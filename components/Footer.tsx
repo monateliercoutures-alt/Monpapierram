@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SITE, MESSAGE_GENERAL, lienWhatsApp } from "@/lib/config";
+import { MOYENS_MOBILE, SITE, MESSAGE_GENERAL, lienWhatsApp } from "@/lib/config";
 import { IconeWhatsApp } from "./Icones";
 
 // Pied de page : liens, contacts, zone de livraison
@@ -61,7 +61,26 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="mt-12 border-t border-white/15 pt-6 text-xs text-white/65">
+        {/* Moyens de paiement */}
+        <div className="mt-12 border-t border-white/15 pt-6">
+          <h2 className="font-sans text-sm font-semibold text-cyan">Moyens de paiement</h2>
+          <ul className="mt-3 flex flex-wrap items-center gap-3">
+            <li className="flex h-11 items-center rounded-bouton border border-white/30 px-4 text-sm font-semibold">
+              Paiement à la livraison
+            </li>
+            {MOYENS_MOBILE.map((m) => (
+              <li
+                key={m.nom}
+                className="flex h-11 min-w-28 items-center justify-center rounded-bouton px-4 text-sm font-bold"
+                style={m.logo ? { background: "#ffffff" } : { background: m.fond, color: m.texte }}
+              >
+                {m.logo ? <Image src={m.logo} alt={m.nom} width={96} height={32} className="h-7 w-auto" /> : m.nom}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <p className="mt-8 border-t border-white/15 pt-6 text-xs text-white/65">
           © {new Date().getFullYear()} {SITE.nom}. Tous droits réservés.
         </p>
       </div>

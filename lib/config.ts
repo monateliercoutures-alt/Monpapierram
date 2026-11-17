@@ -176,6 +176,17 @@ export function formatPrix(n: number): string {
 
 export const MODES_PAIEMENT = ["Paiement à la livraison", "Orange Money", "MTN MoMo", "Wave"];
 
+/**
+ * Moyens de paiement mobile affichés dans le pied de page.
+ * Pour utiliser les logos officiels : déposer les fichiers dans public/images/paiement/
+ * puis renseigner `logo` (ex. "/images/paiement/wave.svg") : il remplacera la pastille de texte.
+ */
+export const MOYENS_MOBILE: { nom: string; fond: string; texte: string; logo?: string }[] = [
+  { nom: "Orange Money", fond: "#ff7900", texte: "#000000" },
+  { nom: "MTN MoMo", fond: "#ffcc00", texte: "#000000" },
+  { nom: "Wave", fond: "#1dc8f2", texte: "#000000" },
+];
+
 /** Communes proposées dans le formulaire de commande */
 export const COMMUNES = [
   /* Abidjan */

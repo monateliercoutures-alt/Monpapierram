@@ -5,7 +5,7 @@ import { IconeWhatsApp } from "./Icones";
 // Pied de page : contacts, zone de livraison, mentions légales
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-nuit px-4 pb-10 pt-16 text-white sm:px-6">
+    <footer id="contact" className="bg-nuit px-4 pb-24 pt-14 sm:pb-10 sm:pt-16 text-white sm:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_0.9fr_1.4fr_1fr]">
           <div>

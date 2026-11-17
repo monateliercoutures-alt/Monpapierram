@@ -248,7 +248,7 @@ export default function PanierTiroir() {
                 <span className="text-xl font-bold text-nuit">{formatPrix(sousTotal)}</span>
               </div>
               <button type="submit" className="mt-3 inline-flex min-h-12 w-full items-center justify-center rounded-bouton bg-profond font-semibold text-white hover:bg-nuit">
-                Envoyer ma commande sur WhatsApp
+                Envoyer sur WhatsApp
               </button>
               <p className="mt-2 text-xs text-encre/60">Votre commande s'ouvre dans WhatsApp. Nous la confirmons avec le prix de livraison avant de partir.</p>
             </footer>

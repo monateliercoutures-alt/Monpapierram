@@ -44,6 +44,33 @@ function courbe(i: number, plein: number, absent: number): { entree: number[]; s
   return { entree, sortie };
 }
 
+/**
+ * Courbe des légendes : le texte sortant disparaît complètement avant que le
+ * suivant n'apparaisse (aucune superposition de textes).
+ */
+function courbeTexte(i: number, plein: number, absent: number): { entree: number[]; sortie: number[] } {
+  const debut = i / N;
+  const fin = (i + 1) / N;
+  const T = 0.035;
+  const entree: number[] = [];
+  const sortie: number[] = [];
+  if (i === 0) {
+    entree.push(0);
+    sortie.push(plein);
+  } else {
+    entree.push(debut + T * 0.5, debut + T * 1.5);
+    sortie.push(absent, plein);
+  }
+  if (i < N - 1) {
+    entree.push(fin - T * 1.5, fin - T * 0.5);
+    sortie.push(plein, absent);
+  } else {
+    entree.push(1);
+    sortie.push(plein);
+  }
+  return { entree, sortie };
+}
+
 /** Plage de progression pendant laquelle l'image bouge (zoom et glissement) */
 function plage(i: number): number[] {
   return [Math.max(0, i / N - FONDU), Math.min(1, (i + 1) / N + FONDU)];
@@ -92,10 +119,10 @@ function Legende({
   progression: MotionValue<number>;
 }) {
   const etape = ETAPES[index];
-  const c = courbe(index, 1, 0);
+  const c = courbeTexte(index, 1, 0);
   const opacity = useTransform(progression, c.entree, c.sortie);
   // Le texte monte légèrement en entrant et en sortant
-  const cy = courbe(index, 0, 14);
+  const cy = courbeTexte(index, 0, 14);
   const y = useTransform(progression, cy.entree, cy.sortie);
 
   return (

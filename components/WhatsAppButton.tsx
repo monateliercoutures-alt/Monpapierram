@@ -9,9 +9,9 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Commander sur WhatsApp"
-      className="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#0b7a4b] text-white shadow-md transition-transform hover:scale-105 motion-reduce:transition-none"
+      className="fixed bottom-4 right-4 z-40 flex h-12 w-12 sm:bottom-5 sm:right-5 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-[#0b7a4b] text-white shadow-md transition-transform hover:scale-105 motion-reduce:transition-none"
     >
-      <IconeWhatsApp className="h-7 w-7" />
+      <IconeWhatsApp className="h-6 w-6 sm:h-7 sm:w-7" />
     </a>
   );
 }

@@ -17,10 +17,10 @@ const donneesStructurees = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Store",
+      "@type": ["Store", "WholesaleStore"],
       name: SITE.nom,
-      alternateName: ["Monpapierram", "Mon papier rame"],
-      description: "Boutique de papier rame A4 Double A en Côte d'Ivoire, livraison à Abidjan et dans tout le pays.",
+      alternateName: ["Monpapierram", "Mon papier rame", "Monpapierrame grossiste papier rame"],
+      description: "Grossiste de papier rame A4 Double A à Abidjan, livraison partout en Côte d'Ivoire. Vente à l'unité, au carton et en gros dès 10 cartons.",
       url: SITE.url,
       telephone: SITE.whatsappAffiche,
       areaServed: { "@type": "Country", name: "Côte d'Ivoire" },

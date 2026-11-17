@@ -128,9 +128,9 @@ export const PRODUITS: Produit[] = [
   },
   {
     id: "gros",
-    metaTitre: "Papier Rame A4 en Gros, Carton Double A | Monpapierrame",
+    metaTitre: "Grossiste Papier Rame A4, Carton Double A | Monpapierrame",
     metaDescription:
-      "Papier rame A4 en gros à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture, livraison en Côte d'Ivoire, Mobile Money. Devis sur WhatsApp.",
+      "Grossiste papier rame A4 à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture, livraison en Côte d'Ivoire, Mobile Money. Devis WhatsApp.",
     slug: "papier-a4-en-gros-carton-double-a",
     nom: "Papier A4 en gros, carton Double A 80g",
     specs: `Dès ${SEUIL_GROS} cartons · 80 g/m²`,
@@ -304,6 +304,10 @@ export const FAQ: { q: string; r: string }[] = [
     r: "Vous pouvez payer à la livraison, ou par Mobile Money\u00a0: Orange Money, MTN MoMo, Moov Money ou Wave. Le mode de paiement est choisi au moment de la commande.",
   },
   {
+    q: "Êtes-vous grossiste de papier rame à Abidjan\u00a0?",
+    r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous vendons à l'unité (ramette), au carton de 5 ramettes et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
+  },
+  {
     q: "Pouvez-vous établir une facture\u00a0?",
     r: "Oui, une facture peut être établie sur demande, notamment pour les entreprises, les écoles, les administrations et les achats en gros. Précisez-le dans votre message WhatsApp.",
   },
@@ -314,7 +318,7 @@ export const FAQ: { q: string; r: string }[] = [
  * titre 60 caractères maximum, description 155 maximum).
  */
 export const SEO_ACCUEIL = {
-  titre: "Papier Rame A4 en Côte d'Ivoire | Monpapierrame",
+  titre: "Grossiste Papier Rame A4 Côte d'Ivoire | Monpapierrame",
   description:
-    "Papier rame A4 Double A 80g : ramette 500 feuilles dès {prix}, carton de 5, vente en gros. Livré à Abidjan et en Côte d'Ivoire, paiement à la livraison.",
+    "Grossiste papier rame A4 Double A à Abidjan et en Côte d'Ivoire : ramette dès {prix}, carton, vente en gros dès 10 cartons. Paiement à la livraison.",
 };

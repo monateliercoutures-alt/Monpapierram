@@ -26,12 +26,12 @@ export default function Presentation() {
   return (
     <section id="a-propos" className="bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-6xl">
-        <Titre titre={`${SITE.nom}, votre fournisseur de papier rame A4 Double A`} />
+        <Titre titre={`${SITE.nom}, grossiste de papier rame A4 Double A à Abidjan et en Côte d'Ivoire`} />
 
         <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-4 text-justify text-encre/85">
             <p>
-              {SITE.nom} vend du <strong>papier rame A4 Double A Premium 80 g/m²</strong> en Côte d&apos;Ivoire : des
+              {SITE.nom} est <strong>grossiste de papier rame A4 Double A Premium 80 g/m²</strong> à Abidjan et partout en Côte d&apos;Ivoire : des
               ramettes de 500 feuilles, des cartons de 5 ramettes (2 500 feuilles) et des cartons en gros pour les
               professionnels. Le papier Double A est reconnu pour sa blancheur régulière et son passage sans bourrage
               dans les imprimantes laser, jet d&apos;encre et les photocopieurs.

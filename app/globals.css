@@ -1,16 +1,40 @@
 @import "tailwindcss";
 @config "../tailwind.config.ts";
 
+/* Tailles de texte agrandies de 20 % par rapport aux valeurs par défaut de Tailwind
+   (seul le texte grandit, pas les marges ni les largeurs) */
+@theme {
+  --text-xs: 0.9rem;
+  --text-xs--line-height: calc(1 / 0.75);
+  --text-sm: 1.05rem;
+  --text-sm--line-height: calc(1.25 / 0.875);
+  --text-base: 1.2rem;
+  --text-base--line-height: 1.5;
+  --text-lg: 1.35rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-xl: 1.5rem;
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-2xl: 1.8rem;
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-3xl: 2.25rem;
+  --text-3xl--line-height: calc(2.25 / 1.875);
+  --text-4xl: 2.7rem;
+  --text-4xl--line-height: calc(2.5 / 2.25);
+  --text-5xl: 3.6rem;
+  --text-5xl--line-height: 1;
+}
+
 /* Styles de base : fond blanc, texte bleu encre, polices via next/font */
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem; /* compense l'en-tête collant pour les ancres */
+    scroll-padding-top: 7rem; /* compense l'en-tête collant pour les ancres */
   }
   body {
     background: #ffffff;
     color: #16213e;
     font-family: var(--font-texte), system-ui, sans-serif;
+    font-size: 1.2rem;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
@@ -33,10 +57,10 @@
 }
 
 /* Hauteur du hero sur grand écran : suit le format 16:9 de l'image sans dépasser l'écran
-   (8 rem = bandeau d'infos + en-tête) */
+   (9,5 rem = bandeau d'infos + en-tête) */
 @media (min-width: 1280px) {
   .hero-cadre {
-    height: clamp(560px, 56.25vw, calc(100svh - 8rem));
+    height: clamp(560px, 56.25vw, calc(100svh - 9.5rem));
   }
 }
 

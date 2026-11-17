@@ -7,14 +7,29 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-nuit px-4 pb-10 pt-16 text-white sm:px-6">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_0.9fr_1.4fr_1fr]">
           <div>
-            <span className="inline-block rounded-bouton bg-white p-2.5">
-              <Image src="/images/logo.png" alt={SITE.nom} width={895} height={268} className="h-10 w-auto" />
-            </span>
+            <Image src="/images/logo-blanc.png" alt={SITE.nom} width={895} height={268} className="h-14 w-auto" />
             <p className="mt-3 max-w-xs text-sm text-white/75">
               Ramettes de papier A4 Double A Premium, livrées à Abidjan.
             </p>
+          </div>
+
+          <div>
+            <h2 className="font-sans text-sm font-semibold text-cyan">La boutique</h2>
+            <ul className="mt-4 space-y-1 text-sm">
+              {[
+                ["#produits", "Nos produits"],
+                ["#avantages", "Pourquoi Double A"],
+                ["#faq", "Questions fréquentes"],
+              ].map(([href, label]) => (
+                <li key={href}>
+                  <a href={href} className="inline-flex min-h-11 items-center text-white/85 hover:underline">
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>

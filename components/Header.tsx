@@ -35,9 +35,9 @@ export default function Header() {
         Aller au contenu
       </a>
 
-      <div className="mx-auto flex h-[72px] sm:h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-20 sm:h-24 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <a href="#" aria-label={`${SITE.nom} - accueil`} className="shrink-0">
-          <Image src="/images/logo.png" alt={SITE.nom} width={895} height={268} priority className="h-12 w-auto sm:h-14" />
+          <Image src="/images/logo.png" alt={SITE.nom} width={895} height={268} priority className="h-[3.6rem] w-auto sm:h-[4.2rem]" />
         </a>
 
         <nav aria-label="Navigation principale" className="hidden items-center gap-7 lg:flex">

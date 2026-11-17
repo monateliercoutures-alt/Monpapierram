@@ -1,6 +1,7 @@
 import BarreInfo from "@/components/BarreInfo";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Reassurance from "@/components/Reassurance";
 import ScrollMontage from "@/components/ScrollMontage";
 import Avantages from "@/components/Avantages";
 import Produits from "@/components/Produits";
@@ -49,6 +50,7 @@ export default function Page() {
       <Header />
       <main id="contenu">
         <Hero />
+        <Reassurance />
         <Produits />
         <ScrollMontage />
         <Avantages />

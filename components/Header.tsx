@@ -33,13 +33,12 @@ export default function Header() {
     return () => window.removeEventListener("keydown", onKey);
   }, [ouvert]);
 
-  // En haut de page (sur le hero sombre) : en-tête transparent, texte blanc
-  const sombre = !defile && !ouvert;
+  const sombre = false; // le hero est clair : texte foncé en permanence
   const lienCommande = lienWhatsApp(MESSAGE_GENERAL);
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md transition-all duration-300 motion-reduce:transition-none ${
-        defile || ouvert ? "border-profond/15 bg-white/95 shadow-[0_1px_12px_rgba(11,27,77,0.06)]" : "border-white/10 bg-nuit/30"
+        defile || ouvert ? "border-profond/15 bg-white/95 shadow-[0_1px_12px_rgba(11,27,77,0.06)]" : "border-transparent bg-white/70"
       }`}>
       <a
         href="#contenu"

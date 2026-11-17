@@ -50,7 +50,7 @@ export const SEUIL_GROS = 10;
 export const PRODUITS: Produit[] = [
   {
     id: "ramette",
-    metaTitre: "Papier Rame A4 80g, Ramette 500 Feuilles, {prix} | Monpapierrame",
+    metaTitre: "Papier Rame A4 80g, Ramette {prix} | Monpapierrame",
     metaDescription:
       "Papier rame A4 80g Double A, ramette de 500 feuilles, {prix}. Idéal impression et photocopie. Livraison à Abidjan et partout en Côte d'Ivoire.",
     slug: "ramette-papier-a4-80g-double-a",

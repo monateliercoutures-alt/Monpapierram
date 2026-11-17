@@ -52,7 +52,7 @@ export const PRODUITS: Produit[] = [
     id: "ramette",
     metaTitre: "Papier Rame A4 80g, Ramette {prix} | Monpapierrame",
     metaDescription:
-      "Papier rame A4 80g Double A, ramette de 500 feuilles, {prix}. Idéal impression et photocopie. Livraison à Abidjan et partout en Côte d'Ivoire.",
+      "Papier rame A4 80g Double A, 500 feuilles, {prix}. Recto verso, laser et jet d'encre. Livraison à Abidjan et en Côte d'Ivoire, paiement à la livraison.",
     slug: "ramette-papier-a4-80g-double-a",
     nom: "Ramette papier A4 80g Double A Premium",
     specs: "80 g/m² · 500 feuilles",
@@ -84,7 +84,7 @@ export const PRODUITS: Produit[] = [
     id: "carton",
     metaTitre: "Carton Papier Rame A4 80g, 5 Ramettes | Monpapierrame",
     metaDescription:
-      "Carton de 5 ramettes papier rame A4 80g Double A, 2 500 feuilles, {prix}. Moins cher à la ramette. Livraison à Abidjan et partout en Côte d'Ivoire.",
+      "Carton de 5 ramettes papier rame A4 80g Double A, 2 500 feuilles, {prix}. Économique. Livré à Abidjan et en Côte d'Ivoire, payez à la livraison.",
     slug: "carton-papier-a4-5-ramettes-double-a",
     nom: "Carton papier A4 80g Double A (5 ramettes)",
     specs: "80 g/m² · 5 × 500 feuilles",
@@ -118,7 +118,7 @@ export const PRODUITS: Produit[] = [
     id: "gros",
     metaTitre: "Papier Rame A4 en Gros, Carton Double A | Monpapierrame",
     metaDescription:
-      "Papier rame A4 en gros à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture sur demande. Livré partout en Côte d'Ivoire. Devis WhatsApp.",
+      "Papier rame A4 en gros à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture, livraison en Côte d'Ivoire, Mobile Money. Devis sur WhatsApp.",
     slug: "papier-a4-en-gros-carton-double-a",
     nom: "Papier A4 en gros, carton Double A 80g",
     specs: `Dès ${SEUIL_GROS} cartons · 80 g/m²`,
@@ -274,5 +274,5 @@ export const FAQ: { q: string; r: string }[] = [
 export const SEO_ACCUEIL = {
   titre: "Papier Rame A4 en Côte d'Ivoire | Monpapierrame",
   description:
-    "Fournisseur de papier rame A4 Double A : ramette dès {prix}, carton de 5 ramettes, vente en gros. Livraison à Abidjan et partout en Côte d'Ivoire.",
+    "Papier rame A4 Double A 80g : ramette 500 feuilles dès {prix}, carton de 5, vente en gros. Livré à Abidjan et en Côte d'Ivoire, paiement à la livraison.",
 };

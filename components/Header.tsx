@@ -33,11 +33,13 @@ export default function Header() {
     return () => window.removeEventListener("keydown", onKey);
   }, [ouvert]);
 
+  // En haut de page (sur le hero sombre) : en-tête transparent, texte blanc
+  const sombre = !defile && !ouvert;
   const lienCommande = lienWhatsApp(MESSAGE_GENERAL);
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md transition-all duration-300 motion-reduce:transition-none ${
-        defile || ouvert ? "border-profond/15 bg-white/95 shadow-[0_1px_12px_rgba(11,27,77,0.06)]" : "border-transparent bg-white/70"
+        defile || ouvert ? "border-profond/15 bg-white/95 shadow-[0_1px_12px_rgba(11,27,77,0.06)]" : "border-white/10 bg-nuit/30"
       }`}>
       <a
         href="#contenu"
@@ -52,14 +54,14 @@ export default function Header() {
         }`}
       >
         {/* Logo texte */}
-        <a href="#" className="font-titre text-xl font-bold tracking-tight text-profond" aria-label={`${SITE.nom} - accueil`}>
+        <a href="#" className={`font-titre text-xl font-bold tracking-tight transition-colors ${sombre ? "text-white" : "text-profond"}`} aria-label={`${SITE.nom} - accueil`}>
           Mon<span className="text-cyan">papier</span>ram
         </a>
 
         {/* Menu ordinateur */}
         <nav aria-label="Navigation principale" className="hidden items-center gap-8 md:flex">
           {LIENS.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-encre/80 transition-colors hover:text-profond">
+            <a key={l.href} href={l.href} className={`text-sm font-medium transition-colors ${sombre ? "text-white/85 hover:text-white" : "text-encre/80 hover:text-profond"}`}>
               {l.label}
             </a>
           ))}
@@ -69,7 +71,7 @@ export default function Header() {
           href={lienCommande}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden min-h-11 items-center gap-2 rounded-bouton bg-profond px-4 text-sm font-semibold text-white transition-colors hover:bg-nuit md:inline-flex"
+          className={`hidden min-h-11 items-center gap-2 rounded-bouton px-4 text-sm font-semibold transition-colors md:inline-flex ${sombre ? "bg-white text-nuit hover:bg-brume" : "bg-profond text-white hover:bg-nuit"}`}
         >
           <IconeWhatsApp className="h-4 w-4" />
           Commander sur WhatsApp
@@ -78,7 +80,7 @@ export default function Header() {
         {/* Bouton hamburger (mobile) */}
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-bouton border border-profond/15 text-profond md:hidden"
+          className={`inline-flex h-11 w-11 items-center justify-center rounded-bouton border md:hidden ${sombre ? "border-white/30 text-white" : "border-profond/15 text-profond"}`}
           aria-expanded={ouvert}
           aria-controls="menu-mobile"
           aria-label={ouvert ? "Fermer le menu" : "Ouvrir le menu"}

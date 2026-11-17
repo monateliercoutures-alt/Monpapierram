@@ -1,3 +1,4 @@
+import BarreInfo from "@/components/BarreInfo";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ScrollMontage from "@/components/ScrollMontage";
@@ -45,12 +46,13 @@ const donneesStructurees = {
 export default function Page() {
   return (
     <>
+      <BarreInfo />
       <Header />
       <main id="contenu">
         <Hero />
+        <Produits />
         <ScrollMontage />
         <Avantages />
-        <Produits />
         <Livraison />
         <Devis />
         <Faq />

@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="font-sans text-sm font-semibold uppercase tracking-widest text-cyan">Contact</h2>
+            <h2 className="font-sans text-sm font-semibold text-cyan">Contact</h2>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
                 <a
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="font-sans text-sm font-semibold uppercase tracking-widest text-cyan">Zone de livraison</h2>
+            <h2 className="font-sans text-sm font-semibold text-cyan">Zone de livraison</h2>
             <p className="mt-4 text-sm text-white/75">{SITE.zone}</p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function Footer() {
         <div className="mt-12 border-t border-white/15 pt-6 text-xs leading-relaxed text-white/65">
           <p className="font-semibold text-white/85">Mentions légales</p>
           <p className="mt-2">
-            {SITE.nom} — boutique de vente de papier, Abidjan, Côte d&apos;Ivoire. Éditeur du site :{" "}
+            {SITE.nom}, boutique de vente de papier, Abidjan, Côte d&apos;Ivoire. Éditeur du site :{" "}
             {SITE.nom} (RCCM et numéro de compte contribuable : à renseigner). Hébergeur : Vercel Inc. /
             Netlify Inc. Les prix sont indicatifs, exprimés en FCFA, et confirmés à la commande.
             « Double A » est une marque de son propriétaire ; Monpapierram est un revendeur indépendant.

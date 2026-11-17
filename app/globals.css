@@ -5,117 +5,29 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem; /* compense le header fixe pour les ancres */
+    scroll-padding-top: 5rem; /* compense l'en-tête collant pour les ancres */
   }
   body {
     background: #ffffff;
     color: #16213e;
     font-family: var(--font-texte), system-ui, sans-serif;
-    line-height: 1.65;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3 {
     font-family: var(--font-titre), system-ui, sans-serif;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
   }
   /* Focus clavier toujours visible */
   :focus-visible {
     outline: 3px solid #1fa3e8;
-    outline-offset: 3px;
-    border-radius: 6px;
+    outline-offset: 2px;
+    border-radius: 4px;
   }
 }
 
 /* Pas de défilement doux si l'utilisateur préfère moins d'animations */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-}
-
-/* Animation du trait de l'indicateur « Faites défiler » */
-@keyframes defile {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(260%); }
-}
-
-/* Apparition douce au défilement (CSS pur, sans JavaScript).
-   Ignorée si le navigateur ne gère pas les animations liées au scroll
-   ou si l'utilisateur préfère moins de mouvement. */
-@keyframes apparition {
-  from { opacity: 0; transform: translateY(28px); }
-  to { opacity: 1; transform: none; }
-}
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .reveal {
-      animation: apparition linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 35%;
-    }
-  }
-}
-
-/* Motif de points très discret pour le fond du hero */
-.motif-points {
-  background-image: radial-gradient(rgba(10, 42, 143, 0.09) 1px, transparent 1px);
-  background-size: 22px 22px;
-}
-
-.motif-points-clair {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 22px 22px;
-}
-
-/* ---------- Animations d'accroche du hero (CSS pur) ---------- */
-
-/* Entrée en cascade : chaque élément arrive avec un léger décalage (--d) */
-@keyframes entree {
-  from { opacity: 0; transform: translateY(26px); }
-  to { opacity: 1; transform: none; }
-}
-.entree {
-  animation: entree 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  animation-delay: var(--d, 0s);
-}
-
-/* Diaporama : 4 images en fondu enchaîné avec léger zoom (cycle de 20 s) */
-@keyframes diapo {
-  0% { opacity: 0; transform: scale(1); }
-  6%, 25% { opacity: 1; }
-  31% { opacity: 0; transform: scale(1.06); }
-  100% { opacity: 0; transform: scale(1.06); }
-}
-.diapo {
-  opacity: 0;
-  animation: diapo 20s linear infinite both;
-}
-
-/* Pastilles flottantes autour du visuel */
-@keyframes flotte {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-9px); }
-}
-.flotte { animation: flotte 5s ease-in-out infinite; }
-
-/* Mouvement réduit : tout est statique, seule la première image reste visible */
-@media (prefers-reduced-motion: reduce) {
-  .entree, .flotte { animation: none; }
-  .diapo { animation: none; opacity: 0; }
-  .diapo:first-child { opacity: 1; }
-}
-
-/* Motif de points clair pour fonds sombres */
-.grille-sombre {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse at 70% 40%, #000 20%, transparent 75%);
-}
-
-/* Hauteur du hero sur grand écran : suit le format 16:9 de l'image sans dépasser l'écran */
-@media (min-width: 1280px) {
-  .hero-cadre {
-    height: clamp(560px, 56.25vw, calc(100svh - 4rem));
-  }
 }

@@ -1,31 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { SITE, MESSAGE_GENERAL, lienWhatsApp } from "@/lib/config";
-import { IconeWhatsApp } from "./Icones";
+import { SITE } from "@/lib/config";
+import { usePanier } from "./PanierContext";
 
 // Liens du menu principal
 const LIENS = [
   { href: "#produits", label: "Produits" },
   { href: "#avantages", label: "Avantages" },
   { href: "#livraison", label: "Livraison" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ];
 
-// En-tête fixe avec menu hamburger sur mobile
+// En-tête collant : logo, menu, bouton panier avec compteur
 export default function Header() {
   const [ouvert, setOuvert] = useState(false);
-  const [defile, setDefile] = useState(false);
+  const { nombre, ouvrir } = usePanier();
 
-  // Ombre légère et bordure renforcée dès que la page défile
-  useEffect(() => {
-    const onScroll = () => setDefile(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Fermer le menu avec la touche Échap
+  // Fermer le menu mobile avec la touche Échap
   useEffect(() => {
     if (!ouvert) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOuvert(false);
@@ -33,13 +26,8 @@ export default function Header() {
     return () => window.removeEventListener("keydown", onKey);
   }, [ouvert]);
 
-  const sombre = false; // le hero est clair : texte foncé en permanence
-  const lienCommande = lienWhatsApp(MESSAGE_GENERAL);
-
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md transition-all duration-300 motion-reduce:transition-none ${
-        defile || ouvert ? "border-profond/15 bg-white/95 shadow-[0_1px_12px_rgba(11,27,77,0.06)]" : "border-transparent bg-white/70"
-      }`}>
+    <header className="sticky top-0 z-50 border-b border-profond/15 bg-white">
       <a
         href="#contenu"
         className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:rounded-bouton focus:bg-profond focus:px-4 focus:py-2 focus:text-white"
@@ -47,73 +35,60 @@ export default function Header() {
         Aller au contenu
       </a>
 
-      <div
-        className={`mx-auto flex max-w-6xl items-center justify-between px-4 xl:max-w-none xl:px-[max(4rem,6vw)] transition-all duration-300 motion-reduce:transition-none sm:px-6 ${
-          defile ? "h-14" : "h-16"
-        }`}
-      >
-        {/* Logo texte */}
-        <a href="#" className={`font-titre text-xl font-bold tracking-tight transition-colors ${sombre ? "text-white" : "text-profond"}`} aria-label={`${SITE.nom} - accueil`}>
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+        <a href="#" className="font-titre text-xl font-bold tracking-tight text-profond" aria-label={`${SITE.nom} - accueil`}>
           Mon<span className="text-cyan">papier</span>ram
         </a>
 
-        {/* Menu ordinateur */}
-        <nav aria-label="Navigation principale" className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Navigation principale" className="hidden items-center gap-7 lg:flex">
           {LIENS.map((l) => (
-            <a key={l.href} href={l.href} className={`text-sm font-medium transition-colors ${sombre ? "text-white/85 hover:text-white" : "text-encre/80 hover:text-profond"}`}>
+            <a key={l.href} href={l.href} className="text-sm font-medium text-encre/80 hover:text-profond">
               {l.label}
             </a>
           ))}
         </nav>
 
-        <a
-          href={lienCommande}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`hidden min-h-11 items-center gap-2 rounded-bouton px-4 text-sm font-semibold transition-colors md:inline-flex ${sombre ? "bg-white text-nuit hover:bg-brume" : "bg-profond text-white hover:bg-nuit"}`}
-        >
-          <IconeWhatsApp className="h-4 w-4" />
-          Commander sur WhatsApp
-        </a>
+        <div className="flex items-center gap-2">
+          {/* Bouton panier */}
+          <button
+            type="button"
+            onClick={ouvrir}
+            aria-label={`Ouvrir le panier, ${nombre} article${nombre > 1 ? "s" : ""}`}
+            className="relative inline-flex h-11 items-center gap-2 rounded-bouton bg-profond px-4 text-sm font-semibold text-white hover:bg-nuit"
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M3 4h2l2.2 11h10.6L20 7H6.2" />
+              <circle cx="9" cy="19.5" r="1.3" />
+              <circle cx="17" cy="19.5" r="1.3" />
+            </svg>
+            <span className="hidden sm:inline">Panier</span>
+            <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-white px-1 text-xs font-bold text-profond">{nombre}</span>
+          </button>
 
-        {/* Bouton hamburger (mobile) */}
-        <button
-          type="button"
-          className={`inline-flex h-11 w-11 items-center justify-center rounded-bouton border md:hidden ${sombre ? "border-white/30 text-white" : "border-profond/15 text-profond"}`}
-          aria-expanded={ouvert}
-          aria-controls="menu-mobile"
-          aria-label={ouvert ? "Fermer le menu" : "Ouvrir le menu"}
-          onClick={() => setOuvert((o) => !o)}
-        >
-          <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-            {ouvert ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
-          </svg>
-        </button>
+          {/* Menu hamburger (mobile et tablette) */}
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-bouton border border-profond/20 text-profond lg:hidden"
+            aria-expanded={ouvert}
+            aria-controls="menu-mobile"
+            aria-label={ouvert ? "Fermer le menu" : "Ouvrir le menu"}
+            onClick={() => setOuvert((o) => !o)}
+          >
+            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              {ouvert ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+            </svg>
+          </button>
+        </div>
       </div>
 
-      {/* Panneau mobile */}
       {ouvert && (
-        <div id="menu-mobile" className="border-t border-profond/10 bg-white md:hidden">
-          <nav aria-label="Navigation mobile" className="mx-auto flex max-w-6xl flex-col px-4 py-3">
+        <div id="menu-mobile" className="border-t border-profond/10 bg-white lg:hidden">
+          <nav aria-label="Navigation mobile" className="mx-auto flex max-w-6xl flex-col px-4 py-2">
             {LIENS.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOuvert(false)}
-                className="flex min-h-12 items-center border-b border-profond/10 text-base font-medium text-encre"
-              >
+              <a key={l.href} href={l.href} onClick={() => setOuvert(false)} className="flex min-h-12 items-center border-b border-profond/10 text-base font-medium text-encre last:border-0">
                 {l.label}
               </a>
             ))}
-            <a
-              href={lienCommande}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 mb-2 inline-flex min-h-12 items-center justify-center gap-2 rounded-bouton bg-profond px-4 font-semibold text-white"
-            >
-              <IconeWhatsApp />
-              Commander sur WhatsApp
-            </a>
           </nav>
         </div>
       )}

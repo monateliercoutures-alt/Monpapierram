@@ -58,7 +58,6 @@ function Calque({
   progression: MotionValue<number>;
 }) {
   const etape = ETAPES[index];
-  const premiere = index === 0;
   const c = courbe(index, 1, 0);
   const p = plage(index);
 
@@ -78,8 +77,7 @@ function Calque({
         fill
         sizes="100vw"
         className="object-contain"
-        priority={premiere}
-        loading={premiere ? undefined : "lazy"}
+        loading="lazy"
       />
     </motion.div>
   );
@@ -102,7 +100,7 @@ function Legende({
 
   return (
     <motion.div className="col-start-1 row-start-1" style={{ opacity, y }}>
-      <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-profond">
+      <p className="mb-2 text-xs font-semibold text-profond">
         Étape {index + 1} / {N}
       </p>
       <h2 className="text-2xl font-bold text-nuit sm:text-4xl">{etape.titre}</h2>
@@ -205,7 +203,7 @@ export default function ScrollMontage() {
                 <Image src={e.image} alt={e.alt} fill sizes="(min-width: 768px) 768px, 100vw" className="object-contain" loading="lazy" />
               </div>
               <figcaption className="mt-4">
-                <p className="text-xs font-semibold uppercase tracking-widest text-profond">
+                <p className="text-xs font-semibold text-profond">
                   Étape {i + 1} / {N}
                 </p>
                 <h2 className="mt-1 text-2xl font-bold text-nuit">{e.titre}</h2>

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/config";
+import PanierProvider from "@/components/PanierContext";
 
 // Police des titres : Plus Jakarta Sans (600 et 700)
 const titre = Plus_Jakarta_Sans({
@@ -68,7 +69,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${titre.variable} ${texte.variable}`}>
-      <body className="min-h-screen antialiased">{children}</body>
+      <body className="min-h-screen antialiased">
+        <PanierProvider>{children}</PanierProvider>
+      </body>
     </html>
   );
 }

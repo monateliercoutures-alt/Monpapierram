@@ -25,15 +25,16 @@ export const MESSAGE_GENERAL =
 export type Produit = {
   id: string;
   nom: string;
-  description: string;
+  specs: string; // ligne courte sous le nom
   detail: string;
   prix: number; // en FCFA (valeurs d'exemple)
-  unite: string;
-  populaire?: boolean;
+  unite: string; // « la ramette », « le carton »…
+  note?: string; // précision sous le prix
+  minQty: number; // quantité minimale de commande
+  badge?: string;
   image: string;
   alt: string;
   points: string[];
-  message: string; // message WhatsApp pré-rempli
 };
 
 /** Nombre de cartons à partir duquel le tarif gros s'applique */
@@ -42,44 +43,48 @@ export const SEUIL_GROS = 10;
 export const PRODUITS: Produit[] = [
   {
     id: "ramette",
-    nom: "Ramette A4 80 g",
-    description: "Double A Premium, 500 feuilles",
-    detail: "Idéale pour la maison, l'école ou un petit bureau.",
-    image: "/images/etape-3.jpg",
-    alt: "Ramette Double A Premium ouverte avec des feuilles A4 blanches",
+    nom: "Ramette A4 Double A Premium",
+    specs: "80 g/m² · 500 feuilles",
+    detail: "Pour la maison, l'école ou un petit bureau.",
     prix: 3500,
     unite: "la ramette",
-    points: ["500 feuilles A4", "80 g/m²", "Recto verso sans bourrage"],
-    message:
-      "Bonjour Monpapierram, je souhaite commander une ramette de papier Double A Premium A4 80 g (500 feuilles). Quel est le délai de livraison ?",
+    minQty: 1,
+    image: "/images/etape-3.jpg",
+    alt: "Ramette Double A Premium ouverte avec des feuilles A4 blanches",
+    points: ["Format A4", "Recto verso sans bourrage", "Laser et jet d'encre"],
   },
   {
     id: "carton",
-    nom: "Carton de 5 ramettes",
-    description: "Double A Premium, 2 500 feuilles",
-    detail: "Le meilleur rapport qualité-prix pour les bureaux et commerces.",
-    image: "/images/etape-1.jpg",
-    alt: "Carton fermé de 5 ramettes Double A",
+    nom: "Carton de 5 ramettes Double A Premium",
+    specs: "80 g/m² · 5 × 500 feuilles",
+    detail: "Le format le plus pratique pour un bureau ou un commerce.",
     prix: 16500,
     unite: "le carton",
-    populaire: true,
-    points: ["5 ramettes de 500 feuilles", "Économie par rapport à l'unité", "Livraison à Abidjan"],
-    message:
-      "Bonjour Monpapierram, je souhaite commander un carton de 5 ramettes de papier Double A Premium A4 80 g. Quel est le délai de livraison ?",
+    note: "Soit 3 300 FCFA la ramette",
+    minQty: 1,
+    badge: "Le plus vendu",
+    image: "/images/etape-1.jpg",
+    alt: "Carton fermé de 5 ramettes Double A",
+    points: ["2 500 feuilles A4", "Carton scellé", "Livraison à Abidjan"],
   },
   {
     id: "gros",
-    nom: `Achat en gros dès ${SEUIL_GROS} cartons`,
-    description: "Tarif dégressif pour professionnels",
-    detail: "Écoles, administrations, imprimeries, revendeurs.",
+    nom: `Carton de 5 ramettes, tarif gros`,
+    specs: `Dès ${SEUIL_GROS} cartons · 80 g/m²`,
+    detail: "Pour les écoles, entreprises, imprimeries et revendeurs.",
+    prix: 15500,
+    unite: "le carton",
+    note: `Soit 3 100 FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    minQty: SEUIL_GROS,
     image: "/images/etape-4.jpg",
     alt: "Ramette Double A Premium couchée devant un carton ouvert",
-    prix: 15500,
-    unite: "le carton, dès " + SEUIL_GROS + " cartons",
-    points: ["Prix dégressif", "Facture sur demande", "Livraison planifiée"],
-    message: `Bonjour Monpapierram, je souhaite un devis pour un achat en gros de papier Double A Premium A4 80 g (à partir de ${SEUIL_GROS} cartons).`,
+    points: [`Minimum ${SEUIL_GROS} cartons`, "Facture sur demande", "Livraison planifiée"],
   },
 ];
+
+export function trouverProduit(id: string): Produit | undefined {
+  return PRODUITS.find((p) => p.id === id);
+}
 
 /** Format d'affichage des prix : « 16 500 FCFA » */
 export function formatPrix(n: number): string {
@@ -87,6 +92,22 @@ export function formatPrix(n: number): string {
 }
 
 export const MODES_PAIEMENT = ["Paiement à la livraison", "Orange Money", "MTN MoMo", "Wave"];
+
+/** Communes proposées dans le formulaire de commande */
+export const COMMUNES = [
+  "Cocody",
+  "Plateau",
+  "Marcory",
+  "Treichville",
+  "Koumassi",
+  "Port-Bouët",
+  "Yopougon",
+  "Abobo",
+  "Adjamé",
+  "Attécoubé",
+  "Bingerville",
+  "Autre (à préciser dans l'adresse)",
+];
 
 export type EtapeMontage = { titre: string; phrase: string; image: string; alt: string };
 

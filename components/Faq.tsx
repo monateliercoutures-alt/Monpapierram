@@ -9,11 +9,11 @@ export default function Faq() {
   const [ouvert, setOuvert] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-white px-4 py-24 sm:px-6 sm:py-32">
-      <div className="mx-auto max-w-3xl">
-        <Titre etiquette="FAQ" titre="Questions fréquentes" />
+    <section id="faq" className="border-t border-profond/10 bg-brume px-4 py-14 sm:px-6 sm:py-20">
+      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_2fr] lg:gap-16">
+        <Titre titre="Questions fréquentes" texte="Une autre question ? Écrivez-nous sur WhatsApp." />
 
-        <div className="mt-14 divide-y divide-profond/10 rounded-carte border border-profond/15">
+        <div className="divide-y divide-profond/10 rounded-carte border border-profond/15 bg-white">
           {FAQ.map((item, i) => {
             const estOuvert = ouvert === i;
             return (

@@ -9,7 +9,7 @@ const trait = {
   strokeWidth: 1.6,
   strokeLinecap: "round" as const,
   strokeLinejoin: "round" as const,
-  className: "h-7 w-7",
+  className: "h-6 w-6",
   "aria-hidden": true,
 };
 
@@ -62,25 +62,19 @@ const AVANTAGES: { titre: string; texte: string; icone: ReactNode }[] = [
   },
 ];
 
-// Quatre blocs sobres présentant les atouts du produit et du service
+// Quatre atouts, présentés en simple rangée (sans cartes)
 export default function Avantages() {
   return (
-    <section id="avantages" className="bg-brume px-4 py-24 sm:px-6 sm:py-32">
+    <section id="avantages" className="border-y border-profond/10 bg-brume px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-6xl">
-        <Titre etiquette="Pourquoi Double A" titre="Un papier fiable, du premier au dernier feuillet" />
+        <Titre titre="Pourquoi choisir Double A" />
 
-        <ul className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {AVANTAGES.map((a, i) => (
-            <li
-              key={a.titre}
-              className="reveal group relative rounded-carte border border-profond/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-profond/30 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
-            >
-              <span className="absolute right-6 top-5 font-titre text-sm font-bold text-profond/20">0{i + 1}</span>
-              <span className="flex h-12 w-12 items-center justify-center rounded-bouton bg-profond text-white transition-colors group-hover:bg-nuit">
-                {a.icone}
-              </span>
-              <h3 className="mt-6 text-lg font-semibold text-nuit">{a.titre}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-encre/70">{a.texte}</p>
+        <ul className="mt-8 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+          {AVANTAGES.map((a) => (
+            <li key={a.titre} className="border-t-2 border-profond pt-4">
+              <span className="text-profond">{a.icone}</span>
+              <h3 className="mt-3 text-base font-bold text-nuit">{a.titre}</h3>
+              <p className="mt-1 text-sm text-encre/75">{a.texte}</p>
             </li>
           ))}
         </ul>

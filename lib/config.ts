@@ -10,7 +10,7 @@ export const SITE = {
   whatsapp: "2250700000000",
   whatsappAffiche: "+225 07 00 00 00 00",
   email: "contact@monpapierrame.ci",
-  zone: "Abidjan et environs (Cocody, Marcory, Plateau, Yopougon, Abobo, Koumassi, Riviera…)",
+  zone: "Partout en Côte d'Ivoire : Abidjan, Yamoussoukro, Bouaké, San-Pédro, Daloa, Korhogo et toutes les autres villes",
   horaires: "Lundi – Samedi, 8h – 19h",
 };
 
@@ -52,7 +52,7 @@ export const PRODUITS: Produit[] = [
     id: "ramette",
     metaTitre: "Ramette Papier A4 80g Abidjan, {prix} | Monpapierrame",
     metaDescription:
-      "Ramette papier A4 80g Double A, 500 feuilles, {prix}. Idéal impression et photocopie. Livraison à Abidjan, paiement à la livraison ou Mobile Money.",
+      "Ramette papier A4 80g Double A, 500 feuilles, {prix}. Idéal impression et photocopie. Livraison à Abidjan et partout en Côte d'Ivoire.",
     slug: "ramette-papier-a4-80g-double-a",
     nom: "Ramette papier A4 80g Double A Premium",
     specs: "80 g/m² · 500 feuilles",
@@ -84,7 +84,7 @@ export const PRODUITS: Produit[] = [
     id: "carton",
     metaTitre: "Carton Papier A4 80g (5 Ramettes) Abidjan | Monpapierrame",
     metaDescription:
-      "Carton de 5 ramettes papier A4 80g Double A, 2 500 feuilles, {prix}. Moins cher à la ramette. Livraison à Abidjan, paiement à la livraison.",
+      "Carton de 5 ramettes papier A4 80g Double A, 2 500 feuilles, {prix}. Moins cher à la ramette. Livraison à Abidjan et partout en Côte d'Ivoire.",
     slug: "carton-papier-a4-5-ramettes-double-a",
     nom: "Carton papier A4 80g Double A (5 ramettes)",
     specs: "80 g/m² · 5 × 500 feuilles",
@@ -96,7 +96,7 @@ export const PRODUITS: Produit[] = [
     badge: "Le plus vendu",
     image: "/images/etape-1.jpg",
     alt: "Carton fermé de 5 ramettes Double A",
-    points: ["2 500 feuilles A4", "Carton scellé", "Livraison à Abidjan"],
+    points: ["2 500 feuilles A4", "Carton scellé", "Livraison partout en Côte d'Ivoire"],
     galerie: [
       { src: "/images/etape-1.jpg", alt: "Carton fermé de 5 ramettes Double A, cerclé d'une sangle blanche" },
       { src: "/images/etape-2.jpg", alt: "Carton Double A ouvert avec une ramette qui en sort" },
@@ -104,7 +104,7 @@ export const PRODUITS: Produit[] = [
     ],
     description: [
       "Le carton de papier A4 80g Double A regroupe 5 ramettes, soit 2 500 feuilles. C'est le format idéal pour un bureau, un commerce, une école ou un cybercafé : moins de réapprovisionnements et un prix plus avantageux à la ramette.",
-      "Chaque ramette est emballée individuellement. Le carton est livré scellé jusqu'à votre adresse à Abidjan.",
+      "Chaque ramette est emballée individuellement. Le carton est livré scellé jusqu'à votre adresse, à Abidjan comme dans le reste de la Côte d'Ivoire.",
     ],
     fiche: [
       ["Marque", "Double A Premium"],
@@ -118,7 +118,7 @@ export const PRODUITS: Produit[] = [
     id: "gros",
     metaTitre: "Papier A4 en Gros Abidjan, Carton Double A | Monpapierrame",
     metaDescription:
-      "Papier A4 en gros à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture sur demande, livraison planifiée. Devis sur WhatsApp.",
+      "Papier A4 en gros à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture sur demande. Livraison partout en Côte d'Ivoire. Devis WhatsApp.",
     slug: "papier-a4-en-gros-carton-double-a",
     nom: "Papier A4 en gros, carton Double A 80g",
     specs: `Dès ${SEUIL_GROS} cartons · 80 g/m²`,
@@ -178,6 +178,7 @@ export const MODES_PAIEMENT = ["Paiement à la livraison", "Orange Money", "MTN 
 
 /** Communes proposées dans le formulaire de commande */
 export const COMMUNES = [
+  /* Abidjan */
   "Cocody",
   "Plateau",
   "Marcory",
@@ -189,7 +190,16 @@ export const COMMUNES = [
   "Adjamé",
   "Attécoubé",
   "Bingerville",
-  "Autre (à préciser dans l'adresse)",
+  /* Autres villes de Côte d'Ivoire */
+  "Yamoussoukro",
+  "Bouaké",
+  "San-Pédro",
+  "Daloa",
+  "Korhogo",
+  "Man",
+  "Abengourou",
+  "Gagnoa",
+  "Autre ville (à préciser dans l'adresse)",
 ];
 
 export type EtapeMontage = { titre: string; phrase: string; image: string; alt: string };
@@ -237,8 +247,8 @@ export const FAQ: { q: string; r: string }[] = [
     r: "Oui. Le Double A Premium A4 80 g convient aux imprimantes laser, jet d'encre et aux photocopieurs, y compris pour l'impression recto verso automatique.",
   },
   {
-    q: "Quel est le délai de livraison à Abidjan ?",
-    r: "Les commandes confirmées sont généralement livrées sous 24 à 48 heures à Abidjan. Contactez-nous sur WhatsApp pour connaître le créneau exact selon votre commune.",
+    q: "Livrez-vous en dehors d'Abidjan, et sous quel délai ?",
+    r: "Oui, nous livrons partout en Côte d'Ivoire. À Abidjan, les commandes confirmées sont généralement livrées sous 24 à 48 heures. Pour les autres villes, nous confirmons le délai et les frais de livraison à la commande sur WhatsApp.",
   },
   {
     q: "Proposez-vous des tarifs pour l'achat en gros ?",
@@ -251,7 +261,7 @@ export const FAQ: { q: string; r: string }[] = [
  * titre 60 caractères maximum, description 155 maximum).
  */
 export const SEO_ACCUEIL = {
-  titre: "Ramette Papier A4 Abidjan, Livraison Rapide | Monpapierrame",
+  titre: "Papier A4 Double A Abidjan et Côte d'Ivoire | Monpapierrame",
   description:
-    "Achetez votre ramette de papier A4 80g à Abidjan dès {prix}. Carton de 5 ramettes, vente en gros. Livraison rapide, paiement à la livraison.",
+    "Fournisseur de papier A4 Double A : ramette dès {prix}, carton de 5 ramettes, vente en gros. Livraison à Abidjan et partout en Côte d'Ivoire.",
 };

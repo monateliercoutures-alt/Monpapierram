@@ -24,10 +24,10 @@ export default function Hero() {
         <div className="relative z-10 order-1 px-4 pb-10 pt-10 sm:px-6 xl:absolute xl:inset-y-0 xl:left-0 xl:flex xl:items-center xl:p-0 xl:pl-[max(4rem,6vw)]">
           <div className="mx-auto sm:text-center xl:mx-0 xl:w-[27.5vw] xl:max-w-[40rem] xl:text-left">
             <h1 className="text-[2.5rem] font-bold leading-[1.12] text-nuit sm:text-5xl xl:text-[clamp(2.2rem,3.1vw,4rem)]">
-              Le papier qui imprime net, livré chez vous à <span className="text-profond">Abidjan</span>
+              Le papier Double&nbsp;A qui imprime net, livré partout en <span className="text-profond">Côte d'Ivoire</span>
             </h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-encre/80 sm:mx-auto sm:text-lg xl:mx-0 xl:text-[clamp(1.05rem,1.2vw,1.35rem)]">
-              Ramettes et cartons de papier A4 Double A Premium 80 g/m². Commandez en ligne, nous confirmons et livrons.
+              Fournisseur de ramettes et cartons de papier A4 Double&nbsp;A Premium en Côte d'Ivoire. Commandez en ligne, nous confirmons et livrons.
             </p>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center xl:flex-col xl:items-start min-[1700px]:flex-row">

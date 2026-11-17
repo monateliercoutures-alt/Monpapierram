@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <Image src="/images/logo-blanc.png" alt={SITE.nom} width={895} height={268} className="h-14 w-auto" />
             <p className="mt-3 max-w-xs text-sm text-white/75">
-              Ramettes de papier A4 Double A Premium, livrées à Abidjan.
+              Fournisseur de papier A4 Double A en Côte d'Ivoire, livré partout dans le pays.
             </p>
           </div>
 

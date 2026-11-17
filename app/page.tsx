@@ -20,7 +20,7 @@ const donneesStructurees = {
       url: SITE.url,
       email: SITE.email,
       telephone: SITE.whatsappAffiche,
-      areaServed: "Abidjan, Côte d'Ivoire",
+      areaServed: "Côte d'Ivoire",
       image: `${SITE.url}/images/etape-1.jpg`,
       priceRange: "FCFA",
       makesOffer: PRODUITS.map((p) => ({

@@ -71,7 +71,7 @@ export default function PanierTiroir() {
       "",
       `Nom : ${nom}`,
       `Téléphone : ${tel}`,
-      `Commune : ${commune}`,
+      `Ville : ${commune}`,
       `Adresse : ${adresse}`,
       `Paiement : ${paiement}`,
       ...(note ? [`Remarque : ${note}`] : []),
@@ -174,7 +174,7 @@ export default function PanierTiroir() {
                   <span className="text-sm text-encre/75">Sous-total</span>
                   <span className="text-xl font-bold text-nuit">{formatPrix(sousTotal)}</span>
                 </div>
-                <p className="mt-1 text-xs text-encre/60">Frais de livraison confirmés par WhatsApp selon votre commune.</p>
+                <p className="mt-1 text-xs text-encre/60">Frais et délai de livraison confirmés par WhatsApp selon votre ville.</p>
                 <button
                   type="button"
                   onClick={() => setEtape("infos")}
@@ -204,10 +204,10 @@ export default function PanierTiroir() {
                 <input name="tel" type="tel" required inputMode="tel" autoComplete="tel" placeholder="07 00 00 00 00" className={champ} />
               </label>
               <label className="block text-sm font-medium text-nuit">
-                Commune
+                Ville ou commune
                 <select name="commune" required defaultValue="" className={champ}>
                   <option value="" disabled>
-                    Choisir une commune
+                    Choisir une ville
                   </option>
                   {COMMUNES.map((c) => (
                     <option key={c}>{c}</option>

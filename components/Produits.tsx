@@ -9,7 +9,7 @@ export default function Produits() {
   return (
     <section id="produits" className="bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-6xl">
-        <Titre titre="Nos produits" texte="Papier A4 Double A Premium 80 g/m². Prix en FCFA, livraison à Abidjan." />
+        <Titre titre="Nos produits" texte="Papier A4 Double A Premium 80 g/m². Prix en FCFA, livraison partout en Côte d'Ivoire." />
 
         <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {PRODUITS.map((p) => (

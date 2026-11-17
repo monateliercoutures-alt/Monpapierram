@@ -49,8 +49,8 @@ const AVANTAGES: { titre: string; texte: string; icone: ReactNode }[] = [
     ),
   },
   {
-    titre: "Livraison rapide à Abidjan",
-    texte: "Commande confirmée sur WhatsApp, livraison à votre adresse en 24 à 48 heures.",
+    titre: "Livraison partout en Côte d'Ivoire",
+    texte: "Commande confirmée sur WhatsApp, livraison à votre adresse à Abidjan et dans toutes les villes du pays.",
     icone: (
       <svg {...trait}>
         <path d="M3 6h11v10H3z" />

@@ -40,8 +40,14 @@ export default function PanierProvider({ children }: { children: React.ReactNode
     try {
       const brut = localStorage.getItem(CLE);
       if (brut) {
-        const lu = JSON.parse(brut) as Ligne[];
-        setLignes(lu.filter((l) => trouverProduit(l.id) && l.qty > 0));
+        const lu: unknown = JSON.parse(brut);
+        if (Array.isArray(lu)) {
+          setLignes(
+            lu
+              .filter((l): l is Ligne => !!l && typeof l.id === "string" && Number.isInteger(l.qty) && l.qty > 0 && l.qty <= 999)
+              .filter((l) => trouverProduit(l.id)),
+          );
+        }
       }
     } catch {
       /* stockage indisponible : on part d'un panier vide */

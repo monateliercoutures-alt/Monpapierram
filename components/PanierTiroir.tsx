@@ -197,11 +197,11 @@ export default function PanierTiroir() {
 
               <label className="block text-sm font-medium text-nuit">
                 Nom et prénom
-                <input name="nom" required autoComplete="name" className={champ} />
+                <input name="nom" required maxLength={80} autoComplete="name" className={champ} />
               </label>
               <label className="block text-sm font-medium text-nuit">
                 Téléphone (WhatsApp de préférence)
-                <input name="tel" type="tel" required inputMode="tel" autoComplete="tel" placeholder="07 00 00 00 00" className={champ} />
+                <input name="tel" type="tel" required maxLength={20} inputMode="tel" autoComplete="tel" placeholder="07 00 00 00 00" className={champ} />
               </label>
               <label className="block text-sm font-medium text-nuit">
                 Ville ou commune
@@ -216,7 +216,7 @@ export default function PanierTiroir() {
               </label>
               <label className="block text-sm font-medium text-nuit">
                 Adresse et point de repère
-                <textarea name="adresse" required rows={2} placeholder="Quartier, rue, immeuble, repère" className={`${champ} py-2`} />
+                <textarea name="adresse" required maxLength={250} rows={2} placeholder="Quartier, rue, immeuble, repère" className={`${champ} py-2`} />
               </label>
 
               <fieldset>
@@ -233,7 +233,7 @@ export default function PanierTiroir() {
 
               <label className="block text-sm font-medium text-nuit">
                 Remarque (facultatif)
-                <input name="note" className={champ} />
+                <input name="note" maxLength={200} className={champ} />
               </label>
 
               {erreur && (

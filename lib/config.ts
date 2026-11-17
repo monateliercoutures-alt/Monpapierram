@@ -265,47 +265,47 @@ export const ETAPES: EtapeMontage[] = [
 /** Questions fréquentes (affichées dans la FAQ et dans les données structurées SEO) */
 export const FAQ: { q: string; r: string }[] = [
   {
-    q: "Que signifie le grammage 80 g/m² ?",
-    r: "Le grammage indique le poids d'une feuille d'un mètre carré. 80 g/m² est le standard de bureau : assez épais pour limiter la transparence en recto verso, assez souple pour bien passer dans les imprimantes laser et jet d'encre.",
+    q: "Que signifie le grammage 80 g/m²\u00a0?",
+    r: "Le grammage indique le poids d'une feuille d'un mètre carré. 80 g/m² est le standard de bureau\u00a0: assez épais pour limiter la transparence en recto verso, assez souple pour bien passer dans les imprimantes laser et jet d'encre.",
   },
   {
-    q: "Combien de feuilles contient une ramette ?",
+    q: "Combien de feuilles contient une ramette\u00a0?",
     r: "Une ramette Double A Premium contient 500 feuilles A4. Un carton regroupe 5 ramettes, soit 2 500 feuilles.",
   },
   {
-    q: "Ce papier est-il compatible avec mon imprimante ?",
+    q: "Ce papier est-il compatible avec mon imprimante\u00a0?",
     r: "Oui. Le Double A Premium A4 80 g convient aux imprimantes laser, jet d'encre et aux photocopieurs, y compris pour l'impression recto verso automatique.",
   },
   {
-    q: "Livrez-vous en dehors d'Abidjan, et sous quel délai ?",
+    q: "Livrez-vous en dehors d'Abidjan, et sous quel délai\u00a0?",
     r: "Oui, nous livrons partout en Côte d'Ivoire. À Abidjan, les commandes confirmées sont généralement livrées sous 24 à 48 heures. Pour les autres villes, nous confirmons le délai et les frais de livraison à la commande sur WhatsApp.",
   },
   {
-    q: "Proposez-vous des tarifs pour l'achat en gros ?",
+    q: "Proposez-vous des tarifs pour l'achat en gros\u00a0?",
     r: `Oui, à partir de ${SEUIL_GROS} cartons, nous appliquons un tarif dégressif pour les écoles, entreprises, imprimeries et revendeurs. Demandez un devis par WhatsApp ou par e-mail.`,
   },
   {
-    q: "Quelle est la différence entre une ramette et un carton de papier A4 ?",
-    r: "Une ramette (ou rame) contient 500 feuilles A4 sous emballage individuel. Un carton regroupe 5 ramettes, soit 2 500 feuilles. Le carton revient moins cher à la ramette et évite de se réapprovisionner souvent : c'est le choix des bureaux, écoles, commerces et cybercafés.",
+    q: "Quelle est la différence entre une ramette et un carton de papier A4\u00a0?",
+    r: "Une ramette (ou rame) contient 500 feuilles A4 sous emballage individuel. Un carton regroupe 5 ramettes, soit 2 500 feuilles. Le carton revient moins cher à la ramette et évite de se réapprovisionner souvent\u00a0: c'est le choix des bureaux, écoles, commerces et cybercafés.",
   },
   {
-    q: "Le papier Double A 80g convient-il à l'impression recto verso ?",
+    q: "Le papier Double A 80g convient-il à l'impression recto verso\u00a0?",
     r: "Oui. Avec 80 g/m², le papier Double A Premium est assez épais pour limiter la transparence quand on imprime sur les deux faces, et il passe sans bourrage dans la plupart des imprimantes laser, jet d'encre et photocopieurs.",
   },
   {
-    q: "Quel grammage de papier A4 choisir : 70, 80 ou 90 g ?",
-    r: "Le 80 g/m² est le standard de bureau : bon rendu, bonne tenue et prix raisonnable pour l'impression courante. Le 70 g/m² est plus léger et plus économique pour les brouillons. Au-delà de 90 g/m², le papier est plus rigide, utile pour des documents de présentation. Nous proposons le papier A4 80 g Double A Premium.",
+    q: "Quel grammage de papier A4 choisir\u00a0: 70, 80 ou 90 g\u00a0?",
+    r: "Le 80 g/m² est le standard de bureau\u00a0: bon rendu, bonne tenue et prix raisonnable pour l'impression courante. Le 70 g/m² est plus léger et plus économique pour les brouillons. Au-delà de 90 g/m², le papier est plus rigide, utile pour des documents de présentation. Nous proposons le papier A4 80 g Double A Premium.",
   },
   {
-    q: "Comment commander mon papier rame en ligne ?",
-    r: "Ajoutez la ramette ou le carton à votre panier, renseignez votre nom, votre téléphone, votre ville et votre adresse, puis envoyez la commande : elle s'ouvre dans WhatsApp. Nous confirmons le prix de livraison et le créneau, puis nous livrons.",
+    q: "Comment commander mon papier rame en ligne\u00a0?",
+    r: "Ajoutez la ramette ou le carton à votre panier, renseignez votre nom, votre téléphone, votre ville et votre adresse, puis envoyez la commande\u00a0: elle s'ouvre dans WhatsApp. Nous confirmons le prix de livraison et le créneau, puis nous livrons.",
   },
   {
-    q: "Quels moyens de paiement acceptez-vous ?",
-    r: "Vous pouvez payer à la livraison, ou par Mobile Money : Orange Money, MTN MoMo, Moov Money ou Wave. Le mode de paiement est choisi au moment de la commande.",
+    q: "Quels moyens de paiement acceptez-vous\u00a0?",
+    r: "Vous pouvez payer à la livraison, ou par Mobile Money\u00a0: Orange Money, MTN MoMo, Moov Money ou Wave. Le mode de paiement est choisi au moment de la commande.",
   },
   {
-    q: "Pouvez-vous établir une facture ?",
+    q: "Pouvez-vous établir une facture\u00a0?",
     r: "Oui, une facture peut être établie sur demande, notamment pour les entreprises, les écoles, les administrations et les achats en gros. Précisez-le dans votre message WhatsApp ou par e-mail.",
   },
 ];

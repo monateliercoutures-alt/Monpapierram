@@ -1,26 +1,26 @@
 import Titre from "./Titre";
 
-// Guide d'achat : questions que les gens posent avant d'acheter du papier A4
+// Guide d'achat\u00a0: questions que les gens posent avant d'acheter du papier A4
 const SUJETS = [
   {
-    t: "Quel grammage de papier A4 choisir ?",
-    d: "Le papier de 80 g/m² est le standard pour le bureau et l'école : bonne tenue, bon rendu d'impression et prix raisonnable. Un papier plus léger (70 g/m²) convient aux brouillons, un papier plus épais (90 g/m² et plus) aux documents de présentation.",
+    t: "Quel grammage de papier A4 choisir\u00a0?",
+    d: "Le papier de 80 g/m² est le standard pour le bureau et l'école\u00a0: bonne tenue, bon rendu d'impression et prix raisonnable. Un papier plus léger (70 g/m²) convient aux brouillons, un papier plus épais (90 g/m² et plus) aux documents de présentation.",
   },
   {
-    t: "Ramette ou carton : que choisir ?",
+    t: "Ramette ou carton\u00a0: que choisir\u00a0?",
     d: "Une ramette de 500 feuilles suffit pour un usage personnel ou un petit bureau. Dès que vous imprimez régulièrement, le carton de 5 ramettes (2 500 feuilles) revient moins cher à la ramette. Pour les écoles, imprimeries et revendeurs, le tarif gros s'applique à partir de 10 cartons.",
   },
   {
-    t: "Papier pour imprimante laser ou jet d'encre ?",
+    t: "Papier pour imprimante laser ou jet d'encre\u00a0?",
     d: "Le papier A4 Double A 80 g convient aux deux types d'imprimantes, ainsi qu'aux photocopieurs. Son épaisseur limite la transparence en impression recto verso.",
   },
   {
-    t: "Comment éviter les bourrages papier ?",
+    t: "Comment éviter les bourrages papier\u00a0?",
     d: "Utilisez un papier de qualité régulière, aérez la ramette avant de la mettre dans le bac et ne dépassez pas la capacité de l'imprimante. Gardez les ramettes dans leur emballage, à plat, loin de l'humidité.",
   },
   {
-    t: "Comment bien conserver ses ramettes ?",
-    d: "Rangez-les à plat, au sec et à l'abri de la chaleur. Chaque ramette Double A est emballée individuellement : ne la déballez qu'au moment de l'utiliser pour garder le papier lisse et sec.",
+    t: "Comment bien conserver ses ramettes\u00a0?",
+    d: "Rangez-les à plat, au sec et à l'abri de la chaleur. Chaque ramette Double A est emballée individuellement\u00a0: ne la déballez qu'au moment de l'utiliser pour garder le papier lisse et sec.",
   },
 ];
 

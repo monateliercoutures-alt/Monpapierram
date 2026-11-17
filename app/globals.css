@@ -44,6 +44,15 @@
     letter-spacing: -0.015em;
     text-wrap: balance; /* évite les mots orphelins en fin de titre */
   }
+  /* Texte justifié sur tout le site (paragraphes, listes, réponses de la FAQ).
+     Les classes Tailwind comme text-center ou text-left restent prioritaires
+     pour les boutons, titres et éléments qui doivent rester alignés autrement. */
+  p,
+  dd,
+  [role="region"],
+  li:not(:has(h1, h2, h3, h4)) {
+    text-align: justify;
+  }
   /* Focus clavier toujours visible */
   :focus-visible {
     outline: 3px solid #1fa3e8;

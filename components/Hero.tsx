@@ -11,7 +11,7 @@ export default function Hero() {
         {/* Image : seule la zone vide à gauche peut être rognée (object-right), jamais les produits */}
         <div className="hero-image relative order-2 h-[340px] w-full sm:aspect-[16/9] sm:h-auto xl:absolute xl:inset-0 xl:aspect-auto">
           <Image
-            src="/images/hero.jpg"
+            src="/images/hero-2.jpg"
             alt="Ramette Double A Premium debout devant des feuilles A4 blanches, avec d'autres cartons et ramettes de papier A4 80 g sur une surface blanche brillante"
             fill
             priority

@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="hero-image relative order-2 h-[340px] w-full sm:aspect-[16/9] sm:h-auto xl:absolute xl:inset-0 xl:aspect-auto">
           <Image
             src="/images/hero.jpg"
-            alt="Ramette de papier A4 Double A Premium 80 g debout devant des feuilles A4 blanches, sur une surface blanche brillante"
+            alt="Ramette Double A Premium debout devant des feuilles A4 blanches, avec d'autres cartons et ramettes de papier A4 80 g sur une surface blanche brillante"
             fill
             priority
             sizes="100vw"

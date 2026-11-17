@@ -17,6 +17,8 @@ const donneesStructurees = {
     {
       "@type": "Store",
       name: SITE.nom,
+      alternateName: ["Monpapierram", "Mon papier rame"],
+      description: "Boutique de papier rame A4 Double A en Côte d'Ivoire, livraison à Abidjan et dans tout le pays.",
       url: SITE.url,
       email: SITE.email,
       telephone: SITE.whatsappAffiche,

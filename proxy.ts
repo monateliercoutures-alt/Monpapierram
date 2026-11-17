@@ -7,17 +7,18 @@ import type { NextRequest } from "next/server";
  * de copie) et les sites qui donnent des informations sur un autre site à partir de son
  * lien (analyseurs SEO, de trafic, de technologies, tests de vitesse, archivage).
  *
- * Restent autorisés : les navigateurs, les moteurs de recherche (Google, Bing…) et les
- * aperçus de lien des messageries (WhatsApp, Facebook, Telegram…) pour que les liens
+ * Restent autorisés : les navigateurs, les moteurs de recherche (Google, Bing…), les
+ * assistants IA (ChatGPT, Claude, Perplexity, Gemini…) et les aperçus de lien des messageries (WhatsApp, Facebook, Telegram…) pour que les liens
  * partagés s'affichent bien.
  *
  * Limite : ce filtre repose sur l'identifiant (User-Agent) envoyé par le robot. Un outil
  * qui se fait passer pour un navigateur n'est pas détecté.
  */
 
-// Moteurs de recherche et aperçus de lien : toujours autorisés
+// Moteurs de recherche, assistants IA (ChatGPT, Claude, Perplexity, Gemini…) et aperçus
+// de lien : toujours autorisés
 const AUTORISES =
-  /googlebot|google-inspectiontool|adsbot-google|bingbot|bingpreview|duckduckbot|yandex|baiduspider|applebot|facebookexternalhit|facebot|whatsapp|telegrambot|twitterbot|linkedinbot|slackbot|discordbot|pinterest/i;
+  /gptbot|chatgpt-user|oai-searchbot|claudebot|claude-web|claude-user|claude-searchbot|anthropic-ai|perplexitybot|perplexity-user|google-extended|googleother|meta-externalagent|meta-externalfetcher|amazonbot|cohere-ai|ccbot|mistralai-user|duckassistbot|youbot|googlebot|google-inspectiontool|adsbot-google|bingbot|bingpreview|duckduckbot|yandex|baiduspider|applebot|facebookexternalhit|facebot|whatsapp|telegrambot|twitterbot|linkedinbot|slackbot|discordbot|pinterest/i;
 
 // Outils automatiques et robots de copie : refusés
 const BLOQUES = new RegExp(
@@ -54,5 +55,5 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   // Pages seulement : on exclut les fichiers statiques, robots.txt, sitemap et les icônes
-  matcher: ["/((?!_next/|images/|robots.txt|sitemap.xml|icon.png|.*\\.(?:png|jpg|jpeg|svg|webp|ico|css|js|woff2?)$).*)"],
+  matcher: ["/((?!_next/|images/|robots.txt|sitemap.xml|llms.txt|icon.png|.*\\.(?:png|jpg|jpeg|svg|webp|ico|css|js|woff2?)$).*)"],
 };

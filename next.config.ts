@@ -1,0 +1,15 @@
+import type { NextConfig } from "next";
+
+// Configuration Next.js (compatible Vercel et Netlify)
+const nextConfig: NextConfig = {
+  turbopack: {
+    rules: {
+      "*.css": {
+        loaders: ["@tailwindcss/turbopack"],
+        as: "*.css",
+      },
+    },
+  },
+};
+
+export default nextConfig;

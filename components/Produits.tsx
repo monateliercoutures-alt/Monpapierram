@@ -14,7 +14,7 @@ export default function Produits() {
         <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {PRODUITS.map((p) => (
             <li key={p.id} className="flex flex-col overflow-hidden rounded-carte border border-profond/15 bg-white">
-              <Link href={`/produits/${p.id}`} className="relative block aspect-[4/3] w-full bg-white" aria-label={`Voir le produit : ${p.nom}`}>
+              <Link href={`/produits/${p.slug}`} className="relative block aspect-[4/3] w-full bg-white" aria-label={`Voir le produit : ${p.nom}`}>
                 <Image
                   src={p.image}
                   alt={p.alt}
@@ -30,7 +30,7 @@ export default function Produits() {
 
               <div className="flex flex-1 flex-col border-t border-profond/10 p-5">
                 <h3 className="text-base font-bold text-nuit">
-                  <Link href={`/produits/${p.id}`} className="hover:underline">
+                  <Link href={`/produits/${p.slug}`} className="hover:underline">
                     {p.nom}
                   </Link>
                 </h3>
@@ -53,7 +53,7 @@ export default function Produits() {
 
                 <p className="mt-4 flex items-center justify-between text-xs">
                   <span className="font-semibold text-[#0b7a4b]">En stock</span>
-                  <Link href={`/produits/${p.id}`} className="inline-flex min-h-8 items-center font-semibold text-profond underline">
+                  <Link href={`/produits/${p.slug}`} className="inline-flex min-h-8 items-center font-semibold text-profond underline">
                     Voir le détail
                   </Link>
                 </p>

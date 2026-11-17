@@ -22,17 +22,22 @@ const texte = Inter({
 
 const TITRE = "Monpapierram | Vente de ramettes de papier Double A à Abidjan";
 const DESCRIPTION =
-  "Ramettes de papier A4 Double A Premium 80 g/m² (500 feuilles) et cartons de 5 ramettes, livrés à Abidjan. Paiement à la livraison, Orange Money, MTN MoMo et Wave. Commande sur WhatsApp.";
+  "Ramette papier A4 80g Double A Premium (500 feuilles), carton de 5 ramettes et papier A4 en gros, livrés à Abidjan. Paiement à la livraison, Orange Money, MTN MoMo et Wave. Commande sur WhatsApp.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: TITRE,
   description: DESCRIPTION,
   keywords: [
-    "ramette papier A4 Abidjan",
-    "papier Double A Côte d'Ivoire",
+    "ramette papier A4",
+    "papier A4 80g",
+    "papier A4 Abidjan",
+    "rame de papier A4",
     "carton papier A4",
-    "papier 80g",
+    "papier A4 en gros",
+    "papier d'impression A4",
+    "papier photocopie A4",
+    "Double A Côte d'Ivoire",
     "fournitures de bureau Abidjan",
   ],
   alternates: { canonical: "/" },

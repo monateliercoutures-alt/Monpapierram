@@ -9,30 +9,30 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ProduitGalerie from "@/components/ProduitGalerie";
 import AjouterAuPanier from "@/components/AjouterAuPanier";
 import { IconeWhatsApp } from "@/components/Icones";
-import { PRODUITS, SITE, formatPrix, lienWhatsApp, trouverProduit } from "@/lib/config";
+import { PRODUITS, SITE, formatPrix, lienWhatsApp, trouverParSlug } from "@/lib/config";
 
 // Une page est générée à la compilation pour chaque produit de lib/config.ts
 export function generateStaticParams() {
-  return PRODUITS.map((p) => ({ slug: p.id }));
+  return PRODUITS.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const p = trouverProduit(slug);
+  const p = trouverParSlug(slug);
   if (!p) return {};
-  const titre = `${p.nom} | ${SITE.nom}`;
-  const description = `${p.nom} : ${p.specs}. ${formatPrix(p.prix)} ${p.unite}. Livraison à Abidjan, paiement à la livraison ou Mobile Money.`;
+  const titre = `${p.nom} à Abidjan, ${formatPrix(p.prix)} | ${SITE.nom}`;
+  const description = `${p.nom} : ${p.specs}. ${formatPrix(p.prix)} ${p.unite}. Achat en ligne et livraison à Abidjan (Côte d'Ivoire), paiement à la livraison ou Mobile Money.`;
   return {
     title: titre,
     description,
-    alternates: { canonical: `/produits/${p.id}` },
-    openGraph: { title: titre, description, url: `/produits/${p.id}`, images: [{ url: p.image, alt: p.alt }] },
+    alternates: { canonical: `/produits/${p.slug}` },
+    openGraph: { title: titre, description, url: `/produits/${p.slug}`, images: [{ url: p.image, alt: p.alt }] },
   };
 }
 
 export default async function PageProduit({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const p = trouverProduit(slug);
+  const p = trouverParSlug(slug);
   if (!p) notFound();
 
   const autres = PRODUITS.filter((x) => x.id !== p.id);
@@ -48,7 +48,7 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
     image: p.galerie.map((g) => `${SITE.url}${g.src}`),
     offers: {
       "@type": "Offer",
-      url: `${SITE.url}/produits/${p.id}`,
+      url: `${SITE.url}/produits/${p.slug}`,
       priceCurrency: "XOF",
       price: p.prix,
       availability: "https://schema.org/InStock",
@@ -156,7 +156,7 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
             <ul className="mt-5 grid gap-5 sm:grid-cols-2">
               {autres.map((a) => (
                 <li key={a.id}>
-                  <Link href={`/produits/${a.id}`} className="flex items-center gap-4 rounded-carte border border-profond/15 p-4 hover:border-profond">
+                  <Link href={`/produits/${a.slug}`} className="flex items-center gap-4 rounded-carte border border-profond/15 p-4 hover:border-profond">
                     <span className="relative h-24 w-28 shrink-0 overflow-hidden rounded-bouton bg-white">
                       <Image src={a.image} alt={a.alt} fill sizes="112px" className="object-contain" />
                     </span>

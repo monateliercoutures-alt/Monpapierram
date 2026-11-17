@@ -31,3 +31,11 @@
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Hauteur du hero sur grand écran : suit le format 16:9 de l'image sans dépasser l'écran
+   (7 rem = bandeau d'infos + en-tête) */
+@media (min-width: 1280px) {
+  .hero-cadre {
+    height: clamp(560px, 56.25vw, calc(100svh - 7rem));
+  }
+}

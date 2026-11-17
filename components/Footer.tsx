@@ -71,10 +71,10 @@ export default function Footer() {
             {MOYENS_MOBILE.map((m) => (
               <li
                 key={m.nom}
-                className="flex h-11 min-w-28 items-center justify-center rounded-bouton px-4 text-sm font-bold"
-                style={m.logo ? { background: "#ffffff" } : { background: m.fond, color: m.texte }}
+                className="flex h-12 items-center justify-center rounded-bouton border border-white/30 px-3"
+                style={{ background: m.fond }}
               >
-                {m.logo ? <Image src={m.logo} alt={m.nom} width={96} height={32} className="h-7 w-auto" /> : m.nom}
+                <Image src={m.logo} alt={m.nom} width={m.l} height={m.h} className="h-8 w-auto" />
               </li>
             ))}
           </ul>

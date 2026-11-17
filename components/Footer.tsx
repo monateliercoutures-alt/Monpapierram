@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-nuit px-4 pb-24 pt-14 sm:pb-10 sm:pt-16 text-white sm:px-6">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_0.9fr_1.4fr_1fr]">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_1.1fr_1.3fr_1.1fr]">
           <div>
             <Image src="/images/logo-blanc.png" alt={SITE.nom} width={895} height={268} className="h-14 w-auto" />
             <p className="mt-3 max-w-xs text-sm text-white/75">
@@ -22,7 +22,7 @@ export default function Footer() {
                 ["/#produits", "Nos produits"],
                 ["/#avantages", "Pourquoi Double A"],
                 ["/#a-propos", "À propos et livraison"],
-                ["/#guide", "Guide d'achat du papier A4"],
+                ["/#guide", "Guide d'achat"],
                 ["/#faq", "Questions fréquentes"],
               ].map(([href, label]) => (
                 <li key={href}>
@@ -42,7 +42,7 @@ export default function Footer() {
                   href={lienWhatsApp(MESSAGE_GENERAL)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-11 items-center gap-2 font-semibold hover:underline"
+                  className="inline-flex min-h-11 items-center gap-2 whitespace-nowrap font-semibold hover:underline"
                 >
                   <IconeWhatsApp className="h-5 w-5" />
                   WhatsApp : {SITE.whatsappAffiche}
@@ -82,9 +82,12 @@ export default function Footer() {
           </ul>
         </div>
 
-        <p className="mt-8 border-t border-white/15 pt-6 text-xs text-white/65">
-          © 2025 Monpapierrame. Tous droits réservés.
-        </p>
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-white/15 pt-6 text-xs text-white/65">
+          <p>© 2025 Monpapierrame. Tous droits réservés.</p>
+          <a href="#" className="inline-flex min-h-11 items-center gap-1 font-semibold text-white/85 hover:underline">
+            Retour en haut <span aria-hidden="true">↑</span>
+          </a>
+        </div>
       </div>
     </footer>
   );

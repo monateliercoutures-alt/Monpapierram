@@ -36,7 +36,7 @@ export default function Header() {
         Aller au contenu
       </a>
 
-      <div className="mx-auto flex h-20 sm:h-24 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:h-24 sm:px-6 xl:max-w-none xl:px-[max(1.5rem,6vw)]">
         <Link href="/" aria-label={`${SITE.nom} - accueil`} className="shrink-0">
           <Image src="/images/logo.png" alt={SITE.nom} width={895} height={268} priority className="h-[3.6rem] w-auto sm:h-[4.2rem]" />
         </Link>
@@ -63,7 +63,9 @@ export default function Header() {
               <circle cx="17" cy="19.5" r="1.3" />
             </svg>
             <span className="hidden sm:inline">Panier</span>
-            <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-white px-1 text-xs font-bold text-profond">{nombre}</span>
+            {nombre > 0 && (
+              <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-white px-1 text-xs font-bold text-profond">{nombre}</span>
+            )}
           </button>
 
           {/* Menu hamburger (mobile et tablette) */}

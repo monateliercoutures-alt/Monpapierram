@@ -138,7 +138,7 @@ function Legende({
 
 /**
  * Montage « vidéo » piloté par le défilement :
- * section de 400vh avec un conteneur sticky de 100vh.
+ * section de 300vh avec un conteneur sticky de 100vh.
  * Avec prefers-reduced-motion, les 4 images s'empilent sans animation.
  */
 export default function ScrollMontage() {
@@ -173,7 +173,7 @@ export default function ScrollMontage() {
       id="montage"
       ref={section}
       aria-label="Présentation du produit en 4 étapes"
-      className="relative h-[400vh] bg-white motion-reduce:h-auto"
+      className="relative h-[300vh] bg-white motion-reduce:h-auto"
     >
       {/* Version animée (masquée si mouvement réduit) */}
       <div className="sticky top-0 flex h-screen flex-col overflow-hidden bg-white motion-reduce:hidden">

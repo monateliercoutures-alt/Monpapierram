@@ -55,5 +55,5 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   // Pages seulement : on exclut les fichiers statiques, robots.txt, sitemap et les icônes
-  matcher: ["/((?!_next/|images/|robots.txt|sitemap.xml|llms.txt|icon.png|.*\\.(?:png|jpg|jpeg|svg|webp|ico|css|js|woff2?)$).*)"],
+  matcher: ["/((?!_next/|images/|robots.txt|sitemap.xml|llms.txt|icon.png|manifest.webmanifest|.*\\.(?:png|jpg|jpeg|svg|webp|ico|css|js|woff2?)$).*)"],
 };

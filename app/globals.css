@@ -27,6 +27,7 @@
 /* Styles de base : fond blanc, texte bleu encre, polices via next/font */
 @layer base {
   html {
+    color-scheme: light;
     scroll-behavior: smooth;
     scroll-padding-top: 7rem; /* compense l'en-tête collant pour les ancres */
   }

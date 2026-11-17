@@ -12,7 +12,7 @@ const SUJETS = [
   },
   {
     t: "Papier pour imprimante laser ou jet d'encre\u00a0?",
-    d: "Le papier A4 Double A 80 g convient aux deux types d'imprimantes, ainsi qu'aux photocopieurs. Son épaisseur limite la transparence en impression recto verso.",
+    d: "Le papier A4 Double A 80 g convient aux deux types d'imprimantes, ainsi qu'aux photocopieurs. Son épaisseur limite la transparence en impression recto verso.",
   },
   {
     t: "Comment éviter les bourrages papier\u00a0?",
@@ -20,7 +20,7 @@ const SUJETS = [
   },
   {
     t: "Comment bien conserver ses ramettes\u00a0?",
-    d: "Rangez-les à plat, au sec et à l'abri de la chaleur. Chaque ramette Double A est emballée individuellement\u00a0: ne la déballez qu'au moment de l'utiliser pour garder le papier lisse et sec.",
+    d: "Rangez-les à plat, au sec et à l'abri de la chaleur. Chaque ramette Double A est emballée individuellement\u00a0: ne la déballez qu'au moment de l'utiliser pour garder le papier lisse et sec.",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function Guide() {
           {SUJETS.map((s) => (
             <article key={s.t} className="rounded-carte border border-profond/15 bg-white p-6">
               <h3 className="text-base font-bold text-nuit">{s.t}</h3>
-              <p className="mt-2 text-sm text-encre/85">{s.d}</p>
+              <p className="justifie mt-2 text-sm text-encre/85">{s.d}</p>
             </article>
           ))}
         </div>

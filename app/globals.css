@@ -44,14 +44,9 @@
     letter-spacing: -0.015em;
     text-wrap: balance; /* évite les mots orphelins en fin de titre */
   }
-  /* Texte justifié sur tout le site (paragraphes, listes, réponses de la FAQ).
-     Les classes Tailwind comme text-center ou text-left restent prioritaires
-     pour les boutons, titres et éléments qui doivent rester alignés autrement. */
-  p,
-  dd,
-  [role="region"],
-  li:not(:has(h1, h2, h3, h4)) {
-    text-align: justify;
+  /* Évite les lignes orphelines dans les paragraphes */
+  p {
+    text-wrap: pretty;
   }
   /* Focus clavier toujours visible */
   :focus-visible {
@@ -82,4 +77,11 @@
     mask-image: linear-gradient(to bottom, transparent 0%, #000 32%);
     margin-top: -2.5rem;
   }
+}
+
+/* Texte justifié : réservé aux longs paragraphes. Sur des textes courts (2 ou 3 lignes),
+   la justification étire les espaces entre les mots, donc on ne l'applique pas. */
+.justifie {
+  text-align: justify;
+  text-justify: inter-word;
 }

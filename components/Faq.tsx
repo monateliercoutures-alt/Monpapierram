@@ -47,7 +47,7 @@ export default function Faq() {
                   role="region"
                   aria-labelledby={`faq-btn-${i}`}
                   hidden={!estOuvert}
-                  className="px-5 pb-5 text-sm text-encre/80 sm:text-base"
+                  className="justifie px-5 pb-5 text-sm text-encre/80 sm:text-base"
                 >
                   {item.r}
                 </div>

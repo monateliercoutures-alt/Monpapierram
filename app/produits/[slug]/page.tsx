@@ -144,7 +144,7 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
           <div className="mt-14 grid gap-10 border-t border-profond/10 pt-10 lg:grid-cols-2 lg:gap-14">
             <section aria-labelledby="titre-description">
               <h2 id="titre-description" className="text-xl font-bold text-nuit">Description</h2>
-              <div className="mt-3 space-y-3 text-encre/85">
+              <div className="justifie mt-3 space-y-3 text-encre/85">
                 {p.description.map((t) => (
                   <p key={t}>{t}</p>
                 ))}

@@ -4,6 +4,7 @@ import ScrollMontage from "@/components/ScrollMontage";
 import Avantages from "@/components/Avantages";
 import Produits from "@/components/Produits";
 import Livraison from "@/components/Livraison";
+import Devis from "@/components/Devis";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -51,6 +52,7 @@ export default function Page() {
         <Avantages />
         <Produits />
         <Livraison />
+        <Devis />
         <Faq />
       </main>
       <Footer />

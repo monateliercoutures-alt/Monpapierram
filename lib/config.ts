@@ -30,6 +30,8 @@ export type Produit = {
   prix: number; // en FCFA (valeurs d'exemple)
   unite: string;
   populaire?: boolean;
+  image: string;
+  alt: string;
   points: string[];
   message: string; // message WhatsApp pré-rempli
 };
@@ -43,6 +45,8 @@ export const PRODUITS: Produit[] = [
     nom: "Ramette A4 80 g",
     description: "Double A Premium, 500 feuilles",
     detail: "Idéale pour la maison, l'école ou un petit bureau.",
+    image: "/images/etape-3.jpg",
+    alt: "Ramette Double A Premium ouverte avec des feuilles A4 blanches",
     prix: 3500,
     unite: "la ramette",
     points: ["500 feuilles A4", "80 g/m²", "Recto verso sans bourrage"],
@@ -54,6 +58,8 @@ export const PRODUITS: Produit[] = [
     nom: "Carton de 5 ramettes",
     description: "Double A Premium, 2 500 feuilles",
     detail: "Le meilleur rapport qualité-prix pour les bureaux et commerces.",
+    image: "/images/etape-1.jpg",
+    alt: "Carton fermé de 5 ramettes Double A",
     prix: 16500,
     unite: "le carton",
     populaire: true,
@@ -66,6 +72,8 @@ export const PRODUITS: Produit[] = [
     nom: `Achat en gros dès ${SEUIL_GROS} cartons`,
     description: "Tarif dégressif pour professionnels",
     detail: "Écoles, administrations, imprimeries, revendeurs.",
+    image: "/images/etape-4.jpg",
+    alt: "Ramette Double A Premium couchée devant un carton ouvert",
     prix: 15500,
     unite: "le carton, dès " + SEUIL_GROS + " cartons",
     points: ["Prix dégressif", "Facture sur demande", "Livraison planifiée"],

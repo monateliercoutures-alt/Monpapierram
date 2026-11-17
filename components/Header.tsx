@@ -15,6 +15,15 @@ const LIENS = [
 // En-tête fixe avec menu hamburger sur mobile
 export default function Header() {
   const [ouvert, setOuvert] = useState(false);
+  const [defile, setDefile] = useState(false);
+
+  // Ombre légère et bordure renforcée dès que la page défile
+  useEffect(() => {
+    const onScroll = () => setDefile(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Fermer le menu avec la touche Échap
   useEffect(() => {
@@ -27,7 +36,9 @@ export default function Header() {
   const lienCommande = lienWhatsApp(MESSAGE_GENERAL);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-profond/10 bg-white/90 backdrop-blur">
+    <header className={`fixed inset-x-0 top-0 z-50 border-b backdrop-blur-md transition-all duration-300 motion-reduce:transition-none ${
+        defile || ouvert ? "border-profond/15 bg-white/95 shadow-[0_1px_12px_rgba(11,27,77,0.06)]" : "border-transparent bg-white/70"
+      }`}>
       <a
         href="#contenu"
         className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:rounded-bouton focus:bg-profond focus:px-4 focus:py-2 focus:text-white"
@@ -35,7 +46,11 @@ export default function Header() {
         Aller au contenu
       </a>
 
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+      <div
+        className={`mx-auto flex max-w-6xl items-center justify-between px-4 transition-all duration-300 motion-reduce:transition-none sm:px-6 ${
+          defile ? "h-14" : "h-16"
+        }`}
+      >
         {/* Logo texte */}
         <a href="#" className="font-titre text-xl font-bold tracking-tight text-profond" aria-label={`${SITE.nom} - accueil`}>
           Mon<span className="text-cyan">papier</span>ram

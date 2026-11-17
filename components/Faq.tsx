@@ -2,20 +2,18 @@
 
 import { useState } from "react";
 import { FAQ } from "@/lib/config";
+import Titre from "./Titre";
 
 // Accordéon accessible : boutons avec aria-expanded / aria-controls
 export default function Faq() {
   const [ouvert, setOuvert] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-white px-4 py-20 sm:px-6 sm:py-28">
+    <section id="faq" className="bg-white px-4 py-24 sm:px-6 sm:py-32">
       <div className="mx-auto max-w-3xl">
-        <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-profond">FAQ</p>
-          <h2 className="mt-3 text-3xl font-bold text-nuit sm:text-4xl">Questions fréquentes</h2>
-        </div>
+        <Titre etiquette="FAQ" titre="Questions fréquentes" />
 
-        <div className="mt-12 divide-y divide-profond/10 rounded-carte border border-profond/15">
+        <div className="mt-14 divide-y divide-profond/10 rounded-carte border border-profond/15">
           {FAQ.map((item, i) => {
             const estOuvert = ouvert === i;
             return (

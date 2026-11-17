@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Titre from "./Titre";
 
 // Icônes SVG sobres (trait fin, couleur bleu profond)
 const trait = {
@@ -64,21 +65,22 @@ const AVANTAGES: { titre: string; texte: string; icone: ReactNode }[] = [
 // Quatre blocs sobres présentant les atouts du produit et du service
 export default function Avantages() {
   return (
-    <section id="avantages" className="bg-brume px-4 py-20 sm:px-6 sm:py-28">
+    <section id="avantages" className="bg-brume px-4 py-24 sm:px-6 sm:py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-profond">Pourquoi Double A</p>
-          <h2 className="mt-3 text-3xl font-bold text-nuit sm:text-4xl">Un papier fiable, du premier au dernier feuillet</h2>
-        </div>
+        <Titre etiquette="Pourquoi Double A" titre="Un papier fiable, du premier au dernier feuillet" />
 
-        <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {AVANTAGES.map((a) => (
-            <li key={a.titre} className="rounded-carte border border-profond/10 bg-white p-6">
-              <span className="flex h-12 w-12 items-center justify-center rounded-bouton bg-brume text-profond">
+        <ul className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {AVANTAGES.map((a, i) => (
+            <li
+              key={a.titre}
+              className="reveal group relative rounded-carte border border-profond/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-profond/30 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+            >
+              <span className="absolute right-6 top-5 font-titre text-sm font-bold text-profond/20">0{i + 1}</span>
+              <span className="flex h-12 w-12 items-center justify-center rounded-bouton bg-profond text-white transition-colors group-hover:bg-nuit">
                 {a.icone}
               </span>
-              <h3 className="mt-5 text-lg font-semibold text-nuit">{a.titre}</h3>
-              <p className="mt-2 text-sm text-encre/75">{a.texte}</p>
+              <h3 className="mt-6 text-lg font-semibold text-nuit">{a.titre}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-encre/70">{a.texte}</p>
             </li>
           ))}
         </ul>

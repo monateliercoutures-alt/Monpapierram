@@ -1,4 +1,5 @@
 import { MODES_PAIEMENT, SITE } from "@/lib/config";
+import Titre from "./Titre";
 
 const ETAPES = [
   { n: "1", t: "Vous commandez", d: "Envoyez votre besoin sur WhatsApp : produit, quantité, adresse." },
@@ -9,16 +10,13 @@ const ETAPES = [
 // Livraison à Abidjan + modes de paiement
 export default function Livraison() {
   return (
-    <section id="livraison" className="bg-brume px-4 py-20 sm:px-6 sm:py-28">
+    <section id="livraison" className="bg-brume px-4 py-24 sm:px-6 sm:py-32">
       <div className="mx-auto max-w-6xl">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-profond">Livraison et paiement</p>
-          <h2 className="mt-3 text-3xl font-bold text-nuit sm:text-4xl">Simple, rapide, sans mauvaise surprise</h2>
-        </div>
+        <Titre etiquette="Livraison et paiement" titre="Simple, rapide, sans mauvaise surprise" />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
+        <div className="mt-16 grid gap-6 lg:grid-cols-2">
           {/* Livraison */}
-          <div className="rounded-carte border border-profond/10 bg-white p-7">
+          <div className="reveal rounded-carte border border-profond/10 bg-white p-8">
             <h3 className="text-xl font-bold text-nuit">Livraison à Abidjan</h3>
             <p className="mt-2 text-sm text-encre/75">{SITE.zone}</p>
             <ol className="mt-6 space-y-5">
@@ -37,7 +35,7 @@ export default function Livraison() {
           </div>
 
           {/* Paiement */}
-          <div className="rounded-carte border border-profond/10 bg-white p-7">
+          <div className="reveal rounded-carte border border-profond/10 bg-white p-8">
             <h3 className="text-xl font-bold text-nuit">Paiement à votre convenance</h3>
             <p className="mt-2 text-sm text-encre/75">
               Payez en espèces à la réception de votre commande, ou par Mobile Money.

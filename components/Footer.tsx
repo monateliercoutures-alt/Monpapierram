@@ -66,17 +66,17 @@ export default function Footer() {
         {/* Moyens de paiement */}
         <div className="mt-12 border-t border-white/15 pt-6">
           <h2 className="font-sans text-sm font-semibold text-cyan">Moyens de paiement</h2>
-          <ul className="mt-3 flex flex-wrap items-center gap-3">
-            <li className="flex h-11 items-center rounded-bouton border border-white/30 px-4 text-sm font-semibold">
+          <ul className="mt-3 grid grid-cols-4 gap-2 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
+            <li className="col-span-4 flex h-12 items-center justify-center rounded-bouton border border-white/30 px-4 text-sm font-semibold sm:justify-start">
               Paiement à la livraison
             </li>
             {MOYENS_MOBILE.map((m) => (
               <li
                 key={m.nom}
-                className="flex h-12 items-center justify-center rounded-bouton border border-white/30 px-3"
+                className="flex h-12 items-center justify-center rounded-bouton border border-white/30 px-2 sm:px-3"
                 style={{ background: m.fond }}
               >
-                <Image src={m.logo} alt={m.nom} width={m.l} height={m.h} className="h-8 w-auto" />
+                <Image src={m.logo} alt={m.nom} width={m.l} height={m.h} className="h-7 w-auto max-w-full sm:h-8" />
               </li>
             ))}
           </ul>

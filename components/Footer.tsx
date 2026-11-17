@@ -19,9 +19,9 @@ export default function Footer() {
             <h2 className="font-sans text-sm font-semibold text-cyan">La boutique</h2>
             <ul className="mt-4 space-y-1 text-sm">
               {[
-                ["#produits", "Nos produits"],
-                ["#avantages", "Pourquoi Double A"],
-                ["#faq", "Questions fréquentes"],
+                ["/#produits", "Nos produits"],
+                ["/#avantages", "Pourquoi Double A"],
+                ["/#faq", "Questions fréquentes"],
               ].map(([href, label]) => (
                 <li key={href}>
                   <a href={href} className="inline-flex min-h-11 items-center text-white/85 hover:underline">

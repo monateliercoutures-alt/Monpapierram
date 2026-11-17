@@ -35,6 +35,10 @@ export type Produit = {
   image: string;
   alt: string;
   points: string[];
+  /** Page produit : photos, texte et fiche technique */
+  galerie: { src: string; alt: string }[];
+  description: string[];
+  fiche: [string, string][];
 };
 
 /** Nombre de cartons à partir duquel le tarif gros s'applique */
@@ -52,6 +56,22 @@ export const PRODUITS: Produit[] = [
     image: "/images/etape-3.jpg",
     alt: "Ramette Double A Premium ouverte avec des feuilles A4 blanches",
     points: ["Format A4", "Recto verso sans bourrage", "Laser et jet d'encre"],
+    galerie: [
+      { src: "/images/etape-3.jpg", alt: "Ramette Double A Premium ouverte avec des feuilles A4 blanches posées à côté" },
+      { src: "/images/etape-2.jpg", alt: "Ramette Double A Premium sortant d'un carton ouvert" },
+      { src: "/images/etape-4.jpg", alt: "Ramette Double A Premium couchée et ouverte devant un carton" },
+    ],
+    description: [
+      "La ramette A4 Double A Premium est le papier de bureau le plus pratique pour imprimer et photocopier au quotidien : documents, devoirs, factures, courriers.",
+      "Son grammage de 80 g/m² convient à l'impression recto verso et passe sans difficulté dans les imprimantes laser, jet d'encre et photocopieurs.",
+    ],
+    fiche: [
+      ["Marque", "Double A Premium"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Contenu", "500 feuilles par ramette"],
+      ["Impression", "Laser, jet d'encre, photocopieur, recto verso"],
+    ],
   },
   {
     id: "carton",
@@ -66,6 +86,22 @@ export const PRODUITS: Produit[] = [
     image: "/images/etape-1.jpg",
     alt: "Carton fermé de 5 ramettes Double A",
     points: ["2 500 feuilles A4", "Carton scellé", "Livraison à Abidjan"],
+    galerie: [
+      { src: "/images/etape-1.jpg", alt: "Carton fermé de 5 ramettes Double A, cerclé d'une sangle blanche" },
+      { src: "/images/etape-2.jpg", alt: "Carton Double A ouvert avec une ramette qui en sort" },
+      { src: "/images/etape-3.jpg", alt: "Ramette Double A Premium ouverte avec des feuilles A4 blanches" },
+    ],
+    description: [
+      "Le carton regroupe 5 ramettes de papier A4 Double A Premium, soit 2 500 feuilles. C'est le format idéal pour un bureau, un commerce, une école ou un cybercafé : moins de réapprovisionnements et un prix plus avantageux à la ramette.",
+      "Chaque ramette est emballée individuellement. Le carton est livré scellé jusqu'à votre adresse à Abidjan.",
+    ],
+    fiche: [
+      ["Marque", "Double A Premium"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Contenu", "5 ramettes de 500 feuilles, soit 2 500 feuilles"],
+      ["Impression", "Laser, jet d'encre, photocopieur, recto verso"],
+    ],
   },
   {
     id: "gros",
@@ -79,6 +115,22 @@ export const PRODUITS: Produit[] = [
     image: "/images/etape-4.jpg",
     alt: "Ramette Double A Premium couchée devant un carton ouvert",
     points: [`Minimum ${SEUIL_GROS} cartons`, "Facture sur demande", "Livraison planifiée"],
+    galerie: [
+      { src: "/images/etape-4.jpg", alt: "Ramette Double A Premium couchée et ouverte devant un carton ouvert" },
+      { src: "/images/etape-1.jpg", alt: "Carton fermé de 5 ramettes Double A" },
+      { src: "/images/etape-2.jpg", alt: "Carton Double A ouvert avec une ramette qui en sort" },
+    ],
+    description: [
+      `Le tarif gros s'applique à partir de ${SEUIL_GROS} cartons de 5 ramettes de papier A4 Double A Premium, soit au minimum ${SEUIL_GROS * 2500} feuilles.`,
+      "Il s'adresse aux écoles, administrations, entreprises, imprimeries et revendeurs. Une facture peut être établie sur demande et la livraison est planifiée avec vous.",
+    ],
+    fiche: [
+      ["Marque", "Double A Premium"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité minimale", `${SEUIL_GROS} cartons`],
+    ],
   },
 ];
 

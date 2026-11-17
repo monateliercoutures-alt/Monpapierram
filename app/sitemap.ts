@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/config";
+import { PRODUITS, SITE } from "@/lib/config";
 
 // Plan du site : une seule page
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -10,5 +10,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
+    ...PRODUITS.map((p) => ({
+      url: `${SITE.url}/produits/${p.id}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
   ];
 }

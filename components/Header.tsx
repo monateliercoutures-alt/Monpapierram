@@ -2,15 +2,16 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { SITE } from "@/lib/config";
 import { usePanier } from "./PanierContext";
 
 // Liens du menu principal
 const LIENS = [
-  { href: "#produits", label: "Produits" },
-  { href: "#avantages", label: "Avantages" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#produits", label: "Produits" },
+  { href: "/#avantages", label: "Avantages" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 // En-tête collant : logo, menu, bouton panier avec compteur
@@ -36,15 +37,15 @@ export default function Header() {
       </a>
 
       <div className="mx-auto flex h-20 sm:h-24 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <a href="#" aria-label={`${SITE.nom} - accueil`} className="shrink-0">
+        <Link href="/" aria-label={`${SITE.nom} - accueil`} className="shrink-0">
           <Image src="/images/logo.png" alt={SITE.nom} width={895} height={268} priority className="h-[3.6rem] w-auto sm:h-[4.2rem]" />
-        </a>
+        </Link>
 
         <nav aria-label="Navigation principale" className="hidden items-center gap-7 lg:flex">
           {LIENS.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-encre/80 hover:text-profond">
+            <Link key={l.href} href={l.href} className="text-sm font-medium text-encre/80 hover:text-profond">
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -85,9 +86,9 @@ export default function Header() {
         <div id="menu-mobile" className="border-t border-profond/10 bg-white lg:hidden">
           <nav aria-label="Navigation mobile" className="mx-auto flex max-w-6xl flex-col px-4 py-2">
             {LIENS.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOuvert(false)} className="flex min-h-12 items-center border-b border-profond/10 text-base font-medium text-encre last:border-0">
+              <Link key={l.href} href={l.href} onClick={() => setOuvert(false)} className="flex min-h-12 items-center border-b border-profond/10 text-base font-medium text-encre last:border-0">
                 {l.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

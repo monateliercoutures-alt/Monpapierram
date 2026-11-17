@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { PRODUITS, formatPrix } from "@/lib/config";
 import AjouterAuPanier from "./AjouterAuPanier";
 import Titre from "./Titre";
@@ -13,7 +14,7 @@ export default function Produits() {
         <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {PRODUITS.map((p) => (
             <li key={p.id} className="flex flex-col overflow-hidden rounded-carte border border-profond/15 bg-white">
-              <div className="relative aspect-[4/3] w-full bg-white">
+              <Link href={`/produits/${p.id}`} className="relative block aspect-[4/3] w-full bg-white" aria-label={`Voir le produit : ${p.nom}`}>
                 <Image
                   src={p.image}
                   alt={p.alt}
@@ -25,10 +26,14 @@ export default function Produits() {
                 {p.badge && (
                   <span className="absolute left-3 top-3 rounded bg-profond px-2 py-1 text-xs font-semibold text-white">{p.badge}</span>
                 )}
-              </div>
+              </Link>
 
               <div className="flex flex-1 flex-col border-t border-profond/10 p-5">
-                <h3 className="text-base font-bold text-nuit">{p.nom}</h3>
+                <h3 className="text-base font-bold text-nuit">
+                  <Link href={`/produits/${p.id}`} className="hover:underline">
+                    {p.nom}
+                  </Link>
+                </h3>
                 <p className="mt-1 text-sm text-encre/70">{p.specs}</p>
 
                 <p className="mt-4 flex items-baseline gap-2">
@@ -46,7 +51,12 @@ export default function Produits() {
                   ))}
                 </ul>
 
-                <p className="mt-4 text-xs font-semibold text-[#0b7a4b]">En stock</p>
+                <p className="mt-4 flex items-center justify-between text-xs">
+                  <span className="font-semibold text-[#0b7a4b]">En stock</span>
+                  <Link href={`/produits/${p.id}`} className="inline-flex min-h-8 items-center font-semibold text-profond underline">
+                    Voir le détail
+                  </Link>
+                </p>
                 <div className="mt-2">
                   <AjouterAuPanier id={p.id} nom={p.nom} minQty={p.minQty} />
                 </div>

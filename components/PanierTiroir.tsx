@@ -125,7 +125,9 @@ export default function PanierTiroir() {
                     type="button"
                     onClick={() => {
                       fermer();
-                      document.getElementById("produits")?.scrollIntoView();
+                      const cible = document.getElementById("produits");
+                      if (cible) cible.scrollIntoView();
+                      else window.location.assign("/#produits");
                     }}
                     className="mt-6 inline-flex min-h-11 items-center rounded-bouton bg-profond px-5 text-sm font-semibold text-white"
                   >

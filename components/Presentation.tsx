@@ -29,7 +29,7 @@ export default function Presentation() {
         <Titre titre={`${SITE.nom}, votre fournisseur de papier rame A4 Double A`} />
 
         <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="space-y-4 text-encre/85">
+          <div className="space-y-4 text-justify text-encre/85">
             <p>
               {SITE.nom} vend du <strong>papier rame A4 Double A Premium 80 g/m²</strong> en Côte d&apos;Ivoire : des
               ramettes de 500 feuilles, des cartons de 5 ramettes (2 500 feuilles) et des cartons en gros pour les
@@ -56,7 +56,7 @@ export default function Presentation() {
             <h3 className="text-lg font-bold text-nuit">Pour qui est ce papier ?</h3>
             <ul className="mt-3 divide-y divide-profond/10 border-y border-profond/10">
               {USAGES.map(([t, d]) => (
-                <li key={t} className="py-3 text-sm text-encre/85">
+                <li key={t} className="py-3 text-justify text-sm text-encre/85">
                   <strong className="text-nuit">{t}</strong> : {d}
                 </li>
               ))}
@@ -65,7 +65,7 @@ export default function Presentation() {
             <h3 className="mt-8 text-lg font-bold text-nuit">Comment commander votre papier A4 ?</h3>
             <ol className="mt-3 space-y-3">
               {ETAPES.map(([t, d], i) => (
-                <li key={t} className="flex gap-3 text-sm text-encre/85">
+                <li key={t} className="flex gap-3 text-justify text-sm text-encre/85">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-profond/30 text-xs font-bold text-profond">
                     {i + 1}
                   </span>

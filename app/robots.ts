@@ -35,6 +35,17 @@ const ROBOTS_BLOQUES = [
   "BLEXBot",
   "DataForSeoBot",
   "PetalBot",
+  // Analyse de sites : technologies, trafic, SEO, archivage
+  "BuiltWith",
+  "Wappalyzer",
+  "SimilarWeb",
+  "rogerbot",
+  "MozBot",
+  "Screaming Frog SEO Spider",
+  "Siteimprove",
+  "Netcraft",
+  "ia_archiver",
+  "archive.org_bot",
 ];
 
 export default function robots(): MetadataRoute.Robots {

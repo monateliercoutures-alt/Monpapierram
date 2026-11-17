@@ -14,26 +14,24 @@ const CHIFFRES = [
 export default function Hero() {
   return (
     <>
-      <section className="relative isolate flex flex-col overflow-hidden bg-white pt-28 lg:min-h-[92svh] lg:justify-center lg:pt-24">
-        {/* Image : en dessous du texte sur mobile, en fond à droite sur ordinateur */}
-        <div
-          className="fondu-gauche relative order-2 mt-10 aspect-[16/9] w-full lg:absolute lg:inset-y-0 lg:right-0 lg:order-none lg:mt-0 lg:flex lg:w-[76%] lg:items-center lg:aspect-auto"
-        >
-          <div className="fondu-bords relative aspect-[16/9] w-full">
+      <section className="relative bg-white pt-16">
+        {/* Cadre : image pleine largeur ; texte à gauche sur grand écran, sous l'image en dessous */}
+        <div className="hero-cadre relative flex flex-col xl:block">
+          {/* Image : on rogne seulement la zone vide à gauche (object-right), jamais les produits */}
+          <div className="relative order-2 aspect-[16/9] w-full xl:absolute xl:inset-0 xl:aspect-auto">
             <Image
               src="/images/hero.jpg"
               alt="Ramette Double A Premium debout devant des feuilles A4 blanches, avec d'autres cartons et ramettes de papier A4 80 g sur une surface blanche brillante"
               fill
               priority
-              sizes="(min-width: 1024px) 76vw, 100vw"
-              className="object-cover"
+              sizes="100vw"
+              className="object-cover xl:object-right"
             />
           </div>
-        </div>
 
-        {/* Texte : au-dessus de l'image sur mobile (ordre inversé), à gauche sur ordinateur */}
-        <div className="relative z-10 order-1 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:order-none">
-          <div className="text-center lg:max-w-[40%] lg:text-left xl:max-w-[42%]">
+          {/* Texte */}
+          <div className="relative z-10 order-1 px-4 pb-10 pt-12 sm:px-6 xl:absolute xl:inset-y-0 xl:left-0 xl:flex xl:items-center xl:p-0 xl:pl-[max(4rem,6vw)]">
+          <div className="mx-auto text-center xl:mx-0 xl:w-[29vw] xl:max-w-[34rem] xl:text-left">
             <p
               className="entree inline-flex items-center gap-2 rounded-full border border-profond/15 bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-profond"
               style={{ "--d": "0.05s" } as React.CSSProperties}
@@ -43,14 +41,14 @@ export default function Hero() {
             </p>
 
             <h1
-              className="entree mt-6 text-[2.25rem] font-bold leading-[1.12] text-nuit sm:text-5xl lg:text-[2.6rem] xl:text-[3.25rem]"
+              className="entree mt-6 text-[2.25rem] font-bold leading-[1.12] text-nuit sm:text-5xl xl:text-[clamp(2rem,2.9vw,3.4rem)]"
               style={{ "--d": "0.15s" } as React.CSSProperties}
             >
               Le papier qui imprime net, livré chez vous à <span className="text-profond">Abidjan</span>
             </h1>
 
             <p
-              className="entree mx-auto mt-5 max-w-xl text-base leading-relaxed text-encre/75 sm:text-lg lg:mx-0"
+              className="entree mx-auto mt-5 max-w-xl text-base leading-relaxed text-encre/75 sm:text-lg xl:mx-0 xl:text-[clamp(0.95rem,1.05vw,1.1rem)]"
               style={{ "--d": "0.3s" } as React.CSSProperties}
             >
               Ramettes de 500 feuilles et cartons de 5 ramettes. Une blancheur uniforme, un grain
@@ -58,7 +56,7 @@ export default function Hero() {
             </p>
 
             <div
-              className="entree mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:flex-col lg:items-start xl:flex-row"
+              className="entree mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center xl:flex-col xl:items-start min-[1700px]:flex-row"
               style={{ "--d": "0.45s" } as React.CSSProperties}
             >
               <a
@@ -79,7 +77,7 @@ export default function Hero() {
             </div>
 
             <ul
-              className="entree mt-7 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-encre/75 lg:justify-start"
+              className="entree mt-7 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-encre/75 xl:justify-start"
               style={{ "--d": "0.6s" } as React.CSSProperties}
             >
               {["Paiement à la livraison", "Orange Money · MTN MoMo · Wave"].map((t) => (
@@ -91,6 +89,7 @@ export default function Hero() {
                 </li>
               ))}
             </ul>
+          </div>
           </div>
         </div>
       </section>

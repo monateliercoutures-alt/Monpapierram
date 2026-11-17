@@ -48,7 +48,7 @@ export default function Header() {
       </a>
 
       <div
-        className={`mx-auto flex max-w-6xl items-center justify-between px-4 transition-all duration-300 motion-reduce:transition-none sm:px-6 ${
+        className={`mx-auto flex max-w-6xl items-center justify-between px-4 xl:max-w-none xl:px-[max(4rem,6vw)] transition-all duration-300 motion-reduce:transition-none sm:px-6 ${
           defile ? "h-14" : "h-16"
         }`}
       >

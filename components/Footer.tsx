@@ -48,11 +48,6 @@ export default function Footer() {
                   WhatsApp : {SITE.whatsappAffiche}
                 </a>
               </li>
-              <li>
-                <a href={`mailto:${SITE.email}`} className="inline-flex min-h-11 items-center hover:underline">
-                  {SITE.email}
-                </a>
-              </li>
               <li className="text-white/75">{SITE.horaires}</li>
             </ul>
           </div>

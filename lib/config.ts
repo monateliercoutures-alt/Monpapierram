@@ -9,7 +9,6 @@ export const SITE = {
   // Numéro WhatsApp au format international, sans « + » ni espaces
   whatsapp: "2250767537998",
   whatsappAffiche: "+225 07 67 53 79 98",
-  email: "contact@monpapierrame.ci",
   zone: "Partout en Côte d'Ivoire : Abidjan, Yamoussoukro, Bouaké, San-Pédro, Daloa, Korhogo et toutes les autres villes",
   horaires: "Lundi – Samedi, 8h – 19h",
 };
@@ -282,7 +281,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Proposez-vous des tarifs pour l'achat en gros\u00a0?",
-    r: `Oui, à partir de ${SEUIL_GROS} cartons, nous appliquons un tarif dégressif pour les écoles, entreprises, imprimeries et revendeurs. Demandez un devis par WhatsApp ou par e-mail.`,
+    r: `Oui, à partir de ${SEUIL_GROS} cartons, nous appliquons un tarif dégressif pour les écoles, entreprises, imprimeries et revendeurs. Demandez un devis sur WhatsApp.`,
   },
   {
     q: "Quelle est la différence entre une ramette et un carton de papier A4\u00a0?",
@@ -306,7 +305,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Pouvez-vous établir une facture\u00a0?",
-    r: "Oui, une facture peut être établie sur demande, notamment pour les entreprises, les écoles, les administrations et les achats en gros. Précisez-le dans votre message WhatsApp ou par e-mail.",
+    r: "Oui, une facture peut être établie sur demande, notamment pour les entreprises, les écoles, les administrations et les achats en gros. Précisez-le dans votre message WhatsApp.",
   },
 ];
 

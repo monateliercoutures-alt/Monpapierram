@@ -22,7 +22,6 @@ const donneesStructurees = {
       alternateName: ["Monpapierram", "Mon papier rame"],
       description: "Boutique de papier rame A4 Double A en Côte d'Ivoire, livraison à Abidjan et dans tout le pays.",
       url: SITE.url,
-      email: SITE.email,
       telephone: SITE.whatsappAffiche,
       areaServed: { "@type": "Country", name: "Côte d'Ivoire" },
       paymentAccepted: "Paiement à la livraison, Orange Money, MTN MoMo, Moov Money, Wave",

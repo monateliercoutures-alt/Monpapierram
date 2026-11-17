@@ -21,6 +21,8 @@ export default function Footer() {
               {[
                 ["/#produits", "Nos produits"],
                 ["/#avantages", "Pourquoi Double A"],
+                ["/#a-propos", "À propos et livraison"],
+                ["/#guide", "Guide d'achat du papier A4"],
                 ["/#faq", "Questions fréquentes"],
               ].map(([href, label]) => (
                 <li key={href}>
@@ -81,7 +83,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-8 border-t border-white/15 pt-6 text-xs text-white/65">
-          © {new Date().getFullYear()} {SITE.nom}. Tous droits réservés.
+          © 2025 Monpapierrame. Tous droits réservés.
         </p>
       </div>
     </footer>

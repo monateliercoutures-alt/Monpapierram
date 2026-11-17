@@ -5,6 +5,8 @@ import Reassurance from "@/components/Reassurance";
 import ScrollMontage from "@/components/ScrollMontage";
 import Avantages from "@/components/Avantages";
 import Produits from "@/components/Produits";
+import Presentation from "@/components/Presentation";
+import Guide from "@/components/Guide";
 import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -22,7 +24,10 @@ const donneesStructurees = {
       url: SITE.url,
       email: SITE.email,
       telephone: SITE.whatsappAffiche,
-      areaServed: "Côte d'Ivoire",
+      areaServed: { "@type": "Country", name: "Côte d'Ivoire" },
+      paymentAccepted: "Paiement à la livraison, Orange Money, MTN MoMo, Moov Money, Wave",
+      currenciesAccepted: "XOF",
+      openingHours: "Mo-Sa 08:00-19:00",
       image: `${SITE.url}/images/etape-1.jpg`,
       priceRange: "FCFA",
       makesOffer: PRODUITS.map((p) => ({
@@ -31,6 +36,12 @@ const donneesStructurees = {
         price: p.prix,
         itemOffered: { "@type": "Product", name: p.nom, brand: "Double A" },
       })),
+    },
+    {
+      "@type": "WebSite",
+      name: SITE.nom,
+      url: SITE.url,
+      inLanguage: "fr",
     },
     {
       "@type": "FAQPage",
@@ -55,6 +66,8 @@ export default function Page() {
         <Produits />
         <ScrollMontage />
         <Avantages />
+        <Presentation />
+        <Guide />
         <Faq />
       </main>
       <Footer />

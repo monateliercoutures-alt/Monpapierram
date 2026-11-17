@@ -44,7 +44,9 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
     "@type": "Product",
     name: p.nom,
     description: p.description.join(" "),
+    sku: p.slug,
     brand: { "@type": "Brand", name: "Double A" },
+    category: "Papier d'impression A4",
     image: p.galerie.map((g) => `${SITE.url}${g.src}`),
     offers: {
       "@type": "Offer",
@@ -52,7 +54,18 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
       priceCurrency: "XOF",
       price: p.prix,
       availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: { "@type": "Organization", name: SITE.nom },
     },
+  };
+  const fil = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Accueil", item: SITE.url },
+      { "@type": "ListItem", position: 2, name: "Produits", item: `${SITE.url}/#produits` },
+      { "@type": "ListItem", position: 3, name: p.nom, item: `${SITE.url}/produits/${p.slug}` },
+    ],
   };
 
   return (
@@ -137,6 +150,17 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
                 ))}
               </div>
             </section>
+            <section aria-labelledby="titre-usages" className="lg:col-span-2">
+              <h2 id="titre-usages" className="text-xl font-bold text-nuit">Pour quels usages ?</h2>
+              <ul className="mt-3 grid gap-x-10 gap-y-2 sm:grid-cols-2">
+                {p.usages.map((u) => (
+                  <li key={u} className="flex gap-2 text-encre/85">
+                    <span className="text-cyan" aria-hidden="true">✓</span>
+                    {u}
+                  </li>
+                ))}
+              </ul>
+            </section>
             <section aria-labelledby="titre-fiche">
               <h2 id="titre-fiche" className="text-xl font-bold text-nuit">Fiche technique</h2>
               <dl className="mt-3 divide-y divide-profond/10 border-y border-profond/10 text-sm">
@@ -176,6 +200,7 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
       <Footer />
       <WhatsAppButton />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(donnees) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fil) }} />
     </>
   );
 }

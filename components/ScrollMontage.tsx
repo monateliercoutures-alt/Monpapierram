@@ -130,7 +130,7 @@ function Legende({
       <p className="mb-2 text-xs font-semibold text-profond">
         Étape {index + 1} / {N}
       </p>
-      <h2 className="text-2xl font-bold text-nuit sm:text-4xl">{etape.titre}</h2>
+      <h3 className="text-2xl font-bold text-nuit sm:text-4xl">{etape.titre}</h3>
       <p className="mt-2 max-w-xl text-sm text-encre/75 sm:text-base">{etape.phrase}</p>
     </motion.div>
   );
@@ -233,7 +233,7 @@ export default function ScrollMontage() {
                 <p className="text-xs font-semibold text-profond">
                   Étape {i + 1} / {N}
                 </p>
-                <h2 className="mt-1 text-2xl font-bold text-nuit">{e.titre}</h2>
+                <h3 className="mt-1 text-2xl font-bold text-nuit">{e.titre}</h3>
                 <p className="mt-1 text-encre/75">{e.phrase}</p>
               </figcaption>
             </figure>

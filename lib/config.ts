@@ -38,6 +38,7 @@ export type Produit = {
   /** Page produit : photos, texte et fiche technique */
   galerie: { src: string; alt: string }[];
   description: string[];
+  usages: string[];
   fiche: [string, string][];
   /** SEO : titre (max 60 caractères) et description (max 155). {prix} est remplacé par le prix formaté. */
   metaTitre: string;
@@ -71,6 +72,12 @@ export const PRODUITS: Produit[] = [
     description: [
       "La ramette de papier A4 80g Double A Premium est le papier d'impression et de photocopie le plus pratique pour le quotidien : documents, devoirs, factures, courriers. Une rame contient 500 feuilles.",
       "Son grammage de 80 g/m² convient à l'impression recto verso et passe sans difficulté dans les imprimantes laser, jet d'encre et photocopieurs.",
+    ],
+    usages: [
+      "Impression de documents, factures et courriers au bureau",
+      "Devoirs, dossiers et polycopiés pour les élèves et étudiants",
+      "Photocopies et impressions recto verso du quotidien",
+      "Démarches administratives et formulaires",
     ],
     fiche: [
       ["Marque", "Double A Premium"],
@@ -106,6 +113,12 @@ export const PRODUITS: Produit[] = [
       "Le carton de papier A4 80g Double A regroupe 5 ramettes, soit 2 500 feuilles. C'est le format idéal pour un bureau, un commerce, une école ou un cybercafé : moins de réapprovisionnements et un prix plus avantageux à la ramette.",
       "Chaque ramette est emballée individuellement. Le carton est livré scellé jusqu'à votre adresse, à Abidjan comme dans le reste de la Côte d'Ivoire.",
     ],
+    usages: [
+      "Bureaux, commerces et cabinets qui impriment chaque semaine",
+      "Écoles et centres de formation : sujets, supports de cours",
+      "Cybercafés et centres de photocopie",
+      "Réserve de papier pour plusieurs mois à un meilleur prix à la ramette",
+    ],
     fiche: [
       ["Marque", "Double A Premium"],
       ["Format", "A4 (210 × 297 mm)"],
@@ -138,6 +151,12 @@ export const PRODUITS: Produit[] = [
     description: [
       `Achetez votre papier A4 en gros : le tarif gros s'applique à partir de ${SEUIL_GROS} cartons de 5 ramettes de papier A4 80g Double A, soit au minimum ${SEUIL_GROS * 2500} feuilles.`,
       "Il s'adresse aux écoles, administrations, entreprises, imprimeries et revendeurs. Une facture peut être établie sur demande et la livraison est planifiée avec vous.",
+    ],
+    usages: [
+      "Imprimeries et revendeurs de papier",
+      "Écoles, universités et administrations",
+      "Entreprises à gros volume d'impression",
+      "Approvisionnement régulier avec livraison planifiée",
     ],
     fiche: [
       ["Marque", "Double A Premium"],
@@ -174,7 +193,7 @@ export function formatPrix(n: number): string {
   return new Intl.NumberFormat("fr-FR").format(n).replace(/ | /g, " ") + " FCFA";
 }
 
-export const MODES_PAIEMENT = ["Paiement à la livraison", "Orange Money", "MTN MoMo", "Wave"];
+export const MODES_PAIEMENT = ["Paiement à la livraison", "Orange Money", "MTN MoMo", "Moov Money", "Wave"];
 
 /**
  * Moyens de paiement mobile affichés dans le pied de page (logos des opérateurs,
@@ -264,6 +283,30 @@ export const FAQ: { q: string; r: string }[] = [
   {
     q: "Proposez-vous des tarifs pour l'achat en gros ?",
     r: `Oui, à partir de ${SEUIL_GROS} cartons, nous appliquons un tarif dégressif pour les écoles, entreprises, imprimeries et revendeurs. Demandez un devis par WhatsApp ou par e-mail.`,
+  },
+  {
+    q: "Quelle est la différence entre une ramette et un carton de papier A4 ?",
+    r: "Une ramette (ou rame) contient 500 feuilles A4 sous emballage individuel. Un carton regroupe 5 ramettes, soit 2 500 feuilles. Le carton revient moins cher à la ramette et évite de se réapprovisionner souvent : c'est le choix des bureaux, écoles, commerces et cybercafés.",
+  },
+  {
+    q: "Le papier Double A 80g convient-il à l'impression recto verso ?",
+    r: "Oui. Avec 80 g/m², le papier Double A Premium est assez épais pour limiter la transparence quand on imprime sur les deux faces, et il passe sans bourrage dans la plupart des imprimantes laser, jet d'encre et photocopieurs.",
+  },
+  {
+    q: "Quel grammage de papier A4 choisir : 70, 80 ou 90 g ?",
+    r: "Le 80 g/m² est le standard de bureau : bon rendu, bonne tenue et prix raisonnable pour l'impression courante. Le 70 g/m² est plus léger et plus économique pour les brouillons. Au-delà de 90 g/m², le papier est plus rigide, utile pour des documents de présentation. Nous proposons le papier A4 80 g Double A Premium.",
+  },
+  {
+    q: "Comment commander mon papier rame en ligne ?",
+    r: "Ajoutez la ramette ou le carton à votre panier, renseignez votre nom, votre téléphone, votre ville et votre adresse, puis envoyez la commande : elle s'ouvre dans WhatsApp. Nous confirmons le prix de livraison et le créneau, puis nous livrons.",
+  },
+  {
+    q: "Quels moyens de paiement acceptez-vous ?",
+    r: "Vous pouvez payer à la livraison, ou par Mobile Money : Orange Money, MTN MoMo, Moov Money ou Wave. Le mode de paiement est choisi au moment de la commande.",
+  },
+  {
+    q: "Pouvez-vous établir une facture ?",
+    r: "Oui, une facture peut être établie sur demande, notamment pour les entreprises, les écoles, les administrations et les achats en gros. Précisez-le dans votre message WhatsApp ou par e-mail.",
   },
 ];
 

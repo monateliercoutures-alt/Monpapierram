@@ -50,9 +50,9 @@ export const SEUIL_GROS = 10;
 export const PRODUITS: Produit[] = [
   {
     id: "ramette",
-    metaTitre: "Ramette Papier A4 80g Abidjan, {prix} | Monpapierrame",
+    metaTitre: "Papier Rame A4 80g Abidjan, {prix} | Monpapierrame",
     metaDescription:
-      "Ramette papier A4 80g Double A, 500 feuilles, {prix}. Idéal impression et photocopie. Livraison à Abidjan et partout en Côte d'Ivoire.",
+      "Papier rame A4 80g Double A, ramette de 500 feuilles, {prix}. Idéal impression et photocopie. Livraison à Abidjan et partout en Côte d'Ivoire.",
     slug: "ramette-papier-a4-80g-double-a",
     nom: "Ramette papier A4 80g Double A Premium",
     specs: "80 g/m² · 500 feuilles",
@@ -82,9 +82,9 @@ export const PRODUITS: Produit[] = [
   },
   {
     id: "carton",
-    metaTitre: "Carton Papier A4 80g (5 Ramettes) Abidjan | Monpapierrame",
+    metaTitre: "Carton Papier Rame A4 80g Abidjan | Monpapierrame",
     metaDescription:
-      "Carton de 5 ramettes papier A4 80g Double A, 2 500 feuilles, {prix}. Moins cher à la ramette. Livraison à Abidjan et partout en Côte d'Ivoire.",
+      "Carton de 5 ramettes papier rame A4 80g Double A, 2 500 feuilles, {prix}. Moins cher à la ramette. Livraison à Abidjan et partout en Côte d'Ivoire.",
     slug: "carton-papier-a4-5-ramettes-double-a",
     nom: "Carton papier A4 80g Double A (5 ramettes)",
     specs: "80 g/m² · 5 × 500 feuilles",
@@ -116,9 +116,9 @@ export const PRODUITS: Produit[] = [
   },
   {
     id: "gros",
-    metaTitre: "Papier A4 en Gros Abidjan, Carton Double A | Monpapierrame",
+    metaTitre: "Papier Rame A4 en Gros, Carton Abidjan | Monpapierrame",
     metaDescription:
-      "Papier A4 en gros à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture sur demande. Livraison partout en Côte d'Ivoire. Devis WhatsApp.",
+      "Papier rame A4 en gros à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture sur demande. Livré partout en Côte d'Ivoire. Devis WhatsApp.",
     slug: "papier-a4-en-gros-carton-double-a",
     nom: "Papier A4 en gros, carton Double A 80g",
     specs: `Dès ${SEUIL_GROS} cartons · 80 g/m²`,
@@ -272,7 +272,7 @@ export const FAQ: { q: string; r: string }[] = [
  * titre 60 caractères maximum, description 155 maximum).
  */
 export const SEO_ACCUEIL = {
-  titre: "Papier A4 Double A Abidjan et Côte d'Ivoire | Monpapierrame",
+  titre: "Papier Rame A4 Abidjan, Côte d'Ivoire | Monpapierrame",
   description:
-    "Fournisseur de papier A4 Double A : ramette dès {prix}, carton de 5 ramettes, vente en gros. Livraison à Abidjan et partout en Côte d'Ivoire.",
+    "Fournisseur de papier rame A4 Double A : ramette dès {prix}, carton de 5 ramettes, vente en gros. Livraison à Abidjan et partout en Côte d'Ivoire.",
 };

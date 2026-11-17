@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   title: TITRE,
   description: DESCRIPTION,
   keywords: [
+    "papier rame",
+    "papier rame A4",
     "ramette papier A4",
     "papier A4 80g",
     "papier A4 Abidjan",

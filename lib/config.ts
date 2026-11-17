@@ -26,7 +26,7 @@ export type Produit = {
   nom: string;
   specs: string; // ligne courte sous le nom
   detail: string;
-  prix: number; // en FCFA (valeurs d'exemple)
+  prix: number; // en FCFA
   unite: string; // « la ramette », « le carton »…
   note?: string; // précision sous le prix
   minQty: number; // quantité minimale de commande
@@ -57,7 +57,7 @@ export const PRODUITS: Produit[] = [
     nom: "Ramette papier A4 80g Double A Premium",
     specs: "80 g/m² · 500 feuilles",
     detail: "Pour la maison, l'école ou un petit bureau.",
-    prix: 3500,
+    prix: 4000,
     unite: "la ramette",
     minQty: 1,
     image: "/images/etape-3.jpg",
@@ -90,14 +90,14 @@ export const PRODUITS: Produit[] = [
     id: "carton",
     metaTitre: "Carton Papier Rame A4 80g, 5 Ramettes | Monpapierrame",
     metaDescription:
-      "Carton de 5 ramettes papier rame A4 80g Double A, 2 500 feuilles, {prix}. Économique. Livré à Abidjan et en Côte d'Ivoire, payez à la livraison.",
+      "Carton de 5 ramettes papier rame A4 80g Double A, 2 500 feuilles, {prix}. Livré scellé à Abidjan et en Côte d'Ivoire, payez à la livraison.",
     slug: "carton-papier-a4-5-ramettes-double-a",
     nom: "Carton papier A4 80g Double A (5 ramettes)",
     specs: "80 g/m² · 5 × 500 feuilles",
     detail: "Le format le plus pratique pour un bureau ou un commerce.",
-    prix: 16500,
+    prix: 19900,
     unite: "le carton",
-    note: "Soit 3 300 FCFA la ramette",
+    note: "Soit 3 980 FCFA la ramette",
     minQty: 1,
     badge: "Le plus vendu",
     image: "/images/etape-1.jpg",
@@ -109,7 +109,7 @@ export const PRODUITS: Produit[] = [
       { src: "/images/etape-3.jpg", alt: "Ramette Double A Premium ouverte avec des feuilles A4 blanches" },
     ],
     description: [
-      "Le carton de papier A4 80g Double A regroupe 5 ramettes, soit 2 500 feuilles. C'est le format idéal pour un bureau, un commerce, une école ou un cybercafé : moins de réapprovisionnements et un prix plus avantageux à la ramette.",
+      "Le carton de papier A4 80g Double A regroupe 5 ramettes, soit 2 500 feuilles. C'est le format idéal pour un bureau, un commerce, une école ou un cybercafé \u00a0: moins de réapprovisionnements et un prix à la ramette légèrement plus bas.",
       "Chaque ramette est emballée individuellement. Le carton est livré scellé jusqu'à votre adresse, à Abidjan comme dans le reste de la Côte d'Ivoire.",
     ],
     usages: [
@@ -135,9 +135,9 @@ export const PRODUITS: Produit[] = [
     nom: "Papier A4 en gros, carton Double A 80g",
     specs: `Dès ${SEUIL_GROS} cartons · 80 g/m²`,
     detail: "Pour les écoles, entreprises, imprimeries et revendeurs.",
-    prix: 15500,
+    prix: 19000,
     unite: "le carton",
-    note: `Soit 3 100 FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    note: `Soit 3 800 FCFA la ramette, dès ${SEUIL_GROS} cartons`,
     minQty: SEUIL_GROS,
     image: "/images/etape-4.jpg",
     alt: "Ramette Double A Premium couchée devant un carton ouvert",
@@ -285,7 +285,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Quelle est la différence entre une ramette et un carton de papier A4\u00a0?",
-    r: "Une ramette (ou rame) contient 500 feuilles A4 sous emballage individuel. Un carton regroupe 5 ramettes, soit 2 500 feuilles. Le carton revient moins cher à la ramette et évite de se réapprovisionner souvent\u00a0: c'est le choix des bureaux, écoles, commerces et cybercafés.",
+    r: "Une ramette (ou rame) contient 500 feuilles A4 sous emballage individuel. Un carton regroupe 5 ramettes, soit 2 500 feuilles. Le carton évite de se réapprovisionner souvent\u00a0: c'est le choix des bureaux, écoles, commerces et cybercafés.",
   },
   {
     q: "Le papier Double A 80g convient-il à l'impression recto verso\u00a0?",

@@ -8,7 +8,7 @@ const SUJETS = [
   },
   {
     t: "Ramette ou carton\u00a0: que choisir\u00a0?",
-    d: "Une ramette de 500 feuilles suffit pour un usage personnel ou un petit bureau. Dès que vous imprimez régulièrement, le carton de 5 ramettes (2 500 feuilles) revient moins cher à la ramette. Pour les écoles, imprimeries et revendeurs, le tarif gros s'applique à partir de 10 cartons.",
+    d: "Une ramette de 500 feuilles suffit pour un usage personnel ou un petit bureau. Dès que vous imprimez régulièrement, le carton de 5 ramettes (2 500 feuilles) évite de recommander souvent. Pour les écoles, imprimeries et revendeurs, le tarif gros s'applique à partir de 10 cartons.",
   },
   {
     t: "Papier pour imprimante laser ou jet d'encre\u00a0?",

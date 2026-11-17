@@ -67,7 +67,7 @@ export default function Footer() {
             {SITE.nom}, boutique de vente de papier, Abidjan, Côte d&apos;Ivoire. Éditeur du site :{" "}
             {SITE.nom} (RCCM et numéro de compte contribuable : à renseigner). Hébergeur : Vercel Inc. /
             Netlify Inc. Les prix sont indicatifs, exprimés en FCFA, et confirmés à la commande.
-            « Double A » est une marque de son propriétaire ; Monpapierram est un revendeur indépendant.
+            « Double A » est une marque de son propriétaire ; {SITE.nom} est un revendeur indépendant.
           </p>
           <p className="mt-3">© {new Date().getFullYear()} {SITE.nom}. Tous droits réservés.</p>
         </div>

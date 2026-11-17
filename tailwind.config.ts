@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Palette Monpapierram, inspirée du bleu Double A.
+ * Palette Monpapierrame, inspirée du bleu Double A.
  * Chargé depuis globals.css avec la directive @config.
  */
 const config: Config = {

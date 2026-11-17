@@ -1,4 +1,4 @@
-# Monpapierram
+# Monpapierrame
 
 Site vitrine one-page (Next.js App Router, TypeScript, Tailwind CSS, Framer Motion) pour la vente de ramettes de papier Double A à Abidjan.
 

@@ -1,15 +1,15 @@
 /**
- * Configuration centrale de Monpapierram.
+ * Configuration centrale de Monpapierrame.
  * Tout ce qu'on modifie régulièrement (prix, contact, textes) est ici.
  */
 
 export const SITE = {
-  nom: "Monpapierram",
+  nom: "Monpapierrame",
   url: "https://monpapierram.vercel.app", // à remplacer par votre domaine
   // Numéro WhatsApp au format international, sans « + » ni espaces
   whatsapp: "2250700000000",
   whatsappAffiche: "+225 07 00 00 00 00",
-  email: "contact@monpapierram.ci",
+  email: "contact@monpapierrame.ci",
   zone: "Abidjan et environs (Cocody, Marcory, Plateau, Yopougon, Abobo, Koumassi, Riviera…)",
   horaires: "Lundi – Samedi, 8h – 19h",
 };
@@ -19,8 +19,7 @@ export function lienWhatsApp(message: string): string {
   return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(message)}`;
 }
 
-export const MESSAGE_GENERAL =
-  "Bonjour Monpapierram, je souhaite commander du papier Double A Premium A4 80 g.";
+export const MESSAGE_GENERAL = `Bonjour ${SITE.nom}, je souhaite commander du papier Double A Premium A4 80 g.`;
 
 export type Produit = {
   id: string; // identifiant interne (panier)
@@ -40,6 +39,9 @@ export type Produit = {
   galerie: { src: string; alt: string }[];
   description: string[];
   fiche: [string, string][];
+  /** SEO : titre (max 60 caractères) et description (max 155). {prix} est remplacé par le prix formaté. */
+  metaTitre: string;
+  metaDescription: string;
 };
 
 /** Nombre de cartons à partir duquel le tarif gros s'applique */
@@ -48,6 +50,9 @@ export const SEUIL_GROS = 10;
 export const PRODUITS: Produit[] = [
   {
     id: "ramette",
+    metaTitre: "Ramette Papier A4 80g Abidjan, {prix} | Monpapierrame",
+    metaDescription:
+      "Ramette papier A4 80g Double A, 500 feuilles, {prix}. Idéal impression et photocopie. Livraison à Abidjan, paiement à la livraison ou Mobile Money.",
     slug: "ramette-papier-a4-80g-double-a",
     nom: "Ramette papier A4 80g Double A Premium",
     specs: "80 g/m² · 500 feuilles",
@@ -77,6 +82,9 @@ export const PRODUITS: Produit[] = [
   },
   {
     id: "carton",
+    metaTitre: "Carton Papier A4 80g (5 Ramettes) Abidjan | Monpapierrame",
+    metaDescription:
+      "Carton de 5 ramettes papier A4 80g Double A, 2 500 feuilles, {prix}. Moins cher à la ramette. Livraison à Abidjan, paiement à la livraison.",
     slug: "carton-papier-a4-5-ramettes-double-a",
     nom: "Carton papier A4 80g Double A (5 ramettes)",
     specs: "80 g/m² · 5 × 500 feuilles",
@@ -108,6 +116,9 @@ export const PRODUITS: Produit[] = [
   },
   {
     id: "gros",
+    metaTitre: "Papier A4 en Gros Abidjan, Carton Double A | Monpapierrame",
+    metaDescription:
+      "Papier A4 en gros à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture sur demande, livraison planifiée. Devis sur WhatsApp.",
     slug: "papier-a4-en-gros-carton-double-a",
     nom: "Papier A4 en gros, carton Double A 80g",
     specs: `Dès ${SEUIL_GROS} cartons · 80 g/m²`,
@@ -137,6 +148,11 @@ export const PRODUITS: Produit[] = [
     ],
   },
 ];
+
+/** Remplace {prix} par le prix formaté du produit */
+export function meta(texte: string, prix: number): string {
+  return texte.replace("{prix}", formatPrix(prix));
+}
 
 export function trouverProduit(id: string): Produit | undefined {
   return PRODUITS.find((p) => p.id === id);
@@ -229,3 +245,13 @@ export const FAQ: { q: string; r: string }[] = [
     r: `Oui, à partir de ${SEUIL_GROS} cartons, nous appliquons un tarif dégressif pour les écoles, entreprises, imprimeries et revendeurs. Demandez un devis par WhatsApp ou par e-mail.`,
   },
 ];
+
+/**
+ * SEO de la page d'accueil (limites recommandées par Google :
+ * titre 60 caractères maximum, description 155 maximum).
+ */
+export const SEO_ACCUEIL = {
+  titre: "Ramette Papier A4 Abidjan, Livraison Rapide | Monpapierrame",
+  description:
+    "Achetez votre ramette de papier A4 80g à Abidjan dès {prix}. Carton de 5 ramettes, vente en gros. Livraison rapide, paiement à la livraison.",
+};

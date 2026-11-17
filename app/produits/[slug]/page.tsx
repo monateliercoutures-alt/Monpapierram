@@ -9,7 +9,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ProduitGalerie from "@/components/ProduitGalerie";
 import AjouterAuPanier from "@/components/AjouterAuPanier";
 import { IconeWhatsApp } from "@/components/Icones";
-import { PRODUITS, SITE, formatPrix, lienWhatsApp, trouverParSlug } from "@/lib/config";
+import { PRODUITS, SITE, formatPrix, lienWhatsApp, meta, trouverParSlug } from "@/lib/config";
 
 // Une page est générée à la compilation pour chaque produit de lib/config.ts
 export function generateStaticParams() {
@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = trouverParSlug(slug);
   if (!p) return {};
-  const titre = `${p.nom} à Abidjan, ${formatPrix(p.prix)} | ${SITE.nom}`;
-  const description = `${p.nom} : ${p.specs}. ${formatPrix(p.prix)} ${p.unite}. Achat en ligne et livraison à Abidjan (Côte d'Ivoire), paiement à la livraison ou Mobile Money.`;
+  const titre = meta(p.metaTitre, p.prix);
+  const description = meta(p.metaDescription, p.prix);
   return {
     title: titre,
     description,

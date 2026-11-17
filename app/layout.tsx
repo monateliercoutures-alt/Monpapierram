@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
-import { SITE } from "@/lib/config";
+import { PRODUITS, SEO_ACCUEIL, SITE, meta } from "@/lib/config";
 import PanierProvider from "@/components/PanierContext";
 
 // Police des titres : Montserrat (600, 700 et 800), proche de la typographie du logo
@@ -20,9 +20,8 @@ const texte = Inter({
   variable: "--font-texte",
 });
 
-const TITRE = "Monpapierram | Vente de ramettes de papier Double A à Abidjan";
-const DESCRIPTION =
-  "Ramette papier A4 80g Double A Premium (500 feuilles), carton de 5 ramettes et papier A4 en gros, livrés à Abidjan. Paiement à la livraison, Orange Money, MTN MoMo et Wave. Commande sur WhatsApp.";
+const TITRE = SEO_ACCUEIL.titre;
+const DESCRIPTION = meta(SEO_ACCUEIL.description, PRODUITS[0].prix);
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),

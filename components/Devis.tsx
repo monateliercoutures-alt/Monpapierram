@@ -3,7 +3,7 @@ import { IconeWhatsApp } from "./Icones";
 
 // Encadré pour les achats en gros
 export default function Devis() {
-  const message = "Bonjour Monpapierram, je souhaite un devis pour du papier Double A Premium A4 80 g (quantité : ... cartons, commune de livraison : ...).";
+  const message = `Bonjour ${SITE.nom}, je souhaite un devis pour du papier Double A Premium A4 80 g (quantité : ... cartons, commune de livraison : ...).`;
   return (
     <section aria-labelledby="titre-devis" className="bg-white px-4 pb-14 sm:px-6 sm:pb-20">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 rounded-carte bg-nuit p-6 text-white sm:p-10 md:flex-row md:items-center md:justify-between">

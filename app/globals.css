@@ -70,15 +70,6 @@
   }
 }
 
-/* Sous 1280 px, le haut de l'image se fond dans le fond bleu ciel pour que le texte
-   semble posé sur l'image, comme sur ordinateur */
-@media (max-width: 1279px) {
-  .hero-image {
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 32%);
-    mask-image: linear-gradient(to bottom, transparent 0%, #000 32%);
-    margin-top: -2.5rem;
-  }
-}
 
 /* Texte justifié : réservé aux longs paragraphes. Sur des textes courts (2 ou 3 lignes),
    la justification étire les espaces entre les mots, donc on ne l'applique pas. */

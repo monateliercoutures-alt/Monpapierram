@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { SITE } from "@/lib/config";
 import { usePanier } from "./PanierContext";
 
@@ -34,9 +35,9 @@ export default function Header() {
         Aller au contenu
       </a>
 
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <a href="#" className="font-titre text-xl font-bold tracking-tight text-profond" aria-label={`${SITE.nom} - accueil`}>
-          Mon<span className="text-cyan">papier</span>ram
+      <div className="mx-auto flex h-[72px] sm:h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+        <a href="#" aria-label={`${SITE.nom} - accueil`} className="shrink-0">
+          <Image src="/images/logo.png" alt={SITE.nom} width={895} height={268} priority className="h-12 w-auto sm:h-14" />
         </a>
 
         <nav aria-label="Navigation principale" className="hidden items-center gap-7 lg:flex">

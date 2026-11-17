@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SITE, MESSAGE_GENERAL, lienWhatsApp } from "@/lib/config";
 import { IconeWhatsApp } from "./Icones";
 
@@ -8,9 +9,9 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <p className="font-titre text-2xl font-bold">
-              Mon<span className="text-cyan">papier</span>ram
-            </p>
+            <span className="inline-block rounded-bouton bg-white p-2.5">
+              <Image src="/images/logo.png" alt={SITE.nom} width={895} height={268} className="h-10 w-auto" />
+            </span>
             <p className="mt-3 max-w-xs text-sm text-white/75">
               Ramettes de papier A4 Double A Premium, livrées à Abidjan.
             </p>

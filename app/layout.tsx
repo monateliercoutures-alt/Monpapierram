@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/config";
 import PanierProvider from "@/components/PanierContext";
 
-// Police des titres : Plus Jakarta Sans (600 et 700)
-const titre = Plus_Jakarta_Sans({
+// Police des titres : Montserrat (600, 700 et 800), proche de la typographie du logo
+const titre = Montserrat({
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["600", "700", "800"],
   display: "swap",
   variable: "--font-titre",
 });

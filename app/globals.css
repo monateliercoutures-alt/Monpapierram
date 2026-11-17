@@ -5,7 +5,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem; /* compense l'en-tête collant pour les ancres */
+    scroll-padding-top: 6rem; /* compense l'en-tête collant pour les ancres */
   }
   body {
     background: #ffffff;
@@ -33,9 +33,19 @@
 }
 
 /* Hauteur du hero sur grand écran : suit le format 16:9 de l'image sans dépasser l'écran
-   (7 rem = bandeau d'infos + en-tête) */
+   (8 rem = bandeau d'infos + en-tête) */
 @media (min-width: 1280px) {
   .hero-cadre {
-    height: clamp(560px, 56.25vw, calc(100svh - 7rem));
+    height: clamp(560px, 56.25vw, calc(100svh - 8rem));
+  }
+}
+
+/* Sous 1280 px, le haut de l'image se fond dans le fond bleu ciel pour que le texte
+   semble posé sur l'image, comme sur ordinateur */
+@media (max-width: 1279px) {
+  .hero-image {
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 32%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 32%);
+    margin-top: -2.5rem;
   }
 }

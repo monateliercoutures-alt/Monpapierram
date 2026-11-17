@@ -8,7 +8,6 @@ import { usePanier } from "./PanierContext";
 const LIENS = [
   { href: "#produits", label: "Produits" },
   { href: "#avantages", label: "Avantages" },
-  { href: "#livraison", label: "Livraison" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ];

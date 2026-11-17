@@ -2,7 +2,7 @@ import Image from "next/image";
 import { SITE, MESSAGE_GENERAL, lienWhatsApp } from "@/lib/config";
 import { IconeWhatsApp } from "./Icones";
 
-// Pied de page : contacts, zone de livraison, mentions légales
+// Pied de page : liens, contacts, zone de livraison
 export default function Footer() {
   return (
     <footer id="contact" className="bg-nuit px-4 pb-24 pt-14 sm:pb-10 sm:pt-16 text-white sm:px-6">
@@ -61,16 +61,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/15 pt-6 text-xs leading-relaxed text-white/65">
-          <p className="font-semibold text-white/85">Mentions légales</p>
-          <p className="mt-2">
-            {SITE.nom}, boutique de vente de papier, Abidjan, Côte d&apos;Ivoire. Éditeur du site :{" "}
-            {SITE.nom} (RCCM et numéro de compte contribuable : à renseigner). Hébergeur : Vercel Inc. /
-            Netlify Inc. Les prix sont indicatifs, exprimés en FCFA, et confirmés à la commande.
-            « Double A » est une marque de son propriétaire ; {SITE.nom} est un revendeur indépendant.
-          </p>
-          <p className="mt-3">© {new Date().getFullYear()} {SITE.nom}. Tous droits réservés.</p>
-        </div>
+        <p className="mt-12 border-t border-white/15 pt-6 text-xs text-white/65">
+          © {new Date().getFullYear()} {SITE.nom}. Tous droits réservés.
+        </p>
       </div>
     </footer>
   );

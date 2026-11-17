@@ -134,7 +134,7 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
                 </div>
                 <div className="grid grid-cols-[7rem_1fr] gap-3 px-4 py-3">
                   <dt className="font-semibold text-nuit">Paiement</dt>
-                  <dd className="text-encre/80">À la livraison, Orange Money, MTN MoMo ou Wave.</dd>
+                  <dd className="text-encre/80">À la livraison, Orange Money, MTN MoMo, Moov Money ou Wave.</dd>
                 </div>
               </dl>
             </div>
@@ -150,17 +150,6 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
                 ))}
               </div>
             </section>
-            <section aria-labelledby="titre-usages" className="lg:col-span-2">
-              <h2 id="titre-usages" className="text-xl font-bold text-nuit">Pour quels usages ?</h2>
-              <ul className="mt-3 grid gap-x-10 gap-y-2 sm:grid-cols-2">
-                {p.usages.map((u) => (
-                  <li key={u} className="flex gap-2 text-encre/85">
-                    <span className="text-cyan" aria-hidden="true">✓</span>
-                    {u}
-                  </li>
-                ))}
-              </ul>
-            </section>
             <section aria-labelledby="titre-fiche">
               <h2 id="titre-fiche" className="text-xl font-bold text-nuit">Fiche technique</h2>
               <dl className="mt-3 divide-y divide-profond/10 border-y border-profond/10 text-sm">
@@ -171,6 +160,17 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
                   </div>
                 ))}
               </dl>
+            </section>
+            <section aria-labelledby="titre-usages" className="lg:col-span-2">
+              <h2 id="titre-usages" className="text-xl font-bold text-nuit">Pour quels usages ?</h2>
+              <ul className="mt-3 grid gap-x-10 gap-y-2 sm:grid-cols-2">
+                {p.usages.map((u) => (
+                  <li key={u} className="flex gap-2 text-encre/85">
+                    <span className="text-cyan" aria-hidden="true">✓</span>
+                    {u}
+                  </li>
+                ))}
+              </ul>
             </section>
           </div>
 

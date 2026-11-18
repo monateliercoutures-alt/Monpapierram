@@ -21,7 +21,9 @@ export default function Footer() {
               {[
                 ["/#produits", "Nos produits"],
                 ["/#avantages", "Pourquoi nous choisir"],
-                ["/#a-propos", "À propos et livraison"],
+                ["/#comparatif", "Comparatif des marques"],
+                ["/livraison", "Livraison en Côte d'Ivoire"],
+                ["/#a-propos", "À propos"],
                 ["/#guide", "Guide d'achat"],
                 ["/#faq", "Questions fréquentes"],
                 ["/politique-de-retour", "Politique de retour"],

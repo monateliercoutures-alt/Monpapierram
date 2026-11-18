@@ -8,7 +8,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ProduitGalerie from "@/components/ProduitGalerie";
 import BoutonAchat from "@/components/BoutonAchat";
 import { IconeWhatsApp } from "@/components/Icones";
-import { PRODUITS, SITE, libellePrix, lienWhatsApp, meta, trouverParSlug } from "@/lib/config";
+import { PRODUITS, SITE, faqProduit, libellePrix, lienWhatsApp, meta, trouverParSlug } from "@/lib/config";
 
 // Une page est générée à la compilation pour chaque produit de lib/config.ts
 export function generateStaticParams() {
@@ -38,6 +38,12 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
   const autres = [...PRODUITS.filter((x) => x.id !== p.id)]
     .sort((a, b) => Number(b.marque === p.marque) - Number(a.marque === p.marque))
     .slice(0, 4);
+  const faq = faqProduit(p);
+  const donneesFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.r } })),
+  };
   const message = `Bonjour ${SITE.nom}, j'ai une question sur : ${p.nom}.`;
 
   // Données structurées (SEO). Google exige une offre (prix), un avis ou une note pour une
@@ -208,6 +214,23 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
             </section>
           </div>
 
+          {/* Questions fréquentes sur ce produit */}
+          <section aria-labelledby="titre-faq-produit" className="mt-14 border-t border-profond/10 pt-10">
+            <h2 id="titre-faq-produit" className="text-xl font-bold text-nuit">Questions fréquentes sur ce produit</h2>
+            <dl className="mt-4 divide-y divide-profond/10 border-y border-profond/10">
+              {faq.map((f) => (
+                <div key={f.q} className="py-4">
+                  <dt className="font-semibold text-nuit">{f.q}</dt>
+                  <dd className="justifie mt-1 text-encre/85">{f.r}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-4 text-sm text-encre/70">
+              Plus de réponses : <Link href="/livraison" className="font-semibold text-profond underline">livraison en Côte d&apos;Ivoire</Link> et{" "}
+              <Link href="/politique-de-retour" className="font-semibold text-profond underline">politique de retour</Link>.
+            </p>
+          </section>
+
           {/* Autres produits */}
           <section aria-labelledby="titre-autres" className="mt-14 border-t border-profond/10 pt-10">
             <h2 id="titre-autres" className="text-xl font-bold text-nuit">Autres produits</h2>
@@ -235,6 +258,7 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
       <WhatsAppButton />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(donnees) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fil) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(donneesFaq) }} />
     </>
   );
 }

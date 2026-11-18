@@ -11,6 +11,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${SITE.url}/livraison`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.5,
+    },
+    {
       url: `${SITE.url}/politique-de-retour`,
       lastModified: new Date(),
       changeFrequency: "yearly" as const,

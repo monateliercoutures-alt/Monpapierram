@@ -4,6 +4,7 @@ import Reassurance from "@/components/Reassurance";
 import ScrollMontage from "@/components/ScrollMontage";
 import Avantages from "@/components/Avantages";
 import Produits from "@/components/Produits";
+import Comparatif from "@/components/Comparatif";
 import Presentation from "@/components/Presentation";
 import Guide from "@/components/Guide";
 import Faq from "@/components/Faq";
@@ -32,6 +33,16 @@ const donneesStructurees = {
       priceRange: "FCFA",
     },
     {
+      "@type": "ItemList",
+      name: "Papier rame A4 : cartons et ramettes",
+      itemListElement: PRODUITS.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: p.nom,
+        url: `${SITE.url}/produits/${p.slug}`,
+      })),
+    },
+    {
       "@type": "WebSite",
       name: SITE.nom,
       url: SITE.url,
@@ -57,6 +68,7 @@ export default function Page() {
         <Hero />
         <Reassurance />
         <Produits />
+        <Comparatif />
         <ScrollMontage />
         <Avantages />
         <Presentation />

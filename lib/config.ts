@@ -608,6 +608,26 @@ export const FAQ: { q: string; r: string }[] = [
     r: "La livraison se fait en 24 à 72 heures après confirmation de votre commande, à Abidjan comme dans le reste de la Côte d'Ivoire.",
   },
   {
+    q: "Quelle marque de papier rame choisir : Double A, Paper One, Globulus, Paper Pro ou Authentik\u00a0?",
+    r: "Les marques proposées sont toutes en format A4 de 500 feuilles par ramette, avec 5 ramettes par carton. Double A, Globulus, Paper Pro et Authentik font 80 g/m², Paper One 70 g/m². Le comparatif des prix par carton est sur la page d'accueil. Pour l'impression recto verso, le 80 g/m² est conseillé.",
+  },
+  {
+    q: "Quel est le prix d'un carton de papier A4 à Abidjan\u00a0?",
+    r: "Le carton de 5 ramettes Double A est à 19\u00a0900 FCFA. Les cartons Paper One, Globulus, Paper Pro et Authentik sont à 13\u00a0500 FCFA. À partir de 10 cartons, le prix passe à 19\u00a0000 FCFA le carton en Double A et à 13\u00a0000 FCFA le carton pour les autres marques.",
+  },
+  {
+    q: "Livrez-vous à Bouaké, Yamoussoukro, San-Pédro ou Korhogo\u00a0?",
+    r: "Oui, nous livrons dans toutes les villes de Côte d'Ivoire, notamment Bouaké, Yamoussoukro, San-Pédro, Daloa, Korhogo, Man, Abengourou et Gagnoa, en 24 à 72 heures après confirmation. Les frais sont confirmés à la commande sur WhatsApp.",
+  },
+  {
+    q: "Vendez-vous du papier A4 pour les écoles et les entreprises\u00a0?",
+    r: "Oui. Nous fournissons les écoles, universités, administrations, entreprises, cybercafés, imprimeries et revendeurs, avec facture sur demande et tarif dégressif à partir de 10 cartons.",
+  },
+  {
+    q: "Combien de feuilles contient un carton de papier rame\u00a0?",
+    r: "Un carton contient 5 ramettes de 500 feuilles A4, soit 2\u00a0500 feuilles. Un lot de 10 cartons représente 50 ramettes, soit 25\u00a0000 feuilles.",
+  },
+  {
     q: "Êtes-vous grossiste de papier rame à Abidjan\u00a0?",
     r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous sommes fournisseur des grandes marques de papier rame : Double A, Paper One, Globulus, Paper Pro et Authentik. Nous vendons à l'unité (ramette), au carton et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
   },
@@ -626,3 +646,40 @@ export const SEO_ACCUEIL = {
   description:
     "Grossiste papier rame A4 à Abidjan : Double A, Paper One, Globulus, Paper Pro, Authentik. Ramette dès {prix}, carton, gros. Livraison en Côte d'Ivoire.",
 };
+
+/** Grammage lu dans la fiche technique du produit (ex. « 80 g/m² ») */
+export function grammage(p: Produit): string {
+  return p.fiche.find(([k]) => k === "Grammage")?.[1] ?? "";
+}
+
+/** Marques proposées, dans l'ordre d'affichage */
+export const MARQUES = ["Double A", "Paper One", "Globulus", "Paper Pro", "Authentik"];
+
+/** Questions-réponses d'une page produit (visibles sur la page et déclarées pour Google) */
+export function faqProduit(p: Produit): { q: string; r: string }[] {
+  const g = grammage(p);
+  const lot = p.minQty > 1;
+  const prix = p.prix === null ? "sur demande" : formatPrixTexte(p.prix);
+  return [
+    {
+      q: `Quel est le prix du ${lot ? "lot de 10 cartons" : "carton"} de papier A4 ${p.marque} ?`,
+      r: `Le prix est de ${prix} ${p.unite}${lot ? `, à partir de ${SEUIL_GROS} cartons` : ""}. Les frais de livraison sont confirmés à la commande sur WhatsApp selon votre ville.`,
+    },
+    {
+      q: `Quel est le grammage du papier ${p.marque} ?`,
+      r: `Le papier A4 ${p.marque} proposé ici fait ${g}, au format A4 (210 × 297 mm), avec 500 feuilles par ramette.`,
+    },
+    {
+      q: "Livrez-vous partout en Côte d'Ivoire ?",
+      r: `Oui, nous livrons à Abidjan et dans toute la Côte d'Ivoire, en ${SITE.delaiLivraison} après confirmation de la commande.`,
+    },
+    {
+      q: "Puis-je retourner ma commande ?",
+      r: `Oui, un retour est possible ${SITE.delaiRetour}. Contactez-nous sur WhatsApp avec une photo du produit.`,
+    },
+    {
+      q: "Comment payer ?",
+      r: "À la livraison, ou par Orange Money, MTN MoMo, Moov Money ou Wave.",
+    },
+  ];
+}

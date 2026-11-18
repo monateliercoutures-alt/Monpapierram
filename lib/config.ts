@@ -303,6 +303,130 @@ export const PRODUITS: Produit[] = [
     metaDescription:
       "Papier rame A4 Globulus en gros à Abidjan : lot de 10 cartons, 80g. {prix} le carton. Facture, livraison en Côte d'Ivoire.",
   },
+  {
+    id: "paperpro-carton",
+    marque: "Paper Pro",
+    slug: "carton-papier-rame-a4-paper-pro",
+    nom: "Carton papier rame A4 80g Paper Pro (5 ramettes)",
+    specs: "80 g/m² · 5 × 500 feuilles",
+    detail: "Papier rame A4 Paper Pro, au carton.",
+    prix: 13500,
+    unite: "le carton",
+    note: "Soit 2\u00a0700\u00a0FCFA la ramette",
+    minQty: 1,
+    image: "/images/paper-pro-1.jpg",
+    alt: "Carton de papier rame A4 Paper Pro 80 g",
+    points: ["5 ramettes de 500 feuilles", "Format A4 (210 × 297 mm), 80 g/m²", "Livraison partout en Côte d'Ivoire"],
+    galerie: [
+      { src: "/images/paper-pro-1.jpg", alt: "Papier rame A4 Paper Pro 80 g/m², 500 feuilles par ramette" },
+      { src: "/images/paper-pro-2.jpg", alt: "Papier rame A4 Paper Pro 80 g/m², 500 feuilles par ramette" },
+      { src: "/images/paper-pro-3.jpg", alt: "Papier rame A4 Paper Pro 80 g/m², 500 feuilles par ramette" },
+    ],
+    description: ["Le carton de papier rame A4 Paper Pro regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles de 80 g/m².", "Livraison partout en Côte d'Ivoire et paiement à la livraison ou par Mobile Money. Commandez en ligne, nous confirmons sur WhatsApp."],
+    usages: ["Bureaux et entreprises", "Écoles et centres de formation", "Cybercafés et centres de photocopie", "Impression et photocopie du quotidien"],
+    fiche: [
+      ["Marque", "Paper Pro"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "1 carton"],
+    ],
+    metaTitre: "Carton Papier Rame A4 Paper Pro 80g | Monpapierrame",
+    metaDescription:
+      "Carton de 5 ramettes papier rame A4 80g Paper Pro, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire.",
+  },
+  {
+    id: "paperpro-gros",
+    marque: "Paper Pro",
+    slug: "papier-rame-a4-paper-pro-10-cartons",
+    nom: "Papier rame A4 Paper Pro en gros (10 cartons)",
+    specs: "Lot de 10 cartons · 80 g/m²",
+    detail: "Pour les professionnels : lot de 10 cartons de papier rame A4 Paper Pro.",
+    prix: 13000,
+    unite: "le carton, dès 10 cartons",
+    note: `Soit 2\u00a0600\u00a0FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    minQty: 10,
+    image: "/images/paper-pro-2.jpg",
+    alt: "Carton de papier rame A4 Paper Pro 80 g",
+    points: ["Lot de 10 cartons (50 ramettes)", "25 000 feuilles A4 80 g/m²", "Facture sur demande"],
+    galerie: [
+      { src: "/images/paper-pro-2.jpg", alt: "Papier rame A4 Paper Pro 80 g/m², 500 feuilles par ramette" },
+      { src: "/images/paper-pro-3.jpg", alt: "Papier rame A4 Paper Pro 80 g/m², 500 feuilles par ramette" },
+      { src: "/images/paper-pro-1.jpg", alt: "Papier rame A4 Paper Pro 80 g/m², 500 feuilles par ramette" },
+    ],
+    description: ["Achetez en gros du papier rame A4 Paper Pro : un lot de 10 cartons de 5 ramettes, soit 50 ramettes et 25 000 feuilles de 80 g/m².", "Le tarif gros s'applique dès 10 cartons, avec facture sur demande et livraison planifiée partout en Côte d'Ivoire."],
+    usages: ["Imprimeries et revendeurs", "Écoles, universités et administrations", "Entreprises à gros volume d'impression", "Approvisionnement régulier avec livraison planifiée"],
+    fiche: [
+      ["Marque", "Paper Pro"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "Lot de 10 cartons (50 ramettes)"],
+    ],
+    metaTitre: "Papier Rame A4 Paper Pro, Lot de 10 Cartons | Monpapierrame",
+    metaDescription:
+      "Papier rame A4 Paper Pro en gros à Abidjan : lot de 10 cartons, 80g. {prix} le carton. Facture, livraison en Côte d'Ivoire.",
+  },
+  {
+    id: "authentik-carton",
+    marque: "Authentik",
+    slug: "carton-papier-rame-a4-authentik",
+    nom: "Carton papier rame A4 80g Authentik (5 ramettes)",
+    specs: "80 g/m² · 5 × 500 feuilles",
+    detail: "Papier rame A4 Authentik, au carton.",
+    prix: 13500,
+    unite: "le carton",
+    note: "Soit 2\u00a0700\u00a0FCFA la ramette",
+    minQty: 1,
+    image: "/images/authentik-1.jpg",
+    alt: "Carton de papier rame A4 Authentik 80 g",
+    points: ["5 ramettes de 500 feuilles", "Format A4 (210 × 297 mm), 80 g/m²", "Livraison partout en Côte d'Ivoire"],
+    galerie: [
+      { src: "/images/authentik-1.jpg", alt: "Papier rame A4 Authentik 80 g/m², 500 feuilles par ramette" },
+    ],
+    description: ["Le carton de papier rame A4 Authentik regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles de 80 g/m².", "Livraison partout en Côte d'Ivoire et paiement à la livraison ou par Mobile Money. Commandez en ligne, nous confirmons sur WhatsApp."],
+    usages: ["Bureaux et entreprises", "Écoles et centres de formation", "Cybercafés et centres de photocopie", "Impression et photocopie du quotidien"],
+    fiche: [
+      ["Marque", "Authentik"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "1 carton"],
+    ],
+    metaTitre: "Carton Papier Rame A4 Authentik 80g | Monpapierrame",
+    metaDescription:
+      "Carton de 5 ramettes papier rame A4 80g Authentik, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire.",
+  },
+  {
+    id: "authentik-gros",
+    marque: "Authentik",
+    slug: "papier-rame-a4-authentik-10-cartons",
+    nom: "Papier rame A4 Authentik en gros (10 cartons)",
+    specs: "Lot de 10 cartons · 80 g/m²",
+    detail: "Pour les professionnels : lot de 10 cartons de papier rame A4 Authentik.",
+    prix: 13000,
+    unite: "le carton, dès 10 cartons",
+    note: `Soit 2\u00a0600\u00a0FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    minQty: 10,
+    image: "/images/authentik-1.jpg",
+    alt: "Carton de papier rame A4 Authentik 80 g",
+    points: ["Lot de 10 cartons (50 ramettes)", "25 000 feuilles A4 80 g/m²", "Facture sur demande"],
+    galerie: [
+      { src: "/images/authentik-1.jpg", alt: "Papier rame A4 Authentik 80 g/m², 500 feuilles par ramette" },
+    ],
+    description: ["Achetez en gros du papier rame A4 Authentik : un lot de 10 cartons de 5 ramettes, soit 50 ramettes et 25 000 feuilles de 80 g/m².", "Le tarif gros s'applique dès 10 cartons, avec facture sur demande et livraison planifiée partout en Côte d'Ivoire."],
+    usages: ["Imprimeries et revendeurs", "Écoles, universités et administrations", "Entreprises à gros volume d'impression", "Approvisionnement régulier avec livraison planifiée"],
+    fiche: [
+      ["Marque", "Authentik"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "Lot de 10 cartons (50 ramettes)"],
+    ],
+    metaTitre: "Papier Rame A4 Authentik, Lot de 10 Cartons | Monpapierrame",
+    metaDescription:
+      "Papier rame A4 Authentik en gros à Abidjan : lot de 10 cartons, 80g. {prix} le carton. Facture, livraison en Côte d'Ivoire.",
+  },
 ];
 
 /** Remplace {prix} par le prix formaté du produit */
@@ -473,7 +597,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Quelles marques de papier rame fournissez-vous\u00a0?",
-    r: "Nous fournissons les marques Double A, Paper One et Globulus, en ramette (Double A), au carton de 5 ramettes et par lot de 10 cartons. Les prix sont indiqués sur chaque fiche produit.",
+    r: "Nous fournissons les marques Double A, Paper One, Globulus, Paper Pro et Authentik, en ramette (Double A), au carton de 5 ramettes et par lot de 10 cartons. Les prix sont indiqués sur chaque fiche produit.",
   },
   {
     q: "Quelle est votre politique de retour\u00a0?",
@@ -485,7 +609,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Êtes-vous grossiste de papier rame à Abidjan\u00a0?",
-    r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous sommes fournisseur des grandes marques de papier rame : Double A, Paper One et Globulus. Nous vendons à l'unité (ramette), au carton et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
+    r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous sommes fournisseur des grandes marques de papier rame : Double A, Paper One, Globulus, Paper Pro et Authentik. Nous vendons à l'unité (ramette), au carton et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
   },
   {
     q: "Pouvez-vous établir une facture\u00a0?",
@@ -500,5 +624,5 @@ export const FAQ: { q: string; r: string }[] = [
 export const SEO_ACCUEIL = {
   titre: "Papier Rame A4 à Abidjan & en Côte d’Ivoire | Monpapierrame",
   description:
-    "Grossiste et fournisseur papier rame A4 Double A, Paper One, Globulus à Abidjan et en Côte d'Ivoire. Ramette dès {prix}, carton, gros dès 10 cartons.",
+    "Grossiste papier rame A4 à Abidjan : Double A, Paper One, Globulus, Paper Pro, Authentik. Ramette dès {prix}, carton, gros. Livraison en Côte d'Ivoire.",
 };

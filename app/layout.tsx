@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   keywords: [
     "fournisseur papier rame Double A Paper One Globulus",
+    "papier rame Paper Pro",
+    "papier rame Authentik",
     "papier rame Paper One",
     "papier rame Globulus",
     "grossiste papier rame",

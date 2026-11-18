@@ -9,6 +9,7 @@ export const SITE = {
   // Numéro WhatsApp au format international, sans « + » ni espaces
   whatsapp: "2250767537998",
   whatsappAffiche: "+225 07 67 53 79 98",
+  email: "contact@monpapierrame.store",
   zone: "Partout en Côte d'Ivoire : Abidjan, Yamoussoukro, Bouaké, San-Pédro, Daloa, Korhogo et toutes les autres villes",
   horaires: "Lundi – Samedi, 8h – 19h",
   delaiLivraison: "24 à 72 h",

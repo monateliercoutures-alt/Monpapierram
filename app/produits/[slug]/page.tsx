@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import BarreInfo from "@/components/BarreInfo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -102,7 +101,6 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
 
   return (
     <>
-      <BarreInfo />
       <Header />
       <main id="contenu" className="bg-white">
         <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10">

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SITE } from "@/lib/config";
 import { usePanier } from "./PanierContext";
+import BarreInfo from "./BarreInfo";
 
 // Liens du menu principal
 const LIENS = [
@@ -29,6 +30,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-profond/15 bg-white">
+      <BarreInfo />
       <a
         href="#contenu"
         className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:rounded-bouton focus:bg-profond focus:px-4 focus:py-2 focus:text-white"

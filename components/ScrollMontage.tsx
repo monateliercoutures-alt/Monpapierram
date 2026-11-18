@@ -184,7 +184,7 @@ export default function ScrollMontage() {
         </div>
 
         {/* Zone des images */}
-        <div className="relative mt-20 flex-1 sm:mt-24">
+        <div className="relative mt-[7.6rem] flex-1 sm:mt-[9.1rem]">
           {ETAPES.map((_, i) => (
             <Calque key={i} index={i} progression={scrollYProgress} />
           ))}

@@ -1,4 +1,3 @@
-import BarreInfo from "@/components/BarreInfo";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Reassurance from "@/components/Reassurance";
@@ -24,6 +23,7 @@ const donneesStructurees = {
       brand: [{ "@type": "Brand", name: "Double A" }, { "@type": "Brand", name: "Paper One" }, { "@type": "Brand", name: "Globulus" }],
       url: SITE.url,
       telephone: SITE.whatsappAffiche,
+      email: SITE.email,
       areaServed: { "@type": "Country", name: "Côte d'Ivoire" },
       paymentAccepted: "Paiement à la livraison, Orange Money, MTN MoMo, Moov Money, Wave",
       currenciesAccepted: "XOF",
@@ -52,7 +52,6 @@ const donneesStructurees = {
 export default function Page() {
   return (
     <>
-      <BarreInfo />
       <Header />
       <main id="contenu">
         <Hero />

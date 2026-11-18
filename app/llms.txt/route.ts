@@ -20,6 +20,7 @@ ${produits}
 ## Informations pratiques
 - Site : ${SITE.url}
 - WhatsApp : ${SITE.whatsappAffiche}
+- E-mail : ${SITE.email}
 - Livraison : ${SITE.zone}
 - Horaires : ${SITE.horaires}
 `;

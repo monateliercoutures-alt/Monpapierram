@@ -1,5 +1,4 @@
 import Link from "next/link";
-import BarreInfo from "@/components/BarreInfo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -9,7 +8,6 @@ import { PRODUITS, libellePrix } from "@/lib/config";
 export default function NotFound() {
   return (
     <>
-      <BarreInfo />
       <Header />
       <main id="contenu" className="bg-white px-4 py-16 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-3xl text-center">

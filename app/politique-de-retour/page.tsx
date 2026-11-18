@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import BarreInfo from "@/components/BarreInfo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
 export default function PolitiqueRetour() {
   return (
     <>
-      <BarreInfo />
       <Header />
       <main id="contenu" className="bg-white px-4 py-12 sm:px-6 sm:py-16">
         <article className="mx-auto max-w-3xl">
@@ -37,7 +35,8 @@ export default function PolitiqueRetour() {
             <h2 className="text-xl font-bold text-nuit">Comment demander un retour ?</h2>
             <ol className="mt-3 space-y-3 text-encre/85">
               <li>
-                <strong className="text-nuit">1. Contactez-nous sur WhatsApp</strong> au {SITE.whatsappAffiche}, dans le
+                <strong className="text-nuit">1. Contactez-nous sur WhatsApp</strong> au {SITE.whatsappAffiche} (ou par e-mail à{" "}
+                <a href={`mailto:${SITE.email}`} className="font-semibold text-profond underline">{SITE.email}</a>), dans le
                 délai de 24 à 72 h après la livraison.
               </li>
               <li>

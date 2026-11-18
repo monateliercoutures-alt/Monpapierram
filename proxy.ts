@@ -18,7 +18,7 @@ import type { NextRequest } from "next/server";
 // Moteurs de recherche, assistants IA (ChatGPT, Claude, Perplexity, Gemini…) et aperçus
 // de lien : toujours autorisés
 const AUTORISES =
-  /gptbot|chatgpt-user|oai-searchbot|claudebot|claude-web|claude-user|claude-searchbot|anthropic-ai|perplexitybot|perplexity-user|google-extended|googleother|meta-externalagent|meta-externalfetcher|amazonbot|cohere-ai|ccbot|mistralai-user|duckassistbot|youbot|googlebot|google-inspectiontool|adsbot-google|bingbot|bingpreview|duckduckbot|yandex|baiduspider|applebot|facebookexternalhit|facebot|whatsapp|telegrambot|twitterbot|linkedinbot|slackbot|discordbot|pinterest/i;
+  /google|storebot-google|feedfetcher-google|msnbot|adidxbot|gptbot|chatgpt-user|oai-searchbot|claudebot|claude-web|claude-user|claude-searchbot|anthropic-ai|perplexitybot|perplexity-user|google-extended|googleother|meta-externalagent|meta-externalfetcher|amazonbot|cohere-ai|ccbot|mistralai-user|duckassistbot|youbot|googlebot|google-inspectiontool|adsbot-google|bingbot|bingpreview|duckduckbot|yandex|baiduspider|applebot|facebookexternalhit|facebot|whatsapp|telegrambot|twitterbot|linkedinbot|slackbot|discordbot|pinterest/i;
 
 // Outils automatiques et robots de copie : refusés
 const BLOQUES = new RegExp(

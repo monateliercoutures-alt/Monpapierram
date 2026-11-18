@@ -15,7 +15,7 @@ function xml(t: string): string {
 }
 
 // Nombre de ramettes par article vendu (pour l'attribut multipack), selon l'identifiant produit
-const MULTIPACK: Record<string, number> = { carton: 5, gros: 5 };
+const MULTIPACK: Record<string, number> = { carton: 5, gros: 5, "paperone-carton": 5, "paperone-gros": 5, "globulus-carton": 5, "globulus-gros": 5 };
 
 export function GET() {
   const articles = PRODUITS.filter((p) => p.prix !== null).map((p) => {

@@ -29,7 +29,7 @@ const donneesStructurees = {
       openingHours: "Mo-Sa 08:00-19:00",
       image: `${SITE.url}/images/etape-1.jpg`,
       priceRange: "FCFA",
-      makesOffer: PRODUITS.map((p) => ({
+      makesOffer: PRODUITS.filter((p) => p.prix !== null).map((p) => ({
         "@type": "Offer",
         priceCurrency: "XOF",
         price: p.prix,

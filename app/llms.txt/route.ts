@@ -7,12 +7,12 @@ import { PRODUITS, SITE, formatPrix } from "@/lib/config";
  */
 export function GET() {
   const produits = PRODUITS.map(
-    (p) => `- [${p.nom}](${SITE.url}/produits/${p.slug}) : ${p.specs}, ${formatPrix(p.prix)} ${p.unite}.`,
+    (p) => `- [${p.nom}](${SITE.url}/produits/${p.slug}) : ${p.specs}, ${p.prix === null ? "prix sur demande (WhatsApp)" : `${formatPrix(p.prix)} ${p.unite}`}.`,
   ).join("\n");
 
   const texte = `# ${SITE.nom}
 
-> ${SITE.nom} est un grossiste de papier rame A4 Double A basé à Abidjan, qui livre partout en Côte d'Ivoire. Vente à l\'unité, au carton et en gros (dès 10 cartons) : ramettes de 500 feuilles, cartons de 5 ramettes et vente en gros. Livraison à Abidjan et partout en Côte d'Ivoire. Paiement à la livraison, Orange Money, MTN MoMo, Moov Money ou Wave. Commande sur le site ou par WhatsApp.
+> ${SITE.nom} est un grossiste de papier rame A4 Double A basé à Abidjan, qui livre partout en Côte d'Ivoire. Vente à l\'unité, au carton et en gros (dès 10 cartons) : ramettes de 500 feuilles, cartons de 5 ramettes et vente en gros, en marques Double A, Paper One et Globulus. Livraison à Abidjan et partout en Côte d'Ivoire. Paiement à la livraison, Orange Money, MTN MoMo, Moov Money ou Wave. Commande sur le site ou par WhatsApp.
 
 ## Produits
 ${produits}

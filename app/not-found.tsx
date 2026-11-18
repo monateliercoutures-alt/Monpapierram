@@ -3,7 +3,7 @@ import BarreInfo from "@/components/BarreInfo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { PRODUITS, formatPrix } from "@/lib/config";
+import { PRODUITS, libellePrix } from "@/lib/config";
 
 // Page 404 aux couleurs du site : on propose les produits plutôt qu'une impasse
 export default function NotFound() {
@@ -19,12 +19,12 @@ export default function NotFound() {
             L&apos;adresse est peut-être incorrecte ou la page a été déplacée. Retrouvez nos produits ci-dessous.
           </p>
           <ul className="mt-8 grid gap-3 text-left sm:grid-cols-3">
-            {PRODUITS.map((p) => (
+            {PRODUITS.filter((p) => ["ramette", "carton", "gros"].includes(p.id)).map((p) => (
               <li key={p.id}>
                 <Link href={`/produits/${p.slug}`} className="block h-full rounded-carte border border-profond/15 p-4 hover:border-profond">
                   <span className="block text-sm font-bold text-nuit">{p.nom}</span>
                   <span className="mt-1 block text-sm text-encre/70">
-                    {formatPrix(p.prix)} {p.unite}
+                    {libellePrix(p)}{p.prix !== null && ` ${p.unite}`}
                   </span>
                 </Link>
               </li>

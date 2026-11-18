@@ -26,9 +26,11 @@ export type Produit = {
   nom: string;
   specs: string; // ligne courte sous le nom
   detail: string;
-  prix: number; // en FCFA
+  marque: string; // regroupement dans le catalogue
+  prix: number | null; // en FCFA ; null = prix sur demande (pas de commande en ligne)
   unite: string; // « la ramette », « le carton »…
   note?: string; // précision sous le prix
+  messageDevis?: string; // message WhatsApp pour les produits sur demande
   minQty: number; // quantité minimale de commande
   badge?: string;
   image: string;
@@ -50,6 +52,7 @@ export const SEUIL_GROS = 10;
 export const PRODUITS: Produit[] = [
   {
     id: "ramette",
+    marque: "Double A",
     metaTitre: "Papier Rame A4 80g, Ramette {prix} | Monpapierrame",
     metaDescription:
       "Papier rame A4 80g Double A, 500 feuilles, {prix}. Recto verso, laser et jet d'encre. Livraison à Abidjan et en Côte d'Ivoire, paiement à la livraison.",
@@ -88,6 +91,7 @@ export const PRODUITS: Produit[] = [
   },
   {
     id: "carton",
+    marque: "Double A",
     metaTitre: "Carton Papier Rame A4 80g, 5 Ramettes | Monpapierrame",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Double A, 2 500 feuilles, {prix}. Livré scellé à Abidjan et en Côte d'Ivoire, payez à la livraison.",
@@ -128,6 +132,7 @@ export const PRODUITS: Produit[] = [
   },
   {
     id: "gros",
+    marque: "Double A",
     metaTitre: "Grossiste Papier Rame A4, Carton Double A | Monpapierrame",
     metaDescription:
       "Grossiste papier rame A4 à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture, livraison en Côte d'Ivoire, Mobile Money. Devis WhatsApp.",
@@ -165,11 +170,141 @@ export const PRODUITS: Produit[] = [
       ["Quantité minimale", `${SEUIL_GROS} cartons`],
     ],
   },
+  {
+    id: "paperone-carton",
+    marque: "Paper One",
+    slug: "carton-papier-rame-a4-paper-one",
+    nom: "Carton papier rame A4 80g Paper One (5 ramettes)",
+    specs: "80 g/m² · 5 × 500 feuilles",
+    detail: "Papier rame A4 Paper One All Purpose, au carton.",
+    prix: null,
+    unite: "prix sur demande",
+    minQty: 1,
+    image: "/images/paper-one.jpg",
+    alt: "Carton de papier rame A4 Paper One All Purpose 80 g",
+    points: ["5 ramettes de 500 feuilles", "Format A4, 80 g/m²", "Livraison partout en Côte d'Ivoire"],
+    galerie: [
+      { src: "/images/paper-one.jpg", alt: "Carton de papier rame A4 Paper One All Purpose 80 g" },
+    ],
+    description: ["Le carton de papier rame A4 Paper One All Purpose regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles de 80 g/m².", "Le prix dépend de la quantité et de votre ville de livraison : demandez-le-nous sur WhatsApp, nous répondons rapidement."],
+    usages: ["Bureaux et entreprises", "Écoles et centres de formation", "Cybercafés et centres de photocopie", "Impression et photocopie du quotidien"],
+    fiche: [
+      ["Marque", "Paper One"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "1 carton"],
+    ],
+    metaTitre: "Carton Papier Rame A4 Paper One 80g | Monpapierrame",
+    metaDescription:
+      "Carton de 5 ramettes papier rame A4 80g Paper One, 2 500 feuilles. Prix sur demande sur WhatsApp. Livraison à Abidjan et partout en Côte d'Ivoire.",
+    messageDevis: "Bonjour Monpapierrame, je souhaite le prix d'un carton de papier rame A4 Paper One 80 g (5 ramettes).",
+  },
+  {
+    id: "paperone-gros",
+    marque: "Paper One",
+    slug: "papier-rame-a4-paper-one-10-cartons",
+    nom: "Papier rame A4 Paper One en gros (10 cartons)",
+    specs: "Lot de 10 cartons · 80 g/m²",
+    detail: "Pour les professionnels : lot de 10 cartons de papier rame A4 Paper One.",
+    prix: null,
+    unite: "prix sur demande",
+    minQty: 10,
+    image: "/images/paper-one.jpg",
+    alt: "Carton de papier rame A4 Paper One All Purpose 80 g",
+    points: ["Lot de 10 cartons (50 ramettes)", "25 000 feuilles A4 80 g/m²", "Facture sur demande"],
+    galerie: [
+      { src: "/images/paper-one.jpg", alt: "Carton de papier rame A4 Paper One All Purpose 80 g" },
+    ],
+    description: ["Achetez en gros du papier rame A4 Paper One All Purpose : un lot de 10 cartons de 5 ramettes, soit 50 ramettes et 25 000 feuilles de 80 g/m².", "Le prix du lot est communiqué sur demande, avec facture et livraison planifiée partout en Côte d'Ivoire."],
+    usages: ["Imprimeries et revendeurs", "Écoles, universités et administrations", "Entreprises à gros volume d'impression", "Approvisionnement régulier avec livraison planifiée"],
+    fiche: [
+      ["Marque", "Paper One"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "Lot de 10 cartons (50 ramettes)"],
+    ],
+    metaTitre: "Papier Rame A4 Paper One en Gros, 10 Cartons | Monpapierrame",
+    metaDescription:
+      "Papier rame A4 Paper One en gros à Abidjan : lot de 10 cartons, 80g. Facture, livraison en Côte d'Ivoire. Prix sur demande, devis WhatsApp.",
+    messageDevis: "Bonjour Monpapierrame, je souhaite le prix d'un lot de 10 cartons de papier rame A4 Paper One 80 g.",
+  },
+  {
+    id: "globulus-carton",
+    marque: "Globulus",
+    slug: "carton-papier-rame-a4-globulus",
+    nom: "Carton papier rame A4 80g Globulus (5 ramettes)",
+    specs: "80 g/m² · 5 × 500 feuilles",
+    detail: "Papier rame A4 Globulus, au carton.",
+    prix: null,
+    unite: "prix sur demande",
+    minQty: 1,
+    image: "/images/globulus.jpg",
+    alt: "Carton de papier rame A4 Globulus 80 g/m², 5 ramettes de 500 feuilles",
+    points: ["5 ramettes de 500 feuilles", "Format A4, 80 g/m²", "Livraison partout en Côte d'Ivoire"],
+    galerie: [
+      { src: "/images/globulus.jpg", alt: "Carton de papier rame A4 Globulus 80 g/m², 5 ramettes de 500 feuilles" },
+    ],
+    description: ["Le carton de papier rame A4 Globulus regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles de 80 g/m².", "Le prix dépend de la quantité et de votre ville de livraison : demandez-le-nous sur WhatsApp, nous répondons rapidement."],
+    usages: ["Bureaux et entreprises", "Écoles et centres de formation", "Cybercafés et centres de photocopie", "Impression et photocopie du quotidien"],
+    fiche: [
+      ["Marque", "Globulus"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "1 carton"],
+    ],
+    metaTitre: "Carton Papier Rame A4 Globulus 80g | Monpapierrame",
+    metaDescription:
+      "Carton de 5 ramettes papier rame A4 80g Globulus, 2 500 feuilles. Prix sur demande sur WhatsApp. Livraison à Abidjan et partout en Côte d'Ivoire.",
+    messageDevis: "Bonjour Monpapierrame, je souhaite le prix d'un carton de papier rame A4 Globulus 80 g (5 ramettes).",
+  },
+  {
+    id: "globulus-gros",
+    marque: "Globulus",
+    slug: "papier-rame-a4-globulus-10-cartons",
+    nom: "Papier rame A4 Globulus en gros (10 cartons)",
+    specs: "Lot de 10 cartons · 80 g/m²",
+    detail: "Pour les professionnels : lot de 10 cartons de papier rame A4 Globulus.",
+    prix: null,
+    unite: "prix sur demande",
+    minQty: 10,
+    image: "/images/globulus.jpg",
+    alt: "Carton de papier rame A4 Globulus 80 g/m², 5 ramettes de 500 feuilles",
+    points: ["Lot de 10 cartons (50 ramettes)", "25 000 feuilles A4 80 g/m²", "Facture sur demande"],
+    galerie: [
+      { src: "/images/globulus.jpg", alt: "Carton de papier rame A4 Globulus 80 g/m², 5 ramettes de 500 feuilles" },
+    ],
+    description: ["Achetez en gros du papier rame A4 Globulus : un lot de 10 cartons de 5 ramettes, soit 50 ramettes et 25 000 feuilles de 80 g/m².", "Le prix du lot est communiqué sur demande, avec facture et livraison planifiée partout en Côte d'Ivoire."],
+    usages: ["Imprimeries et revendeurs", "Écoles, universités et administrations", "Entreprises à gros volume d'impression", "Approvisionnement régulier avec livraison planifiée"],
+    fiche: [
+      ["Marque", "Globulus"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "Lot de 10 cartons (50 ramettes)"],
+    ],
+    metaTitre: "Papier Rame A4 Globulus en Gros, 10 Cartons | Monpapierrame",
+    metaDescription:
+      "Papier rame A4 Globulus en gros à Abidjan : lot de 10 cartons, 80g. Facture, livraison en Côte d'Ivoire. Prix sur demande, devis WhatsApp.",
+    messageDevis: "Bonjour Monpapierrame, je souhaite le prix d'un lot de 10 cartons de papier rame A4 Globulus 80 g.",
+  },
 ];
 
 /** Remplace {prix} par le prix formaté du produit */
-export function meta(texte: string, prix: number): string {
-  return texte.replace("{prix}", formatPrix(prix));
+export function meta(texte: string, prix: number | null): string {
+  return texte.replace("{prix}", prix === null ? "prix sur demande" : formatPrix(prix));
+}
+
+/** Libellé du prix à afficher : « 19 900 FCFA » ou « Prix sur demande » */
+export function libellePrix(p: Produit): string {
+  return p.prix === null ? "Prix sur demande" : formatPrix(p.prix);
+}
+
+/** Lien WhatsApp pour demander le prix d'un produit sur demande */
+export function lienDevis(p: Produit): string {
+  return lienWhatsApp(p.messageDevis ?? `Bonjour ${SITE.nom}, je souhaite le prix de : ${p.nom}.`);
 }
 
 export function trouverProduit(id: string): Produit | undefined {

@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   title: TITRE,
   description: DESCRIPTION,
   keywords: [
+    "papier rame Paper One",
+    "papier rame Globulus",
     "grossiste papier rame",
     "grossiste papier A4 Abidjan",
     "grossiste papier rame Côte d'Ivoire",

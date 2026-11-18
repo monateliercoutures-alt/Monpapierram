@@ -7,9 +7,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ProduitGalerie from "@/components/ProduitGalerie";
-import AjouterAuPanier from "@/components/AjouterAuPanier";
+import BoutonAchat from "@/components/BoutonAchat";
 import { IconeWhatsApp } from "@/components/Icones";
-import { PRODUITS, SITE, formatPrix, lienWhatsApp, meta, trouverParSlug } from "@/lib/config";
+import { PRODUITS, SITE, libellePrix, lienWhatsApp, meta, trouverParSlug } from "@/lib/config";
 
 // Une page est générée à la compilation pour chaque produit de lib/config.ts
 export function generateStaticParams() {
@@ -35,7 +35,10 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
   const p = trouverParSlug(slug);
   if (!p) notFound();
 
-  const autres = PRODUITS.filter((x) => x.id !== p.id);
+  // Autres produits : d'abord ceux de la même marque, puis les autres, 4 au maximum
+  const autres = [...PRODUITS.filter((x) => x.id !== p.id)]
+    .sort((a, b) => Number(b.marque === p.marque) - Number(a.marque === p.marque))
+    .slice(0, 4);
   const message = `Bonjour ${SITE.nom}, j'ai une question sur : ${p.nom}.`;
 
   // Données structurées (SEO) : fiche produit avec prix
@@ -45,18 +48,23 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
     name: p.nom,
     description: p.description.join(" "),
     sku: p.slug,
-    brand: { "@type": "Brand", name: "Double A" },
+    brand: { "@type": "Brand", name: p.marque },
     category: "Papier d'impression A4",
     image: p.galerie.map((g) => `${SITE.url}${g.src}`),
-    offers: {
-      "@type": "Offer",
-      url: `${SITE.url}/produits/${p.slug}`,
-      priceCurrency: "XOF",
-      price: p.prix,
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-      seller: { "@type": "Organization", name: SITE.nom },
-    },
+    // Sans prix affiché, on ne déclare pas d'offre (Google exige un prix)
+    ...(p.prix === null
+      ? {}
+      : {
+        offers: {
+          "@type": "Offer",
+          url: `${SITE.url}/produits/${p.slug}`,
+          priceCurrency: "XOF",
+          price: p.prix,
+          availability: "https://schema.org/InStock",
+          itemCondition: "https://schema.org/NewCondition",
+          seller: { "@type": "Organization", name: SITE.nom },
+        },
+        }),
   };
   const fil = {
     "@context": "https://schema.org",
@@ -99,14 +107,14 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
               <p className="mt-1 text-encre/70">{p.specs}</p>
 
               <p className="mt-6 flex items-baseline gap-3">
-                <span className="font-titre text-3xl font-bold text-nuit">{formatPrix(p.prix)}</span>
-                <span className="text-encre/65">{p.unite}</span>
+                <span className="font-titre text-3xl font-bold text-nuit">{libellePrix(p)}</span>
+                {p.prix !== null && <span className="text-encre/65">{p.unite}</span>}
               </p>
               {p.note && <p className="mt-1 text-sm text-profond">{p.note}</p>}
-              <p className="mt-3 text-sm font-semibold text-[#0b7a4b]">En stock</p>
+              {p.prix !== null && <p className="mt-3 text-sm font-semibold text-[#0b7a4b]">En stock</p>}
 
               <div className="mt-5 max-w-md">
-                <AjouterAuPanier id={p.id} nom={p.nom} minQty={p.minQty} />
+                <BoutonAchat p={p} />
               </div>
               <a
                 href={lienWhatsApp(message)}
@@ -187,7 +195,7 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
                     <span>
                       <span className="block font-bold text-nuit">{a.nom}</span>
                       <span className="mt-1 block text-sm text-encre/70">
-                        {formatPrix(a.prix)} {a.unite}
+                        {libellePrix(a)}{a.prix !== null && ` ${a.unite}`}
                       </span>
                     </span>
                   </Link>

@@ -34,7 +34,7 @@ export default function Presentation() {
               {SITE.nom} est <strong>grossiste de papier rame A4 Double A Premium 80 g/m²</strong> à Abidjan et partout en Côte d&apos;Ivoire : des
               ramettes de 500 feuilles, des cartons de 5 ramettes (2 500 feuilles) et des cartons en gros pour les
               professionnels. Le papier Double A est reconnu pour sa blancheur régulière et son passage sans bourrage
-              dans les imprimantes laser, jet d&apos;encre et les photocopieurs.
+              dans les imprimantes laser, jet d&apos;encre et les photocopieurs. Nous proposons aussi le papier rame A4 Paper One et Globulus, au carton et par lot de 10 cartons, sur demande de prix par WhatsApp.
             </p>
             <p>
               Vous commandez en ligne, nous confirmons votre commande sur WhatsApp, puis nous vous livrons à Abidjan et

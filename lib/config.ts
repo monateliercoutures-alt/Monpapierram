@@ -402,6 +402,30 @@ export const ETAPES: EtapeMontage[] = [
     image: "/images/etape-4.jpg",
     alt: "Ramette Double A Premium couchée et ouverte devant un carton ouvert",
   },
+  {
+    titre: "Le carton Paper One",
+    phrase: "Papier rame A4 Paper One 70 g/m², 500 feuilles par ramette, au carton ou par lot de 10 cartons.",
+    image: "/images/paper-one-3.jpg",
+    alt: "Carton de papier rame A4 Paper One 70 g/m²",
+  },
+  {
+    titre: "Paper One, prêt pour l'impression",
+    phrase: "Ramettes A4 de 210 × 297 mm pour imprimantes laser, jet d'encre et photocopieurs.",
+    image: "/images/paper-one-2.jpg",
+    alt: "Carton et ramettes de papier A4 Paper One, dont une ramette ouverte avec ses feuilles",
+  },
+  {
+    titre: "Le carton Globulus Premium",
+    phrase: "Papier rame A4 Globulus Premium 80 g/m², 500 feuilles par ramette, au carton ou par lot de 10 cartons.",
+    image: "/images/globulus-3.jpg",
+    alt: "Carton de papier rame A4 Globulus Premium 80 g/m²",
+  },
+  {
+    titre: "Globulus : haute blancheur, grande polyvalence",
+    phrase: "Une ramette A4 de 500 feuilles pour copie, laser, jet d'encre et impression du quotidien.",
+    image: "/images/globulus-2.jpg",
+    alt: "Carton et ramettes de papier A4 Globulus Premium, dont une ramette ouverte",
+  },
 ];
 
 /** Questions fréquentes (affichées dans la FAQ et dans les données structurées SEO) */

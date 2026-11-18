@@ -138,7 +138,7 @@ function Legende({
 
 /**
  * Montage « vidéo » piloté par le défilement :
- * section de 300vh avec un conteneur sticky de 100vh.
+ * section de hauteur proportionnelle au nombre d'étapes (75vh par étape) avec un conteneur sticky de 100vh.
  * Avec prefers-reduced-motion, les 4 images s'empilent sans animation.
  */
 export default function ScrollMontage() {
@@ -173,7 +173,8 @@ export default function ScrollMontage() {
       id="montage"
       ref={section}
       aria-label="Présentation du produit en 4 étapes"
-      className="relative h-[300vh] bg-white motion-reduce:h-auto"
+      style={{ height: `${Math.max(300, N * 75)}vh` }}
+      className="relative bg-white motion-reduce:h-auto!"
     >
       {/* Version animée (masquée si mouvement réduit) */}
       <div className="sticky top-0 flex h-screen flex-col overflow-hidden bg-white motion-reduce:hidden">
@@ -193,7 +194,7 @@ export default function ScrollMontage() {
         <div className="relative z-10 border-t border-profond/10 bg-white/95 px-4 pb-5 pt-2 sm:px-6">
           <div className="mx-auto max-w-6xl">
             {/* Points d'étape */}
-            <div className="-ml-3.5 flex" role="group" aria-label="Étapes">
+            <div className="-ml-2.5 flex sm:-ml-3.5" role="group" aria-label="Étapes">
               {ETAPES.map((e, i) => (
                 <button
                   key={i}
@@ -201,7 +202,7 @@ export default function ScrollMontage() {
                   onClick={() => allerA(i)}
                   aria-label={`Aller à l'étape ${i + 1} : ${e.titre}`}
                   aria-current={actif === i ? "step" : undefined}
-                  className="group flex h-11 w-11 items-center justify-center"
+                  className="group flex h-11 w-8 items-center justify-center sm:w-11"
                 >
                   <span
                     className={`block rounded-full transition-all motion-reduce:transition-none ${

@@ -51,7 +51,7 @@ function courbe(i: number, plein: number, absent: number): { entree: number[]; s
 function courbeTexte(i: number, plein: number, absent: number): { entree: number[]; sortie: number[] } {
   const debut = i / N;
   const fin = (i + 1) / N;
-  const T = 0.035;
+  const T = Math.min(0.035, 0.28 / N); // la transition se raccourcit quand il y a beaucoup d'étapes
   const entree: number[] = [];
   const sortie: number[] = [];
   if (i === 0) {
@@ -173,7 +173,7 @@ export default function ScrollMontage() {
       id="montage"
       ref={section}
       aria-label="Présentation du produit en 4 étapes"
-      style={{ height: `${Math.max(300, N * 75)}vh` }}
+      style={{ height: `${Math.max(300, N * 70)}vh` }}
       className="relative bg-white motion-reduce:h-auto!"
     >
       {/* Version animée (masquée si mouvement réduit) */}

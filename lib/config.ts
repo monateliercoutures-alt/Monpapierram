@@ -426,6 +426,18 @@ export const ETAPES: EtapeMontage[] = [
     image: "/images/globulus-2.jpg",
     alt: "Carton et ramettes de papier A4 Globulus Premium, dont une ramette ouverte",
   },
+  {
+    titre: "Paper One : ramette et carton",
+    phrase: "Disponible à la ramette dans le carton, ou par lot de 10 cartons pour les professionnels.",
+    image: "/images/paper-one-1.jpg",
+    alt: "Ramette et carton de papier A4 Paper One 70 g/m²",
+  },
+  {
+    titre: "Globulus : ramette et carton",
+    phrase: "Le papier Globulus Premium, au carton ou par lot de 10 cartons. Prix sur demande par WhatsApp.",
+    image: "/images/globulus-1.jpg",
+    alt: "Ramette et carton de papier A4 Globulus Premium 80 g/m²",
+  },
 ];
 
 /** Questions fréquentes (affichées dans la FAQ et dans les données structurées SEO) */

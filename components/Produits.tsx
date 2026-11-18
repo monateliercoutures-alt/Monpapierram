@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { PRODUITS, libellePrix } from "@/lib/config";
+import CarteImages from "./CarteImages";
 import BoutonAchat from "./BoutonAchat";
 import Titre from "./Titre";
 
@@ -20,19 +20,7 @@ export default function Produits() {
             <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {PRODUITS.filter((p) => p.marque === marque).map((p) => (
                 <li key={p.id} className="flex flex-col overflow-hidden rounded-carte border border-profond/15 bg-white">
-                  <Link href={`/produits/${p.slug}`} className="relative block aspect-[4/3] w-full bg-white" aria-label={`Voir le produit : ${p.nom}`}>
-                    <Image
-                      src={p.image}
-                      alt={p.alt}
-                      fill
-                      sizes="(min-width: 1024px) 370px, (min-width: 640px) 50vw, 100vw"
-                      className="object-contain p-2"
-                      loading="lazy"
-                    />
-                    {p.badge && (
-                      <span className="absolute left-3 top-3 rounded bg-profond px-2 py-1 text-xs font-semibold text-white">{p.badge}</span>
-                    )}
-                  </Link>
+                  <CarteImages href={`/produits/${p.slug}`} nom={p.nom} images={p.galerie} badge={p.badge} />
 
                   <div className="flex flex-1 flex-col border-t border-profond/10 p-5">
                     <h4 className="text-base font-bold text-nuit">

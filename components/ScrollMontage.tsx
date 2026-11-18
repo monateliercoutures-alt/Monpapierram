@@ -12,8 +12,9 @@ import {
 import { ETAPES } from "@/lib/config";
 
 const N = ETAPES.length;
-// Largeur (en fraction de progression) du fondu enchaîné entre deux étapes
-const FONDU = 0.07;
+// Demi-largeur (en fraction de progression) du fondu enchaîné, centré sur la frontière
+// entre deux étapes : l'image reste nette et pleine 70 % du temps, le fondu est bref.
+const FONDU = 0.15 / N;
 
 /**
  * Points de passage (progression 0 → 1) d'une étape et valeurs associées.
@@ -26,11 +27,11 @@ function courbe(i: number, plein: number, absent: number): { entree: number[]; s
   const entree: number[] = [];
   const sortie: number[] = [];
   if (i > 0) {
-    entree.push(debut - FONDU, debut + FONDU * 0.3);
+    entree.push(debut - FONDU, debut + FONDU);
     sortie.push(absent, plein);
   }
   if (i < N - 1) {
-    entree.push(fin - FONDU * 0.3, fin + FONDU);
+    entree.push(fin - FONDU, fin + FONDU);
     sortie.push(plein, absent);
   }
   if (i === 0) {
@@ -91,7 +92,7 @@ function Calque({
   // Fondu enchaîné entre les images
   const opacity = useTransform(progression, c.entree, c.sortie);
   // Léger zoom au fil de l'étape
-  const scale = useTransform(progression, p, [1, 1.05]);
+  const scale = useTransform(progression, p, [1, 1.03]);
   // Léger glissement horizontal, alterné selon l'étape
   const sens = index % 2 === 0 ? 1 : -1;
   const x = useTransform(progression, p, [`${1 * sens}%`, `${-1 * sens}%`]);
@@ -103,7 +104,7 @@ function Calque({
         alt={etape.alt}
         fill
         sizes="100vw"
-        className="object-contain"
+        className="object-contain p-4 sm:p-6"
         loading="lazy"
       />
     </motion.div>

@@ -498,7 +498,7 @@ export const FAQ: { q: string; r: string }[] = [
  * titre 60 caractères maximum, description 155 maximum).
  */
 export const SEO_ACCUEIL = {
-  titre: "Grossiste Papier Rame A4 en Côte d'Ivoire | Monpapierrame",
+  titre: "Papier Rame A4 à Abidjan & en Côte d’Ivoire | Monpapierrame",
   description:
     "Grossiste et fournisseur papier rame A4 Double A, Paper One, Globulus à Abidjan et en Côte d'Ivoire. Ramette dès {prix}, carton, gros dès 10 cartons.",
 };

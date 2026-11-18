@@ -15,10 +15,10 @@ import type { NextRequest } from "next/server";
  * qui se fait passer pour un navigateur n'est pas détecté.
  */
 
-// Moteurs de recherche, assistants IA (ChatGPT, Claude, Perplexity, Gemini…) et aperçus
+// Outils de vitesse de Google (Lighthouse, PageSpeed Insights), moteurs de recherche, assistants IA (ChatGPT, Claude, Perplexity, Gemini…) et aperçus
 // de lien : toujours autorisés
 const AUTORISES =
-  /google|storebot-google|feedfetcher-google|msnbot|adidxbot|gptbot|chatgpt-user|oai-searchbot|claudebot|claude-web|claude-user|claude-searchbot|anthropic-ai|perplexitybot|perplexity-user|google-extended|googleother|meta-externalagent|meta-externalfetcher|amazonbot|cohere-ai|ccbot|mistralai-user|duckassistbot|youbot|googlebot|google-inspectiontool|adsbot-google|bingbot|bingpreview|duckduckbot|yandex|baiduspider|applebot|facebookexternalhit|facebot|whatsapp|telegrambot|twitterbot|linkedinbot|slackbot|discordbot|pinterest/i;
+  /lighthouse|chrome-lighthouse|pagespeed|page speed|google|storebot-google|feedfetcher-google|msnbot|adidxbot|gptbot|chatgpt-user|oai-searchbot|claudebot|claude-web|claude-user|claude-searchbot|anthropic-ai|perplexitybot|perplexity-user|google-extended|googleother|meta-externalagent|meta-externalfetcher|amazonbot|cohere-ai|ccbot|mistralai-user|duckassistbot|youbot|googlebot|google-inspectiontool|adsbot-google|bingbot|bingpreview|duckduckbot|yandex|baiduspider|applebot|facebookexternalhit|facebot|whatsapp|telegrambot|twitterbot|linkedinbot|slackbot|discordbot|pinterest/i;
 
 // Outils automatiques et robots de copie : refusés
 const BLOQUES = new RegExp(
@@ -29,8 +29,8 @@ const BLOQUES = new RegExp(
     "extract|meta|parser|checker|validator|analy|inspect|audit|monitor|uptime|status|w3c|check",
     // Analyseurs SEO, de trafic et de technologies : Semrush, Ahrefs, Moz, SimilarWeb, BuiltWith, Wappalyzer…
     "semrush|ahrefs|screaming|seo|serpstat|spyfu|ubersuggest|majestic|mj12|rogerbot|mozbot|moz\\.com|similarweb|similartech|builtwith|wappalyzer|whatcms|netcraft|urlscan|siteimprove|siteliner|woorank|dareboost|sucuri|zoominfo",
-    // Tests de vitesse et de performance
-    "lighthouse|pagespeed|gtmetrix|pingdom|webpagetest|speed-?insights|site24x7|statuscake",
+    // Tests de vitesse tiers (Lighthouse et PageSpeed de Google sont autorisés plus haut)
+    "gtmetrix|pingdom|webpagetest|speed-?insights|site24x7|statuscake",
     // Archivage de pages
     "ia_archiver|archive\\.org|wayback",
   ].join("|"),

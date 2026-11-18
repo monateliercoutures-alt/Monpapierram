@@ -389,7 +389,7 @@ export const COMMUNES = [
 
 export type EtapeMontage = { titre: string; phrase: string; image: string; alt: string };
 
-/** Les 4 étapes du montage au défilement */
+/** Les 6 étapes du montage au défilement (2 par marque) */
 export const ETAPES: EtapeMontage[] = [
   {
     titre: "Le carton de 5 ramettes",
@@ -402,18 +402,6 @@ export const ETAPES: EtapeMontage[] = [
     phrase: "Ouvrez le carton : chaque ramette est emballée individuellement et protégée de l'humidité.",
     image: "/images/etape-2.jpg",
     alt: "Carton Double A ouvert avec une ramette Double A Premium qui en sort",
-  },
-  {
-    titre: "500 feuilles blanches et lisses",
-    phrase: "Un papier A4 80 g/m² à la blancheur uniforme, pour des impressions nettes.",
-    image: "/images/etape-3.jpg",
-    alt: "Ramette Double A Premium ouverte avec des feuilles blanches posées à côté, carton flou derrière",
-  },
-  {
-    titre: "Prête pour l'impression recto verso",
-    phrase: "Une épaisseur et une opacité pensées pour le recto verso, sans bourrage.",
-    image: "/images/etape-4.jpg",
-    alt: "Ramette Double A Premium couchée et ouverte devant un carton ouvert",
   },
   {
     titre: "Le carton Paper One",
@@ -438,18 +426,6 @@ export const ETAPES: EtapeMontage[] = [
     phrase: "Une ramette A4 de 500 feuilles pour copie, laser, jet d'encre et impression du quotidien.",
     image: "/images/globulus-2.jpg",
     alt: "Carton et ramettes de papier A4 Globulus Premium, dont une ramette ouverte",
-  },
-  {
-    titre: "Paper One : ramette et carton",
-    phrase: "Disponible à la ramette dans le carton, ou par lot de 10 cartons pour les professionnels.",
-    image: "/images/paper-one-1.jpg",
-    alt: "Ramette et carton de papier A4 Paper One 70 g/m²",
-  },
-  {
-    titre: "Globulus : ramette et carton",
-    phrase: "Le papier Globulus Premium, au carton ou par lot de 10 cartons. Commande en ligne, livraison partout en Côte d'Ivoire.",
-    image: "/images/globulus-1.jpg",
-    alt: "Ramette et carton de papier A4 Globulus Premium 80 g/m²",
   },
 ];
 
@@ -522,7 +498,7 @@ export const FAQ: { q: string; r: string }[] = [
  * titre 60 caractères maximum, description 155 maximum).
  */
 export const SEO_ACCUEIL = {
-  titre: "Grossiste Papier Rame A4 Côte d'Ivoire | Monpapierrame",
+  titre: "Grossiste Papier Rame A4 en Côte d'Ivoire | Monpapierrame",
   description:
     "Grossiste et fournisseur papier rame A4 Double A, Paper One, Globulus à Abidjan et en Côte d'Ivoire. Ramette dès {prix}, carton, gros dès 10 cartons.",
 };

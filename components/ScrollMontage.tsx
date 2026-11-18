@@ -174,7 +174,7 @@ export default function ScrollMontage() {
       id="montage"
       ref={section}
       aria-label="Présentation du produit en 4 étapes"
-      style={{ height: `${Math.max(300, N * 70)}vh` }}
+      style={{ height: `${Math.max(300, N * 80)}vh` }}
       className="relative bg-white motion-reduce:h-auto!"
     >
       {/* Version animée (masquée si mouvement réduit) */}

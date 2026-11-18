@@ -24,6 +24,7 @@ export default function Footer() {
                 ["/#a-propos", "À propos et livraison"],
                 ["/#guide", "Guide d'achat"],
                 ["/#faq", "Questions fréquentes"],
+                ["/politique-de-retour", "Politique de retour"],
               ].map(([href, label]) => (
                 <li key={href}>
                   <a href={href} className="inline-flex min-h-11 items-center text-white/85 hover:underline">

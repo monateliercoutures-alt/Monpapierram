@@ -20,6 +20,8 @@ export function lienWhatsApp(message: string): string {
   return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(message)}`;
 }
 
+export const MESSAGE_RETOUR = `Bonjour ${SITE.nom}, je souhaite demander un retour pour ma commande (référence : ...). Photo du produit en pièce jointe.`;
+
 export const MESSAGE_GENERAL = `Bonjour ${SITE.nom}, je souhaite commander du papier Double A Premium A4 80 g.`;
 
 export type Produit = {

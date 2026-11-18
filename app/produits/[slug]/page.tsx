@@ -86,6 +86,7 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
               applicableCountry: "CI",
               returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
               merchantReturnDays: 3,
+              merchantReturnLink: `${SITE.url}/politique-de-retour`,
             },
           },
         };
@@ -165,7 +166,7 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
                 </div>
                 <div className="grid grid-cols-[7rem_1fr] gap-3 px-4 py-3">
                   <dt className="font-semibold text-nuit">Retours</dt>
-                  <dd className="text-encre/80">Retour possible sous 24 à 72 h après la livraison. Contactez-nous sur WhatsApp.</dd>
+                  <dd className="text-encre/80">Retour possible sous 24 à 72 h après la livraison. <Link href="/politique-de-retour" className="font-semibold text-profond underline">Voir la politique de retour</Link>.</dd>
                 </div>
                 <div className="grid grid-cols-[7rem_1fr] gap-3 px-4 py-3">
                   <dt className="font-semibold text-nuit">Paiement</dt>

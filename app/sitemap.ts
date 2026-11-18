@@ -10,6 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
+    {
+      url: `${SITE.url}/politique-de-retour`,
+      lastModified: new Date(),
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
+    },
     ...PRODUITS.map((p) => ({
       url: `${SITE.url}/produits/${p.slug}`,
       lastModified: new Date(),

@@ -53,7 +53,7 @@ export const PRODUITS: Produit[] = [
   {
     id: "ramette",
     marque: "Double A",
-    metaTitre: "Papier Rame A4 80g, Ramette {prix} | Monpapierrame",
+    metaTitre: "Papier Rame A4 80g Double A, {prix} | Monpapierrame",
     metaDescription:
       "Papier rame A4 80g Double A, 500 feuilles, {prix}. Recto verso, laser et jet d'encre. Livraison à Abidjan et en Côte d'Ivoire, paiement à la livraison.",
     slug: "ramette-papier-a4-80g-double-a",
@@ -92,7 +92,7 @@ export const PRODUITS: Produit[] = [
   {
     id: "carton",
     marque: "Double A",
-    metaTitre: "Carton Papier Rame A4 80g, 5 Ramettes | Monpapierrame",
+    metaTitre: "Carton Papier Rame A4 Double A 80g | Monpapierrame",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Double A, 2 500 feuilles, {prix}. Livré scellé à Abidjan et en Côte d'Ivoire, payez à la livraison.",
     slug: "carton-papier-a4-5-ramettes-double-a",
@@ -133,7 +133,7 @@ export const PRODUITS: Produit[] = [
   {
     id: "gros",
     marque: "Double A",
-    metaTitre: "Grossiste Papier Rame A4, Carton Double A | Monpapierrame",
+    metaTitre: "Papier Rame A4 Double A en Gros, 10 Cartons | Monpapierrame",
     metaDescription:
       "Grossiste papier rame A4 à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture, livraison en Côte d'Ivoire, Mobile Money. Devis WhatsApp.",
     slug: "papier-a4-en-gros-carton-double-a",
@@ -229,7 +229,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Paper One en Gros, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Paper One, Lot de 10 Cartons | Monpapierrame",
     metaDescription:
       "Papier rame A4 Paper One en gros à Abidjan : lot de 10 cartons, 70g. Facture, livraison en Côte d'Ivoire. Prix sur demande, devis WhatsApp.",
     messageDevis: "Bonjour Monpapierrame, je souhaite le prix d'un lot de 10 cartons de papier rame A4 Paper One 70 g.",
@@ -293,7 +293,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Globulus en Gros, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Globulus, Lot de 10 Cartons | Monpapierrame",
     metaDescription:
       "Papier rame A4 Globulus en gros à Abidjan : lot de 10 cartons, 80g. Facture, livraison en Côte d'Ivoire. Prix sur demande, devis WhatsApp.",
     messageDevis: "Bonjour Monpapierrame, je souhaite le prix d'un lot de 10 cartons de papier rame A4 Globulus 80 g.",

@@ -1,4 +1,4 @@
-import { PRODUITS, SITE, formatPrix } from "@/lib/config";
+import { PRODUITS, SITE, formatPrixTexte } from "@/lib/config";
 
 /**
  * /llms.txt : présentation courte de la boutique, destinée aux assistants IA
@@ -7,7 +7,7 @@ import { PRODUITS, SITE, formatPrix } from "@/lib/config";
  */
 export function GET() {
   const produits = PRODUITS.map(
-    (p) => `- [${p.nom}](${SITE.url}/produits/${p.slug}) : ${p.specs}, ${p.prix === null ? "prix sur demande (WhatsApp)" : `${formatPrix(p.prix)} ${p.unite}`}.`,
+    (p) => `- [${p.nom}](${SITE.url}/produits/${p.slug}) : ${p.specs}, ${p.prix === null ? "prix sur demande (WhatsApp)" : `${formatPrixTexte(p.prix)} ${p.unite}`}.`,
   ).join("\n");
 
   const texte = `# ${SITE.nom}

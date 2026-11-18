@@ -105,7 +105,7 @@ export const PRODUITS: Produit[] = [
     detail: "Le format le plus pratique pour un bureau ou un commerce.",
     prix: 19900,
     unite: "le carton",
-    note: "Soit 3 980 FCFA la ramette",
+    note: "Soit 3\u00a0980\u00a0FCFA la ramette",
     minQty: 1,
     badge: "Le plus vendu",
     image: "/images/etape-1.jpg",
@@ -146,7 +146,7 @@ export const PRODUITS: Produit[] = [
     detail: "Pour les écoles, entreprises, imprimeries et revendeurs.",
     prix: 19000,
     unite: "le carton",
-    note: `Soit 3 800 FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    note: `Soit 3\u00a0800\u00a0FCFA la ramette, dès ${SEUIL_GROS} cartons`,
     minQty: SEUIL_GROS,
     image: "/images/etape-4.jpg",
     alt: "Ramette Double A Premium couchée devant un carton ouvert",
@@ -183,7 +183,7 @@ export const PRODUITS: Produit[] = [
     detail: "Papier rame A4 Paper One, au carton.",
     prix: 19900,
     unite: "le carton",
-    note: "Soit 3 980 FCFA la ramette",
+    note: "Soit 3\u00a0980\u00a0FCFA la ramette",
     minQty: 1,
     image: "/images/paper-one-3.jpg",
     alt: "Carton de papier rame A4 Paper One 70 g",
@@ -215,7 +215,7 @@ export const PRODUITS: Produit[] = [
     detail: "Pour les professionnels : lot de 10 cartons de papier rame A4 Paper One.",
     prix: 19000,
     unite: "le carton, dès 10 cartons",
-    note: `Soit 3 800 FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    note: `Soit 3\u00a0800\u00a0FCFA la ramette, dès ${SEUIL_GROS} cartons`,
     minQty: 10,
     image: "/images/paper-one-2.jpg",
     alt: "Carton de papier rame A4 Paper One 70 g",
@@ -247,7 +247,7 @@ export const PRODUITS: Produit[] = [
     detail: "Papier rame A4 Globulus Premium, au carton.",
     prix: 19900,
     unite: "le carton",
-    note: "Soit 3 980 FCFA la ramette",
+    note: "Soit 3\u00a0980\u00a0FCFA la ramette",
     minQty: 1,
     image: "/images/globulus-3.jpg",
     alt: "Carton de papier rame A4 Globulus 80 g/m², 5 ramettes de 500 feuilles",
@@ -279,7 +279,7 @@ export const PRODUITS: Produit[] = [
     detail: "Pour les professionnels : lot de 10 cartons de papier rame A4 Globulus.",
     prix: 19000,
     unite: "le carton, dès 10 cartons",
-    note: `Soit 3 800 FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    note: `Soit 3\u00a0800\u00a0FCFA la ramette, dès ${SEUIL_GROS} cartons`,
     minQty: 10,
     image: "/images/globulus-2.jpg",
     alt: "Carton de papier rame A4 Globulus 80 g/m², 5 ramettes de 500 feuilles",
@@ -306,7 +306,7 @@ export const PRODUITS: Produit[] = [
 
 /** Remplace {prix} par le prix formaté du produit */
 export function meta(texte: string, prix: number | null): string {
-  return texte.replace("{prix}", prix === null ? "prix sur demande" : formatPrix(prix));
+  return texte.replace("{prix}", prix === null ? "prix sur demande" : formatPrixTexte(prix));
 }
 
 /** Libellé du prix à afficher : « 19 900 FCFA » ou « Prix sur demande » */
@@ -334,9 +334,17 @@ export const ANCIENS_SLUGS: Record<string, string> = {
   gros: "papier-a4-en-gros-carton-double-a",
 };
 
-/** Format d'affichage des prix : « 16 500 FCFA » */
+/**
+ * Prix pour l'affichage : « 19 900 FCFA », avec des espaces insécables pour que
+ * le montant ne se coupe jamais en fin de ligne.
+ */
 export function formatPrix(n: number): string {
-  return new Intl.NumberFormat("fr-FR").format(n).replace(/ | /g, " ") + " FCFA";
+  return new Intl.NumberFormat("fr-FR").format(n).replace(/[\u202f\u00a0 ]/g, "\u00a0") + "\u00a0FCFA";
+}
+
+/** Prix en texte simple (espaces normaux) : titres Google, messages WhatsApp, llms.txt */
+export function formatPrixTexte(n: number): string {
+  return formatPrix(n).replace(/\u00a0/g, " ");
 }
 
 export const MODES_PAIEMENT = ["Paiement à la livraison", "Orange Money", "MTN MoMo", "Moov Money", "Wave"];

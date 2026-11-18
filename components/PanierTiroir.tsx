@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { COMMUNES, MODES_PAIEMENT, SITE, formatPrix, lienWhatsApp, trouverProduit } from "@/lib/config";
+import { COMMUNES, MODES_PAIEMENT, SITE, formatPrix, formatPrixTexte, lienWhatsApp, trouverProduit } from "@/lib/config";
 import { usePanier } from "./PanierContext";
 
 type Etape = "panier" | "infos" | "envoye";
@@ -61,13 +61,13 @@ export default function PanierTiroir() {
     const detail = lignes
       .map((l) => {
         const p = trouverProduit(l.id)!;
-        return `- ${l.qty} x ${p.nom} : ${formatPrix(l.qty * (p.prix ?? 0))}`;
+        return `- ${l.qty} x ${p.nom} : ${formatPrixTexte(l.qty * (p.prix ?? 0))}`;
       })
       .join("\n");
     const message = [
       `Bonjour ${SITE.nom}, je passe commande (réf. ${ref}) :`,
       detail,
-      `Sous-total : ${formatPrix(sousTotal)} (hors livraison)`,
+      `Sous-total : ${formatPrixTexte(sousTotal)} (hors livraison)`,
       "",
       `Nom : ${nom}`,
       `Téléphone : ${tel}`,
@@ -146,7 +146,7 @@ export default function PanierTiroir() {
                         <div className="min-w-0 flex-1">
                           <p className="text-sm font-semibold leading-snug text-nuit">{p.nom}</p>
                           <p className="mt-0.5 text-xs text-encre/65">{formatPrix(p.prix ?? 0)} {p.unite}</p>
-                          <div className="mt-2 flex items-center justify-between">
+                          <div className="mt-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
                             <div className="flex items-center rounded-bouton border border-profond/25" role="group" aria-label={`Quantité : ${p.nom}`}>
                               <button type="button" onClick={() => changerQty(l.id, l.qty - 1)} aria-label={l.qty <= p.minQty ? "Retirer du panier" : "Diminuer la quantité"} className="flex h-9 w-9 items-center justify-center text-profond">
                                 −
@@ -156,7 +156,7 @@ export default function PanierTiroir() {
                                 +
                               </button>
                             </div>
-                            <p className="text-sm font-bold text-nuit">{formatPrix(l.qty * (p.prix ?? 0))}</p>
+                            <p className="whitespace-nowrap text-sm font-bold text-nuit">{formatPrix(l.qty * (p.prix ?? 0))}</p>
                           </div>
                           <button type="button" onClick={() => changerQty(l.id, 0)} className="mt-2 inline-flex min-h-8 items-center text-xs text-encre/60 underline">
                             Retirer

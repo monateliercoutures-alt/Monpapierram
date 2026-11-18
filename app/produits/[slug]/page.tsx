@@ -41,31 +41,38 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
     .slice(0, 4);
   const message = `Bonjour ${SITE.nom}, j'ai une question sur : ${p.nom}.`;
 
-  // Données structurées (SEO) : fiche produit avec prix
-  const donnees = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: p.nom,
-    description: p.description.join(" "),
-    sku: p.slug,
-    brand: { "@type": "Brand", name: p.marque },
-    category: "Papier d'impression A4",
-    image: p.galerie.map((g) => `${SITE.url}${g.src}`),
-    // Sans prix affiché, on ne déclare pas d'offre (Google exige un prix)
-    ...(p.prix === null
-      ? {}
-      : {
-        offers: {
-          "@type": "Offer",
+  // Données structurées (SEO). Google exige une offre (prix), un avis ou une note pour une
+  // fiche « Product » : sans prix affiché, on déclare une simple page web pour éviter l'erreur.
+  const donnees =
+    p.prix === null
+      ? {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: p.nom,
           url: `${SITE.url}/produits/${p.slug}`,
-          priceCurrency: "XOF",
-          price: p.prix,
-          availability: "https://schema.org/InStock",
-          itemCondition: "https://schema.org/NewCondition",
-          seller: { "@type": "Organization", name: SITE.nom },
-        },
-        }),
-  };
+          description: p.description.join(" "),
+          inLanguage: "fr",
+          primaryImageOfPage: `${SITE.url}${p.image}`,
+        }
+      : {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: p.nom,
+          description: p.description.join(" "),
+          sku: p.slug,
+          brand: { "@type": "Brand", name: p.marque },
+          category: "Papier d'impression A4",
+          image: p.galerie.map((g) => `${SITE.url}${g.src}`),
+          offers: {
+            "@type": "Offer",
+            url: `${SITE.url}/produits/${p.slug}`,
+            priceCurrency: "XOF",
+            price: p.prix,
+            availability: "https://schema.org/InStock",
+            itemCondition: "https://schema.org/NewCondition",
+            seller: { "@type": "Organization", name: SITE.nom },
+          },
+        };
   const fil = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

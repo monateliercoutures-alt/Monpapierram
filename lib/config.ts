@@ -5,7 +5,7 @@
 
 export const SITE = {
   nom: "Monpapierrame",
-  url: "https://monpapierram.vercel.app", // à remplacer par votre domaine
+  url: "https://www.monpapierrame.store", // domaine principal (monpapierrame.store redirige vers www)
   // Numéro WhatsApp au format international, sans « + » ni espaces
   whatsapp: "2250767537998",
   whatsappAffiche: "+225 07 67 53 79 98",

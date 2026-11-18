@@ -11,6 +11,8 @@ export const SITE = {
   whatsappAffiche: "+225 07 67 53 79 98",
   zone: "Partout en Côte d'Ivoire : Abidjan, Yamoussoukro, Bouaké, San-Pédro, Daloa, Korhogo et toutes les autres villes",
   horaires: "Lundi – Samedi, 8h – 19h",
+  delaiLivraison: "24 à 72 h",
+  delaiRetour: "24 à 72 h après la livraison",
 };
 
 /** Construit un lien WhatsApp avec un message pré-rempli */
@@ -456,7 +458,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Livrez-vous en dehors d'Abidjan, et sous quel délai\u00a0?",
-    r: "Oui, nous livrons partout en Côte d'Ivoire. À Abidjan, les commandes confirmées sont généralement livrées sous 24 à 48 heures. Pour les autres villes, nous confirmons le délai et les frais de livraison à la commande sur WhatsApp.",
+    r: "Oui, nous livrons partout en Côte d'Ivoire. Les commandes confirmées sont livrées en 24 à 72 heures. Les frais de livraison sont confirmés à la commande sur WhatsApp selon votre ville.",
   },
   {
     q: "Proposez-vous des tarifs pour l'achat en gros\u00a0?",
@@ -485,6 +487,14 @@ export const FAQ: { q: string; r: string }[] = [
   {
     q: "Quelles marques de papier rame fournissez-vous\u00a0?",
     r: "Nous fournissons les marques Double A, Paper One et Globulus, en ramette (Double A), au carton de 5 ramettes et par lot de 10 cartons. Pour le prix des cartons Paper One et Globulus, demandez-le-nous sur WhatsApp.",
+  },
+  {
+    q: "Quelle est votre politique de retour\u00a0?",
+    r: "Vous pouvez signaler un problème (produit abîmé ou non conforme à votre commande) et demander un retour dans un délai de 24 à 72 heures après la livraison. Contactez-nous sur WhatsApp avec une photo du produit : nous trouvons ensemble la solution.",
+  },
+  {
+    q: "Quel est le délai de livraison\u00a0?",
+    r: "La livraison se fait en 24 à 72 heures après confirmation de votre commande, à Abidjan comme dans le reste de la Côte d'Ivoire.",
   },
   {
     q: "Êtes-vous grossiste de papier rame à Abidjan\u00a0?",

@@ -23,7 +23,7 @@ const POINTS = [
   },
   {
     titre: "Livraison en Côte d'Ivoire",
-    texte: "Abidjan sous 24 à 48 h, autres villes sur confirmation",
+    texte: "Livraison en 24 à 72 h",
     icone: (
       <svg {...trait}>
         <path d="M3 6h11v10H3z" />

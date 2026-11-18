@@ -71,6 +71,22 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
             availability: "https://schema.org/InStock",
             itemCondition: "https://schema.org/NewCondition",
             seller: { "@type": "Organization", name: SITE.nom },
+            // Livraison en 24 à 72 h partout en Côte d'Ivoire ; retours sous 3 jours après livraison
+            shippingDetails: {
+              "@type": "OfferShippingDetails",
+              shippingDestination: { "@type": "DefinedRegion", addressCountry: "CI" },
+              deliveryTime: {
+                "@type": "ShippingDeliveryTime",
+                handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
+                transitTime: { "@type": "QuantitativeValue", minValue: 1, maxValue: 3, unitCode: "DAY" },
+              },
+            },
+            hasMerchantReturnPolicy: {
+              "@type": "MerchantReturnPolicy",
+              applicableCountry: "CI",
+              returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+              merchantReturnDays: 3,
+            },
           },
         };
   const fil = {
@@ -145,7 +161,11 @@ export default async function PageProduit({ params }: { params: Promise<{ slug: 
               <dl className="mt-6 divide-y divide-profond/10 rounded-carte border border-profond/15 text-sm">
                 <div className="grid grid-cols-[7rem_1fr] gap-3 px-4 py-3">
                   <dt className="font-semibold text-nuit">Livraison</dt>
-                  <dd className="text-encre/80">Partout en Côte d'Ivoire. Abidjan généralement sous 24 à 48 h ; délai et frais confirmés selon votre ville.</dd>
+                  <dd className="text-encre/80">Partout en Côte d'Ivoire, en 24 à 72 h après confirmation. Frais confirmés selon votre ville.</dd>
+                </div>
+                <div className="grid grid-cols-[7rem_1fr] gap-3 px-4 py-3">
+                  <dt className="font-semibold text-nuit">Retours</dt>
+                  <dd className="text-encre/80">Retour possible sous 24 à 72 h après la livraison. Contactez-nous sur WhatsApp.</dd>
                 </div>
                 <div className="grid grid-cols-[7rem_1fr] gap-3 px-4 py-3">
                   <dt className="font-semibold text-nuit">Paiement</dt>

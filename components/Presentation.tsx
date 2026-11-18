@@ -43,11 +43,11 @@ export default function Presentation() {
             </p>
             <h3 className="pt-2 text-lg font-bold text-nuit">Où livrons-nous ?</h3>
             <p>
-              <strong>À Abidjan</strong> : {ABIDJAN}. Les commandes confirmées sont généralement livrées sous 24 à 48
+              <strong>À Abidjan</strong> : {ABIDJAN}. Les commandes confirmées sont livrées en 24 à 72
               heures.
             </p>
             <p>
-              <strong>Dans le reste du pays</strong> : {VILLES} et toutes les autres villes. Le délai et les frais de
+              <strong>Dans le reste du pays</strong> : {VILLES} et toutes les autres villes. Livraison en 24 à 72 heures, et frais de
               livraison sont confirmés avec vous à la commande.
             </p>
           </div>

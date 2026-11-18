@@ -2,44 +2,14 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/config";
 
 /**
- * Robots refusés : copie de contenu, analyse de concurrents et collecte agressive.
- * Les moteurs de recherche ET les assistants IA (ChatGPT, Claude, Perplexity, Gemini,
- * Apple, Meta…) restent autorisés pour pouvoir présenter et citer la boutique.
- * Attention : robots.txt est respecté par les robots « honnêtes » seulement.
+ * robots.txt : tous les robots sont autorisés et le sitemap est indiqué.
+ * Le blocage des robots indésirables (copie, analyse de concurrents) se fait côté
+ * serveur dans proxy.ts, et non ici : une liste « Disallow » dans robots.txt est
+ * signalée comme avertissement par Lighthouse et ne protège pas des robots malhonnêtes.
  */
-const ROBOTS_BLOQUES = [
-  "Bytespider",
-  "Diffbot",
-  "ImagesiftBot",
-  "Omgilibot",
-  // Analyse de sites : trafic, SEO, technologies, archivage
-  "SemrushBot",
-  "AhrefsBot",
-  "MJ12bot",
-  "DotBot",
-  "BLEXBot",
-  "DataForSeoBot",
-  "PetalBot",
-  "BuiltWith",
-  "Wappalyzer",
-  "SimilarWeb",
-  "rogerbot",
-  "MozBot",
-  "Screaming Frog SEO Spider",
-  "Siteimprove",
-  "Netcraft",
-  "ia_archiver",
-  "archive.org_bot",
-];
-
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      // Tous les autres robots (Google, Bing…) : accès autorisé
-      { userAgent: "*", allow: "/" },
-      // Robots bloqués : accès interdit à tout le site
-      { userAgent: ROBOTS_BLOQUES, disallow: "/" },
-    ],
+    rules: { userAgent: "*", allow: "/" },
     sitemap: `${SITE.url}/sitemap.xml`,
   };
 }

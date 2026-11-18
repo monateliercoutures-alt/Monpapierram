@@ -12,7 +12,7 @@ export function GET() {
 
   const texte = `# ${SITE.nom}
 
-> ${SITE.nom} est un grossiste de papier rame A4 Double A basé à Abidjan, qui livre partout en Côte d'Ivoire. Vente à l\'unité, au carton et en gros (dès 10 cartons) : ramettes de 500 feuilles, cartons de 5 ramettes et vente en gros, en marques Double A, Paper One et Globulus. Livraison à Abidjan et partout en Côte d'Ivoire. Paiement à la livraison, Orange Money, MTN MoMo, Moov Money ou Wave. Commande sur le site ou par WhatsApp.
+> ${SITE.nom} est un grossiste et fournisseur de papier rame A4 (marques Double A, Paper One et Globulus) basé à Abidjan, qui livre partout en Côte d'Ivoire. Vente à l\'unité, au carton et en gros (dès 10 cartons) : ramettes de 500 feuilles, cartons de 5 ramettes et vente en gros, en marques Double A, Paper One et Globulus. Livraison à Abidjan et partout en Côte d'Ivoire. Paiement à la livraison, Orange Money, MTN MoMo, Moov Money ou Wave. Commande sur le site ou par WhatsApp.
 
 ## Produits
 ${produits}

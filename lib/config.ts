@@ -240,15 +240,17 @@ export const PRODUITS: Produit[] = [
     slug: "carton-papier-rame-a4-globulus",
     nom: "Carton papier rame A4 80g Globulus (5 ramettes)",
     specs: "80 g/m² · 5 × 500 feuilles",
-    detail: "Papier rame A4 Globulus, au carton.",
+    detail: "Papier rame A4 Globulus Premium, au carton.",
     prix: null,
     unite: "prix sur demande",
     minQty: 1,
-    image: "/images/globulus.jpg",
+    image: "/images/globulus-3.jpg",
     alt: "Carton de papier rame A4 Globulus 80 g/m², 5 ramettes de 500 feuilles",
-    points: ["5 ramettes de 500 feuilles", "Format A4, 80 g/m²", "Livraison partout en Côte d'Ivoire"],
+    points: ["5 ramettes de 500 feuilles", "Format A4 (210 × 297 mm), 80 g/m²", "Livraison partout en Côte d'Ivoire"],
     galerie: [
-      { src: "/images/globulus.jpg", alt: "Carton de papier rame A4 Globulus 80 g/m², 5 ramettes de 500 feuilles" },
+      { src: "/images/globulus-3.jpg", alt: "Papier rame A4 Globulus Premium 80 g/m², 500 feuilles par ramette" },
+      { src: "/images/globulus-1.jpg", alt: "Papier rame A4 Globulus Premium 80 g/m², 500 feuilles par ramette" },
+      { src: "/images/globulus-2.jpg", alt: "Papier rame A4 Globulus Premium 80 g/m², 500 feuilles par ramette" },
     ],
     description: ["Le carton de papier rame A4 Globulus regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles de 80 g/m².", "Le prix dépend de la quantité et de votre ville de livraison : demandez-le-nous sur WhatsApp, nous répondons rapidement."],
     usages: ["Bureaux et entreprises", "Écoles et centres de formation", "Cybercafés et centres de photocopie", "Impression et photocopie du quotidien"],
@@ -274,11 +276,13 @@ export const PRODUITS: Produit[] = [
     prix: null,
     unite: "prix sur demande",
     minQty: 10,
-    image: "/images/globulus.jpg",
+    image: "/images/globulus-2.jpg",
     alt: "Carton de papier rame A4 Globulus 80 g/m², 5 ramettes de 500 feuilles",
     points: ["Lot de 10 cartons (50 ramettes)", "25 000 feuilles A4 80 g/m²", "Facture sur demande"],
     galerie: [
-      { src: "/images/globulus.jpg", alt: "Carton de papier rame A4 Globulus 80 g/m², 5 ramettes de 500 feuilles" },
+      { src: "/images/globulus-2.jpg", alt: "Papier rame A4 Globulus Premium 80 g/m², 500 feuilles par ramette" },
+      { src: "/images/globulus-1.jpg", alt: "Papier rame A4 Globulus Premium 80 g/m², 500 feuilles par ramette" },
+      { src: "/images/globulus-3.jpg", alt: "Papier rame A4 Globulus Premium 80 g/m², 500 feuilles par ramette" },
     ],
     description: ["Achetez en gros du papier rame A4 Globulus : un lot de 10 cartons de 5 ramettes, soit 50 ramettes et 25 000 feuilles de 80 g/m².", "Le prix du lot est communiqué sur demande, avec facture et livraison planifiée partout en Côte d'Ivoire."],
     usages: ["Imprimeries et revendeurs", "Écoles, universités et administrations", "Entreprises à gros volume d'impression", "Approvisionnement régulier avec livraison planifiée"],
@@ -443,8 +447,12 @@ export const FAQ: { q: string; r: string }[] = [
     r: "Vous pouvez payer à la livraison, ou par Mobile Money\u00a0: Orange Money, MTN MoMo, Moov Money ou Wave. Le mode de paiement est choisi au moment de la commande.",
   },
   {
+    q: "Quelles marques de papier rame fournissez-vous\u00a0?",
+    r: "Nous fournissons les marques Double A, Paper One et Globulus, en ramette (Double A), au carton de 5 ramettes et par lot de 10 cartons. Pour le prix des cartons Paper One et Globulus, demandez-le-nous sur WhatsApp.",
+  },
+  {
     q: "Êtes-vous grossiste de papier rame à Abidjan\u00a0?",
-    r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous vendons à l'unité (ramette), au carton de 5 ramettes et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
+    r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous sommes fournisseur des grandes marques de papier rame : Double A, Paper One et Globulus. Nous vendons à l'unité (ramette), au carton et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
   },
   {
     q: "Pouvez-vous établir une facture\u00a0?",
@@ -459,5 +467,5 @@ export const FAQ: { q: string; r: string }[] = [
 export const SEO_ACCUEIL = {
   titre: "Grossiste Papier Rame A4 Côte d'Ivoire | Monpapierrame",
   description:
-    "Grossiste papier rame A4 Double A à Abidjan et en Côte d'Ivoire : ramette dès {prix}, carton, vente en gros dès 10 cartons. Paiement à la livraison.",
+    "Grossiste et fournisseur papier rame A4 Double A, Paper One, Globulus à Abidjan et en Côte d'Ivoire. Ramette dès {prix}, carton, gros dès 10 cartons.",
 };

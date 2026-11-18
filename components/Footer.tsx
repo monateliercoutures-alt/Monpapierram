@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <Image src="/images/logo-blanc.png" alt={SITE.nom} width={895} height={268} className="h-14 w-auto" />
             <p className="mt-3 max-w-xs text-sm text-white/75">
-              Grossiste de papier rame A4 Double A à Abidjan, livré partout en Côte d'Ivoire.
+              Grossiste et fournisseur de papier rame A4 (Double A, Paper One, Globulus) à Abidjan, livré partout en Côte d'Ivoire.
             </p>
           </div>
 

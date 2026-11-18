@@ -12,8 +12,8 @@ const trait = {
 
 const POINTS = [
   {
-    titre: "Grossiste papier rame Double A",
-    texte: "A4, 80 g/m², 500 feuilles",
+    titre: "Double A, Paper One, Globulus",
+    texte: "Grossiste papier rame A4",
     icone: (
       <svg {...trait}>
         <path d="M6 3h8l4 4v14H6z" />

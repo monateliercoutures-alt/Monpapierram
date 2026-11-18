@@ -20,7 +20,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-1 text-sm">
               {[
                 ["/#produits", "Nos produits"],
-                ["/#avantages", "Pourquoi Double A"],
+                ["/#avantages", "Pourquoi nous choisir"],
                 ["/#a-propos", "À propos et livraison"],
                 ["/#guide", "Guide d'achat"],
                 ["/#faq", "Questions fréquentes"],

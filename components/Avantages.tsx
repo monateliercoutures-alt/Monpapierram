@@ -67,7 +67,7 @@ export default function Avantages() {
   return (
     <section id="avantages" className="border-y border-profond/10 bg-brume px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-6xl">
-        <Titre titre="Pourquoi choisir Double A" />
+        <Titre titre="Pourquoi choisir Monpapierrame" />
 
         <ul className="mt-8 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
           {AVANTAGES.map((a) => (

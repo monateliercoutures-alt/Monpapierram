@@ -71,9 +71,15 @@
 }
 
 
-/* Texte justifié : réservé aux longs paragraphes. Sur des textes courts (2 ou 3 lignes),
-   la justification étire les espaces entre les mots, donc on ne l'applique pas. */
+/* Texte justifié : réservé aux longs paragraphes et aux écrans à partir de 640 px.
+   Sur téléphone (colonne étroite) ou sur des textes courts, la justification étire
+   les espaces entre les mots : on garde l'alignement à gauche. */
 .justifie {
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
+}
+@media (min-width: 640px) {
+  .justifie {
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }

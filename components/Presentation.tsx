@@ -29,7 +29,7 @@ export default function Presentation() {
         <Titre titre={`${SITE.nom}, grossiste de papier rame A4 Double A, Paper One et Globulus`} />
 
         <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="space-y-4 text-justify text-encre/85">
+          <div className="justifie space-y-4 text-encre/85">
             <p>
               {SITE.nom} est <strong>grossiste et fournisseur de papier rame A4</strong> à Abidjan et partout en Côte d&apos;Ivoire, pour les marques <strong>Double A, Paper One et Globulus</strong>. Nous proposons des
               ramettes de 500 feuilles, des cartons de 5 ramettes (2 500 feuilles) et des cartons en gros pour les

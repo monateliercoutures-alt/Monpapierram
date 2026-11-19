@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MOYENS_MOBILE, SITE, MESSAGE_GENERAL, lienWhatsApp } from "@/lib/config";
+import { MARQUES, MOYENS_MOBILE, slugMarque, SITE, MESSAGE_GENERAL, lienWhatsApp } from "@/lib/config";
 import { IconeWhatsApp } from "./Icones";
 
 // Pied de page : liens, contacts, zone de livraison
@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-nuit px-4 pb-24 pt-14 sm:pb-10 sm:pt-16 text-white sm:px-6">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_1.1fr_1.3fr_1.1fr]">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_1fr_1fr_1.25fr_1fr]">
           <div>
             <Image src="/images/logo-blanc.png" alt={SITE.nom} width={895} height={268} className="h-14 w-auto" />
             <p className="mt-3 max-w-xs text-sm text-white/75">
@@ -31,6 +31,19 @@ export default function Footer() {
                 <li key={href}>
                   <a href={href} className="inline-flex min-h-11 items-center text-white/85 hover:underline">
                     {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="font-sans text-sm font-semibold text-cyan">Nos marques</h2>
+            <ul className="mt-4 space-y-1 text-sm">
+              {MARQUES.map((m) => (
+                <li key={m}>
+                  <a href={`/marques/${slugMarque(m)}`} className="inline-flex min-h-11 items-center text-white/85 hover:underline">
+                    Papier rame {m}
                   </a>
                 </li>
               ))}

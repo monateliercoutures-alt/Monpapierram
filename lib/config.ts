@@ -655,6 +655,57 @@ export function grammage(p: Produit): string {
 /** Marques proposées, dans l'ordre d'affichage */
 export const MARQUES = ["Double A", "Paper One", "Globulus", "Paper Pro", "Authentik"];
 
+/** Adresse de la page d'une marque : /marques/<slug> */
+export function slugMarque(marque: string): string {
+  return "papier-rame-" + marque.toLowerCase().replace(/\s+/g, "-");
+}
+
+export function trouverMarque(slug: string): string | undefined {
+  return MARQUES.find((m) => slugMarque(m) === slug);
+}
+
+/** Titre et description Google de chaque page marque ({carton}, {gros}, {ramette} = prix formatés) */
+export const SEO_MARQUES: Record<string, { titre: string; description: string }> = {
+  "Double A": {
+    titre: "Papier Rame Double A en Côte d'Ivoire, Prix | Monpapierrame",
+    description: "Papier rame Double A 80g à Abidjan : ramette {ramette}, carton {carton}, gros dès 10 cartons. Pour entreprises et écoles. Livraison en Côte d'Ivoire.",
+  },
+  "Paper One": {
+    titre: "Papier Rame Paper One 70g, Prix Carton | Monpapierrame",
+    description: "Papier rame Paper One 70g à Abidjan : carton {carton}, {gros} dès 10 cartons. Pour entreprises, écoles, cybercafés. Livraison en Côte d'Ivoire.",
+  },
+  Globulus: {
+    titre: "Papier Rame Globulus 80g, Prix Carton | Monpapierrame",
+    description: "Papier rame Globulus 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Pour entreprises, écoles, cybercafés. Livraison en Côte d'Ivoire.",
+  },
+  "Paper Pro": {
+    titre: "Papier Rame Paper Pro 80g, Prix Carton | Monpapierrame",
+    description: "Papier rame Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Pour entreprises, écoles, cybercafés. Livraison en Côte d'Ivoire.",
+  },
+  Authentik: {
+    titre: "Papier Rame Authentik 80g, Prix Carton | Monpapierrame",
+    description: "Papier rame Authentik 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Pour entreprises, écoles, cybercafés. Livraison en Côte d'Ivoire.",
+  },
+};
+
+/** Produits d'une marque */
+export function produitsMarque(marque: string): Produit[] {
+  return PRODUITS.filter((p) => p.marque === marque);
+}
+
+/** Remplace {carton}, {gros} et {ramette} par les prix réels de la marque */
+export function metaMarque(marque: string, champ: "titre" | "description"): string {
+  const ps = produitsMarque(marque);
+  const prix = (id: (p: Produit) => boolean) => {
+    const p = ps.find(id);
+    return p && p.prix !== null ? formatPrixTexte(p.prix) : "sur demande";
+  };
+  return SEO_MARQUES[marque][champ]
+    .replace("{ramette}", prix((p) => p.id === "ramette"))
+    .replace("{carton}", prix((p) => p.minQty === 1 && p.id.endsWith("carton")))
+    .replace("{gros}", prix((p) => p.minQty > 1));
+}
+
 /** Questions-réponses d'une page produit (visibles sur la page et déclarées pour Google) */
 export function faqProduit(p: Produit): { q: string; r: string }[] {
   const g = grammage(p);

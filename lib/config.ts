@@ -427,6 +427,70 @@ export const PRODUITS: Produit[] = [
     metaDescription:
       "Papier rame A4 Authentik en gros à Abidjan : lot de 10 cartons, 80g. {prix} le carton. Facture, livraison en Côte d'Ivoire.",
   },
+  {
+    id: "smart-copy-carton",
+    marque: "Smart Copy",
+    slug: "carton-papier-rame-a4-smart-copy",
+    nom: "Carton papier rame A4 80g Smart Copy (5 ramettes)",
+    specs: "80 g/m² · 5 × 500 feuilles",
+    detail: "Papier rame A4 Smart Copy, au carton.",
+    prix: 13500,
+    unite: "le carton",
+    note: "Soit 2\u00a0700\u00a0FCFA la ramette",
+    minQty: 1,
+    image: "/images/smart-copy-3.jpg",
+    alt: "Carton de papier rame A4 Smart Copy 80 g/m², 5 ramettes de 500 feuilles",
+    points: ["5 ramettes de 500 feuilles", "Format A4 (210 × 297 mm), 80 g/m²", "Livraison partout en Côte d'Ivoire"],
+    galerie: [
+      { src: "/images/smart-copy-3.jpg", alt: "Papier rame A4 Smart Copy 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/smart-copy-1.jpg", alt: "Papier rame A4 Smart Copy 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/smart-copy-2.jpg", alt: "Papier rame A4 Smart Copy 80 g/m², carton et ramettes de 500 feuilles" },
+    ],
+    description: ["Le carton de papier rame A4 Smart Copy regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles de 80 g/m².", "Livraison partout en Côte d'Ivoire et paiement à la livraison ou par Mobile Money. Commandez en ligne, nous confirmons sur WhatsApp."],
+    usages: ["Bureaux et entreprises", "Écoles et centres de formation", "Cybercafés et centres de photocopie", "Impression et photocopie du quotidien"],
+    fiche: [
+      ["Marque", "Smart Copy"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "1 carton"],
+    ],
+    metaTitre: "Carton Papier Rame A4 Smart Copy 80g | Monpapierrame",
+    metaDescription:
+      "Carton de 5 ramettes papier rame A4 80g Smart Copy, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire.",
+  },
+  {
+    id: "smart-copy-gros",
+    marque: "Smart Copy",
+    slug: "papier-rame-a4-smart-copy-10-cartons",
+    nom: "Papier rame A4 Smart Copy en gros (10 cartons)",
+    specs: "Lot de 10 cartons · 80 g/m²",
+    detail: "Pour les professionnels : lot de 10 cartons de papier rame A4 Smart Copy.",
+    prix: 13000,
+    unite: "le carton, dès 10 cartons",
+    note: `Soit 2\u00a0600\u00a0FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    minQty: 10,
+    image: "/images/smart-copy-2.jpg",
+    alt: "Carton de papier rame A4 Smart Copy 80 g/m², 5 ramettes de 500 feuilles",
+    points: ["Lot de 10 cartons (50 ramettes)", "25 000 feuilles A4 80 g/m²", "Facture sur demande"],
+    galerie: [
+      { src: "/images/smart-copy-2.jpg", alt: "Papier rame A4 Smart Copy 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/smart-copy-1.jpg", alt: "Papier rame A4 Smart Copy 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/smart-copy-3.jpg", alt: "Papier rame A4 Smart Copy 80 g/m², carton et ramettes de 500 feuilles" },
+    ],
+    description: ["Achetez en gros du papier rame A4 Smart Copy : un lot de 10 cartons de 5 ramettes, soit 50 ramettes et 25 000 feuilles de 80 g/m².", "Le tarif gros s'applique dès 10 cartons, avec facture sur demande et livraison planifiée partout en Côte d'Ivoire."],
+    usages: ["Imprimeries et revendeurs", "Écoles, universités et administrations", "Entreprises à gros volume d'impression", "Approvisionnement régulier avec livraison planifiée"],
+    fiche: [
+      ["Marque", "Smart Copy"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "Lot de 10 cartons (50 ramettes)"],
+    ],
+    metaTitre: "Papier Rame A4 Smart Copy, Lot de 10 Cartons | Monpapierrame",
+    metaDescription:
+      "Papier rame A4 Smart Copy en gros à Abidjan : lot de 10 cartons, 80g. {prix} le carton. Facture, livraison en Côte d'Ivoire.",
+  },
 ];
 
 /** Remplace {prix} par le prix formaté du produit */
@@ -597,7 +661,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Quelles marques de papier rame fournissez-vous\u00a0?",
-    r: "Nous fournissons les marques Double A, Paper One, Globulus, Paper Pro et Authentik, en ramette (Double A), au carton de 5 ramettes et par lot de 10 cartons. Les prix sont indiqués sur chaque fiche produit.",
+    r: "Nous fournissons les marques Double A, Paper One, Globulus, Paper Pro, Authentik et Smart Copy, en ramette (Double A), au carton de 5 ramettes et par lot de 10 cartons. Les prix sont indiqués sur chaque fiche produit.",
   },
   {
     q: "Quelle est votre politique de retour\u00a0?",
@@ -608,12 +672,12 @@ export const FAQ: { q: string; r: string }[] = [
     r: "La livraison se fait en 24 à 72 heures après confirmation de votre commande, à Abidjan comme dans le reste de la Côte d'Ivoire.",
   },
   {
-    q: "Quelle marque de papier rame choisir : Double A, Paper One, Globulus, Paper Pro ou Authentik\u00a0?",
-    r: "Les marques proposées sont toutes en format A4 de 500 feuilles par ramette, avec 5 ramettes par carton. Double A, Globulus, Paper Pro et Authentik font 80 g/m², Paper One 70 g/m². Le comparatif des prix par carton est sur la page d'accueil. Pour l'impression recto verso, le 80 g/m² est conseillé.",
+    q: "Quelle marque de papier rame choisir : Double A, Paper One, Globulus, Paper Pro, Authentik ou Smart Copy\u00a0?",
+    r: "Les marques proposées sont toutes en format A4 de 500 feuilles par ramette, avec 5 ramettes par carton. Double A, Globulus, Paper Pro, Authentik et Smart Copy font 80 g/m², Paper One 70 g/m². Le comparatif des prix par carton est sur la page d'accueil. Pour l'impression recto verso, le 80 g/m² est conseillé.",
   },
   {
     q: "Quel est le prix d'un carton de papier A4 à Abidjan\u00a0?",
-    r: "Le carton de 5 ramettes Double A est à 19\u00a0900 FCFA. Les cartons Paper One, Globulus, Paper Pro et Authentik sont à 13\u00a0500 FCFA. À partir de 10 cartons, le prix passe à 19\u00a0000 FCFA le carton en Double A et à 13\u00a0000 FCFA le carton pour les autres marques.",
+    r: "Le carton de 5 ramettes Double A est à 19\u00a0900 FCFA. Les cartons Paper One, Globulus, Paper Pro, Authentik et Smart Copy sont à 13\u00a0500 FCFA. À partir de 10 cartons, le prix passe à 19\u00a0000 FCFA le carton en Double A et à 13\u00a0000 FCFA le carton pour les autres marques.",
   },
   {
     q: "Livrez-vous à Bouaké, Yamoussoukro, San-Pédro ou Korhogo\u00a0?",
@@ -629,7 +693,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Êtes-vous grossiste de papier rame à Abidjan\u00a0?",
-    r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous sommes fournisseur des grandes marques de papier rame : Double A, Paper One, Globulus, Paper Pro et Authentik. Nous vendons à l'unité (ramette), au carton et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
+    r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous sommes fournisseur des grandes marques de papier rame : Double A, Paper One, Globulus, Paper Pro, Authentik et Smart Copy. Nous vendons à l'unité (ramette), au carton et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
   },
   {
     q: "Pouvez-vous établir une facture\u00a0?",
@@ -653,7 +717,7 @@ export function grammage(p: Produit): string {
 }
 
 /** Marques proposées, dans l'ordre d'affichage */
-export const MARQUES = ["Double A", "Paper One", "Globulus", "Paper Pro", "Authentik"];
+export const MARQUES = ["Double A", "Paper One", "Globulus", "Paper Pro", "Authentik", "Smart Copy"];
 
 /** Adresse de la page d'une marque : /marques/<slug> */
 export function slugMarque(marque: string): string {
@@ -681,6 +745,10 @@ export const SEO_MARQUES: Record<string, { titre: string; description: string }>
   "Paper Pro": {
     titre: "Papier Rame Paper Pro 80g, Prix Carton | Monpapierrame",
     description: "Papier rame Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Pour entreprises, écoles, cybercafés. Livraison en Côte d'Ivoire.",
+  },
+  "Smart Copy": {
+    titre: "Papier Rame Smart Copy 80g, Prix Carton | Monpapierrame",
+    description: "Papier rame Smart Copy 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Pour entreprises, écoles, cybercafés. Livraison en Côte d'Ivoire.",
   },
   Authentik: {
     titre: "Papier Rame Authentik 80g, Prix Carton | Monpapierrame",

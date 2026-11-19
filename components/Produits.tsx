@@ -8,7 +8,7 @@ export default function Produits() {
   return (
     <section id="produits" className="bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-6xl">
-        <Titre titre="Nos produits" texte="Papier rame A4 Double A, Paper One, Globulus, Paper Pro et Authentik, livré partout en Côte d'Ivoire." />
+        <Titre titre="Nos produits" texte="Papier rame A4 Double A, Paper One, Globulus, Paper Pro, Authentik et Smart Copy, livré partout en Côte d'Ivoire." />
 
         {MARQUES.map((marque) => (
           <div key={marque} className="mt-12 first:mt-8">

@@ -20,7 +20,7 @@ export default function PolitiqueRetour() {
         <article className="mx-auto max-w-3xl">
           <h1 className="text-2xl font-bold text-nuit sm:text-4xl">Politique de retour</h1>
           <p className="mt-3 text-encre/75">
-            {SITE.nom} · papier rame A4 Double A, Paper One, Globulus, Paper Pro et Authentik, livré partout en Côte d&apos;Ivoire.
+            {SITE.nom} · papier rame A4 Double A, Paper One, Globulus, Paper Pro, Authentik et Smart Copy, livré partout en Côte d&apos;Ivoire.
           </p>
 
           <section className="mt-8">

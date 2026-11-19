@@ -3,6 +3,7 @@ import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 import { PRODUITS, SEO_ACCUEIL, SITE, meta } from "@/lib/config";
 import PanierProvider from "@/components/PanierContext";
+import RetourEnHaut from "@/components/RetourEnHaut";
 
 // Police des titres : Montserrat (600, 700 et 800), proche de la typographie du logo
 const titre = Montserrat({
@@ -88,7 +89,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" className={`${titre.variable} ${texte.variable}`}>
       <body className="min-h-screen antialiased">
-        <PanierProvider>{children}</PanierProvider>
+        <PanierProvider>
+          <RetourEnHaut />
+          {children}
+        </PanierProvider>
       </body>
     </html>
   );

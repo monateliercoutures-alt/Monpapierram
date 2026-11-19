@@ -699,6 +699,30 @@ export const FAQ: { q: string; r: string }[] = [
     q: "Pouvez-vous établir une facture\u00a0?",
     r: "Oui, une facture peut être établie sur demande, notamment pour les entreprises, les écoles, les administrations et les achats en gros. Précisez-le dans votre message WhatsApp.",
   },
+  {
+    q: "Quelles marques de papier rame A4 vendez-vous\u00a0?",
+    r: "Nous vendons six marques de papier rame A4\u00a0: Double A, Paper One, Globulus, Paper Pro, Authentik et Smart Copy. Chaque marque a sa page avec les prix, les photos et les conditions de livraison.",
+  },
+  {
+    q: "Quel est le prix d'un carton de papier A4 Smart Copy\u00a0?",
+    r: "Le carton de 5 ramettes Smart Copy (80 g/m², 2\u00a0500 feuilles) est à 13\u00a0500 FCFA, et à 13\u00a0000 FCFA le carton à partir de 10 cartons. Livraison à Abidjan et partout en Côte d'Ivoire.",
+  },
+  {
+    q: "Quel papier A4 choisir pour un cybercafé ou un centre de photocopie\u00a0?",
+    r: "Pour un fort volume, privilégiez un papier 80 g/m² en carton ou en lot de 10 cartons : il passe bien dans les photocopieurs et les imprimantes laser et limite les bourrages. Le tarif gros s'applique dès 10 cartons.",
+  },
+  {
+    q: "Pouvez-vous livrer du papier A4 en urgence à Abidjan\u00a0?",
+    r: "Les commandes confirmées sont livrées en 24 à 72 heures. Pour une urgence, écrivez-nous sur WhatsApp en indiquant votre commune et la quantité\u00a0: nous confirmons le créneau le plus rapide possible.",
+  },
+  {
+    q: "Faites-vous des factures pour les entreprises et les administrations\u00a0?",
+    r: "Oui, une facture peut être établie sur demande pour les entreprises, administrations, écoles et associations. Indiquez la raison sociale à la commande sur WhatsApp.",
+  },
+  {
+    q: "Comment commander du papier rame A4 chez Monpapierrame\u00a0?",
+    r: "Ajoutez vos produits au panier puis envoyez la commande sur WhatsApp, ou écrivez-nous directement. Nous confirmons le prix de livraison et le créneau, puis vous payez à la livraison ou par Orange Money, MTN MoMo, Moov Money ou Wave.",
+  },
 ];
 
 /**

@@ -61,7 +61,7 @@ export default function Footer() {
                   className="inline-flex min-h-11 items-center gap-2 whitespace-nowrap font-semibold hover:underline"
                 >
                   <IconeWhatsApp className="h-5 w-5" />
-                  WhatsApp : {SITE.whatsappAffiche}
+                  Commander sur WhatsApp
                 </a>
               </li>
               <li>

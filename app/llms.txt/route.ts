@@ -47,7 +47,7 @@ Retour possible ${SITE.delaiRetour}. Détails : ${SITE.url}/politique-de-retour
 
 ## Contact
 - Site : ${SITE.url}
-- WhatsApp : ${SITE.whatsappAffiche}
+- WhatsApp : commande via le bouton WhatsApp du site
 - E-mail : ${SITE.email}
 - Horaires : ${SITE.horaires}
 

@@ -35,7 +35,7 @@ export default function PolitiqueRetour() {
             <h2 className="text-xl font-bold text-nuit">Comment demander un retour ?</h2>
             <ol className="mt-3 space-y-3 text-encre/85">
               <li>
-                <strong className="text-nuit">1. Contactez-nous sur WhatsApp</strong> au {SITE.whatsappAffiche} (ou par e-mail à{" "}
+                <strong className="text-nuit">1. Contactez-nous sur WhatsApp</strong> (ou par e-mail à{" "}
                 <a href={`mailto:${SITE.email}`} className="font-semibold text-profond underline">{SITE.email}</a>), dans le
                 délai de 24 à 72 h après la livraison.
               </li>

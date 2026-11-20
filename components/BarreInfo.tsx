@@ -7,7 +7,7 @@ export default function BarreInfo() {
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-1 px-4 py-1 text-xs sm:justify-between sm:py-2 sm:px-6 xl:max-w-none xl:px-[max(1.5rem,6vw)]">
         <p className="hidden sm:block">Livraison en 24 à 72 h partout en Côte d'Ivoire · Retours sous 24 à 72 h après livraison</p>
         <a href={`https://wa.me/${SITE.whatsapp}`} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-8 items-center font-semibold hover:underline">
-          Commander sur WhatsApp
+          WhatsApp : {SITE.whatsappAffiche}
         </a>
       </div>
     </div>

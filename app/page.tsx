@@ -23,6 +23,7 @@ const donneesStructurees = {
       description: "Grossiste et fournisseur de papier rame A4 (Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy) à Abidjan, livraison partout en Côte d'Ivoire. Vente à l'unité, au carton et en gros dès 10 cartons.",
       brand: [{ "@type": "Brand", name: "Double A" }, { "@type": "Brand", name: "Paper One" }, { "@type": "Brand", name: "Globulus" }, { "@type": "Brand", name: "Paper Pro" }, { "@type": "Brand", name: "Authentik" }, { "@type": "Brand", name: "Smart Copy" }],
       url: SITE.url,
+      telephone: SITE.whatsappAffiche,
       email: SITE.email,
       areaServed: { "@type": "Country", name: "Côte d'Ivoire" },
       paymentAccepted: "Paiement à la livraison, Orange Money, MTN MoMo, Moov Money, Wave",

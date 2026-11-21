@@ -57,6 +57,8 @@ export const metadata: Metadata = {
     "papier rame Smart Copy",
     "papier rame Ultima Copy",
     "papier rame Roch",
+    "papier rame Aone",
+    "papier rame Aria",
     "prix rame de papier A4 Côte d'Ivoire",
     "prix carton papier A4 Abidjan",
     "vente de papier rame Abidjan",

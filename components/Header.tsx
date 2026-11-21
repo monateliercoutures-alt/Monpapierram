@@ -73,7 +73,7 @@ export default function Header() {
 
       {/* Rayons : accès direct aux marques (ordinateur) */}
       <nav aria-label="Marques de papier rame" className="hidden border-t border-profond/10 bg-brume lg:block">
-        <ul className="mx-auto flex max-w-6xl items-center gap-1 px-4 sm:px-6 xl:max-w-none xl:px-[max(1.5rem,6vw)]">
+        <ul className="mx-auto flex max-w-6xl items-center gap-1 overflow-x-auto whitespace-nowrap px-4 sm:px-6 xl:max-w-none xl:px-[max(1.5rem,6vw)]">
           <li>
             <Link href="/papier-rame-abidjan" className="inline-flex h-10 items-center px-3 text-sm font-bold text-profond hover:underline">
               Tous les produits

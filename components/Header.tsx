@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MARQUES, SITE, slugMarque } from "@/lib/config";
@@ -8,29 +8,12 @@ import { usePanier } from "./PanierContext";
 import BarreInfo from "./BarreInfo";
 import RechercheProduits from "./RechercheProduits";
 
-// Liens du menu principal
-const LIENS = [
-  { href: "/#produits", label: "Produits" },
-  { href: "/#marques", label: "Marques" },
-  { href: "/#comparatif", label: "Comparatif" },
-  { href: "/livraison", label: "Livraison" },
-  { href: "/#faq", label: "FAQ" },
-  { href: "/#contact", label: "Contact" },
-];
 
 // En-tête collant : logo, menu, bouton panier avec compteur
 export default function Header() {
-  const [ouvert, setOuvert] = useState(false);
   const [recherche, setRecherche] = useState(false);
   const { nombre, ouvrir } = usePanier();
 
-  // Fermer le menu mobile avec la touche Échap
-  useEffect(() => {
-    if (!ouvert) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOuvert(false);
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [ouvert]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-profond/15 bg-white">
@@ -47,13 +30,10 @@ export default function Header() {
           <Image src="/images/logo.png" alt={SITE.nom} width={895} height={268} priority className="h-[3.6rem] w-auto sm:h-[4.2rem]" />
         </Link>
 
-        <nav aria-label="Navigation principale" className="hidden items-center gap-7 lg:flex">
-          {LIENS.map((l) => (
-            <Link key={l.href} href={l.href} className="text-sm font-medium text-encre/80 hover:text-profond">
-              {l.label}
-            </Link>
-          ))}
-        </nav>
+        {/* Recherche de produits (ordinateur) */}
+        <div className="hidden max-w-xl flex-1 lg:block">
+          <RechercheProduits />
+        </div>
 
         <div className="flex items-center gap-2">
           {/* Recherche (mobile) */}
@@ -88,19 +68,6 @@ export default function Header() {
             )}
           </button>
 
-          {/* Menu hamburger (mobile et tablette) */}
-          <button
-            type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-bouton border border-profond/20 text-profond lg:hidden"
-            aria-expanded={ouvert}
-            aria-controls="menu-mobile"
-            aria-label={ouvert ? "Fermer le menu" : "Ouvrir le menu"}
-            onClick={() => setOuvert((o) => !o)}
-          >
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-              {ouvert ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
-            </svg>
-          </button>
         </div>
       </div>
 
@@ -119,9 +86,6 @@ export default function Header() {
               </Link>
             </li>
           ))}
-          <li className="ml-auto w-72 py-1">
-            <RechercheProduits />
-          </li>
         </ul>
       </nav>
 
@@ -131,17 +95,6 @@ export default function Header() {
         </div>
       )}
 
-      {ouvert && (
-        <div id="menu-mobile" className="border-t border-profond/10 bg-white lg:hidden">
-          <nav aria-label="Navigation mobile" className="mx-auto flex max-w-6xl flex-col px-4 py-2">
-            {LIENS.map((l) => (
-              <Link key={l.href} href={l.href} onClick={() => setOuvert(false)} className="flex min-h-12 items-center border-b border-profond/10 text-base font-medium text-encre last:border-0">
-                {l.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
     </header>
   );
 }

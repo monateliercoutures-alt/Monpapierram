@@ -29,7 +29,12 @@
   html {
     color-scheme: light;
     scroll-behavior: smooth;
-    scroll-padding-top: 9.5rem; /* compense l'en-tête collant pour les ancres */
+    scroll-padding-top: 8rem; /* compense l'en-tête collant pour les ancres */
+  }
+  @media (min-width: 1024px) {
+    html {
+      scroll-padding-top: 12rem;
+    }
   }
   body {
     background: #ffffff;

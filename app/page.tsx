@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Reassurance from "@/components/Reassurance";
 import ScrollMontage from "@/components/ScrollMontage";
 import Avantages from "@/components/Avantages";
+import CategoriesMarques from "@/components/CategoriesMarques";
 import Produits from "@/components/Produits";
 import Comparatif from "@/components/Comparatif";
 import Presentation from "@/components/Presentation";
@@ -67,6 +68,7 @@ export default function Page() {
       <main id="contenu">
         <Hero />
         <Reassurance />
+        <CategoriesMarques />
         <Produits />
         <Comparatif />
         <ScrollMontage />

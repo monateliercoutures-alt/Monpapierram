@@ -5,18 +5,18 @@ import { IconeWhatsApp } from "./Icones";
 // Pied de page : liens, contacts, zone de livraison
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-nuit px-4 pb-24 pt-14 sm:pb-10 sm:pt-16 text-white sm:px-6">
+    <footer id="contact" className="border-t border-profond/15 bg-white px-4 pb-24 pt-14 text-encre sm:pb-10 sm:pt-16 sm:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_1fr_1fr_1.25fr_1fr]">
           <div>
-            <Image src="/images/logo-blanc.png" alt={SITE.nom} width={895} height={268} className="h-14 w-auto" />
-            <p className="mt-3 max-w-xs text-sm text-white/75">
+            <Image src="/images/logo.png" alt={SITE.nom} width={895} height={268} className="h-14 w-auto" />
+            <p className="mt-3 max-w-xs text-sm text-encre/75">
               Grossiste et fournisseur de papier rame A4 (Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy) à Abidjan, livré partout en Côte d'Ivoire.
             </p>
           </div>
 
           <div>
-            <h2 className="font-sans text-sm font-semibold text-cyan">La boutique</h2>
+            <h2 className="font-sans text-sm font-bold uppercase tracking-wide text-nuit">La boutique</h2>
             <ul className="mt-4 space-y-1 text-sm">
               {[
                 ["/papier-rame-abidjan", "Papier rame Abidjan"],
@@ -30,7 +30,7 @@ export default function Footer() {
                 ["/politique-de-retour", "Politique de retour"],
               ].map(([href, label]) => (
                 <li key={href}>
-                  <a href={href} className="inline-flex min-h-11 items-center text-white/85 hover:underline">
+                  <a href={href} className="inline-flex min-h-11 items-center text-encre/85 hover:text-profond hover:underline">
                     {label}
                   </a>
                 </li>
@@ -39,11 +39,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="font-sans text-sm font-semibold text-cyan">Nos marques</h2>
+            <h2 className="font-sans text-sm font-bold uppercase tracking-wide text-nuit">Nos marques</h2>
             <ul className="mt-4 space-y-1 text-sm">
               {MARQUES.map((m) => (
                 <li key={m}>
-                  <a href={`/marques/${slugMarque(m)}`} className="inline-flex min-h-11 items-center text-white/85 hover:underline">
+                  <a href={`/marques/${slugMarque(m)}`} className="inline-flex min-h-11 items-center text-encre/85 hover:text-profond hover:underline">
                     Papier rame {m}
                   </a>
                 </li>
@@ -52,45 +52,45 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="font-sans text-sm font-semibold text-cyan">Contact</h2>
+            <h2 className="font-sans text-sm font-bold uppercase tracking-wide text-nuit">Contact</h2>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
                 <a
                   href={lienWhatsApp(MESSAGE_GENERAL)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-11 items-center gap-2 whitespace-nowrap font-semibold hover:underline"
+                  className="inline-flex min-h-11 items-center gap-2 whitespace-nowrap font-semibold hover:text-profond hover:underline"
                 >
                   <IconeWhatsApp className="h-5 w-5" />
                   WhatsApp : {SITE.whatsappAffiche}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${SITE.email}`} className="inline-flex min-h-11 items-center break-all hover:underline">
+                <a href={`mailto:${SITE.email}`} className="inline-flex min-h-11 items-center break-all hover:text-profond hover:underline">
                   {SITE.email}
                 </a>
               </li>
-              <li className="text-white/75">{SITE.horaires}</li>
+              <li className="text-encre/75">{SITE.horaires}</li>
             </ul>
           </div>
 
           <div>
-            <h2 className="font-sans text-sm font-semibold text-cyan">Zone de livraison</h2>
-            <p className="mt-4 text-sm text-white/75">{SITE.zone}</p>
+            <h2 className="font-sans text-sm font-bold uppercase tracking-wide text-nuit">Zone de livraison</h2>
+            <p className="mt-4 text-sm text-encre/75">{SITE.zone}</p>
           </div>
         </div>
 
         {/* Moyens de paiement */}
-        <div className="mt-12 border-t border-white/15 pt-6">
-          <h2 className="font-sans text-sm font-semibold text-cyan">Moyens de paiement</h2>
+        <div className="mt-12 border-t border-profond/15 pt-6">
+          <h2 className="font-sans text-sm font-bold uppercase tracking-wide text-nuit">Moyens de paiement</h2>
           <ul className="mt-3 grid grid-cols-4 gap-2 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
-            <li className="col-span-4 flex h-12 items-center justify-center rounded-bouton border border-white/30 px-4 text-sm font-semibold sm:justify-start">
+            <li className="col-span-4 flex h-12 items-center justify-center rounded-bouton border border-profond/20 px-4 text-sm font-semibold sm:justify-start">
               Paiement à la livraison
             </li>
             {MOYENS_MOBILE.map((m) => (
               <li
                 key={m.nom}
-                className="flex h-12 items-center justify-center rounded-bouton border border-white/30 px-2 sm:px-3"
+                className="flex h-12 items-center justify-center rounded-bouton border border-profond/20 px-2 sm:px-3"
                 style={{ background: m.fond }}
               >
                 <Image src={m.logo} alt={m.nom} width={m.l} height={m.h} className="h-7 w-auto max-w-full sm:h-8" />
@@ -99,9 +99,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-white/15 pt-6 text-xs text-white/65">
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-profond/15 pt-6 text-xs text-encre/65">
           <p>© 2025 Monpapierrame. Tous droits réservés.</p>
-          <a href="#" className="inline-flex min-h-11 items-center gap-1 font-semibold text-white/85 hover:underline">
+          <a href="#" className="inline-flex min-h-11 items-center gap-1 font-semibold text-encre/85 hover:text-profond hover:underline">
             Retour en haut <span aria-hidden="true">↑</span>
           </a>
         </div>

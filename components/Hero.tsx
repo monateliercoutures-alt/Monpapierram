@@ -27,7 +27,7 @@ export default function Hero() {
               Grossiste de papier rame, livré partout en <span className="text-profond">Côte d'Ivoire</span>
             </h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-encre/80 sm:mx-auto sm:text-lg xl:mx-0 xl:text-[clamp(1.05rem,1.2vw,1.35rem)]">
-              Grossiste et fournisseur de papier rame A4 à Abidjan et dans toute la Côte d'Ivoire : Double&nbsp;A, Paper One, Globulus, Paper Pro, Authentik et Smart Copy, au carton et en gros dès 10 cartons.
+              Grossiste et fournisseur de papier rame A4 à Abidjan et dans toute la Côte d'Ivoire : Double&nbsp;A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy et Roch, au carton et en gros dès 10 cartons.
             </p>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center xl:flex-col xl:items-start min-[1700px]:flex-row">

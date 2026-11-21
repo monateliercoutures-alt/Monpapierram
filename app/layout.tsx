@@ -55,6 +55,8 @@ export const metadata: Metadata = {
     "Double A Côte d'Ivoire",
     "fournitures de bureau Abidjan",
     "papier rame Smart Copy",
+    "papier rame Ultima Copy",
+    "papier rame Roch",
     "prix rame de papier A4 Côte d'Ivoire",
     "prix carton papier A4 Abidjan",
     "vente de papier rame Abidjan",

@@ -49,7 +49,7 @@ export default function Comparatif() {
           </table>
         </div>
         <p className="mt-4 text-sm text-encre/70">
-          Le papier Double A est aussi vendu à la ramette (500 feuilles). Le papier Paper One est du 70 g/m² ; les autres marques sont du 80 g/m², conseillé pour l&apos;impression recto verso.
+          Le papier Double A est aussi vendu à la ramette (500 feuilles). Le papier Paper One est du 70 g/m² et Ultima Copy du 75 g/m² ; les autres marques sont du 80 g/m², conseillé pour l&apos;impression recto verso.
         </p>
       </div>
     </section>

@@ -24,7 +24,7 @@ const SUJETS = [
   },
   {
     t: "Papier 70 g ou 80 g : quelle différence de prix et d'usage\u00a0?",
-    d: "Le Paper One (70 g/m²) est plus léger : il suffit pour les brouillons, les copies internes et les impressions recto simple. Les marques en 80 g/m² (Double A, Globulus, Paper Pro, Authentik, Smart Copy) sont plus opaques et plus rigides, donc préférables pour les documents officiels, les contrats et le recto verso.",
+    d: "Le Paper One (70 g/m²) est plus léger : il suffit pour les brouillons, les copies internes et les impressions recto simple. Les marques en 80 g/m² (Double A, Globulus, Paper Pro, Authentik, Smart Copy, Roch) sont plus opaques et plus rigides, donc préférables pour les documents officiels, les contrats et le recto verso.",
   },
   {
     t: "Que veut dire la blancheur d'un papier A4\u00a0?",

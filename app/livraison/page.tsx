@@ -24,7 +24,7 @@ export default function PageLivraison() {
         <article className="mx-auto max-w-3xl">
           <h1 className="text-2xl font-bold text-nuit sm:text-4xl">Livraison de papier rame A4 en Côte d&apos;Ivoire</h1>
           <p className="justifie mt-4 text-encre/85">
-            {SITE.nom} livre le papier rame A4 (ramettes et cartons Double A, Paper One, Globulus, Paper Pro, Authentik et Smart Copy) à
+            {SITE.nom} livre le papier rame A4 (ramettes et cartons Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy et Roch) à
             Abidjan et dans toute la Côte d&apos;Ivoire. Les commandes confirmées sont livrées en <strong>{SITE.delaiLivraison}</strong>.
           </p>
 

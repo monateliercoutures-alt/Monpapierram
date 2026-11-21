@@ -491,6 +491,132 @@ export const PRODUITS: Produit[] = [
     metaDescription:
       "Papier rame A4 Smart Copy 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
+  {
+    id: "ultima-copy-carton",
+    marque: "Ultima Copy",
+    slug: "carton-papier-rame-a4-ultima-copy",
+    nom: "Carton papier rame A4 75g Ultima Copy (5 ramettes)",
+    specs: "75 g/m² · 5 × 500 feuilles",
+    detail: "Papier rame A4 Ultima Copy, au carton.",
+    prix: 12500,
+    unite: "le carton",
+    note: "Soit 2\u00a0500\u00a0FCFA la ramette",
+    minQty: 1,
+    image: "/images/ultima-copy-1.jpg",
+    alt: "Carton de papier rame A4 Ultima Copy 75 g/m², 5 ramettes de 500 feuilles",
+    points: ["5 ramettes de 500 feuilles", "Format A4 (210 × 297 mm), 75 g/m²", "Livraison partout en Côte d'Ivoire"],
+    galerie: [
+      { src: "/images/ultima-copy-1.jpg", alt: "Papier rame A4 Ultima Copy 75 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/ultima-copy-2.jpg", alt: "Papier rame A4 Ultima Copy 75 g/m², carton et ramettes de 500 feuilles" },
+    ],
+    description: ["Le carton de papier rame A4 Ultima Copy regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles de 75 g/m².", "Livraison partout en Côte d'Ivoire et paiement à la livraison ou par Mobile Money. Commandez en ligne, nous confirmons sur WhatsApp."],
+    usages: ["Bureaux et entreprises", "Écoles et centres de formation", "Cybercafés et centres de photocopie", "Impression et photocopie du quotidien"],
+    fiche: [
+      ["Marque", "Ultima Copy"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "75 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "1 carton"],
+    ],
+    metaTitre: "Carton Papier Rame A4 Ultima Copy 75g | Monpapierrame",
+    metaDescription:
+      "Carton de 5 ramettes papier rame A4 75g Ultima Copy, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
+  },
+  {
+    id: "ultima-copy-gros",
+    marque: "Ultima Copy",
+    slug: "papier-rame-a4-ultima-copy-10-cartons",
+    nom: "Papier rame A4 Ultima Copy en gros (10 cartons)",
+    specs: "Lot de 10 cartons · 75 g/m²",
+    detail: "Pour les professionnels : lot de 10 cartons de papier rame A4 Ultima Copy.",
+    prix: 12000,
+    unite: "le carton, dès 10 cartons",
+    note: `Soit 2\u00a0400\u00a0FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    minQty: 10,
+    image: "/images/ultima-copy-2.jpg",
+    alt: "Carton de papier rame A4 Ultima Copy 75 g/m², 5 ramettes de 500 feuilles",
+    points: ["Lot de 10 cartons (50 ramettes)", "25 000 feuilles A4 75 g/m²", "Facture sur demande"],
+    galerie: [
+      { src: "/images/ultima-copy-2.jpg", alt: "Papier rame A4 Ultima Copy 75 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/ultima-copy-1.jpg", alt: "Papier rame A4 Ultima Copy 75 g/m², carton et ramettes de 500 feuilles" },
+    ],
+    description: ["Achetez en gros du papier rame A4 Ultima Copy : un lot de 10 cartons de 5 ramettes, soit 50 ramettes et 25 000 feuilles de 75 g/m².", "Le tarif gros s'applique dès 10 cartons, avec facture sur demande et livraison planifiée partout en Côte d'Ivoire."],
+    usages: ["Imprimeries et revendeurs", "Écoles, universités et administrations", "Entreprises à gros volume d'impression", "Approvisionnement régulier avec livraison planifiée"],
+    fiche: [
+      ["Marque", "Ultima Copy"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "75 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "Lot de 10 cartons (50 ramettes)"],
+    ],
+    metaTitre: "Papier Rame A4 Ultima Copy, 10 Cartons | Monpapierrame",
+    metaDescription:
+      "Papier rame A4 Ultima Copy 75g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison en Côte d'Ivoire. Devis sur WhatsApp.",
+  },
+  {
+    id: "roch-carton",
+    marque: "Roch",
+    slug: "carton-papier-rame-a4-roch",
+    nom: "Carton papier rame A4 80g Roch (5 ramettes)",
+    specs: "80 g/m² · 5 × 500 feuilles",
+    detail: "Papier rame A4 Roch, au carton.",
+    prix: 12500,
+    unite: "le carton",
+    note: "Soit 2\u00a0500\u00a0FCFA la ramette",
+    minQty: 1,
+    image: "/images/roch-3.jpg",
+    alt: "Carton de papier rame A4 Roch 80 g/m², 5 ramettes de 500 feuilles",
+    points: ["5 ramettes de 500 feuilles", "Format A4 (210 × 297 mm), 80 g/m²", "Livraison partout en Côte d'Ivoire"],
+    galerie: [
+      { src: "/images/roch-3.jpg", alt: "Papier rame A4 Roch 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/roch-1.jpg", alt: "Papier rame A4 Roch 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/roch-2.jpg", alt: "Papier rame A4 Roch 80 g/m², carton et ramettes de 500 feuilles" },
+    ],
+    description: ["Le carton de papier rame A4 Roch regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles de 80 g/m².", "Livraison partout en Côte d'Ivoire et paiement à la livraison ou par Mobile Money. Commandez en ligne, nous confirmons sur WhatsApp."],
+    usages: ["Bureaux et entreprises", "Écoles et centres de formation", "Cybercafés et centres de photocopie", "Impression et photocopie du quotidien"],
+    fiche: [
+      ["Marque", "Roch"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "1 carton"],
+    ],
+    metaTitre: "Carton Papier Rame A4 Roch 80g | Monpapierrame",
+    metaDescription:
+      "Carton de 5 ramettes papier rame A4 80g Roch, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
+  },
+  {
+    id: "roch-gros",
+    marque: "Roch",
+    slug: "papier-rame-a4-roch-10-cartons",
+    nom: "Papier rame A4 Roch en gros (10 cartons)",
+    specs: "Lot de 10 cartons · 80 g/m²",
+    detail: "Pour les professionnels : lot de 10 cartons de papier rame A4 Roch.",
+    prix: 12000,
+    unite: "le carton, dès 10 cartons",
+    note: `Soit 2\u00a0400\u00a0FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    minQty: 10,
+    image: "/images/roch-2.jpg",
+    alt: "Carton de papier rame A4 Roch 80 g/m², 5 ramettes de 500 feuilles",
+    points: ["Lot de 10 cartons (50 ramettes)", "25 000 feuilles A4 80 g/m²", "Facture sur demande"],
+    galerie: [
+      { src: "/images/roch-2.jpg", alt: "Papier rame A4 Roch 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/roch-1.jpg", alt: "Papier rame A4 Roch 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/roch-3.jpg", alt: "Papier rame A4 Roch 80 g/m², carton et ramettes de 500 feuilles" },
+    ],
+    description: ["Achetez en gros du papier rame A4 Roch : un lot de 10 cartons de 5 ramettes, soit 50 ramettes et 25 000 feuilles de 80 g/m².", "Le tarif gros s'applique dès 10 cartons, avec facture sur demande et livraison planifiée partout en Côte d'Ivoire."],
+    usages: ["Imprimeries et revendeurs", "Écoles, universités et administrations", "Entreprises à gros volume d'impression", "Approvisionnement régulier avec livraison planifiée"],
+    fiche: [
+      ["Marque", "Roch"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "Lot de 10 cartons (50 ramettes)"],
+    ],
+    metaTitre: "Papier Rame A4 Roch, 10 Cartons | Monpapierrame",
+    metaDescription:
+      "Papier rame A4 Roch 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
+  },
 ];
 
 /** Remplace {prix} par le prix formaté du produit */
@@ -661,7 +787,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Quelles marques de papier rame fournissez-vous\u00a0?",
-    r: "Nous fournissons les marques Double A, Paper One, Globulus, Paper Pro, Authentik et Smart Copy, en ramette (Double A), au carton de 5 ramettes et par lot de 10 cartons. Les prix sont indiqués sur chaque fiche produit.",
+    r: "Nous fournissons les marques Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy et Roch, en ramette (Double A), au carton de 5 ramettes et par lot de 10 cartons. Les prix sont indiqués sur chaque fiche produit.",
   },
   {
     q: "Quelle est votre politique de retour\u00a0?",
@@ -672,12 +798,12 @@ export const FAQ: { q: string; r: string }[] = [
     r: "La livraison se fait en 24 à 72 heures après confirmation de votre commande, à Abidjan comme dans le reste de la Côte d'Ivoire.",
   },
   {
-    q: "Quelle marque de papier rame choisir : Double A, Paper One, Globulus, Paper Pro, Authentik ou Smart Copy\u00a0?",
-    r: "Les marques proposées sont toutes en format A4 de 500 feuilles par ramette, avec 5 ramettes par carton. Double A, Globulus, Paper Pro, Authentik et Smart Copy font 80 g/m², Paper One 70 g/m². Le comparatif des prix par carton est sur la page d'accueil. Pour l'impression recto verso, le 80 g/m² est conseillé.",
+    q: "Quelle marque de papier rame choisir : Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy ou Roch\u00a0?",
+    r: "Les marques proposées sont toutes en format A4 de 500 feuilles par ramette, avec 5 ramettes par carton. Double A, Globulus, Paper Pro, Authentik, Smart Copy et Roch font 80 g/m², Paper One 70 g/m² et Ultima Copy 75 g/m². Le comparatif des prix par carton est sur la page d'accueil. Pour l'impression recto verso, le 80 g/m² est conseillé.",
   },
   {
     q: "Quel est le prix d'un carton de papier A4 à Abidjan\u00a0?",
-    r: "Le carton de 5 ramettes Double A est à 19\u00a0900 FCFA. Les cartons Paper One, Globulus, Paper Pro, Authentik et Smart Copy sont à 13\u00a0500 FCFA. À partir de 10 cartons, le prix passe à 19\u00a0000 FCFA le carton en Double A et à 13\u00a0000 FCFA le carton pour les autres marques.",
+    r: "Le carton de 5 ramettes Double A est à 19\u00a0900 FCFA. Les cartons Paper One, Globulus, Paper Pro, Authentik et Smart Copy sont à 13\u00a0500 FCFA, et ceux d'Ultima Copy et de Roch à 12\u00a0500 FCFA. À partir de 10 cartons, le prix passe à 19\u00a0000 FCFA le carton en Double A, 13\u00a0000 FCFA pour Paper One, Globulus, Paper Pro, Authentik et Smart Copy, et 12\u00a0000 FCFA pour Ultima Copy et Roch.",
   },
   {
     q: "Livrez-vous à Bouaké, Yamoussoukro, San-Pédro ou Korhogo\u00a0?",
@@ -693,7 +819,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Êtes-vous grossiste de papier rame à Abidjan\u00a0?",
-    r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous sommes fournisseur des grandes marques de papier rame : Double A, Paper One, Globulus, Paper Pro, Authentik et Smart Copy. Nous vendons à l'unité (ramette), au carton et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
+    r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous sommes fournisseur des grandes marques de papier rame : Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy et Roch. Nous vendons à l'unité (ramette), au carton et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
   },
   {
     q: "Pouvez-vous établir une facture\u00a0?",
@@ -701,7 +827,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Quelles marques de papier rame A4 vendez-vous\u00a0?",
-    r: "Nous vendons six marques de papier rame A4\u00a0: Double A, Paper One, Globulus, Paper Pro, Authentik et Smart Copy. Chaque marque a sa page avec les prix, les photos et les conditions de livraison.",
+    r: "Nous vendons huit marques de papier rame A4\u00a0: Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy et Roch. Chaque marque a sa page avec les prix, les photos et les conditions de livraison.",
   },
   {
     q: "Quel est le prix d'un carton de papier A4 Smart Copy\u00a0?",
@@ -741,7 +867,7 @@ export function grammage(p: Produit): string {
 }
 
 /** Marques proposées, dans l'ordre d'affichage */
-export const MARQUES = ["Double A", "Paper One", "Globulus", "Paper Pro", "Authentik", "Smart Copy"];
+export const MARQUES = ["Double A", "Paper One", "Globulus", "Paper Pro", "Authentik", "Smart Copy", "Ultima Copy", "Roch"];
 
 /** Adresse de la page d'une marque : /marques/<slug> */
 export function slugMarque(marque: string): string {
@@ -770,6 +896,14 @@ export const SEO_MARQUES: Record<string, { titre: string; description: string }>
     titre: "Papier Rame Paper Pro 80g, Prix Carton | Monpapierrame",
     description: "Prix du papier rame Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
+  "Ultima Copy": {
+    titre: "Papier Rame Ultima Copy 75g, Prix Carton | Monpapierrame",
+    description: "Prix du papier rame Ultima Copy 75g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+  },
+  Roch: {
+    titre: "Papier Rame Roch 80g, Prix Carton | Monpapierrame",
+    description: "Prix du papier rame Roch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+  },
   "Smart Copy": {
     titre: "Papier Rame Smart Copy 80g, Prix Carton | Monpapierrame",
     description: "Prix du papier rame Smart Copy 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
@@ -783,6 +917,8 @@ export const SEO_MARQUES: Record<string, { titre: string; description: string }>
 /** Contenu éditorial supplémentaire des pages marques (texte unique pour Google), avec les prix réels */
 export type PrixMarque = { carton: string; gros: string; ramette: string; g: string };
 export type ContenuMarque = { h1: string; intro: string[]; atouts: [string, string][]; faq: { q: string; r: string }[] };
+
+const V0 = "Cocody, Yopougon, Marcory, Abobo, Koumassi, Plateau, Bouaké, San-Pédro et toute la Côte d'Ivoire";
 
 export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> = {
   "Double A": (x) => ({
@@ -802,6 +938,44 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
       { q: "Où acheter du papier Double A en Côte d'Ivoire ?", r: `Chez ${SITE.nom}, grossiste de papier rame A4 à Abidjan. Nous livrons le papier Double A à Cocody, Yopougon, Marcory, Abobo, Koumassi, Bouaké, Yamoussoukro, San-Pédro et dans toutes les villes de Côte d'Ivoire.` },
       { q: "Le papier Double A convient-il à toutes les imprimantes ?", r: "Oui. Il est adapté aux imprimantes laser et jet d'encre ainsi qu'aux photocopieurs, avec un bon rendu en recto verso." },
       { q: "Quelle différence entre Double A et les autres marques ?", r: "Double A est le seul papier vendu à la ramette chez nous, en plus du carton et du gros. Les autres marques sont proposées au carton et par lot de 10 cartons, à un prix plus bas." },
+    ],
+  }),
+  "Ultima Copy": (x) => ({
+    h1: "Papier rame Ultima Copy 75g en Côte d'Ivoire : prix carton et gros",
+    intro: [
+      `Le papier rame A4 Ultima Copy ${x.g} est un papier blanc multi-usage pour imprimer et photocopier au quotidien. ${SITE.nom} le livre à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton à partir de ${SEUIL_GROS} cartons.`,
+      "Reconnaissable à son emballage jaune et bleu, le carton Ultima Copy contient 5 ramettes de 500 feuilles A4 (210 × 297 mm), pour imprimantes laser, jet d'encre et photocopieurs, avec un prix de gros parmi les plus bas de notre gamme.",
+    ],
+    atouts: [
+      ["Prix de gros très bas", `${x.carton} le carton, puis ${x.gros} le carton dès ${SEUIL_GROS} cartons.`],
+      ["75 g/m² économique", "Un grammage léger, adapté aux copies, impressions courantes et documents internes."],
+      ["Multi-usage", "Pour l'impression rapide et la photocopie à fort volume : bureaux, écoles, cybercafés."],
+      ["Livraison partout", `${V0}.`],
+    ],
+    faq: [
+      { q: "Quel est le prix du carton de papier Ultima Copy ?", r: `Le carton de 5 ramettes de papier A4 Ultima Copy ${x.g} est à ${x.carton}. À partir de ${SEUIL_GROS} cartons, le prix est de ${x.gros} le carton.` },
+      { q: "Où acheter du papier Ultima Copy à Abidjan ?", r: `Chez ${SITE.nom}. Commande en ligne ou sur WhatsApp, livraison à Cocody, Yopougon, Marcory, Abobo, Bouaké et dans toute la Côte d'Ivoire.` },
+      { q: "Le papier Ultima Copy 75g convient-il à l'impression recto verso ?", r: "Il convient aux documents courants. Pour le recto verso sur des documents importants, un papier 80 g/m² est un peu plus opaque." },
+      { q: "Combien de feuilles dans un carton Ultima Copy ?", r: "Un carton contient 5 ramettes de 500 feuilles, soit 2 500 feuilles A4. Le lot de 10 cartons représente 25 000 feuilles." },
+    ],
+  }),
+  Roch: (x) => ({
+    h1: "Papier rame Roch 80g en Côte d'Ivoire : prix carton et gros",
+    intro: [
+      `Le papier rame A4 Roch ${x.g} est un papier de copie multi-usage pour le bureau, l'école et l'impression à fort volume. ${SITE.nom} le propose à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton à partir de ${SEUIL_GROS} cartons.`,
+      "Le carton Roch, à l'emballage bleu, contient 5 ramettes de 500 feuilles A4 (210 × 297 mm), compatibles avec les imprimantes laser, jet d'encre et les photocopieurs.",
+    ],
+    atouts: [
+      ["80 g/m² à petit prix", `${x.carton} le carton de 5 ramettes, soit 2 500 feuilles de 80 g/m².`],
+      ["Copie et impression", "Pour imprimantes laser, jet d'encre et photocopieurs, au bureau comme à l'école."],
+      ["Tarif gros dès 10 cartons", `${x.gros} le carton à partir de ${SEUIL_GROS} cartons, avec facture sur demande.`],
+      ["Livraison partout", `${V0}.`],
+    ],
+    faq: [
+      { q: "Quel est le prix du papier rame Roch ?", r: `Le carton de 5 ramettes de papier A4 Roch ${x.g} est à ${x.carton}. À partir de ${SEUIL_GROS} cartons, le prix est de ${x.gros} le carton.` },
+      { q: "Où acheter du papier Roch à Abidjan ?", r: `Chez ${SITE.nom}. Commande en ligne ou sur WhatsApp, livraison à Cocody, Yopougon, Marcory, Abobo et partout en Côte d'Ivoire.` },
+      { q: "Le papier Roch est-il bon pour l'impression recto verso ?", r: "Oui, le 80 g/m² est assez épais pour limiter la transparence en recto verso et convient aux imprimantes laser et jet d'encre." },
+      { q: "Combien de feuilles dans un carton Roch ?", r: "Un carton regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles A4. Un lot de 10 cartons fait 25 000 feuilles." },
     ],
   }),
   Authentik: (x) => ({
@@ -837,7 +1011,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
     faq: [
       { q: "Quel est le prix du carton de papier Paper One ?", r: `Le carton de 5 ramettes de papier A4 Paper One ${x.g} est à ${x.carton}. À partir de ${SEUIL_GROS} cartons, il passe à ${x.gros} le carton.` },
-      { q: "Le papier Paper One 70g est-il adapté à l'impression recto verso ?", r: `Il convient aux documents courants. Pour le recto verso sur des documents importants ou des textes denses, un papier 80 g/m² (Double A, Globulus, Paper Pro, Authentik, Smart Copy) est plus opaque.` },
+      { q: "Le papier Paper One 70g est-il adapté à l'impression recto verso ?", r: `Il convient aux documents courants. Pour le recto verso sur des documents importants ou des textes denses, un papier 80 g/m² (Double A, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch) est plus opaque.` },
       { q: "Où acheter du papier rame Paper One à Abidjan ?", r: `Chez ${SITE.nom}, grossiste de papier rame A4. Commande en ligne ou sur WhatsApp, livraison à Cocody, Yopougon, Marcory, Abobo et dans toute la Côte d'Ivoire.` },
       { q: "Quelle différence entre Paper One 70g et un papier 80g ?", r: `Le 70 g/m² est plus léger et plus économique, idéal pour les brouillons et copies. Le 80 g/m² est plus rigide et plus opaque, préféré pour les documents officiels et le recto verso.` },
     ],

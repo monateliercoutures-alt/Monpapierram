@@ -33,6 +33,9 @@ ${produits}
 ## Comparatif par marque
 ${comparatif}
 
+## Pages utiles
+- [Papier rame à Abidjan : toutes les marques et tous les prix](${SITE.url}/papier-rame-abidjan)
+
 ## Livraison
 - Zone : ${SITE.zone}.
 - Délai : ${SITE.delaiLivraison} après confirmation de la commande.

@@ -10,6 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
+    {
+      url: `${SITE.url}/papier-rame-abidjan`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
     ...MARQUES.map((m) => ({
       url: `${SITE.url}/marques/${slugMarque(m)}`,
       lastModified: new Date(),

@@ -19,6 +19,7 @@ export default function Footer() {
             <h2 className="font-sans text-sm font-semibold text-cyan">La boutique</h2>
             <ul className="mt-4 space-y-1 text-sm">
               {[
+                ["/papier-rame-abidjan", "Papier rame Abidjan"],
                 ["/#produits", "Nos produits"],
                 ["/#avantages", "Pourquoi nous choisir"],
                 ["/#comparatif", "Comparatif des marques"],

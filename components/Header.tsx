@@ -10,7 +10,9 @@ import BarreInfo from "./BarreInfo";
 // Liens du menu principal
 const LIENS = [
   { href: "/#produits", label: "Produits" },
-  { href: "/#avantages", label: "Avantages" },
+  { href: "/#marques", label: "Marques" },
+  { href: "/#comparatif", label: "Comparatif" },
+  { href: "/livraison", label: "Livraison" },
   { href: "/#faq", label: "FAQ" },
   { href: "/#contact", label: "Contact" },
 ];

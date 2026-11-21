@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
-import { MARQUES, PRODUITS, slugMarque, type Produit } from "@/lib/config";
+import { MARQUES, PRODUITS, type Produit } from "@/lib/config";
 import ProduitCarte from "./ProduitCarte";
 import Titre from "./Titre";
 
@@ -23,7 +22,10 @@ export default function Produits() {
     return l;
   }, [marque, q, tri]);
 
-  const groupe = marque === "Toutes" && !q.trim() && tri === "defaut";
+  // Par défaut, 6 produits sont visibles ; les autres se déplient (ils restent dans la page pour Google)
+  const [toutVoir, setToutVoir] = useState(false);
+  const filtre = marque !== "Toutes" || q.trim() !== "" || tri !== "defaut";
+  const limite = filtre || toutVoir ? liste.length : 6;
 
   return (
     <section id="produits" className="bg-white px-4 py-14 sm:px-6 sm:py-20">
@@ -82,34 +84,23 @@ export default function Produits() {
           </p>
         )}
 
-        {groupe ? (
-          MARQUES.map((m) => {
-            const l = liste.filter((p) => p.marque === m);
-            if (!l.length) return null;
-            return (
-              <div key={m} className="mt-10 first:mt-6">
-                <h3 className="flex items-center justify-between gap-4 border-b border-profond/15 pb-2 text-lg font-bold text-nuit">
-                  <Link href={`/marques/${slugMarque(m)}`} className="hover:underline">
-                    Papier rame {m}
-                  </Link>
-                  <Link href={`/marques/${slugMarque(m)}`} className="inline-flex min-h-8 items-center whitespace-nowrap text-sm font-semibold text-profond underline" aria-label={`Voir tous les produits Papier rame ${m}`}>
-                    Voir la marque →
-                  </Link>
-                </h3>
-                <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {l.map((p) => (
-                    <ProduitCarte key={p.id} p={p} />
-                  ))}
-                </ul>
-              </div>
-            );
-          })
-        ) : (
-          <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {liste.map((p) => (
-              <ProduitCarte key={p.id} p={p} />
-            ))}
-          </ul>
+        <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {liste.map((p, i) => (
+            <ProduitCarte key={p.id} p={p} className={i >= limite ? "hidden" : ""} />
+          ))}
+        </ul>
+
+        {!filtre && liste.length > 6 && (
+          <div className="mt-8 text-center">
+            <button
+              type="button"
+              onClick={() => setToutVoir((v) => !v)}
+              aria-expanded={toutVoir}
+              className="inline-flex min-h-12 items-center rounded-bouton border border-profond px-8 font-semibold text-profond hover:bg-profond hover:text-white"
+            >
+              {toutVoir ? "Voir moins de produits" : `Voir les ${liste.length - 6} autres produits`}
+            </button>
+          </div>
         )}
       </div>
     </section>

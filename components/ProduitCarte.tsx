@@ -4,9 +4,9 @@ import CarteImages from "./CarteImages";
 import BoutonAchat from "./BoutonAchat";
 
 /** Carte produit : photos, nom, prix, points forts et bouton d'achat */
-export default function ProduitCarte({ p }: { p: Produit }) {
+export default function ProduitCarte({ p, className = "" }: { p: Produit; className?: string }) {
   return (
-    <li className="flex flex-col overflow-hidden rounded-carte border border-profond/15 bg-white">
+    <li className={`flex flex-col overflow-hidden rounded-carte border border-profond/15 bg-white ${className}`}>
       <CarteImages href={`/produits/${p.slug}`} nom={p.nom} images={p.galerie} badge={p.badge} />
 
       <div className="flex flex-1 flex-col border-t border-profond/10 p-5">

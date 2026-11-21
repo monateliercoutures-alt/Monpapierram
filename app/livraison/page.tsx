@@ -8,7 +8,7 @@ import { COMMUNES, MESSAGE_GENERAL, MODES_PAIEMENT, SITE, lienWhatsApp } from "@
 
 export const metadata: Metadata = {
   title: "Livraison de papier rame A4 en Côte d'Ivoire | Monpapierrame",
-  description: "Livraison de papier rame A4 à Abidjan et dans toute la Côte d'Ivoire en 24 à 72 h. Paiement à la livraison ou Mobile Money. Retours sous 24 à 72 h.",
+  description: "Livraison de papier rame A4 à Abidjan (Cocody, Yopougon, Marcory, Abobo) et partout en Côte d'Ivoire en 24 à 72 h. Paiement à la livraison ou Mobile Money.",
   alternates: { canonical: "/livraison" },
 };
 

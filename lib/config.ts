@@ -205,7 +205,7 @@ export const PRODUITS: Produit[] = [
     ],
     metaTitre: "Carton Papier Rame A4 Paper One 70g | Monpapierrame",
     metaDescription:
-      "Carton de 5 ramettes papier rame A4 70g Paper One, 2 500 feuilles, {prix}. Livraison Cocody, Yopougon, Bouaké et toute la CI.",
+      "Carton de 5 ramettes papier rame A4 70g Paper One, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
   {
     id: "paperone-gros",
@@ -235,9 +235,9 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Paper One, Lot de 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Paper One, 10 Cartons | Monpapierrame",
     metaDescription:
-      "Papier rame A4 Paper One en gros à Abidjan : lot de 10 cartons, 70g. {prix} le carton. Facture, livraison Cocody, Yopougon, Bouaké, toute la CI.",
+      "Papier rame A4 Paper One 70g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
   {
     id: "globulus-carton",
@@ -269,7 +269,7 @@ export const PRODUITS: Produit[] = [
     ],
     metaTitre: "Carton Papier Rame A4 Globulus 80g | Monpapierrame",
     metaDescription:
-      "Carton de 5 ramettes papier rame A4 80g Globulus, 2 500 feuilles, {prix}. Livraison Cocody, Yopougon, Bouaké et toute la CI.",
+      "Carton de 5 ramettes papier rame A4 80g Globulus, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
   {
     id: "globulus-gros",
@@ -299,9 +299,9 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Globulus, Lot de 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Globulus, 10 Cartons | Monpapierrame",
     metaDescription:
-      "Papier rame A4 Globulus en gros à Abidjan : lot de 10 cartons, 80g. {prix} le carton. Facture, livraison Cocody, Yopougon, Bouaké, toute la CI.",
+      "Papier rame A4 Globulus 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
   {
     id: "paperpro-carton",
@@ -333,7 +333,7 @@ export const PRODUITS: Produit[] = [
     ],
     metaTitre: "Carton Papier Rame A4 Paper Pro 80g | Monpapierrame",
     metaDescription:
-      "Carton de 5 ramettes papier rame A4 80g Paper Pro, 2 500 feuilles, {prix}. Livraison Cocody, Yopougon, Bouaké et toute la CI.",
+      "Carton de 5 ramettes papier rame A4 80g Paper Pro, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
   {
     id: "paperpro-gros",
@@ -363,9 +363,9 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Paper Pro, Lot de 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Paper Pro, 10 Cartons | Monpapierrame",
     metaDescription:
-      "Papier rame A4 Paper Pro en gros à Abidjan : lot de 10 cartons, 80g. {prix} le carton. Facture, livraison Cocody, Yopougon, Bouaké, toute la CI.",
+      "Papier rame A4 Paper Pro 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
   {
     id: "authentik-carton",
@@ -395,7 +395,7 @@ export const PRODUITS: Produit[] = [
     ],
     metaTitre: "Carton Papier Rame A4 Authentik 80g | Monpapierrame",
     metaDescription:
-      "Carton de 5 ramettes papier rame A4 80g Authentik, 2 500 feuilles, {prix}. Livraison Cocody, Yopougon, Bouaké et toute la CI.",
+      "Carton de 5 ramettes papier rame A4 80g Authentik, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
   {
     id: "authentik-gros",
@@ -423,9 +423,9 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Authentik, Lot de 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Authentik, 10 Cartons | Monpapierrame",
     metaDescription:
-      "Papier rame A4 Authentik en gros à Abidjan : lot de 10 cartons, 80g. {prix} le carton. Facture, livraison Cocody, Yopougon, Bouaké, toute la CI.",
+      "Papier rame A4 Authentik 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
   {
     id: "smart-copy-carton",
@@ -457,7 +457,7 @@ export const PRODUITS: Produit[] = [
     ],
     metaTitre: "Carton Papier Rame A4 Smart Copy 80g | Monpapierrame",
     metaDescription:
-      "Carton de 5 ramettes papier rame A4 80g Smart Copy, 2 500 feuilles, {prix}. Livraison Cocody, Yopougon, Bouaké et toute la CI.",
+      "Carton de 5 ramettes papier rame A4 80g Smart Copy, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
   {
     id: "smart-copy-gros",
@@ -487,9 +487,9 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Smart Copy, Lot de 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Smart Copy, 10 Cartons | Monpapierrame",
     metaDescription:
-      "Papier rame A4 Smart Copy en gros à Abidjan : lot de 10 cartons, 80g. {prix} le carton. Facture, livraison Cocody, Yopougon, Bouaké, toute la CI.",
+      "Papier rame A4 Smart Copy 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
 ];
 
@@ -732,7 +732,7 @@ export const FAQ: { q: string; r: string }[] = [
 export const SEO_ACCUEIL = {
   titre: "Papier Rame A4 à Abidjan & en Côte d’Ivoire | Monpapierrame",
   description:
-    "Grossiste papier rame A4 à Abidjan : Double A, Paper One, Globulus, Smart Copy… Ramette dès {prix}, carton, gros. Livraison Cocody, Yopougon, Bouaké.",
+    "Grossiste papier rame A4 à Abidjan : Double A, Paper One, Globulus, Smart Copy. Ramette dès {prix}, carton, gros. Livraison en Côte d'Ivoire.",
 };
 
 /** Grammage lu dans la fiche technique du produit (ex. « 80 g/m² ») */
@@ -756,27 +756,27 @@ export function trouverMarque(slug: string): string | undefined {
 export const SEO_MARQUES: Record<string, { titre: string; description: string }> = {
   "Double A": {
     titre: "Papier Rame Double A en Côte d'Ivoire, Prix | Monpapierrame",
-    description: "Prix rame de papier Double A 80g à Abidjan : ramette {ramette}, carton {carton}, gros dès 10 cartons. Livraison à Cocody, Yopougon et partout en CI.",
+    description: "Prix du papier rame Double A 80g à Abidjan : ramette {ramette}, carton {carton}, gros dès 10 cartons. Livraison à Cocody, Yopougon et en Côte d'Ivoire.",
   },
   "Paper One": {
     titre: "Papier Rame Paper One 70g, Prix Carton | Monpapierrame",
-    description: "Prix rame de papier Paper One 70g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison Cocody, Yopougon, Bouaké et toute la CI.",
+    description: "Prix du papier rame Paper One 70g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   Globulus: {
     titre: "Papier Rame Globulus 80g, Prix Carton | Monpapierrame",
-    description: "Prix rame de papier Globulus 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison Cocody, Yopougon, Bouaké et toute la CI.",
+    description: "Prix du papier rame Globulus 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   "Paper Pro": {
     titre: "Papier Rame Paper Pro 80g, Prix Carton | Monpapierrame",
-    description: "Prix rame de papier Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison Cocody, Yopougon, Bouaké et toute la CI.",
+    description: "Prix du papier rame Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   "Smart Copy": {
     titre: "Papier Rame Smart Copy 80g, Prix Carton | Monpapierrame",
-    description: "Prix rame de papier Smart Copy 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison Cocody, Yopougon, Bouaké et toute la CI.",
+    description: "Prix du papier rame Smart Copy 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   Authentik: {
     titre: "Papier Rame Authentik 80g, Prix Carton | Monpapierrame",
-    description: "Prix rame de papier Authentik 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison Cocody, Yopougon, Bouaké et toute la CI.",
+    description: "Prix du papier rame Authentik 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
 };
 

@@ -975,6 +975,22 @@ export const FAQ: { q: string; r: string }[] = [
     q: "Comment commander du papier rame A4 chez Monpapierrame\u00a0?",
     r: "Ajoutez vos produits au panier puis envoyez la commande sur WhatsApp, ou écrivez-nous directement. Nous confirmons le prix de livraison et le créneau, puis vous payez à la livraison ou par Orange Money, MTN MoMo, Moov Money ou Wave.",
   },
+  {
+    q: "Quel est le prix d'un paquet de rame de papier A4\u00a0?",
+    r: "Un paquet de rame (ramette) de 500 feuilles A4 Double A 80 g est à 4\u00a0000 FCFA. Au carton de 5 ramettes, la ramette revient à environ 3\u00a0980 FCFA en Double A, 2\u00a0700 FCFA en Paper One, Globulus, Paper Pro, Authentik et Smart Copy, et 2\u00a0500 FCFA en Ultima Copy, Roch, Aone et Aria. Les prix de chaque produit sont sur sa fiche.",
+  },
+  {
+    q: "Quel est le prix de la rame Double A à Abidjan\u00a0?",
+    r: "La rame Double A Premium 80 g (500 feuilles A4) est à 4\u00a0000 FCFA à l'unité, 19\u00a0900 FCFA le carton de 5 rames, et 19\u00a0000 FCFA le carton à partir de 10 cartons. Livraison à Abidjan et partout en Côte d'Ivoire.",
+  },
+  {
+    q: "Combien coûte une feuille A4 et combien de feuilles dans une rame\u00a0?",
+    r: "Une rame contient 500 feuilles A4 (210 × 297 mm). Au prix de 4\u00a0000 FCFA la rame Double A, la feuille A4 revient à 8 FCFA. Au carton de 12\u00a0500 à 13\u00a0500 FCFA (2\u00a0500 feuilles), elle revient à 5 à 5,4 FCFA la feuille.",
+  },
+  {
+    q: "Êtes-vous grossiste papier rame à Abidjan\u00a0?",
+    r: "Oui. Monpapierrame est grossiste papier rame à Abidjan et livre partout en Côte d'Ivoire. Nous vendons à l'unité (Double A), au carton de 5 rames et en gros à partir de 10 cartons, avec facture sur demande, aux écoles, entreprises, administrations, cybercafés, imprimeries et revendeurs.",
+  },
 ];
 
 /**
@@ -984,7 +1000,7 @@ export const FAQ: { q: string; r: string }[] = [
 export const SEO_ACCUEIL = {
   titre: "Papier Rame A4 à Abidjan & en Côte d’Ivoire | Monpapierrame",
   description:
-    "Grossiste papier rame A4 à Abidjan : Double A, Paper One, Globulus, Smart Copy. Ramette dès {prix}, carton, gros. Livraison en Côte d'Ivoire.",
+    "Grossiste papier rame à Abidjan : paquet de rame, rame Double A, feuille A4. Ramette dès {prix}, carton, gros. Livraison en Côte d'Ivoire.",
 };
 
 /** Grammage lu dans la fiche technique du produit (ex. « 80 g/m² ») */
@@ -1008,7 +1024,7 @@ export function trouverMarque(slug: string): string | undefined {
 export const SEO_MARQUES: Record<string, { titre: string; description: string }> = {
   "Double A": {
     titre: "Papier Rame Double A en Côte d'Ivoire, Prix | Monpapierrame",
-    description: "Prix du papier rame Double A 80g à Abidjan : ramette {ramette}, carton {carton}, gros dès 10 cartons. Livraison à Cocody, Yopougon et en Côte d'Ivoire.",
+    description: "Prix de la rame Double A 80g à Abidjan : ramette {ramette}, carton {carton}, gros dès 10 cartons. Livraison à Cocody, Yopougon et en Côte d'Ivoire.",
   },
   "Paper One": {
     titre: "Papier Rame Paper One 70g, Prix Carton | Monpapierrame",
@@ -1059,6 +1075,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     h1: "Papier rame Double A en Côte d'Ivoire : prix ramette, carton et gros",
     intro: [
       `Double A est l'une des marques de papier rame A4 les plus demandées pour le bureau, l'école et la photocopie. Chez ${SITE.nom}, vous trouvez le papier Double A ${x.g} à Abidjan en trois formats : la ramette de 500 feuilles à ${x.ramette}, le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et le carton en gros à ${x.gros} dès ${SEUIL_GROS} cartons.`,
+      "La rame Double A (le paquet de 500 feuilles A4) est notre produit le plus demandé : feuille A4 80 g/m² à l'unité, au carton de 5 rames ou en gros dès 10 cartons, livrée à Abidjan et partout en Côte d'Ivoire.",
       "Le papier Double A se distingue par sa blancheur régulière et sa bonne tenue dans les imprimantes laser, jet d'encre et les photocopieurs, y compris en impression recto verso. Chaque ramette est emballée individuellement pour rester sèche et lisse.",
     ],
     atouts: [
@@ -1069,6 +1086,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
     faq: [
       { q: "Quel est le prix d'une ramette de papier Double A à Abidjan ?", r: `La ramette de 500 feuilles A4 Double A ${x.g} est à ${x.ramette}. Le carton de 5 ramettes est à ${x.carton}, et le carton revient à ${x.gros} à partir de ${SEUIL_GROS} cartons.` },
+      { q: "Quel est le prix de la rame Double A ?", r: `La rame Double A (paquet de 500 feuilles A4) est à ${x.ramette}. Au carton de 5 rames : ${x.carton}. Dès ${SEUIL_GROS} cartons : ${x.gros} le carton.` },
       { q: "Où acheter du papier Double A en Côte d'Ivoire ?", r: `Chez ${SITE.nom}, grossiste de papier rame A4 à Abidjan. Nous livrons le papier Double A à Cocody, Yopougon, Marcory, Abobo, Koumassi, Bouaké, Yamoussoukro, San-Pédro et dans toutes les villes de Côte d'Ivoire.` },
       { q: "Le papier Double A convient-il à toutes les imprimantes ?", r: "Oui. Il est adapté aux imprimantes laser et jet d'encre ainsi qu'aux photocopieurs, avec un bon rendu en recto verso." },
       { q: "Quelle différence entre Double A et les autres marques ?", r: "Double A est le seul papier vendu à la ramette chez nous, en plus du carton et du gros. Les autres marques sont proposées au carton et par lot de 10 cartons, à un prix plus bas." },

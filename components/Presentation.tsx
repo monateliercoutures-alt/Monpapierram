@@ -41,6 +41,12 @@ export default function Presentation() {
               dans toute la Côte d&apos;Ivoire. Le paiement se fait à la livraison, ou par Orange Money, MTN MoMo, Moov
               Money et Wave. Une facture peut être établie sur demande.
             </p>
+            <h3 className="pt-2 text-lg font-bold text-nuit">Paquet de rame, rame Double A, feuille A4 : nos prix</h3>
+            <p>
+              Le <strong>paquet de rame</strong> (la ramette de 500 feuilles A4) <strong>Double A</strong> est à 4&nbsp;000 FCFA. Au carton de 5 rames, le prix descend à 19&nbsp;900 FCFA pour la <strong>rame Double A</strong>,
+              et de 12&nbsp;500 à 13&nbsp;500 FCFA pour les autres marques. La <strong>feuille A4</strong> revient ainsi à 5 à 8 FCFA selon la marque et la quantité. Comme <strong>grossiste papier rame à Abidjan</strong>,
+              nous appliquons le tarif gros dès {SEUIL_GROS} cartons.
+            </p>
             <h3 className="pt-2 text-lg font-bold text-nuit">Où livrons-nous ?</h3>
             <p>
               <strong>À Abidjan</strong> : {ABIDJAN}. Les commandes confirmées sont livrées en 24 à 72

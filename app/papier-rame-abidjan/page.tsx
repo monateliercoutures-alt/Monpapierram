@@ -108,9 +108,9 @@ export default function PagePapierRameAbidjan() {
             </ol>
           </nav>
 
-          <h1 className="mt-4 text-2xl font-bold text-nuit sm:text-4xl">Papier rame à Abidjan : prix, carton et gros</h1>
+          <h1 className="mt-4 text-2xl font-bold text-nuit sm:text-4xl">Grossiste papier rame à Abidjan : prix du paquet de rame, carton et gros</h1>
           <p className="justifie mt-4 max-w-3xl text-encre/85">
-            Vous cherchez du <strong>papier rame A4 à Abidjan</strong> ? {SITE.nom} est grossiste et fournisseur de rames de papier pour les
+            Vous cherchez du <strong>papier rame A4 à Abidjan</strong>, une <strong>rame Double A</strong> ou un <strong>paquet de rame</strong> de <strong>feuilles A4</strong> ? {SITE.nom} est grossiste et fournisseur de rames de papier pour les
             entreprises, écoles, administrations, cybercafés, imprimeries et particuliers. Choisissez votre marque ci-dessous : ramette de 500 feuilles,
             carton de 5 ramettes (2&nbsp;500 feuilles) ou carton en gros dès {SEUIL_GROS} cartons, avec des prix à partir de <strong>{PRIX_MIN}</strong>.
           </p>

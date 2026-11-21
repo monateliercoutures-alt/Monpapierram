@@ -4,6 +4,7 @@ import "./globals.css";
 import { PRODUITS, SEO_ACCUEIL, SITE, meta } from "@/lib/config";
 import PanierProvider from "@/components/PanierContext";
 import RetourEnHaut from "@/components/RetourEnHaut";
+import BarreMobile from "@/components/BarreMobile";
 
 // Police des titres : Montserrat (600, 700 et 800), proche de la typographie du logo
 const titre = Montserrat({
@@ -107,6 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <PanierProvider>
           <RetourEnHaut />
           {children}
+          <BarreMobile />
         </PanierProvider>
       </body>
     </html>

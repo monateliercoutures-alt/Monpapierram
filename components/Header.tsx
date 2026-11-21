@@ -55,7 +55,7 @@ export default function Header() {
             type="button"
             onClick={ouvrir}
             aria-label={`Ouvrir le panier, ${nombre} article${nombre > 1 ? "s" : ""}`}
-            className="relative inline-flex h-11 items-center gap-2 rounded-bouton bg-profond px-4 text-sm font-semibold text-white hover:bg-nuit"
+            className="relative hidden h-11 items-center gap-2 rounded-bouton bg-profond px-4 md:inline-flex text-sm font-semibold text-white hover:bg-nuit"
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M3 4h2l2.2 11h10.6L20 7H6.2" />

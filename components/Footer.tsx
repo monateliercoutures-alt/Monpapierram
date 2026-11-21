@@ -5,7 +5,7 @@ import { IconeWhatsApp } from "./Icones";
 // Pied de page simple : logo, liens utiles, contact, paiements, copyright
 export default function Footer() {
   return (
-    <footer id="contact" className="border-t border-profond/15 bg-white px-4 pb-24 pt-8 text-sm text-encre sm:px-6 sm:pb-8">
+    <footer id="contact" className="border-t border-profond/15 bg-white px-4 pb-24 pt-8 text-sm text-encre sm:px-6 md:pb-8">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <Image src="/images/logo.png" alt={SITE.nom} width={895} height={268} className="h-10 w-auto self-start" />

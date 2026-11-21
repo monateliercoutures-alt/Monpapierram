@@ -823,6 +823,82 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
       { q: "Combien de feuilles dans un carton Authentik ?", r: "Un carton contient 5 ramettes de 500 feuilles, soit 2 500 feuilles A4. Un lot de 10 cartons représente 25 000 feuilles." },
     ],
   }),
+  "Paper One": (x) => ({
+    h1: "Papier rame Paper One 70g en Côte d'Ivoire : prix carton et gros",
+    intro: [
+      `Le papier rame A4 Paper One ${x.g} est le choix économique pour les impressions courantes. ${SITE.nom} le livre à Abidjan et partout en Côte d'Ivoire : carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton à partir de ${SEUIL_GROS} cartons.`,
+      "Plus léger que le 80 g/m², le papier Paper One 70 g convient aux brouillons, copies internes, circulaires, exercices et documents de travail. Chaque ramette contient 500 feuilles A4 (210 × 297 mm).",
+    ],
+    atouts: [
+      ["Le plus économique pour le volume", `Un grammage de 70 g/m² adapté aux impressions du quotidien, au prix de ${x.carton} le carton.`],
+      ["Parfait pour les copies", `Idéal pour les polycopiés, brouillons, photocopies et documents internes.`],
+      ["Tarif gros dès 10 cartons", `${x.gros} le carton à partir de ${SEUIL_GROS} cartons, facture sur demande.`],
+      ["Livraison rapide", `Livré à Cocody, Yopougon, Marcory, Abobo, Koumassi, Plateau, Bouaké, San-Pédro et toute la Côte d'Ivoire.`],
+    ],
+    faq: [
+      { q: "Quel est le prix du carton de papier Paper One ?", r: `Le carton de 5 ramettes de papier A4 Paper One ${x.g} est à ${x.carton}. À partir de ${SEUIL_GROS} cartons, il passe à ${x.gros} le carton.` },
+      { q: "Le papier Paper One 70g est-il adapté à l'impression recto verso ?", r: `Il convient aux documents courants. Pour le recto verso sur des documents importants ou des textes denses, un papier 80 g/m² (Double A, Globulus, Paper Pro, Authentik, Smart Copy) est plus opaque.` },
+      { q: "Où acheter du papier rame Paper One à Abidjan ?", r: `Chez ${SITE.nom}, grossiste de papier rame A4. Commande en ligne ou sur WhatsApp, livraison à Cocody, Yopougon, Marcory, Abobo et dans toute la Côte d'Ivoire.` },
+      { q: "Quelle différence entre Paper One 70g et un papier 80g ?", r: `Le 70 g/m² est plus léger et plus économique, idéal pour les brouillons et copies. Le 80 g/m² est plus rigide et plus opaque, préféré pour les documents officiels et le recto verso.` },
+    ],
+  }),
+  Globulus: (x) => ({
+    h1: "Papier rame Globulus 80g en Côte d'Ivoire : prix carton et gros",
+    intro: [
+      `Le papier rame A4 Globulus ${x.g} est un papier polyvalent pour l'impression, la copie et le travail de bureau. ${SITE.nom} le propose à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton dès ${SEUIL_GROS} cartons.`,
+      "Chaque ramette Globulus contient 500 feuilles A4 de 210 × 297 mm. Il s'utilise sur les imprimantes laser, jet d'encre et les photocopieurs, pour les entreprises, écoles, administrations, cybercafés et particuliers.",
+    ],
+    atouts: [
+      ["Polyvalent et blanc", `Un papier 80 g/m² pour l'impression et la copie du quotidien.`],
+      ["Prix carton avantageux", `${x.carton} le carton de 5 ramettes, soit 2 500 feuilles.`],
+      ["Gros dès 10 cartons", `${x.gros} le carton à partir de ${SEUIL_GROS} cartons, avec facture.`],
+      ["Livraison partout", `Cocody, Yopougon, Marcory, Abobo, Koumassi, Plateau, Bouaké, San-Pédro et toute la Côte d'Ivoire.`],
+    ],
+    faq: [
+      { q: "Quel est le prix du carton de papier Globulus à Abidjan ?", r: `Le carton de 5 ramettes de papier A4 Globulus ${x.g} est à ${x.carton}. Dès ${SEUIL_GROS} cartons, le prix est de ${x.gros} le carton.` },
+      { q: "Le papier Globulus est-il bon pour l'impression recto verso ?", r: `Oui, le 80 g/m² est assez épais pour limiter la transparence en recto verso et passe dans les imprimantes laser et jet d'encre.` },
+      { q: "Où acheter du papier rame Globulus en Côte d'Ivoire ?", r: `Chez ${SITE.nom}. Commandez en ligne ou sur WhatsApp, livraison à Cocody, Yopougon, Marcory, Abobo, Bouaké et partout en Côte d'Ivoire.` },
+      { q: "Combien de feuilles dans un carton Globulus ?", r: `Un carton regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles A4. Un lot de 10 cartons fait 25 000 feuilles.` },
+    ],
+  }),
+  "Paper Pro": (x) => ({
+    h1: "Papier rame Paper Pro 80g en Côte d'Ivoire : prix carton et gros",
+    intro: [
+      `Le papier rame A4 Paper Pro ${x.g} s'adresse aux professionnels qui impriment beaucoup : bureaux, cabinets, administrations, écoles et imprimeries. ${SITE.nom} le livre à Abidjan et en Côte d'Ivoire : carton de 5 ramettes (2 500 feuilles) à ${x.carton}, ${x.gros} le carton dès ${SEUIL_GROS} cartons.`,
+      "Format A4 (210 × 297 mm), 500 feuilles par ramette, compatible avec les imprimantes laser, jet d'encre et les photocopieurs. Une facture est établie sur demande pour les entreprises et les administrations.",
+    ],
+    atouts: [
+      ["Pensé pour les pros", `Un papier 80 g/m² pour les documents d'entreprise : devis, factures, rapports, contrats.`],
+      ["Facture sur demande", `Idéal pour les achats d'entreprises, administrations et associations.`],
+      ["Tarif dégressif", `${x.carton} le carton, puis ${x.gros} le carton à partir de ${SEUIL_GROS} cartons.`],
+      ["Livraison planifiée", `Cocody, Yopougon, Marcory, Abobo, Koumassi, Plateau, Bouaké, San-Pédro et toute la Côte d'Ivoire, avec livraison planifiée pour les achats réguliers.`],
+    ],
+    faq: [
+      { q: "Quel est le prix du papier rame Paper Pro ?", r: `Le carton de 5 ramettes de papier A4 Paper Pro ${x.g} est à ${x.carton}. À partir de ${SEUIL_GROS} cartons, le prix est de ${x.gros} le carton.` },
+      { q: "Peut-on obtenir une facture pour du papier Paper Pro ?", r: `Oui, une facture peut être établie sur demande pour les entreprises, administrations, écoles et associations. Indiquez la raison sociale à la commande.` },
+      { q: "Où acheter du papier rame Paper Pro à Abidjan ?", r: `Chez ${SITE.nom}, grossiste de papier rame A4. Commande en ligne ou sur WhatsApp, livraison à Cocody, Yopougon, Marcory, Abobo et partout en Côte d'Ivoire.` },
+      { q: "Le Paper Pro convient-il aux gros volumes d'impression ?", r: `Oui. Le carton de 2 500 feuilles et le lot de 10 cartons (25 000 feuilles) sont adaptés aux bureaux, écoles et imprimeries à fort volume.` },
+    ],
+  }),
+  "Smart Copy": (x) => ({
+    h1: "Papier rame Smart Copy 80g en Côte d'Ivoire : prix carton et gros",
+    intro: [
+      `Smart Copy est un papier rame A4 laser et copieur de ${x.g}, livré par ${SITE.nom} à Abidjan et dans toute la Côte d'Ivoire. Le carton de 5 ramettes (2 500 feuilles) est à ${x.carton}, et à ${x.gros} le carton dès ${SEUIL_GROS} cartons.`,
+      "Le carton Smart Copy est reconnaissable à son emballage rouge. Il contient 5 ramettes de 500 feuilles A4 (210 × 297 mm), pour imprimantes laser, jet d'encre et photocopieurs.",
+    ],
+    atouts: [
+      ["Laser et copieur", `Un papier A4 80 g/m² conçu pour l'impression laser et la photocopie.`],
+      ["Emballage rouge reconnaissable", `Cartons Smart Copy livrés scellés, ramettes emballées individuellement.`],
+      ["Prix de gros", `${x.carton} le carton, puis ${x.gros} le carton à partir de ${SEUIL_GROS} cartons.`],
+      ["Livraison partout", `Cocody, Yopougon, Marcory, Abobo, Koumassi, Plateau, Bouaké, San-Pédro et toute la Côte d'Ivoire.`],
+    ],
+    faq: [
+      { q: "Quel est le prix du carton de papier Smart Copy ?", r: `Le carton de 5 ramettes de papier A4 Smart Copy ${x.g} est à ${x.carton}. À partir de ${SEUIL_GROS} cartons, le prix est de ${x.gros} le carton.` },
+      { q: "Où acheter du papier Smart Copy à Abidjan ?", r: `Chez ${SITE.nom}. Commande en ligne ou sur WhatsApp, livraison à Cocody, Yopougon, Marcory, Abobo, Bouaké et dans toute la Côte d'Ivoire.` },
+      { q: "Le papier Smart Copy convient-il aux photocopieurs ?", r: `Oui, c'est un papier laser et copieur A4 de 80 g/m², adapté aussi aux imprimantes jet d'encre.` },
+      { q: "Combien de feuilles dans un carton Smart Copy ?", r: `Un carton contient 5 ramettes de 500 feuilles, soit 2 500 feuilles A4. Le lot de 10 cartons représente 25 000 feuilles.` },
+    ],
+  }),
 };
 
 /** Produits d'une marque */

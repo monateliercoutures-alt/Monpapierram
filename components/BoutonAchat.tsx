@@ -22,5 +22,5 @@ export default function BoutonAchat({ p }: { p: Produit }) {
       </a>
     );
   }
-  return <AjouterAuPanier id={p.id} nom={p.nom} minQty={p.minQty} />;
+  return <AjouterAuPanier id={p.id} nom={p.nom} minQty={p.minQty} prix={p.prix} />;
 }

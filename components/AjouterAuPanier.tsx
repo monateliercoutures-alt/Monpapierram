@@ -1,14 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { formatPrix } from "@/lib/config";
 import { usePanier } from "./PanierContext";
 
 /** Sélecteur de quantité + bouton « Ajouter au panier » d'une carte produit */
-export default function AjouterAuPanier({ id, nom, minQty }: { id: string; nom: string; minQty: number }) {
+export default function AjouterAuPanier({ id, nom, minQty, prix }: { id: string; nom: string; minQty: number; prix?: number | null }) {
   const { ajouter } = usePanier();
   const [qty, setQty] = useState(minQty);
+  const [ajoute, setAjoute] = useState(false);
+
+  // Le message « Ajouté » disparaît après 2 secondes
+  useEffect(() => {
+    if (!ajoute) return;
+    const t = setTimeout(() => setAjoute(false), 2000);
+    return () => clearTimeout(t);
+  }, [ajoute]);
 
   return (
+    <div>
+    {prix != null && (
+      <p className="mb-2 text-sm text-encre/80" aria-live="polite">
+        Total : <strong className="text-nuit">{formatPrix(prix * qty)}</strong>
+      </p>
+    )}
     <div className="flex items-stretch gap-2">
       <div className="flex items-center rounded-bouton border border-profond/25" role="group" aria-label={`Quantité : ${nom}`}>
         <button
@@ -34,12 +49,16 @@ export default function AjouterAuPanier({ id, nom, minQty }: { id: string; nom: 
       </div>
       <button
         type="button"
-        onClick={() => ajouter(id, qty)}
-        className="inline-flex min-h-11 flex-1 items-center justify-center rounded-bouton bg-profond px-4 text-sm font-semibold text-white transition-colors hover:bg-nuit"
+        onClick={() => {
+          ajouter(id, qty);
+          setAjoute(true);
+        }}
+        className={`inline-flex min-h-11 flex-1 items-center justify-center rounded-bouton px-4 text-sm font-semibold text-white transition-colors ${ajoute ? "bg-[#0b7a4b]" : "bg-profond hover:bg-nuit"}`}
       >
-        Ajouter au panier
+        {ajoute ? "Ajouté ✓" : "Ajouter au panier"}
         <span className="sr-only"> : {nom}</span>
       </button>
+    </div>
     </div>
   );
 }

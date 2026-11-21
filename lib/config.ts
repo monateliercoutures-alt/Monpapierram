@@ -732,7 +732,7 @@ export const FAQ: { q: string; r: string }[] = [
 export const SEO_ACCUEIL = {
   titre: "Papier Rame A4 à Abidjan & en Côte d’Ivoire | Monpapierrame",
   description:
-    "Grossiste papier rame A4 à Abidjan : Double A, Paper One, Globulus, Smart Copy… Prix ramette dès {prix}, carton, gros. Livraison Cocody, Yopougon, Bouaké.",
+    "Grossiste papier rame A4 à Abidjan : Double A, Paper One, Globulus, Smart Copy… Ramette dès {prix}, carton, gros. Livraison Cocody, Yopougon, Bouaké.",
 };
 
 /** Grammage lu dans la fiche technique du produit (ex. « 80 g/m² ») */

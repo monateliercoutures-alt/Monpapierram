@@ -6,6 +6,7 @@ import Link from "next/link";
 import { MARQUES, SITE, slugMarque } from "@/lib/config";
 import { usePanier } from "./PanierContext";
 import BarreInfo from "./BarreInfo";
+import RechercheProduits from "./RechercheProduits";
 
 // Liens du menu principal
 const LIENS = [
@@ -20,6 +21,7 @@ const LIENS = [
 // En-tête collant : logo, menu, bouton panier avec compteur
 export default function Header() {
   const [ouvert, setOuvert] = useState(false);
+  const [recherche, setRecherche] = useState(false);
   const { nombre, ouvrir } = usePanier();
 
   // Fermer le menu mobile avec la touche Échap
@@ -54,6 +56,20 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          {/* Recherche (mobile) */}
+          <button
+            type="button"
+            onClick={() => setRecherche((r) => !r)}
+            aria-expanded={recherche}
+            aria-label="Rechercher un produit"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-bouton border border-profond/20 text-profond lg:hidden"
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" />
+              <path d="M16 16l4 4" />
+            </svg>
+          </button>
+
           {/* Bouton panier */}
           <button
             type="button"
@@ -103,8 +119,17 @@ export default function Header() {
               </Link>
             </li>
           ))}
+          <li className="ml-auto w-72 py-1">
+            <RechercheProduits />
+          </li>
         </ul>
       </nav>
+
+      {recherche && (
+        <div className="border-t border-profond/10 bg-brume px-4 py-2 lg:hidden">
+          <RechercheProduits autoFocus onChoisi={() => setRecherche(false)} />
+        </div>
+      )}
 
       {ouvert && (
         <div id="menu-mobile" className="border-t border-profond/10 bg-white lg:hidden">

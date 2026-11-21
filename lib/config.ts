@@ -780,6 +780,51 @@ export const SEO_MARQUES: Record<string, { titre: string; description: string }>
   },
 };
 
+/** Contenu éditorial supplémentaire des pages marques (texte unique pour Google), avec les prix réels */
+export type PrixMarque = { carton: string; gros: string; ramette: string; g: string };
+export type ContenuMarque = { h1: string; intro: string[]; atouts: [string, string][]; faq: { q: string; r: string }[] };
+
+export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> = {
+  "Double A": (x) => ({
+    h1: "Papier rame Double A en Côte d'Ivoire : prix ramette, carton et gros",
+    intro: [
+      `Double A est l'une des marques de papier rame A4 les plus demandées pour le bureau, l'école et la photocopie. Chez ${SITE.nom}, vous trouvez le papier Double A ${x.g} à Abidjan en trois formats : la ramette de 500 feuilles à ${x.ramette}, le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et le carton en gros à ${x.gros} dès ${SEUIL_GROS} cartons.`,
+      "Le papier Double A se distingue par sa blancheur régulière et sa bonne tenue dans les imprimantes laser, jet d'encre et les photocopieurs, y compris en impression recto verso. Chaque ramette est emballée individuellement pour rester sèche et lisse.",
+    ],
+    atouts: [
+      ["Ramette, carton ou gros", "Seule marque proposée à l'unité : achetez une ramette pour tester ou un carton pour vos besoins courants."],
+      ["Idéal recto verso", "Le 80 g/m² limite la transparence et se manipule bien dans les imprimantes à impression automatique."],
+      ["Fiable pour la photocopie", "Un papier régulier, qui passe sans bourrage dans les photocopieurs des cybercafés et des bureaux."],
+      ["Livré partout", "Cocody, Plateau, Marcory, Yopougon, Abobo, Koumassi, Bouaké, San-Pédro et toute la Côte d'Ivoire."],
+    ],
+    faq: [
+      { q: "Quel est le prix d'une ramette de papier Double A à Abidjan ?", r: `La ramette de 500 feuilles A4 Double A ${x.g} est à ${x.ramette}. Le carton de 5 ramettes est à ${x.carton}, et le carton revient à ${x.gros} à partir de ${SEUIL_GROS} cartons.` },
+      { q: "Où acheter du papier Double A en Côte d'Ivoire ?", r: `Chez ${SITE.nom}, grossiste de papier rame A4 à Abidjan. Nous livrons le papier Double A à Cocody, Yopougon, Marcory, Abobo, Koumassi, Bouaké, Yamoussoukro, San-Pédro et dans toutes les villes de Côte d'Ivoire.` },
+      { q: "Le papier Double A convient-il à toutes les imprimantes ?", r: "Oui. Il est adapté aux imprimantes laser et jet d'encre ainsi qu'aux photocopieurs, avec un bon rendu en recto verso." },
+      { q: "Quelle différence entre Double A et les autres marques ?", r: "Double A est le seul papier vendu à la ramette chez nous, en plus du carton et du gros. Les autres marques sont proposées au carton et par lot de 10 cartons, à un prix plus bas." },
+    ],
+  }),
+  Authentik: (x) => ({
+    h1: "Papier rame Authentik en Côte d'Ivoire : prix carton et gros",
+    intro: [
+      `Le papier rame A4 Authentik ${x.g} est une solution économique pour imprimer et photocopier au quotidien. ${SITE.nom} le propose à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton à partir de ${SEUIL_GROS} cartons.`,
+      "Avec 500 feuilles par ramette au format A4 (210 × 297 mm), le papier Authentik convient aux bureaux, écoles, administrations, cybercafés et centres de photocopie qui cherchent un papier de qualité à un prix de gros intéressant.",
+    ],
+    atouts: [
+      ["Prix de gros intéressant", `Carton à ${x.carton}, puis ${x.gros} le carton dès ${SEUIL_GROS} cartons, facture sur demande.`],
+      ["80 g/m² polyvalent", "Un grammage standard pour les documents courants, les polycopiés et le recto verso."],
+      ["Pour gros volumes", "Pensé pour les cybercafés, écoles et entreprises qui consomment beaucoup de papier."],
+      ["Livraison en 24 à 72 h", "À Abidjan et dans toute la Côte d'Ivoire, avec paiement à la livraison ou Mobile Money."],
+    ],
+    faq: [
+      { q: "Quel est le prix du carton de papier Authentik ?", r: `Le carton de 5 ramettes de papier A4 Authentik ${x.g} est à ${x.carton}. À partir de ${SEUIL_GROS} cartons, le prix est de ${x.gros} le carton.` },
+      { q: "Où acheter du papier rame Authentik à Abidjan ?", r: `Chez ${SITE.nom}. Commandez en ligne ou sur WhatsApp : nous livrons à Cocody, Yopougon, Marcory, Abobo, Koumassi, Plateau et dans toute la Côte d'Ivoire.` },
+      { q: "Le papier Authentik est-il adapté à la photocopie et à l'impression ?", r: "Oui. Le papier A4 Authentik de 80 g/m² s'utilise sur les imprimantes laser, jet d'encre et les photocopieurs pour les documents du quotidien." },
+      { q: "Combien de feuilles dans un carton Authentik ?", r: "Un carton contient 5 ramettes de 500 feuilles, soit 2 500 feuilles A4. Un lot de 10 cartons représente 25 000 feuilles." },
+    ],
+  }),
+};
+
 /** Produits d'une marque */
 export function produitsMarque(marque: string): Produit[] {
   return PRODUITS.filter((p) => p.marque === marque);

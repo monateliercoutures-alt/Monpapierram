@@ -7,6 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ProduitCarte from "@/components/ProduitCarte";
 import { IconeWhatsApp } from "@/components/Icones";
 import {
+  CONTENU_MARQUES,
   MARQUES,
   SEUIL_GROS,
   SITE,
@@ -49,6 +50,13 @@ export default async function PageMarque({ params }: { params: Promise<{ slug: s
   const gros = produits.find((p) => p.minQty > 1);
   const g = carton ? grammage(carton) : "";
   const autres = MARQUES.filter((m) => m !== marque);
+  const prixTxt = (x?: { prix: number | null }) => (x && x.prix !== null ? formatPrixTexte(x.prix) : "prix sur demande");
+  const contenu = CONTENU_MARQUES[marque]?.({
+    carton: prixTxt(carton),
+    gros: prixTxt(gros),
+    ramette: prixTxt(produits.find((p) => p.id === "ramette")),
+    g,
+  });
   const message = `Bonjour ${SITE.nom}, je souhaite un devis pour du papier rame A4 ${marque} (quantité : ... cartons, ville de livraison : ...).`;
 
   // Questions-réponses propres à la marque
@@ -71,6 +79,7 @@ export default async function PageMarque({ params }: { params: Promise<{ slug: s
       q: "Quels sont les moyens de paiement ?",
       r: "Paiement à la livraison, Orange Money, MTN MoMo, Moov Money ou Wave.",
     },
+    ...(contenu?.faq ?? []),
   ];
 
   const donnees = {
@@ -117,17 +126,35 @@ export default async function PageMarque({ params }: { params: Promise<{ slug: s
             </ol>
           </nav>
 
-          <h1 className="mt-4 text-2xl font-bold text-nuit sm:text-4xl">Papier rame {marque} en Côte d&apos;Ivoire</h1>
+          <h1 className="mt-4 text-2xl font-bold text-nuit sm:text-4xl">{contenu?.h1 ?? `Papier rame ${marque} en Côte d'Ivoire`}</h1>
           <p className="justifie mt-4 max-w-3xl text-encre/85">
             {SITE.nom} est grossiste et fournisseur de <strong>papier rame A4 {marque}</strong> ({g}, 500 feuilles par ramette) à Abidjan et partout en Côte
             d&apos;Ivoire. Le carton contient 5 ramettes, soit 2&nbsp;500 feuilles. Commandez en ligne ou sur WhatsApp : livraison en {SITE.delaiLivraison}, paiement à la livraison ou par Mobile Money.
           </p>
+
+          {contenu?.intro.map((t) => (
+            <p key={t} className="justifie mt-3 max-w-3xl text-encre/85">{t}</p>
+          ))}
 
           <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {produits.map((p) => (
               <ProduitCarte key={p.id} p={p} />
             ))}
           </ul>
+
+          {contenu && (
+            <section aria-labelledby="titre-atouts" className="mt-14 border-t border-profond/10 pt-10">
+              <h2 id="titre-atouts" className="text-xl font-bold text-nuit">Pourquoi acheter le papier rame {marque} chez {SITE.nom}</h2>
+              <ul className="mt-4 grid gap-4 sm:grid-cols-2">
+                {contenu.atouts.map(([t, d]) => (
+                  <li key={t} className="rounded-carte border border-profond/15 p-5">
+                    <h3 className="font-bold text-nuit">{t}</h3>
+                    <p className="justifie mt-1 text-sm text-encre/85">{d}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <section aria-labelledby="titre-pro" className="mt-14 grid gap-8 border-t border-profond/10 pt-10 lg:grid-cols-2 lg:gap-14">
             <div>

@@ -7,7 +7,7 @@ import { IconeWhatsApp } from "@/components/Icones";
 import { COMMUNES, MESSAGE_GENERAL, MODES_PAIEMENT, SITE, lienWhatsApp } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Livraison de papier rame A4 en Côte d'Ivoire | Monpapierrame",
+  title: "Papier Rame A4 : Livraison en Côte d'Ivoire | Monpapierrame",
   description: "Livraison de papier rame A4 à Abidjan (Cocody, Yopougon, Abobo) et partout en Côte d'Ivoire en 24 à 72 h. Paiement à la livraison ou Mobile Money.",
   alternates: { canonical: "/livraison" },
 };

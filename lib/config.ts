@@ -1147,51 +1147,51 @@ export function trouverMarque(slug: string): string | undefined {
 /** Titre et description Google de chaque page marque ({carton}, {gros}, {ramette} = prix formatés) */
 export const SEO_MARQUES: Record<string, { titre: string; description: string }> = {
   "Double A": {
-    titre: "Papier Rame Double A : Prix et Fournisseur | Monpapierrame",
+    titre: "Papier Rame Double A en Côte d'Ivoire, Prix | Monpapierrame",
     description: "Fournisseur papier rame Double A : ramette {ramette}, carton {carton}, gros dès 10 cartons. Revendeurs, entreprises, livraison en Côte d'Ivoire.",
   },
   "Paper One": {
-    titre: "Papier Rame Paper One : Prix et Fournisseur | Monpapierrame",
+    titre: "Papier Rame Paper One 70g, Prix Carton | Monpapierrame",
     description: "Fournisseur papier rame Paper One 70g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Globulus: {
-    titre: "Papier Rame Globulus : Prix et Fournisseur | Monpapierrame",
+    titre: "Papier Rame Globulus 80g, Prix Carton | Monpapierrame",
     description: "Fournisseur papier rame Globulus 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Paper Pro": {
-    titre: "Papier Rame Paper Pro : Prix et Fournisseur | Monpapierrame",
+    titre: "Papier Rame Paper Pro 80g, Prix Carton | Monpapierrame",
     description: "Fournisseur papier rame Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Ultima Copy": {
-    titre: "Papier Rame Ultima Copy : Prix, Fournisseur | Monpapierrame",
+    titre: "Papier Rame Ultima Copy 75g, Prix Carton | Monpapierrame",
     description: "Fournisseur papier rame Ultima Copy 75g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Beifa: {
-    titre: "Papier Rame Beifa : Prix et Fournisseur | Monpapierrame",
+    titre: "Papier Rame Beifa 80g, Prix Carton | Monpapierrame",
     description: "Fournisseur papier rame Beifa 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Royal Touch": {
-    titre: "Papier Rame Royal Touch : Prix, Fournisseur | Monpapierrame",
+    titre: "Papier Rame Royal Touch 80g, Prix Carton | Monpapierrame",
     description: "Fournisseur papier rame Royal Touch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Aone: {
-    titre: "Papier Rame Aone : Prix et Fournisseur | Monpapierrame",
+    titre: "Papier Rame Aone 80g, Prix Carton | Monpapierrame",
     description: "Fournisseur papier rame Aone 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Aria: {
-    titre: "Papier Rame Aria : Prix et Fournisseur | Monpapierrame",
+    titre: "Papier Rame Aria 80g, Prix Carton | Monpapierrame",
     description: "Fournisseur papier rame Aria 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Roch: {
-    titre: "Papier Rame Roch : Prix et Fournisseur | Monpapierrame",
+    titre: "Papier Rame Roch 80g, Prix Carton | Monpapierrame",
     description: "Fournisseur papier rame Roch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Smart Copy": {
-    titre: "Papier Rame Smart Copy : Prix et Fournisseur | Monpapierrame",
+    titre: "Papier Rame Smart Copy 80g, Prix Carton | Monpapierrame",
     description: "Fournisseur papier rame Smart Copy 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Authentik: {
-    titre: "Papier Rame Authentik : Prix et Fournisseur | Monpapierrame",
+    titre: "Papier Rame Authentik 80g, Prix Carton | Monpapierrame",
     description: "Fournisseur papier rame Authentik 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
 };

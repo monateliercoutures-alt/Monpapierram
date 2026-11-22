@@ -6,7 +6,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { IconeWhatsApp } from "@/components/Icones";
 import { MARQUES, MESSAGE_GENERAL, PRODUITS, SEUIL_GROS, SITE, formatPrixTexte, grammage, lienWhatsApp, slugMarque } from "@/lib/config";
 
-const TITRE = "Papier Rame A4 : Types 70g, 75g, 80g | Monpapierrame";
+const TITRE = "Papier Rame A4 : Ramette 70g, 75g, 80g | Monpapierrame";
 const DESCRIPTION = "Quel papier rame A4 choisir ? 70g, 75g ou 80g, copie, laser, recto verso : guide des types de rames et des marques vendues à Abidjan, avec les prix.";
 
 export const metadata: Metadata = {

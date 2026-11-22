@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { LIEUX, MARQUES, SITE } from "@/lib/config";
 
-const TITRE = "Papier Rame Côte d'Ivoire : Villes Livrées | Monpapierrame";
+const TITRE = "Papier Rame et Ramette : Villes Livrées | Monpapierrame";
 const DESCRIPTION = "Papier rame A4 livré à Abidjan (Cocody, Yopougon, Abobo…), Bouaké, Yamoussoukro, San-Pédro, Daloa, Korhogo et dans toutes les villes de Côte d'Ivoire.";
 
 export const metadata: Metadata = {

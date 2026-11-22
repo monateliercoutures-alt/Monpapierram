@@ -6,7 +6,7 @@ import { MESSAGE_RETOUR, SITE, lienWhatsApp } from "@/lib/config";
 import { IconeWhatsApp } from "@/components/Icones";
 
 export const metadata: Metadata = {
-  title: "Papier Rame A4 : Retour et Échange | Monpapierrame",
+  title: "Papier Rame A4 : Retour Ramette et Échange | Monpapierrame",
   description: "Retour possible 24 à 72 h après la livraison de votre papier rame A4. Contactez-nous sur WhatsApp avec une photo du produit.",
   alternates: { canonical: "/politique-de-retour" },
 };

@@ -58,7 +58,7 @@ export const PRODUITS: Produit[] = [
   {
     id: "ramette",
     marque: "Double A",
-    metaTitre: "Papier Rame A4 80g Double A, {prix} | Monpapierrame",
+    metaTitre: "Papier Rame A4 80g Double A : Ramette {prix}",
     metaDescription:
       "Papier rame A4 80g Double A, 500 feuilles, {prix}. Recto verso, laser et jet d'encre. Livraison à Abidjan et en Côte d'Ivoire, paiement à la livraison.",
     slug: "ramette-papier-a4-80g-double-a",
@@ -97,7 +97,7 @@ export const PRODUITS: Produit[] = [
   {
     id: "carton",
     marque: "Double A",
-    metaTitre: "Papier Rame A4 Double A 80g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Double A 80g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Double A, 2 500 feuilles, {prix}. Livré scellé à Abidjan et en Côte d'Ivoire, payez à la livraison.",
     slug: "carton-papier-a4-5-ramettes-double-a",
@@ -138,7 +138,7 @@ export const PRODUITS: Produit[] = [
   {
     id: "gros",
     marque: "Double A",
-    metaTitre: "Papier Rame A4 Double A en Gros, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Double A : Ramettes en Gros | Monpapierrame",
     metaDescription:
       "Grossiste papier rame A4 à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture, livraison en Côte d'Ivoire, Mobile Money. Devis WhatsApp.",
     slug: "papier-a4-en-gros-carton-double-a",
@@ -203,7 +203,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Paper One 70g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Paper One 70g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 70g Paper One, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -235,7 +235,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Paper One, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Paper One : Ramettes en Gros | Monpapierrame",
     metaDescription:
       "Papier rame A4 Paper One 70g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -267,7 +267,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Globulus 80g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Globulus 80g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Globulus, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -299,7 +299,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Globulus, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Globulus : Ramettes en Gros | Monpapierrame",
     metaDescription:
       "Papier rame A4 Globulus 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -331,7 +331,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Paper Pro 80g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Paper Pro 80g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Paper Pro, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -363,7 +363,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Paper Pro, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Paper Pro : Ramettes en Gros | Monpapierrame",
     metaDescription:
       "Papier rame A4 Paper Pro 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -393,7 +393,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Authentik 80g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Authentik 80g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Authentik, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -423,7 +423,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Authentik, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Authentik : Ramettes en Gros | Monpapierrame",
     metaDescription:
       "Papier rame A4 Authentik 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -455,7 +455,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Smart Copy 80g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Smart Copy 80g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Smart Copy, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -487,7 +487,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Smart Copy, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Smart Copy : Ramettes en Gros | Monpapierrame",
     metaDescription:
       "Papier rame A4 Smart Copy 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -518,7 +518,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Ultima Copy 75g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Ultima Copy 75g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 75g Ultima Copy, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -549,7 +549,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Ultima Copy, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Ultima Copy, Ramettes en Gros",
     metaDescription:
       "Papier rame A4 Ultima Copy 75g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison en Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -581,7 +581,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Roch 80g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Roch 80g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Roch, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -613,7 +613,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Roch, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Roch : Ramettes en Gros | Monpapierrame",
     metaDescription:
       "Papier rame A4 Roch 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -645,7 +645,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Aone 80g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Aone 80g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Aone, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -677,7 +677,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Aone, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Aone : Ramettes en Gros | Monpapierrame",
     metaDescription:
       "Papier rame A4 Aone 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -708,7 +708,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Aria 80g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Aria 80g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Aria, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -739,7 +739,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Aria, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Aria : Ramettes en Gros | Monpapierrame",
     metaDescription:
       "Papier rame A4 Aria 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -769,7 +769,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Royal Touch 80g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Royal Touch 80g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Royal Touch, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -799,7 +799,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Royal Touch, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Royal Touch, Ramettes en Gros",
     metaDescription:
       "Papier rame A4 Royal Touch 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison en Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -831,7 +831,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Beifa 80g : Carton de 5 Rames",
+    metaTitre: "Papier Rame A4 Beifa 80g : Carton de 5 Ramettes",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Beifa, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -863,7 +863,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Beifa, 10 Cartons | Monpapierrame",
+    metaTitre: "Papier Rame A4 Beifa : Ramettes en Gros | Monpapierrame",
     metaDescription:
       "Papier rame A4 Beifa 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison en Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -1147,51 +1147,51 @@ export function trouverMarque(slug: string): string | undefined {
 /** Titre et description Google de chaque page marque ({carton}, {gros}, {ramette} = prix formatés) */
 export const SEO_MARQUES: Record<string, { titre: string; description: string }> = {
   "Double A": {
-    titre: "Papier Rame Double A : Rame A4, Carton et Ramette",
+    titre: "Papier Rame Double A : Ramette A4, Carton et Gros",
     description: "Rame A4 Double A 80g à Abidjan : paquet de 500 feuilles {ramette}, carton de 5 rames {carton}, gros dès 10 cartons. Livraison en Côte d'Ivoire.",
   },
   "Paper One": {
-    titre: "Papier Rame Paper One 70g : Vente de Rame A4, Carton",
+    titre: "Papier Rame Paper One 70g : Ramette et Carton A4",
     description: "Vente de rame papier Paper One 70g : carton de 5 paquets {carton}, {gros} dès 10 cartons. Écoles, cybercafés, bureaux. Livraison à Abidjan.",
   },
   Globulus: {
-    titre: "Papier Rame Globulus 80g : Paquet 500 Feuilles A4",
+    titre: "Papier Rame Globulus 80g : Ramette 500 Feuilles A4",
     description: "Papier rame A4 Globulus 80g, paquet de 500 feuilles : carton {carton}, gros {gros}. Commande WhatsApp, livraison partout en Côte d'Ivoire.",
   },
   "Paper Pro": {
-    titre: "Papier Rame Paper Pro 80g : Carton, Gros et Demi-gros",
+    titre: "Papier Rame Paper Pro 80g : Ramette, Carton, Gros",
     description: "Carton de rames A4 Paper Pro 80g à {carton}, gros et demi-gros à {gros} dès 10 cartons. Facture entreprises, livraison à Abidjan et en CI.",
   },
   "Ultima Copy": {
-    titre: "Papier Rame Ultima Copy 75g : Rames A4, Prix Carton",
+    titre: "Papier Rame Ultima Copy 75g : Ramette A4, Prix Carton",
     description: "Papiers rames A4 Ultima Copy 75g : carton de 2 500 feuilles {carton}, {gros} dès 10 cartons. Copie et impression, livraison en Côte d'Ivoire.",
   },
   Beifa: {
-    titre: "Papier Rame Beifa 80g : Rame de Papier A4, Gros",
+    titre: "Papier Rame Beifa 80g : Ramette de Papier A4, Gros",
     description: "Rame de papier A4 Beifa 80g : carton de 5 rames {carton}, gros {gros} dès 10 cartons. Revendeurs bienvenus, livraison en Côte d'Ivoire.",
   },
   "Royal Touch": {
-    titre: "Papier Rame Royal Touch 80g : Rame A4, Prix du Carton",
+    titre: "Papier Rame Royal Touch 80g : Ramette A4, Prix Carton",
     description: "Papier rame A4 Royal Touch 80g à surface lisse : carton {carton}, {gros} dès 10 cartons. Impression nette, livraison à Abidjan et en CI.",
   },
   Aone: {
-    titre: "Papier Rame Aone 80g : Rame A4, Paquet ou Carton",
+    titre: "Papier Rame Aone 80g : Ramette A4, Paquet ou Carton",
     description: "Papier rame A4 Aone 80g, au paquet ou au carton : {carton} les 5 rames, {gros} dès 10 cartons. Commande WhatsApp, livraison en Côte d'Ivoire.",
   },
   Aria: {
-    titre: "Papier Rame Aria 80g : Rame A4 Abidjan, Livraison CI",
+    titre: "Papier Rame Aria 80g : Ramette A4 Abidjan, Gros",
     description: "Rame A4 Aria 80g (500 feuilles) : carton {carton}, gros {gros} dès 10 cartons. Papier de copie pour bureaux et écoles, livraison en Côte d'Ivoire.",
   },
   Roch: {
-    titre: "Papier Rame Roch 80g : Vente de Rames A4, Carton, Gros",
+    titre: "Papier Rame Roch 80g : Ramette A4, Carton et Gros",
     description: "Vente de rames A4 Roch 80g à Abidjan : carton de 5 rames {carton}, gros {gros} dès 10 cartons. Papier de copie, livraison en Côte d'Ivoire.",
   },
   "Smart Copy": {
-    titre: "Papier Rame Smart Copy 80g : Rame A4, Carton et Gros",
+    titre: "Papier Rame Smart Copy 80g : Ramette A4, Carton, Gros",
     description: "Rame de papier Smart Copy A4 80g, laser et copieur : carton {carton}, gros {gros}. Livraison à Cocody, Yopougon, Bouaké et partout en CI.",
   },
   Authentik: {
-    titre: "Papier Rame Authentik 80g : Acheter Rame A4 en Carton",
+    titre: "Papier Rame Authentik 80g : Ramette A4 en Carton",
     description: "Acheter papier rame A4 Authentik 80g en carton : {carton} les 5 rames, {gros} dès 10 cartons. Revendeurs, écoles. Livraison en Côte d'Ivoire.",
   },
 };
@@ -1504,7 +1504,7 @@ export const CATEGORIES: Categorie[] = [
     nom: "Papier rame A4",
     dimensions: "210 × 297 mm",
     surDemande: false,
-    titre: "Papier Rame A4 Abidjan : Toutes les Marques | Monpapierrame",
+    titre: "Papier Rame A4 Abidjan : Ramette et Marques | Monpapierrame",
     description: "Papier rame A4 à Abidjan : ramette 500 feuilles, carton, gros. Double A, Paper One, Globulus, Roch, Aone… Prix et livraison en Côte d'Ivoire.",
     intro: "Le format A4 (210 × 297 mm) est le format standard du bureau, de l'école et de la photocopie. Retrouvez toutes nos marques de papier rame A4, de 70 à 80 g/m², à l'unité, au carton de 5 rames et en gros dès 10 cartons.",
     usages: ["Bureaux et entreprises", "Écoles et universités", "Cybercafés et photocopie", "Administrations et imprimeries"],
@@ -1519,7 +1519,7 @@ export const CATEGORIES: Categorie[] = [
     nom: "Papier rame A3",
     dimensions: "297 × 420 mm",
     surDemande: true,
-    titre: "Papier Rame A3 à Abidjan : Prix sur Demande | Monpapierrame",
+    titre: "Papier Rame A3 Abidjan : Ramette sur Demande | Monpapierrame",
     description: "Papier rame A3 (297 × 420 mm) à Abidjan : demandez le prix et la disponibilité sur WhatsApp. Livraison partout en Côte d'Ivoire.",
     intro: "Le format A3 (297 × 420 mm) mesure le double d'une feuille A4. Il sert aux plans, affiches, tableaux, présentations et documents techniques. Demandez le prix et la disponibilité du papier rame A3 sur WhatsApp : nous vous répondons avec les marques et les quantités possibles.",
     usages: ["Plans et dessins techniques", "Affiches et présentations", "Tableaux et graphiques", "Cabinets d'architecture et bureaux d'études"],
@@ -1534,7 +1534,7 @@ export const CATEGORIES: Categorie[] = [
     nom: "Papier rame A5",
     dimensions: "148 × 210 mm",
     surDemande: true,
-    titre: "Papier Rame A5 à Abidjan : Prix sur Demande | Monpapierrame",
+    titre: "Papier Rame A5 Abidjan : Ramette sur Demande | Monpapierrame",
     description: "Papier rame A5 (148 × 210 mm) à Abidjan : demandez le prix et la disponibilité sur WhatsApp. Livraison partout en Côte d'Ivoire.",
     intro: "Le format A5 (148 × 210 mm) est la moitié d'une feuille A4. Il convient aux carnets, flyers, bons de commande, ordonnances et petits documents. Demandez le prix et la disponibilité du papier rame A5 sur WhatsApp.",
     usages: ["Flyers et prospectus", "Bons de commande et factures", "Carnets et cahiers", "Ordonnances et petits formulaires"],
@@ -1607,34 +1607,34 @@ export function trouverLieu(slug: string): Lieu | undefined {
 
 /** Titre (sans « | Monpapierrame ») et description propres à chaque page locale ; {prix} = prix d'appel */
 export const META_LIEUX: Record<string, { t: string; d: string }> = {
-  "papier-rame-cocody": { t: "Papier Rame Cocody : Riviera, Angré, Prix", d: "Papier rame A4 livré à Cocody, Riviera, Angré et Deux-Plateaux : ramette dès {prix}, cartons, gros. Écoles, bureaux, cybercafés. Livraison 24 à 72 h." },
-  "papier-rame-yopougon": { t: "Papier Rame Yopougon : Ramette et Carton", d: "Acheter du papier rame à Yopougon, la plus grande commune d'Abidjan : ramette dès {prix}, carton, gros pour écoles et cybercafés. Livraison rapide." },
-  "papier-rame-abobo": { t: "Papier Rame Abobo : Prix Carton et Gros", d: "Papier rame A4 à Abobo : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Pour écoles, photocopie et boutiques. Livraison à Abobo." },
-  "papier-rame-marcory": { t: "Papier Rame Marcory, Zone 4 : Prix", d: "Papier rame A4 livré à Marcory, Zone 4 et Biétry : ramette dès {prix}, carton, gros. Pour entreprises, commerces et écoles. Livraison en 24 à 72 h." },
-  "papier-rame-koumassi": { t: "Papier Rame Koumassi : Carton et Gros", d: "Besoin de papier rame à Koumassi ? Ramette dès {prix}, carton de 5 ramettes et tarif gros dès 10 cartons. Livraison à domicile à Koumassi, Abidjan." },
-  "papier-rame-plateau": { t: "Papier Rame Plateau Abidjan : Entreprises", d: "Papier rame A4 pour les bureaux, banques et administrations du Plateau : facture sur demande, carton et gros, livraison en 24 à 72 h à Abidjan Plateau." },
-  "papier-rame-port-bouet": { t: "Papier Rame Port-Bouët : Prix et Gros", d: "Papier rame A4 livré à Port-Bouët, près de l'aéroport : carton, gros dès 10 cartons pour entreprises et logistique. Ramette dès {prix}." },
-  "papier-rame-treichville": { t: "Papier Rame Treichville : Carton et Gros", d: "Papier rame à Treichville : ramette dès {prix}, cartons et gros pour commerces, entreprises du port et écoles. Livraison en 24 à 72 h à Treichville." },
-  "papier-rame-adjame": { t: "Papier Rame Adjamé : Prix de Gros", d: "Grossiste papier rame pour Adjamé : prix de gros dès 10 cartons, carton de 5 ramettes, ramette dès {prix}. Revendeurs et commerçants du marché." },
-  "papier-rame-attecoube": { t: "Papier Rame Attécoubé : Prix et Livraison", d: "Papier rame A4 à Attécoubé : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles, commerces et photocopie, livraison à Attécoubé." },
-  "papier-rame-bingerville": { t: "Papier Rame Bingerville : Livraison", d: "Papier rame A4 livré à Bingerville : ramette dès {prix}, carton, gros. Écoles, administrations et nouveaux quartiers, livraison en 24 à 72 h." },
-  "papier-rame-bouake": { t: "Papier Rame Bouaké : Prix et Livraison", d: "Grossiste papier rame livrant à Bouaké : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Écoles, bureaux, commerces. Livraison 72 h." },
-  "papier-rame-yamoussoukro": { t: "Papier Rame Yamoussoukro : Prix, Livraison", d: "Papier rame A4 pour les administrations, écoles et entreprises de Yamoussoukro : facture sur demande, carton, gros dès 10 cartons. Livraison 24 à 72 h." },
-  "papier-rame-san-pedro": { t: "Papier Rame San-Pédro : Prix et Livraison", d: "Papier rame A4 à San-Pédro pour entreprises du port, négoce et écoles : carton, gros dès 10 cartons, ramette dès {prix}. Livraison à San-Pédro." },
-  "papier-rame-daloa": { t: "Papier Rame Daloa : Carton et Gros", d: "Papier rame A4 à Daloa pour coopératives, négociants et écoles : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Livraison à Daloa." },
-  "papier-rame-korhogo": { t: "Papier Rame Korhogo : Prix et Livraison", d: "Commandez du papier rame A4 à Korhogo : carton, gros dès 10 cartons, ramette dès {prix}. Coopératives, écoles et administrations du nord." },
-  "papier-rame-man": { t: "Papier Rame Man : Prix et Livraison", d: "Papier rame A4 livré à Man et dans la région du Tonkpi : ramette dès {prix}, carton, gros. Écoles, commerces et administrations. Livraison 24 à 72 h." },
-  "papier-rame-abengourou": { t: "Papier Rame Abengourou : Carton et Gros", d: "Papier rame A4 à Abengourou : ramette dès {prix}, cartons et gros dès 10 cartons pour écoles, commerces et administrations de l'est. Livraison rapide." },
-  "papier-rame-gagnoa": { t: "Papier Rame Gagnoa : Prix et Livraison", d: "Papier rame A4 à Gagnoa pour coopératives de cacao, écoles et administrations : carton, gros dès 10 cartons, ramette dès {prix}. Livraison à Gagnoa." },
-  "papier-rame-divo": { t: "Papier Rame Divo : Prix et Livraison", d: "Papier rame A4 livré à Divo, zone cacaoyère : ramette dès {prix}, carton, gros dès 10 cartons pour négociants, écoles et commerces." },
-  "papier-rame-soubre": { t: "Papier Rame Soubré : Carton et Gros", d: "Papier rame A4 à Soubré : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Négociants, écoles et commerces de la Nawa." },
-  "papier-rame-odienne": { t: "Papier Rame Odienné : Prix et Livraison", d: "Papier rame A4 livré à Odienné et au Kabadougou : ramette dès {prix}, carton, gros. Écoles, administrations et commerces. Livraison en 24 à 72 h." },
-  "papier-rame-seguela": { t: "Papier Rame Séguéla : Carton et Gros", d: "Papier rame A4 à Séguéla : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles, commerces et services publics. Livraison à Séguéla." },
-  "papier-rame-bondoukou": { t: "Papier Rame Bondoukou : Prix et Livraison", d: "Papier rame A4 à Bondoukou et dans le Gontougo : ramette dès {prix}, carton, gros dès 10 cartons. Écoles, commerces, administrations. Livraison rapide." },
-  "papier-rame-ferkessedougou": { t: "Papier Rame Ferkessédougou : Livraison", d: "Papier rame A4 livré à Ferkessédougou, point de passage du nord : ramette dès {prix}, carton, gros dès 10 cartons. Livraison en 24 à 72 h." },
-  "papier-rame-grand-bassam": { t: "Papier Rame Grand-Bassam : Prix et Livraison", d: "Papier rame A4 à Grand-Bassam : hôtels, administrations et écoles. Ramette dès {prix}, carton et gros dès 10 cartons. Livraison en 24 à 72 h." },
-  "papier-rame-agboville": { t: "Papier Rame Agboville : Carton et Gros", d: "Papier rame A4 livré à Agboville, au nord d'Abidjan : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles et commerces." },
-  "papier-rame-dimbokro": { t: "Papier Rame Dimbokro : Prix et Livraison", d: "Papier rame A4 à Dimbokro : ramette dès {prix}, carton, gros dès 10 cartons. Écoles, administrations et commerces du N'Zi. Livraison en 24 à 72 h." },
-  "papier-rame-katiola": { t: "Papier Rame Katiola : Carton et Gros", d: "Papier rame A4 livré à Katiola et dans le Hambol : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles et commerces." },
-  "papier-rame-adzope": { t: "Papier Rame Adzopé : Prix et Livraison", d: "Papier rame A4 à Adzopé, dans la région de La Mé : ramette dès {prix}, carton, gros dès 10 cartons. Écoles, administrations, commerces." },
+  "papier-rame-cocody": { t: "Papier Rame Cocody : Ramette, Riviera, Angré", d: "Papier rame A4 livré à Cocody, Riviera, Angré et Deux-Plateaux : ramette dès {prix}, cartons, gros. Écoles, bureaux, cybercafés. Livraison 24 à 72 h." },
+  "papier-rame-yopougon": { t: "Papier Rame Yopougon : Ramette, Écoles", d: "Acheter du papier rame à Yopougon, la plus grande commune d'Abidjan : ramette dès {prix}, carton, gros pour écoles et cybercafés. Livraison rapide." },
+  "papier-rame-abobo": { t: "Papier Rame Abobo : Ramette, Carton et Gros", d: "Papier rame A4 à Abobo : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Pour écoles, photocopie et boutiques. Livraison à Abobo." },
+  "papier-rame-marcory": { t: "Papier Rame Marcory : Ramette et Carton", d: "Papier rame A4 livré à Marcory, Zone 4 et Biétry : ramette dès {prix}, carton, gros. Pour entreprises, commerces et écoles. Livraison en 24 à 72 h." },
+  "papier-rame-koumassi": { t: "Papier Rame Koumassi : Ramette à Domicile", d: "Besoin de papier rame à Koumassi ? Ramette dès {prix}, carton de 5 ramettes et tarif gros dès 10 cartons. Livraison à domicile à Koumassi, Abidjan." },
+  "papier-rame-plateau": { t: "Papier Rame Plateau : Ramette pour Bureaux", d: "Papier rame A4 pour les bureaux, banques et administrations du Plateau : facture sur demande, carton et gros, livraison en 24 à 72 h à Abidjan Plateau." },
+  "papier-rame-port-bouet": { t: "Papier Rame Port-Bouët : Ramette, Carton", d: "Papier rame A4 livré à Port-Bouët, près de l'aéroport : carton, gros dès 10 cartons pour entreprises et logistique. Ramette dès {prix}." },
+  "papier-rame-treichville": { t: "Papier Rame Treichville : Ramette et Carton", d: "Papier rame à Treichville : ramette dès {prix}, cartons et gros pour commerces, entreprises du port et écoles. Livraison en 24 à 72 h à Treichville." },
+  "papier-rame-adjame": { t: "Papier Rame Adjamé : Ramette, Prix de Gros", d: "Grossiste papier rame pour Adjamé : prix de gros dès 10 cartons, carton de 5 ramettes, ramette dès {prix}. Revendeurs et commerçants du marché." },
+  "papier-rame-attecoube": { t: "Papier Rame Attécoubé : Ramette, Livraison", d: "Papier rame A4 à Attécoubé : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles, commerces et photocopie, livraison à Attécoubé." },
+  "papier-rame-bingerville": { t: "Papier Rame Bingerville : Ramette, Livraison", d: "Papier rame A4 livré à Bingerville : ramette dès {prix}, carton, gros. Écoles, administrations et nouveaux quartiers, livraison en 24 à 72 h." },
+  "papier-rame-bouake": { t: "Papier Rame Bouaké : Ramette, Carton et Gros", d: "Grossiste papier rame livrant à Bouaké : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Écoles, bureaux, commerces. Livraison 72 h." },
+  "papier-rame-yamoussoukro": { t: "Papier Rame Yamoussoukro : Ramette, Gros", d: "Papier rame A4 pour les administrations, écoles et entreprises de Yamoussoukro : facture sur demande, carton, gros dès 10 cartons. Livraison 24 à 72 h." },
+  "papier-rame-san-pedro": { t: "Papier Rame San-Pédro : Ramette, Port", d: "Papier rame A4 à San-Pédro pour entreprises du port, négoce et écoles : carton, gros dès 10 cartons, ramette dès {prix}. Livraison à San-Pédro." },
+  "papier-rame-daloa": { t: "Papier Rame Daloa : Ramette, Carton et Gros", d: "Papier rame A4 à Daloa pour coopératives, négociants et écoles : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Livraison à Daloa." },
+  "papier-rame-korhogo": { t: "Papier Rame Korhogo : Ramette, Prix et Gros", d: "Commandez du papier rame A4 à Korhogo : carton, gros dès 10 cartons, ramette dès {prix}. Coopératives, écoles et administrations du nord." },
+  "papier-rame-man": { t: "Papier Rame Man : Ramette, Prix et Livraison", d: "Papier rame A4 livré à Man et dans la région du Tonkpi : ramette dès {prix}, carton, gros. Écoles, commerces et administrations. Livraison 24 à 72 h." },
+  "papier-rame-abengourou": { t: "Papier Rame Abengourou : Ramette, Carton", d: "Papier rame A4 à Abengourou : ramette dès {prix}, cartons et gros dès 10 cartons pour écoles, commerces et administrations de l'est. Livraison rapide." },
+  "papier-rame-gagnoa": { t: "Papier Rame Gagnoa : Ramette, Livraison", d: "Papier rame A4 à Gagnoa pour coopératives de cacao, écoles et administrations : carton, gros dès 10 cartons, ramette dès {prix}. Livraison à Gagnoa." },
+  "papier-rame-divo": { t: "Papier Rame Divo : Ramette, Carton et Gros", d: "Papier rame A4 livré à Divo, zone cacaoyère : ramette dès {prix}, carton, gros dès 10 cartons pour négociants, écoles et commerces." },
+  "papier-rame-soubre": { t: "Papier Rame Soubré : Ramette, Carton et Gros", d: "Papier rame A4 à Soubré : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Négociants, écoles et commerces de la Nawa." },
+  "papier-rame-odienne": { t: "Papier Rame Odienné : Ramette, Livraison", d: "Papier rame A4 livré à Odienné et au Kabadougou : ramette dès {prix}, carton, gros. Écoles, administrations et commerces. Livraison en 24 à 72 h." },
+  "papier-rame-seguela": { t: "Papier Rame Séguéla : Ramette et Carton", d: "Papier rame A4 à Séguéla : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles, commerces et services publics. Livraison à Séguéla." },
+  "papier-rame-bondoukou": { t: "Papier Rame Bondoukou : Ramette, Livraison", d: "Papier rame A4 à Bondoukou et dans le Gontougo : ramette dès {prix}, carton, gros dès 10 cartons. Écoles, commerces, administrations. Livraison rapide." },
+  "papier-rame-ferkessedougou": { t: "Papier Rame Ferkessédougou : Ramette, Gros", d: "Papier rame A4 livré à Ferkessédougou, point de passage du nord : ramette dès {prix}, carton, gros dès 10 cartons. Livraison en 24 à 72 h." },
+  "papier-rame-grand-bassam": { t: "Papier Rame Grand-Bassam : Ramette, Gros", d: "Papier rame A4 à Grand-Bassam : hôtels, administrations et écoles. Ramette dès {prix}, carton et gros dès 10 cartons. Livraison en 24 à 72 h." },
+  "papier-rame-agboville": { t: "Papier Rame Agboville : Ramette, Carton", d: "Papier rame A4 livré à Agboville, au nord d'Abidjan : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles et commerces." },
+  "papier-rame-dimbokro": { t: "Papier Rame Dimbokro : Ramette, Livraison", d: "Papier rame A4 à Dimbokro : ramette dès {prix}, carton, gros dès 10 cartons. Écoles, administrations et commerces du N'Zi. Livraison en 24 à 72 h." },
+  "papier-rame-katiola": { t: "Papier Rame Katiola : Ramette, Carton, Gros", d: "Papier rame A4 livré à Katiola et dans le Hambol : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles et commerces." },
+  "papier-rame-adzope": { t: "Papier Rame Adzopé : Ramette, Livraison", d: "Papier rame A4 à Adzopé, dans la région de La Mé : ramette dès {prix}, carton, gros dès 10 cartons. Écoles, administrations, commerces." },
 };

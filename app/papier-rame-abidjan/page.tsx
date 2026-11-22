@@ -25,7 +25,7 @@ const PRIX_MIN = PRIX.length ? formatPrixTexte(Math.min(...PRIX)) : "prix sur de
 // Prix d'appel du carton de 5 rames (le plus bas), pour le titre Google
 const CARTONS = PRODUITS.filter((p) => p.prix !== null && p.minQty === 1 && p.id.endsWith("carton")).map((p) => p.prix as number);
 const PRIX_CARTON_MIN = CARTONS.length ? formatPrixTexte(Math.min(...CARTONS)) : "";
-const TITRE = PRIX_CARTON_MIN ? `Papier Rame A4 Prix Abidjan : Carton dès ${PRIX_CARTON_MIN}` : "Papier Rame A4 Prix Abidjan : Carton, Gros";
+const TITRE = PRIX_CARTON_MIN ? `Papier Rame A4 Prix Abidjan : Ramette, Carton ${PRIX_CARTON_MIN}` : "Papier Rame A4 Prix Abidjan : Carton, Gros";
 const DESCRIPTION = `Rame papier A4 à Abidjan : paquet de 500 feuilles dès ${PRIX_MIN}, carton de rames, gros et demi-gros. 12 marques, livraison à Cocody, Yopougon, Abobo.`;
 
 export const metadata: Metadata = {

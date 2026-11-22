@@ -22,7 +22,7 @@ import {
 const PRIX = PRODUITS.map((p) => p.prix).filter((x): x is number => x !== null);
 const PRIX_MIN = PRIX.length ? formatPrixTexte(Math.min(...PRIX)) : "prix sur demande";
 
-const TITRE = "Papier Rame Abidjan : Vente de Rame, Carton, Paquet, Gros";
+const TITRE = `Papier Rame Abidjan : Ramette dès ${PRIX_MIN}, Carton, Gros`;
 const DESCRIPTION = `Rame papier A4 à Abidjan : paquet de 500 feuilles dès ${PRIX_MIN}, carton de rames, gros et demi-gros. 12 marques, livraison à Cocody, Yopougon, Abobo.`;
 
 export const metadata: Metadata = {

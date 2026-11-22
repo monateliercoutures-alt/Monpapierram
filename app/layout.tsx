@@ -86,7 +86,6 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   applicationName: SITE.nom,
-  appleWebApp: { capable: true, title: SITE.nom, statusBarStyle: "default" },
   formatDetection: { telephone: false },
   openGraph: {
     type: "website",

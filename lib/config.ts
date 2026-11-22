@@ -1147,51 +1147,51 @@ export function trouverMarque(slug: string): string | undefined {
 /** Titre et description Google de chaque page marque ({carton}, {gros}, {ramette} = prix formatés) */
 export const SEO_MARQUES: Record<string, { titre: string; description: string }> = {
   "Double A": {
-    titre: "Fournisseur Papier Rame Double A : Prix | Monpapierrame",
+    titre: "Papier Rame Double A : Prix et Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Double A : ramette {ramette}, carton {carton}, gros dès 10 cartons. Revendeurs, entreprises, livraison en Côte d'Ivoire.",
   },
   "Paper One": {
-    titre: "Fournisseur Papier Rame Paper One : Prix | Monpapierrame",
+    titre: "Papier Rame Paper One : Prix et Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Paper One 70g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Globulus: {
-    titre: "Fournisseur Papier Rame Globulus : Prix | Monpapierrame",
+    titre: "Papier Rame Globulus : Prix et Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Globulus 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Paper Pro": {
-    titre: "Fournisseur Papier Rame Paper Pro : Prix | Monpapierrame",
+    titre: "Papier Rame Paper Pro : Prix et Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Ultima Copy": {
-    titre: "Fournisseur Papier Rame Ultima Copy : Prix | Monpapierrame",
+    titre: "Papier Rame Ultima Copy : Prix, Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Ultima Copy 75g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Beifa: {
-    titre: "Fournisseur Papier Rame Beifa : Prix et Gros | Monpapierrame",
+    titre: "Papier Rame Beifa : Prix et Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Beifa 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Royal Touch": {
-    titre: "Fournisseur Papier Rame Royal Touch : Prix | Monpapierrame",
+    titre: "Papier Rame Royal Touch : Prix, Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Royal Touch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Aone: {
-    titre: "Fournisseur Papier Rame Aone : Prix et Gros | Monpapierrame",
+    titre: "Papier Rame Aone : Prix et Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Aone 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Aria: {
-    titre: "Fournisseur Papier Rame Aria : Prix et Gros | Monpapierrame",
+    titre: "Papier Rame Aria : Prix et Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Aria 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Roch: {
-    titre: "Fournisseur Papier Rame Roch : Prix et Gros | Monpapierrame",
+    titre: "Papier Rame Roch : Prix et Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Roch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Smart Copy": {
-    titre: "Fournisseur Papier Rame Smart Copy : Prix | Monpapierrame",
+    titre: "Papier Rame Smart Copy : Prix et Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Smart Copy 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Authentik: {
-    titre: "Fournisseur Papier Rame Authentik : Prix | Monpapierrame",
+    titre: "Papier Rame Authentik : Prix et Fournisseur | Monpapierrame",
     description: "Fournisseur papier rame Authentik 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
 };

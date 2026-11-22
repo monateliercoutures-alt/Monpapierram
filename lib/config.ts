@@ -1604,3 +1604,37 @@ export const LIEUX: Lieu[] = LIEUX_BRUTS.map((l) => ({ ...l, slug: sl(l.nom) }))
 export function trouverLieu(slug: string): Lieu | undefined {
   return LIEUX.find((l) => l.slug === slug);
 }
+
+/** Titre (sans « | Monpapierrame ») et description propres à chaque page locale ; {prix} = prix d'appel */
+export const META_LIEUX: Record<string, { t: string; d: string }> = {
+  "papier-rame-cocody": { t: "Papier Rame Cocody : Riviera, Angré, Prix", d: "Papier rame A4 livré à Cocody, Riviera, Angré et Deux-Plateaux : ramette dès {prix}, cartons, gros. Écoles, bureaux, cybercafés. Livraison 24 à 72 h." },
+  "papier-rame-yopougon": { t: "Papier Rame Yopougon : Ramette et Carton", d: "Acheter du papier rame à Yopougon, la plus grande commune d'Abidjan : ramette dès {prix}, carton, gros pour écoles et cybercafés. Livraison rapide." },
+  "papier-rame-abobo": { t: "Papier Rame Abobo : Prix Carton et Gros", d: "Papier rame A4 à Abobo : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Pour écoles, photocopie et boutiques. Livraison à Abobo." },
+  "papier-rame-marcory": { t: "Papier Rame Marcory, Zone 4 : Prix", d: "Papier rame A4 livré à Marcory, Zone 4 et Biétry : ramette dès {prix}, carton, gros. Pour entreprises, commerces et écoles. Livraison en 24 à 72 h." },
+  "papier-rame-koumassi": { t: "Papier Rame Koumassi : Carton et Gros", d: "Besoin de papier rame à Koumassi ? Ramette dès {prix}, carton de 5 ramettes et tarif gros dès 10 cartons. Livraison à domicile à Koumassi, Abidjan." },
+  "papier-rame-plateau": { t: "Papier Rame Plateau Abidjan : Entreprises", d: "Papier rame A4 pour les bureaux, banques et administrations du Plateau : facture sur demande, carton et gros, livraison en 24 à 72 h à Abidjan Plateau." },
+  "papier-rame-port-bouet": { t: "Papier Rame Port-Bouët : Prix et Gros", d: "Papier rame A4 livré à Port-Bouët, près de l'aéroport : carton, gros dès 10 cartons pour entreprises et logistique. Ramette dès {prix}." },
+  "papier-rame-treichville": { t: "Papier Rame Treichville : Carton et Gros", d: "Papier rame à Treichville : ramette dès {prix}, cartons et gros pour commerces, entreprises du port et écoles. Livraison en 24 à 72 h à Treichville." },
+  "papier-rame-adjame": { t: "Papier Rame Adjamé : Prix de Gros", d: "Grossiste papier rame pour Adjamé : prix de gros dès 10 cartons, carton de 5 ramettes, ramette dès {prix}. Revendeurs et commerçants du marché." },
+  "papier-rame-attecoube": { t: "Papier Rame Attécoubé : Prix et Livraison", d: "Papier rame A4 à Attécoubé : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles, commerces et photocopie, livraison à Attécoubé." },
+  "papier-rame-bingerville": { t: "Papier Rame Bingerville : Livraison", d: "Papier rame A4 livré à Bingerville : ramette dès {prix}, carton, gros. Écoles, administrations et nouveaux quartiers, livraison en 24 à 72 h." },
+  "papier-rame-bouake": { t: "Papier Rame Bouaké : Prix et Livraison", d: "Grossiste papier rame livrant à Bouaké : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Écoles, bureaux, commerces. Livraison 72 h." },
+  "papier-rame-yamoussoukro": { t: "Papier Rame Yamoussoukro : Prix, Livraison", d: "Papier rame A4 pour les administrations, écoles et entreprises de Yamoussoukro : facture sur demande, carton, gros dès 10 cartons. Livraison 24 à 72 h." },
+  "papier-rame-san-pedro": { t: "Papier Rame San-Pédro : Prix et Livraison", d: "Papier rame A4 à San-Pédro pour entreprises du port, négoce et écoles : carton, gros dès 10 cartons, ramette dès {prix}. Livraison à San-Pédro." },
+  "papier-rame-daloa": { t: "Papier Rame Daloa : Carton et Gros", d: "Papier rame A4 à Daloa pour coopératives, négociants et écoles : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Livraison à Daloa." },
+  "papier-rame-korhogo": { t: "Papier Rame Korhogo : Prix et Livraison", d: "Commandez du papier rame A4 à Korhogo : carton, gros dès 10 cartons, ramette dès {prix}. Coopératives, écoles et administrations du nord." },
+  "papier-rame-man": { t: "Papier Rame Man : Prix et Livraison", d: "Papier rame A4 livré à Man et dans la région du Tonkpi : ramette dès {prix}, carton, gros. Écoles, commerces et administrations. Livraison 24 à 72 h." },
+  "papier-rame-abengourou": { t: "Papier Rame Abengourou : Carton et Gros", d: "Papier rame A4 à Abengourou : ramette dès {prix}, cartons et gros dès 10 cartons pour écoles, commerces et administrations de l'est. Livraison rapide." },
+  "papier-rame-gagnoa": { t: "Papier Rame Gagnoa : Prix et Livraison", d: "Papier rame A4 à Gagnoa pour coopératives de cacao, écoles et administrations : carton, gros dès 10 cartons, ramette dès {prix}. Livraison à Gagnoa." },
+  "papier-rame-divo": { t: "Papier Rame Divo : Prix et Livraison", d: "Papier rame A4 livré à Divo, zone cacaoyère : ramette dès {prix}, carton, gros dès 10 cartons pour négociants, écoles et commerces." },
+  "papier-rame-soubre": { t: "Papier Rame Soubré : Carton et Gros", d: "Papier rame A4 à Soubré : carton de 5 ramettes, gros dès 10 cartons, ramette dès {prix}. Négociants, écoles et commerces de la Nawa." },
+  "papier-rame-odienne": { t: "Papier Rame Odienné : Prix et Livraison", d: "Papier rame A4 livré à Odienné et au Kabadougou : ramette dès {prix}, carton, gros. Écoles, administrations et commerces. Livraison en 24 à 72 h." },
+  "papier-rame-seguela": { t: "Papier Rame Séguéla : Carton et Gros", d: "Papier rame A4 à Séguéla : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles, commerces et services publics. Livraison à Séguéla." },
+  "papier-rame-bondoukou": { t: "Papier Rame Bondoukou : Prix et Livraison", d: "Papier rame A4 à Bondoukou et dans le Gontougo : ramette dès {prix}, carton, gros dès 10 cartons. Écoles, commerces, administrations. Livraison rapide." },
+  "papier-rame-ferkessedougou": { t: "Papier Rame Ferkessédougou : Livraison", d: "Papier rame A4 livré à Ferkessédougou, point de passage du nord : ramette dès {prix}, carton, gros dès 10 cartons. Livraison en 24 à 72 h." },
+  "papier-rame-grand-bassam": { t: "Papier Rame Grand-Bassam : Prix et Livraison", d: "Papier rame A4 à Grand-Bassam : hôtels, administrations et écoles. Ramette dès {prix}, carton et gros dès 10 cartons. Livraison en 24 à 72 h." },
+  "papier-rame-agboville": { t: "Papier Rame Agboville : Carton et Gros", d: "Papier rame A4 livré à Agboville, au nord d'Abidjan : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles et commerces." },
+  "papier-rame-dimbokro": { t: "Papier Rame Dimbokro : Prix et Livraison", d: "Papier rame A4 à Dimbokro : ramette dès {prix}, carton, gros dès 10 cartons. Écoles, administrations et commerces du N'Zi. Livraison en 24 à 72 h." },
+  "papier-rame-katiola": { t: "Papier Rame Katiola : Carton et Gros", d: "Papier rame A4 livré à Katiola et dans le Hambol : ramette dès {prix}, carton de 5 ramettes, gros dès 10 cartons. Écoles et commerces." },
+  "papier-rame-adzope": { t: "Papier Rame Adzopé : Prix et Livraison", d: "Papier rame A4 à Adzopé, dans la région de La Mé : ramette dès {prix}, carton, gros dès 10 cartons. Écoles, administrations, commerces." },
+};

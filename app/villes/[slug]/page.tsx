@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ProduitCarte from "@/components/ProduitCarte";
 import { IconeWhatsApp } from "@/components/Icones";
-import { LIEUX, MARQUES, MODES_PAIEMENT, PRODUITS, SEUIL_GROS, SITE, formatPrixTexte, lienWhatsApp, slugMarque, trouverLieu } from "@/lib/config";
+import { LIEUX, MARQUES, META_LIEUX, MODES_PAIEMENT, PRODUITS, SEUIL_GROS, SITE, formatPrixTexte, lienWhatsApp, slugMarque, trouverLieu } from "@/lib/config";
 
 const PRIX = PRODUITS.map((p) => p.prix).filter((x): x is number => x !== null);
 const PRIX_MIN = PRIX.length ? formatPrixTexte(Math.min(...PRIX)) : "prix sur demande";
@@ -15,27 +15,19 @@ export function generateStaticParams() {
   return LIEUX.map((l) => ({ slug: l.slug }));
 }
 
-// Titre ≤ 60 caractères : on retire « Livraison » si le nom du lieu est long
-function titre(nom: string): string {
-  const long = `Papier Rame ${nom} : Prix, Carton et Livraison | Monpapierrame`;
-  if (long.length <= 60) return long;
-  const moyen = `Papier Rame ${nom} : Prix et Livraison | Monpapierrame`;
-  return moyen.length <= 60 ? moyen : `Papier Rame ${nom} : Livraison | Monpapierrame`;
-}
-
-function description(nom: string, type: "ville" | "commune"): string {
-  const d = type === "commune"
-    ? `Papier rame A4 livré à ${nom}, Abidjan : ramette dès ${PRIX_MIN}, carton, gros. Double A, Globulus, Roch… Livraison en ${SITE.delaiLivraison}.`
-    : `Papier rame A4 livré à ${nom} : carton, gros dès ${SEUIL_GROS} cartons, ramette dès ${PRIX_MIN}. Double A, Globulus, Roch… Livraison en ${SITE.delaiLivraison}.`;
-  return d.length <= 155 ? d : d.replace("Double A, Globulus, Roch… ", "");
+// Titre et description propres à chaque lieu (voir META_LIEUX dans lib/config.ts), avec repli automatique
+function metas(slug: string, nom: string): { t: string; d: string } {
+  const m = META_LIEUX[slug];
+  const t = m ? `${m.t} | Monpapierrame` : `Papier Rame ${nom} : Prix et Livraison | Monpapierrame`;
+  const d = m ? m.d.replace("{prix}", PRIX_MIN) : `Papier rame A4 livré à ${nom} : carton, gros dès ${SEUIL_GROS} cartons, ramette dès ${PRIX_MIN}. Livraison en ${SITE.delaiLivraison}.`;
+  return { t, d };
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const l = trouverLieu(slug);
   if (!l) return {};
-  const t = titre(l.nom);
-  const d = description(l.nom, l.type);
+  const { t, d } = metas(slug, l.nom);
   return { title: t, description: d, alternates: { canonical: `/villes/${slug}` }, openGraph: { title: t, description: d, url: `/villes/${slug}`, images: [{ url: PRODUITS[0].image }] } };
 }
 
@@ -49,7 +41,6 @@ export default async function PageLieu({ params }: { params: Promise<{ slug: str
   const lieu = enAbidjan ? `${l.nom} (Abidjan)` : l.nom;
   const message = `Bonjour ${SITE.nom}, je souhaite commander du papier rame A4 à ${l.nom} (marque : ..., quantité : ...).`;
   const voisins = LIEUX.filter((x) => x.slug !== l.slug && (enAbidjan ? x.type === "commune" : x.type === "ville")).slice(0, 8);
-  const populaires = PRODUITS.filter((p) => ["ramette", "carton", "beifa-carton", "roch-carton", "globulus-carton", "paperone-carton"].includes(p.id));
 
   const faq = [
     { q: `Où acheter du papier rame à ${l.nom} ?`, r: `Chez ${SITE.nom}, grossiste de papier rame A4. Vous commandez en ligne ou sur WhatsApp et nous livrons à ${l.nom}${enAbidjan ? ", à Abidjan," : ""} en ${SITE.delaiLivraison} après confirmation.` },
@@ -107,15 +98,12 @@ export default async function PageLieu({ params }: { params: Promise<{ slug: str
           </a>
 
           <section className="mt-12" aria-labelledby="v-produits">
-            <h2 id="v-produits" className="text-xl font-bold text-nuit sm:text-2xl">Papier rame livré à {l.nom}</h2>
+            <h2 id="v-produits" className="text-xl font-bold text-nuit sm:text-2xl">Tous nos papiers rame livrés à {l.nom}</h2>
             <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {populaires.map((p) => (
+              {PRODUITS.map((p) => (
                 <ProduitCarte key={p.id} p={p} />
               ))}
             </ul>
-            <p className="mt-4 text-sm">
-              <Link href="/papier-rame-abidjan" className="font-semibold text-profond underline">Voir tous les produits et toutes les marques →</Link>
-            </p>
           </section>
 
           <section className="mt-12 border-t border-profond/10 pt-10" aria-labelledby="v-marques">

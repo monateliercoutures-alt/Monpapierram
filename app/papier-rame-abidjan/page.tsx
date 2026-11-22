@@ -22,8 +22,8 @@ import {
 const PRIX = PRODUITS.map((p) => p.prix).filter((x): x is number => x !== null);
 const PRIX_MIN = PRIX.length ? formatPrixTexte(Math.min(...PRIX)) : "prix sur demande";
 
-const TITRE = "Papier Rame Abidjan : Prix, Carton et Gros | Monpapierrame";
-const DESCRIPTION = `Achetez du papier rame A4 à Abidjan : Double A, Paper One, Globulus, Smart Copy… Dès ${PRIX_MIN}. Carton, gros, livraison Cocody, Yopougon, Abobo.`;
+const TITRE = "Vente de Rame Papier à Abidjan : Carton, Paquet et Gros";
+const DESCRIPTION = `Rame papier A4 à Abidjan : paquet de 500 feuilles dès ${PRIX_MIN}, carton de rames, gros et demi-gros. 12 marques, livraison à Cocody, Yopougon, Abobo.`;
 
 export const metadata: Metadata = {
   title: TITRE,

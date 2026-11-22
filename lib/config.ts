@@ -1124,7 +1124,7 @@ export const FAQ: { q: string; r: string }[] = [
 export const SEO_ACCUEIL = {
   titre: "Papier Rame A4 à Abidjan & en Côte d’Ivoire | Monpapierrame",
   description:
-    "Grossiste papier rame à Abidjan : paquet de rame, rame Double A, feuille A4. Ramette dès {prix}, carton, gros. Livraison en Côte d'Ivoire.",
+    "Grossiste papier rame A4 à Abidjan : 1 paquet de 500 feuilles dès {prix}, carton de rames, gros et demi-gros. Livraison partout en Côte d'Ivoire.",
 };
 
 /** Grammage lu dans la fiche technique du produit (ex. « 80 g/m² ») */
@@ -1147,52 +1147,52 @@ export function trouverMarque(slug: string): string | undefined {
 /** Titre et description Google de chaque page marque ({carton}, {gros}, {ramette} = prix formatés) */
 export const SEO_MARQUES: Record<string, { titre: string; description: string }> = {
   "Double A": {
-    titre: "Papier rame Double A en Côte d'Ivoire : prix ramette, carton et gros",
-    description: "Prix de la rame Double A 80g à Abidjan : ramette {ramette}, carton {carton}, gros dès 10 cartons. Livraison à Cocody, Yopougon et en Côte d'Ivoire.",
+    titre: "Rame A4 Double A Abidjan : Carton de Rame et Ramette",
+    description: "Rame A4 Double A 80g à Abidjan : paquet de 500 feuilles {ramette}, carton de 5 rames {carton}, gros dès 10 cartons. Livraison en Côte d'Ivoire.",
   },
   "Paper One": {
-    titre: "Papier rame Paper One 70g en Côte d'Ivoire : prix carton et gros",
-    description: "Prix du papier rame Paper One 70g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Paper One 70g : Vente de Rame Papier A4 à Abidjan",
+    description: "Vente de rame papier Paper One 70g : carton de 5 paquets {carton}, {gros} dès 10 cartons. Écoles, cybercafés, bureaux. Livraison à Abidjan.",
   },
   Globulus: {
-    titre: "Papier rame Globulus 80g en Côte d'Ivoire : prix carton et gros",
-    description: "Prix du papier rame Globulus 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Papier Rame A4 Globulus 80g : Paquet 500 Feuilles",
+    description: "Papier rame A4 Globulus 80g, paquet de 500 feuilles : carton {carton}, gros {gros}. Commande WhatsApp, livraison partout en Côte d'Ivoire.",
   },
   "Paper Pro": {
-    titre: "Papier rame Paper Pro 80g en Côte d'Ivoire : prix carton et gros",
-    description: "Prix du papier rame Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Paper Pro 80g : Carton de Rames A4, Gros et Demi-gros",
+    description: "Carton de rames A4 Paper Pro 80g à {carton}, gros et demi-gros à {gros} dès 10 cartons. Facture entreprises, livraison à Abidjan et en CI.",
   },
   "Ultima Copy": {
-    titre: "Papier rame Ultima Copy 75g en Côte d'Ivoire : prix carton et gros",
-    description: "Prix du papier rame Ultima Copy 75g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Ultima Copy 75g : Papiers Rames A4, Prix Carton",
+    description: "Papiers rames A4 Ultima Copy 75g : carton de 2 500 feuilles {carton}, {gros} dès 10 cartons. Copie et impression, livraison en Côte d'Ivoire.",
   },
   Beifa: {
-    titre: "Papier rame Beifa 80g en Côte d'Ivoire : prix carton et gros",
-    description: "Prix du papier rame Beifa 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Beifa 80g : Rame de Papier A4, Gros Abidjan",
+    description: "Rame de papier A4 Beifa 80g : carton de 5 rames {carton}, gros {gros} dès 10 cartons. Revendeurs bienvenus, livraison en Côte d'Ivoire.",
   },
   "Royal Touch": {
-    titre: "Papier rame Royal Touch 80g en Côte d'Ivoire : prix carton et gros",
-    description: "Prix du papier rame Royal Touch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Royal Touch 80g : Papier Rame A4, Prix du Carton",
+    description: "Papier rame A4 Royal Touch 80g à surface lisse : carton {carton}, {gros} dès 10 cartons. Impression nette, livraison à Abidjan et en CI.",
   },
   Aone: {
-    titre: "Papier rame Aone 80g en Côte d'Ivoire : prix carton et gros",
-    description: "Prix du papier rame Aone 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Aone 80g : Papier Rame A4, Paquet ou Carton",
+    description: "Papier rame A4 Aone 80g, au paquet ou au carton : {carton} les 5 rames, {gros} dès 10 cartons. Commande WhatsApp, livraison en Côte d'Ivoire.",
   },
   Aria: {
-    titre: "Papier rame Aria 80g en Côte d'Ivoire : prix carton et gros",
-    description: "Prix du papier rame Aria 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Aria 80g : Rame A4 Abidjan, Livraison Côte d'Ivoire",
+    description: "Rame A4 Aria 80g (500 feuilles) : carton {carton}, gros {gros} dès 10 cartons. Papier de copie pour bureaux et écoles, livraison en Côte d'Ivoire.",
   },
   Roch: {
-    titre: "Papier rame Roch 80g en Côte d'Ivoire : prix carton et gros",
-    description: "Prix du papier rame Roch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Roch 80g : Vente de Rames A4 Abidjan, Carton et Gros",
+    description: "Vente de rames A4 Roch 80g à Abidjan : carton de 5 rames {carton}, gros {gros} dès 10 cartons. Papier de copie, livraison en Côte d'Ivoire.",
   },
   "Smart Copy": {
-    titre: "Papier rame Smart Copy 80g en Côte d'Ivoire : prix carton et gros",
-    description: "Prix du papier rame Smart Copy 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Smart Copy A4 80g : Rame de Papier, Carton et Gros",
+    description: "Rame de papier Smart Copy A4 80g, laser et copieur : carton {carton}, gros {gros}. Livraison à Cocody, Yopougon, Bouaké et partout en CI.",
   },
   Authentik: {
-    titre: "Papier rame Authentik en Côte d'Ivoire : prix carton et gros",
-    description: "Prix du papier rame Authentik 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Authentik 80g : Acheter Papier Rame A4 en Carton",
+    description: "Acheter papier rame A4 Authentik 80g en carton : {carton} les 5 rames, {gros} dès 10 cartons. Revendeurs, écoles. Livraison en Côte d'Ivoire.",
   },
 };
 

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Titre from "./Titre";
 
 // Guide d'achat\u00a0: questions que les gens posent avant d'acheter du papier A4
@@ -54,6 +55,11 @@ export default function Guide() {
             </article>
           ))}
         </div>
+        <p className="mt-6 text-center">
+          <Link href="/types-de-papier-rame-a4" className="font-semibold text-profond underline">
+            Voir tous les types de papier rame A4 (70 g, 75 g, 80 g) →
+          </Link>
+        </p>
       </div>
     </section>
   );

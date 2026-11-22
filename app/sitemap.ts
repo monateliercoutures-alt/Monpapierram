@@ -16,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.95,
     },
+    {
+      url: `${SITE.url}/types-de-papier-rame-a4`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
     ...MARQUES.map((m) => ({
       url: `${SITE.url}/marques/${slugMarque(m)}`,
       lastModified: new Date(),

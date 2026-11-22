@@ -26,6 +26,7 @@ export default function Footer() {
           <ul className="flex flex-wrap gap-x-5 gap-y-1 text-encre/80">
             {[
               ["/papier-rame-abidjan", "Papier rame Abidjan"],
+              ["/types-de-papier-rame-a4", "Types de papier"],
               ["/livraison", "Livraison"],
               ["/politique-de-retour", "Retours"],
               ["/#faq", "FAQ"],

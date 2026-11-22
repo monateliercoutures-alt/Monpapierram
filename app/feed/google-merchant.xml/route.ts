@@ -1,4 +1,4 @@
-import { PRODUITS, SITE } from "@/lib/config";
+import { PRODUITS, SEUIL_GROS, SITE, grammage, type Produit } from "@/lib/config";
 
 /**
  * Flux produits pour Google Merchant Center : https://<site>/feed/google-merchant.xml
@@ -14,32 +14,71 @@ function xml(t: string): string {
   return t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
 }
 
-// Nombre de ramettes par article vendu (pour l'attribut multipack), selon l'identifiant produit
-const MULTIPACK: Record<string, number> = { carton: 5, gros: 5, "paperone-carton": 5, "paperone-gros": 5, "globulus-carton": 5, "globulus-gros": 5, "paperpro-carton": 5, "paperpro-gros": 5, "authentik-carton": 5, "authentik-gros": 5, "smart-copy-carton": 5, "smart-copy-gros": 5, "ultima-copy-carton": 5, "ultima-copy-gros": 5, "roch-carton": 5, "roch-gros": 5, "aone-carton": 5, "aone-gros": 5, "aria-carton": 5, "aria-gros": 5, "royal-touch-carton": 5, "royal-touch-gros": 5, "beifa-carton": 5, "beifa-gros": 5 };
+// Un carton contient toujours 5 ramettes ; la ramette seule n'a pas d'attribut multipack (valable aussi pour les futurs produits)
+const RAMETTES_PAR_CARTON = 5;
+
+// Titre au format recommandé par Google : marque d'abord, puis type de produit et attributs clés
+function titre(p: Produit): string {
+  const g = grammage(p).replace("g/m²", "g");
+  if (p.id === "ramette") return `${p.marque} Papier Rame A4 ${g} - Ramette de 500 feuilles`;
+  if (p.minQty > 1) return `${p.marque} Papier Rame A4 ${g} - Carton de 5 ramettes, prix par carton dès ${SEUIL_GROS} cartons`;
+  return `${p.marque} Papier Rame A4 ${g} - Carton de 5 ramettes (2 500 feuilles)`;
+}
+
+// Type de vente, pour classer les produits dans Merchant Center
+function typeVente(p: Produit): string {
+  if (p.id === "ramette") return "Ramette";
+  return p.minQty > 1 ? "Gros" : "Carton";
+}
+
+const balise = (nom: string, valeur: string) => `      <g:${nom}>${xml(valeur)}</g:${nom}>`;
+
+function detail(section: string, nom: string, valeur: string): string {
+  return `      <g:product_detail>
+        <g:section_name>${xml(section)}</g:section_name>
+        <g:attribute_name>${xml(nom)}</g:attribute_name>
+        <g:attribute_value>${xml(valeur)}</g:attribute_value>
+      </g:product_detail>`;
+}
 
 export function GET() {
   const articles = PRODUITS.filter((p) => p.prix !== null).map((p) => {
     const lien = `${SITE.url}/produits/${p.slug}`;
     const images = p.galerie.map((g) => `${SITE.url}${g.src}`);
-    const multipack = MULTIPACK[p.id];
-    return `    <item>
-      <g:id>${xml(p.id)}</g:id>
-      <g:title>${xml(p.nom.slice(0, 150))}</g:title>
-      <g:description>${xml(p.description.join(" ").slice(0, 5000))}</g:description>
-      <g:link>${xml(lien)}</g:link>
-      <g:image_link>${xml(images[0])}</g:image_link>
-${images
-  .slice(1, 10)
-  .map((i) => `      <g:additional_image_link>${xml(i)}</g:additional_image_link>`)
-  .join("\n")}
-      <g:availability>in_stock</g:availability>
-      <g:price>${p.prix} XOF</g:price>
-      <g:condition>new</g:condition>
-      <g:brand>${xml(p.marque)}</g:brand>
-      <g:identifier_exists>no</g:identifier_exists>
-      <g:google_product_category>Office Supplies &gt; General Supplies &gt; Paper Products &gt; Printer &amp; Copier Paper</g:google_product_category>
-      <g:product_type>Papier &gt; Papier rame A4 &gt; ${xml(p.marque)}</g:product_type>${multipack ? `\n      <g:multipack>${multipack}</g:multipack>` : ""}
-    </item>`;
+    const multipack = p.id === "ramette" ? 0 : RAMETTES_PAR_CARTON;
+    const g = grammage(p);
+    const feuilles = p.id === "ramette" ? "500" : "2 500";
+    const description = (p.minQty > 1 ? [...p.description, `Prix par carton à partir de ${SEUIL_GROS} cartons.`] : p.description).join(" ");
+    const lignes = [
+      balise("id", p.id),
+      balise("title", titre(p).slice(0, 150)),
+      balise("description", description.slice(0, 5000)),
+      balise("link", lien),
+      balise("image_link", images[0]),
+      ...images.slice(1, 10).map((i) => balise("additional_image_link", i)),
+      balise("availability", "in_stock"),
+      balise("price", `${p.prix} XOF`),
+      balise("condition", "new"),
+      balise("brand", p.marque),
+      balise("identifier_exists", "no"),
+      balise("google_product_category", "Office Supplies > General Supplies > Paper Products > Printer & Copier Paper"),
+      balise("product_type", `Papier > Papier rame A4 > ${p.marque} > ${typeVente(p)}`),
+      balise("size", "A4"),
+      balise("color", "Blanc"),
+      balise("material", "Papier"),
+      ...(multipack ? [balise("multipack", String(multipack))] : []),
+      balise("ships_from_country", "CI"),
+      ...p.points.slice(0, 5).map((pt) => balise("product_highlight", pt)),
+      detail("Caractéristiques", "Format", "A4 (210 × 297 mm)"),
+      detail("Caractéristiques", "Grammage", g),
+      detail("Caractéristiques", "Feuilles par ramette", "500"),
+      detail("Conditionnement", "Quantité vendue", p.id === "ramette" ? "1 ramette" : p.minQty > 1 ? `Carton de 5 ramettes (minimum ${SEUIL_GROS} cartons)` : "Carton de 5 ramettes"),
+      detail("Conditionnement", "Total de feuilles par article", feuilles),
+      balise("custom_label_0", p.marque),
+      balise("custom_label_1", typeVente(p)),
+      balise("custom_label_2", g),
+    ];
+    return `    <item>\n${lignes.join("\n")}\n    </item>`;
   });
 
   const corps = `<?xml version="1.0" encoding="UTF-8"?>

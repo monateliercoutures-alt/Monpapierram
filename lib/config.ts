@@ -803,6 +803,70 @@ export const PRODUITS: Produit[] = [
     metaDescription:
       "Papier rame A4 Royal Touch 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison en Côte d'Ivoire. Devis sur WhatsApp.",
   },
+  {
+    id: "beifa-carton",
+    marque: "Beifa",
+    slug: "carton-papier-rame-a4-beifa",
+    nom: "Carton papier rame A4 80g Beifa (5 ramettes)",
+    specs: "80 g/m² · 5 × 500 feuilles",
+    detail: "Papier rame A4 Beifa, au carton.",
+    prix: 12500,
+    unite: "le carton",
+    note: "Soit 2\u00a0500\u00a0FCFA la ramette",
+    minQty: 1,
+    image: "/images/beifa-2.jpg",
+    alt: "Carton de papier rame A4 Beifa 80 g/m², 5 ramettes de 500 feuilles",
+    points: ["5 ramettes de 500 feuilles", "Format A4 (210 × 297 mm), 80 g/m²", "Livraison partout en Côte d'Ivoire"],
+    galerie: [
+      { src: "/images/beifa-2.jpg", alt: "Papier rame A4 Beifa 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/beifa-1.jpg", alt: "Papier rame A4 Beifa 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/beifa-3.jpg", alt: "Papier rame A4 Beifa 80 g/m², carton et ramettes de 500 feuilles" },
+    ],
+    description: ["Le carton de papier rame A4 Beifa regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles de 80 g/m².", "Livraison partout en Côte d'Ivoire et paiement à la livraison ou par Mobile Money. Commandez en ligne, nous confirmons sur WhatsApp."],
+    usages: ["Bureaux et entreprises", "Écoles et centres de formation", "Cybercafés et centres de photocopie", "Impression et photocopie du quotidien"],
+    fiche: [
+      ["Marque", "Beifa"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "1 carton"],
+    ],
+    metaTitre: "Carton Papier Rame A4 Beifa 80g | Monpapierrame",
+    metaDescription:
+      "Carton de 5 ramettes papier rame A4 80g Beifa, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
+  },
+  {
+    id: "beifa-gros",
+    marque: "Beifa",
+    slug: "papier-rame-a4-beifa-10-cartons",
+    nom: "Papier rame A4 Beifa en gros (10 cartons)",
+    specs: "Lot de 10 cartons · 80 g/m²",
+    detail: "Pour les professionnels : lot de 10 cartons de papier rame A4 Beifa.",
+    prix: 12000,
+    unite: "le carton, dès 10 cartons",
+    note: `Soit 2\u00a0400\u00a0FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    minQty: 10,
+    image: "/images/beifa-1.jpg",
+    alt: "Carton de papier rame A4 Beifa 80 g/m², 5 ramettes de 500 feuilles",
+    points: ["Lot de 10 cartons (50 ramettes)", "25 000 feuilles A4 80 g/m²", "Facture sur demande"],
+    galerie: [
+      { src: "/images/beifa-1.jpg", alt: "Papier rame A4 Beifa 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/beifa-3.jpg", alt: "Papier rame A4 Beifa 80 g/m², carton et ramettes de 500 feuilles" },
+      { src: "/images/beifa-2.jpg", alt: "Papier rame A4 Beifa 80 g/m², carton et ramettes de 500 feuilles" },
+    ],
+    description: ["Achetez en gros du papier rame A4 Beifa : un lot de 10 cartons de 5 ramettes, soit 50 ramettes et 25 000 feuilles de 80 g/m².", "Le tarif gros s'applique dès 10 cartons, avec facture sur demande et livraison planifiée partout en Côte d'Ivoire."],
+    usages: ["Imprimeries et revendeurs", "Écoles, universités et administrations", "Entreprises à gros volume d'impression", "Approvisionnement régulier avec livraison planifiée"],
+    fiche: [
+      ["Marque", "Beifa"],
+      ["Format", "A4 (210 × 297 mm)"],
+      ["Grammage", "80 g/m²"],
+      ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
+      ["Quantité", "Lot de 10 cartons (50 ramettes)"],
+    ],
+    metaTitre: "Papier Rame A4 Beifa, 10 Cartons | Monpapierrame",
+    metaDescription:
+      "Papier rame A4 Beifa 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison en Côte d'Ivoire. Devis sur WhatsApp.",
+  },
 ];
 
 /** Remplace {prix} par le prix formaté du produit */
@@ -973,7 +1037,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Quelles marques de papier rame fournissez-vous\u00a0?",
-    r: "Nous fournissons les marques Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone, Aria et Royal Touch, en ramette (Double A), au carton de 5 ramettes et par lot de 10 cartons. Les prix sont indiqués sur chaque fiche produit.",
+    r: "Nous fournissons les marques Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone, Aria, Royal Touch et Beifa, en ramette (Double A), au carton de 5 ramettes et par lot de 10 cartons. Les prix sont indiqués sur chaque fiche produit.",
   },
   {
     q: "Quelle est votre politique de retour\u00a0?",
@@ -984,12 +1048,12 @@ export const FAQ: { q: string; r: string }[] = [
     r: "La livraison se fait en 24 à 72 heures après confirmation de votre commande, à Abidjan comme dans le reste de la Côte d'Ivoire.",
   },
   {
-    q: "Quelle marque de papier rame choisir : Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone, Aria ou Royal Touch\u00a0?",
-    r: "Les marques proposées sont toutes en format A4 de 500 feuilles par ramette, avec 5 ramettes par carton. Double A, Globulus, Paper Pro, Authentik, Smart Copy, Roch, Aone, Aria et Royal Touch font 80 g/m², Paper One 70 g/m² et Ultima Copy 75 g/m². Le comparatif des prix par carton est sur la page d'accueil. Pour l'impression recto verso, le 80 g/m² est conseillé.",
+    q: "Quelle marque de papier rame choisir : Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone, Aria, Royal Touch ou Beifa\u00a0?",
+    r: "Les marques proposées sont toutes en format A4 de 500 feuilles par ramette, avec 5 ramettes par carton. Double A, Globulus, Paper Pro, Authentik, Smart Copy, Roch, Aone, Aria, Royal Touch et Beifa font 80 g/m², Paper One 70 g/m² et Ultima Copy 75 g/m². Le comparatif des prix par carton est sur la page d'accueil. Pour l'impression recto verso, le 80 g/m² est conseillé.",
   },
   {
     q: "Quel est le prix d'un carton de papier A4 à Abidjan\u00a0?",
-    r: "Le carton de 5 ramettes Double A est à 19\u00a0900 FCFA. Les cartons Paper One, Globulus, Authentik et Smart Copy sont à 13\u00a0500 FCFA, et ceux de Paper Pro, Ultima Copy, Roch, Aone, Aria et Royal Touch à 12\u00a0500 FCFA. À partir de 10 cartons, le prix passe à 19\u00a0000 FCFA le carton en Double A, 13\u00a0000 FCFA pour Paper One, Globulus, Authentik et Smart Copy, et 12\u00a0000 FCFA pour Paper Pro, Ultima Copy, Roch, Aone, Aria et Royal Touch.",
+    r: "Le carton de 5 ramettes Double A est à 19\u00a0900 FCFA. Les cartons Paper One, Globulus, Authentik et Smart Copy sont à 13\u00a0500 FCFA, et ceux de Paper Pro, Ultima Copy, Roch, Aone, Aria, Royal Touch et Beifa à 12\u00a0500 FCFA. À partir de 10 cartons, le prix passe à 19\u00a0000 FCFA le carton en Double A, 13\u00a0000 FCFA pour Paper One, Globulus, Authentik et Smart Copy, et 12\u00a0000 FCFA pour Paper Pro, Ultima Copy, Roch, Aone, Aria, Royal Touch et Beifa.",
   },
   {
     q: "Livrez-vous à Bouaké, Yamoussoukro, San-Pédro ou Korhogo\u00a0?",
@@ -1005,7 +1069,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Êtes-vous grossiste de papier rame à Abidjan\u00a0?",
-    r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous sommes fournisseur des grandes marques de papier rame : Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone, Aria et Royal Touch. Nous vendons à l'unité (ramette), au carton et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
+    r: "Oui. Monpapierrame est grossiste de papier rame A4 Double A à Abidjan et livre partout en Côte d'Ivoire. Nous sommes fournisseur des grandes marques de papier rame : Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone, Aria, Royal Touch et Beifa. Nous vendons à l'unité (ramette), au carton et en gros à partir de 10 cartons, aux écoles, entreprises, administrations, imprimeries et revendeurs.",
   },
   {
     q: "Pouvez-vous établir une facture\u00a0?",
@@ -1013,7 +1077,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Quelles marques de papier rame A4 vendez-vous\u00a0?",
-    r: "Nous vendons onze marques de papier rame A4\u00a0: Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone, Aria et Royal Touch. Chaque marque a sa page avec les prix, les photos et les conditions de livraison.",
+    r: "Nous vendons douze marques de papier rame A4\u00a0: Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone, Aria, Royal Touch et Beifa. Chaque marque a sa page avec les prix, les photos et les conditions de livraison.",
   },
   {
     q: "Quel est le prix d'un carton de papier A4 Smart Copy\u00a0?",
@@ -1037,7 +1101,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Quel est le prix d'un paquet de rame de papier A4\u00a0?",
-    r: "Un paquet de rame (ramette) de 500 feuilles A4 Double A 80 g est à 4\u00a0000 FCFA. Au carton de 5 ramettes, la ramette revient à environ 3\u00a0980 FCFA en Double A, 2\u00a0700 FCFA en Paper One, Globulus, Authentik et Smart Copy, et 2\u00a0500 FCFA en Paper Pro, Ultima Copy, Roch, Aone, Aria et Royal Touch. Les prix de chaque produit sont sur sa fiche.",
+    r: "Un paquet de rame (ramette) de 500 feuilles A4 Double A 80 g est à 4\u00a0000 FCFA. Au carton de 5 ramettes, la ramette revient à environ 3\u00a0980 FCFA en Double A, 2\u00a0700 FCFA en Paper One, Globulus, Authentik et Smart Copy, et 2\u00a0500 FCFA en Paper Pro, Ultima Copy, Roch, Aone, Aria, Royal Touch et Beifa. Les prix de chaque produit sont sur sa fiche.",
   },
   {
     q: "Quel est le prix de la rame Double A à Abidjan\u00a0?",
@@ -1069,7 +1133,7 @@ export function grammage(p: Produit): string {
 }
 
 /** Marques proposées, dans l'ordre d'affichage */
-export const MARQUES = ["Double A", "Paper One", "Globulus", "Paper Pro", "Authentik", "Smart Copy", "Ultima Copy", "Roch", "Aone", "Aria", "Royal Touch"];
+export const MARQUES = ["Double A", "Paper One", "Globulus", "Paper Pro", "Authentik", "Smart Copy", "Ultima Copy", "Roch", "Aone", "Aria", "Royal Touch", "Beifa"];
 
 /** Adresse de la page d'une marque : /marques/<slug> */
 export function slugMarque(marque: string): string {
@@ -1101,6 +1165,10 @@ export const SEO_MARQUES: Record<string, { titre: string; description: string }>
   "Ultima Copy": {
     titre: "Papier Rame Ultima Copy 75g, Prix Carton | Monpapierrame",
     description: "Prix du papier rame Ultima Copy 75g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+  },
+  Beifa: {
+    titre: "Papier Rame Beifa 80g, Prix Carton | Monpapierrame",
+    description: "Prix du papier rame Beifa 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   "Royal Touch": {
     titre: "Papier Rame Royal Touch 80g, Prix Carton | Monpapierrame",
@@ -1173,6 +1241,25 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
       { q: "Où acheter du papier Ultima Copy à Abidjan ?", r: `Chez ${SITE.nom}. Commande en ligne ou sur WhatsApp, livraison à Cocody, Yopougon, Marcory, Abobo, Bouaké et dans toute la Côte d'Ivoire.` },
       { q: "Le papier Ultima Copy 75g convient-il à l'impression recto verso ?", r: "Il convient aux documents courants. Pour le recto verso sur des documents importants, un papier 80 g/m² est un peu plus opaque." },
       { q: "Combien de feuilles dans un carton Ultima Copy ?", r: "Un carton contient 5 ramettes de 500 feuilles, soit 2 500 feuilles A4. Le lot de 10 cartons représente 25 000 feuilles." },
+    ],
+  }),
+  Beifa: (x) => ({
+    h1: "Papier rame Beifa 80g en Côte d'Ivoire : prix carton et gros",
+    intro: [
+      `Le papier rame A4 Beifa ${x.g} est un papier multi-usage (Multi-Purpose Paper) pour la copie et l'impression de bureau. ${SITE.nom} le livre à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton dès ${SEUIL_GROS} cartons.`,
+      "Reconnaissable à son emballage rouge et blanc, le carton Beifa contient 5 ramettes de 500 feuilles A4 (210 × 297 mm), pour imprimantes laser, jet d'encre et photocopieurs.",
+    ],
+    atouts: [
+      ["Multi-usage 80 g/m²", "Un papier de copie polyvalent pour le bureau, l'école et les cybercafés."],
+      ["Prix de gros", `${x.carton} le carton de 5 ramettes, soit 2 500 feuilles.`],
+      ["Tarif dès 10 cartons", `${x.gros} le carton à partir de ${SEUIL_GROS} cartons, avec facture sur demande.`],
+      ["Livraison partout", `${V0}.`],
+    ],
+    faq: [
+      { q: "Quel est le prix du carton de papier Beifa ?", r: `Le carton de 5 ramettes de papier A4 Beifa ${x.g} est à ${x.carton}. À partir de ${SEUIL_GROS} cartons, le prix est de ${x.gros} le carton.` },
+      { q: "Où acheter du papier Beifa à Abidjan ?", r: `Chez ${SITE.nom}. Commande en ligne ou sur WhatsApp, livraison à Cocody, Yopougon, Marcory, Abobo et partout en Côte d'Ivoire.` },
+      { q: "Le papier Beifa convient-il à l'impression recto verso ?", r: "Oui, le 80 g/m² limite la transparence en recto verso et convient aux imprimantes laser et jet d'encre." },
+      { q: "Combien de feuilles dans un carton Beifa ?", r: "Un carton regroupe 5 ramettes de 500 feuilles, soit 2 500 feuilles A4. Un lot de 10 cartons fait 25 000 feuilles." },
     ],
   }),
   "Royal Touch": (x) => ({
@@ -1284,7 +1371,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
     faq: [
       { q: "Quel est le prix du carton de papier Paper One ?", r: `Le carton de 5 ramettes de papier A4 Paper One ${x.g} est à ${x.carton}. À partir de ${SEUIL_GROS} cartons, il passe à ${x.gros} le carton.` },
-      { q: "Le papier Paper One 70g est-il adapté à l'impression recto verso ?", r: `Il convient aux documents courants. Pour le recto verso sur des documents importants ou des textes denses, un papier 80 g/m² (Double A, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone, Aria, Royal Touch) est plus opaque.` },
+      { q: "Le papier Paper One 70g est-il adapté à l'impression recto verso ?", r: `Il convient aux documents courants. Pour le recto verso sur des documents importants ou des textes denses, un papier 80 g/m² (Double A, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone, Aria, Royal Touch, Beifa) est plus opaque.` },
       { q: "Où acheter du papier rame Paper One à Abidjan ?", r: `Chez ${SITE.nom}, grossiste de papier rame A4. Commande en ligne ou sur WhatsApp, livraison à Cocody, Yopougon, Marcory, Abobo et dans toute la Côte d'Ivoire.` },
       { q: "Quelle différence entre Paper One 70g et un papier 80g ?", r: `Le 70 g/m² est plus léger et plus économique, idéal pour les brouillons et copies. Le 80 g/m² est plus rigide et plus opaque, préféré pour les documents officiels et le recto verso.` },
     ],

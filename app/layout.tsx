@@ -61,6 +61,7 @@ export const metadata: Metadata = {
     "papier rame Aone",
     "papier rame Aria",
     "papier rame Royal Touch",
+    "papier rame Beifa",
     "paquet de rame prix",
     "prix paquet de rame papier A4",
     "rame Double A",

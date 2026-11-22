@@ -1147,52 +1147,52 @@ export function trouverMarque(slug: string): string | undefined {
 /** Titre et description Google de chaque page marque ({carton}, {gros}, {ramette} = prix formatés) */
 export const SEO_MARQUES: Record<string, { titre: string; description: string }> = {
   "Double A": {
-    titre: "Papier Rame Double A en Côte d'Ivoire, Prix | Monpapierrame",
-    description: "Prix de la rame Double A 80g à Abidjan : ramette {ramette}, carton {carton}, gros dès 10 cartons. Livraison à Cocody, Yopougon et en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Double A : Prix | Monpapierrame",
+    description: "Fournisseur papier rame Double A : ramette {ramette}, carton {carton}, gros dès 10 cartons. Revendeurs, entreprises, livraison en Côte d'Ivoire.",
   },
   "Paper One": {
-    titre: "Papier Rame Paper One 70g, Prix Carton | Monpapierrame",
-    description: "Prix du papier rame Paper One 70g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Paper One : Prix | Monpapierrame",
+    description: "Fournisseur papier rame Paper One 70g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Globulus: {
-    titre: "Papier Rame Globulus 80g, Prix Carton | Monpapierrame",
-    description: "Prix du papier rame Globulus 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Globulus : Prix | Monpapierrame",
+    description: "Fournisseur papier rame Globulus 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Paper Pro": {
-    titre: "Papier Rame Paper Pro 80g, Prix Carton | Monpapierrame",
-    description: "Prix du papier rame Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Paper Pro : Prix | Monpapierrame",
+    description: "Fournisseur papier rame Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Ultima Copy": {
-    titre: "Papier Rame Ultima Copy 75g, Prix Carton | Monpapierrame",
-    description: "Prix du papier rame Ultima Copy 75g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Ultima Copy : Prix | Monpapierrame",
+    description: "Fournisseur papier rame Ultima Copy 75g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Beifa: {
-    titre: "Papier Rame Beifa 80g, Prix Carton | Monpapierrame",
-    description: "Prix du papier rame Beifa 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Beifa : Prix et Gros | Monpapierrame",
+    description: "Fournisseur papier rame Beifa 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Royal Touch": {
-    titre: "Papier Rame Royal Touch 80g, Prix Carton | Monpapierrame",
-    description: "Prix du papier rame Royal Touch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Royal Touch : Prix | Monpapierrame",
+    description: "Fournisseur papier rame Royal Touch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Aone: {
-    titre: "Papier Rame Aone 80g, Prix Carton | Monpapierrame",
-    description: "Prix du papier rame Aone 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Aone : Prix et Gros | Monpapierrame",
+    description: "Fournisseur papier rame Aone 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Aria: {
-    titre: "Papier Rame Aria 80g, Prix Carton | Monpapierrame",
-    description: "Prix du papier rame Aria 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Aria : Prix et Gros | Monpapierrame",
+    description: "Fournisseur papier rame Aria 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Roch: {
-    titre: "Papier Rame Roch 80g, Prix Carton | Monpapierrame",
-    description: "Prix du papier rame Roch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Roch : Prix et Gros | Monpapierrame",
+    description: "Fournisseur papier rame Roch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   "Smart Copy": {
-    titre: "Papier Rame Smart Copy 80g, Prix Carton | Monpapierrame",
-    description: "Prix du papier rame Smart Copy 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Smart Copy : Prix | Monpapierrame",
+    description: "Fournisseur papier rame Smart Copy 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
   Authentik: {
-    titre: "Papier Rame Authentik 80g, Prix Carton | Monpapierrame",
-    description: "Prix du papier rame Authentik 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
+    titre: "Fournisseur Papier Rame Authentik : Prix | Monpapierrame",
+    description: "Fournisseur papier rame Authentik 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
   },
 };
 
@@ -1204,7 +1204,7 @@ const V0 = "Cocody, Yopougon, Marcory, Abobo, Koumassi, Plateau, Bouaké, San-P�
 
 export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> = {
   "Double A": (x) => ({
-    h1: "Papier rame Double A en Côte d'Ivoire : prix ramette, carton et gros",
+    h1: "Fournisseur papier rame Double A en Côte d'Ivoire : prix ramette, carton et gros",
     intro: [
       `Double A est l'une des marques de papier rame A4 les plus demandées pour le bureau, l'école et la photocopie. Chez ${SITE.nom}, vous trouvez le papier Double A ${x.g} à Abidjan en trois formats : la ramette de 500 feuilles à ${x.ramette}, le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et le carton en gros à ${x.gros} dès ${SEUIL_GROS} cartons.`,
       "La rame Double A (le paquet de 500 feuilles A4) est notre produit le plus demandé : feuille A4 80 g/m² à l'unité, au carton de 5 rames ou en gros dès 10 cartons, livrée à Abidjan et partout en Côte d'Ivoire.",
@@ -1225,7 +1225,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
   }),
   "Ultima Copy": (x) => ({
-    h1: "Papier rame Ultima Copy 75g en Côte d'Ivoire : prix carton et gros",
+    h1: "Fournisseur papier rame Ultima Copy 75g en Côte d'Ivoire : prix carton et gros",
     intro: [
       `Le papier rame A4 Ultima Copy ${x.g} est un papier blanc multi-usage pour imprimer et photocopier au quotidien. ${SITE.nom} le livre à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton à partir de ${SEUIL_GROS} cartons.`,
       "Reconnaissable à son emballage jaune et bleu, le carton Ultima Copy contient 5 ramettes de 500 feuilles A4 (210 × 297 mm), pour imprimantes laser, jet d'encre et photocopieurs, avec un prix de gros parmi les plus bas de notre gamme.",
@@ -1244,7 +1244,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
   }),
   Beifa: (x) => ({
-    h1: "Papier rame Beifa 80g en Côte d'Ivoire : prix carton et gros",
+    h1: "Fournisseur papier rame Beifa 80g en Côte d'Ivoire : prix carton et gros",
     intro: [
       `Le papier rame A4 Beifa ${x.g} est un papier multi-usage (Multi-Purpose Paper) pour la copie et l'impression de bureau. ${SITE.nom} le livre à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton dès ${SEUIL_GROS} cartons.`,
       "Reconnaissable à son emballage rouge et blanc, le carton Beifa contient 5 ramettes de 500 feuilles A4 (210 × 297 mm), pour imprimantes laser, jet d'encre et photocopieurs.",
@@ -1263,7 +1263,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
   }),
   "Royal Touch": (x) => ({
-    h1: "Papier rame Royal Touch 80g en Côte d'Ivoire : prix carton et gros",
+    h1: "Fournisseur papier rame Royal Touch 80g en Côte d'Ivoire : prix carton et gros",
     intro: [
       `Le papier rame A4 Royal Touch ${x.g} est un papier de copie à la surface lisse, pensé pour une impression nette. ${SITE.nom} le livre à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton dès ${SEUIL_GROS} cartons.`,
       "Reconnaissable à son emballage blanc, violet et orange, le carton Royal Touch contient 5 ramettes de 500 feuilles A4 (210 × 297 mm), pour imprimantes laser, jet d'encre et photocopieurs.",
@@ -1282,7 +1282,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
   }),
   Aone: (x) => ({
-    h1: "Papier rame Aone 80g en Côte d'Ivoire : prix carton et gros",
+    h1: "Fournisseur papier rame Aone 80g en Côte d'Ivoire : prix carton et gros",
     intro: [
       `Le papier rame A4 Aone ${x.g} est un papier multi-usage pour la copie, l'impression laser et jet d'encre. ${SITE.nom} le livre à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton à partir de ${SEUIL_GROS} cartons.`,
       "Le carton Aone, à l'emballage rouge et orange, contient 5 ramettes de 500 feuilles A4 (210 × 297 mm), pour les bureaux, écoles, administrations, cybercafés et imprimeries.",
@@ -1301,7 +1301,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
   }),
   Aria: (x) => ({
-    h1: "Papier rame Aria 80g en Côte d'Ivoire : prix carton et gros",
+    h1: "Fournisseur papier rame Aria 80g en Côte d'Ivoire : prix carton et gros",
     intro: [
       `Le papier rame A4 Aria ${x.g} est un papier de copie blanc, apprécié pour le bureau et l'école. ${SITE.nom} le propose à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton dès ${SEUIL_GROS} cartons.`,
       "Reconnaissable à son emballage bleu et jaune, le carton Aria contient 5 ramettes de 500 feuilles A4 (210 × 297 mm), compatibles avec les imprimantes laser, jet d'encre et les photocopieurs.",
@@ -1320,7 +1320,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
   }),
   Roch: (x) => ({
-    h1: "Papier rame Roch 80g en Côte d'Ivoire : prix carton et gros",
+    h1: "Fournisseur papier rame Roch 80g en Côte d'Ivoire : prix carton et gros",
     intro: [
       `Le papier rame A4 Roch ${x.g} est un papier de copie multi-usage pour le bureau, l'école et l'impression à fort volume. ${SITE.nom} le propose à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton à partir de ${SEUIL_GROS} cartons.`,
       "Le carton Roch, à l'emballage bleu, contient 5 ramettes de 500 feuilles A4 (210 × 297 mm), compatibles avec les imprimantes laser, jet d'encre et les photocopieurs.",
@@ -1339,7 +1339,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
   }),
   Authentik: (x) => ({
-    h1: "Papier rame Authentik en Côte d'Ivoire : prix carton et gros",
+    h1: "Fournisseur papier rame Authentik en Côte d'Ivoire : prix carton et gros",
     intro: [
       `Le papier rame A4 Authentik ${x.g} est une solution économique pour imprimer et photocopier au quotidien. ${SITE.nom} le propose à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton à partir de ${SEUIL_GROS} cartons.`,
       "Avec 500 feuilles par ramette au format A4 (210 × 297 mm), le papier Authentik convient aux bureaux, écoles, administrations, cybercafés et centres de photocopie qui cherchent un papier de qualité à un prix de gros intéressant.",
@@ -1358,7 +1358,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
   }),
   "Paper One": (x) => ({
-    h1: "Papier rame Paper One 70g en Côte d'Ivoire : prix carton et gros",
+    h1: "Fournisseur papier rame Paper One 70g en Côte d'Ivoire : prix carton et gros",
     intro: [
       `Le papier rame A4 Paper One ${x.g} est le choix économique pour les impressions courantes. ${SITE.nom} le livre à Abidjan et partout en Côte d'Ivoire : carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton à partir de ${SEUIL_GROS} cartons.`,
       "Plus léger que le 80 g/m², le papier Paper One 70 g convient aux brouillons, copies internes, circulaires, exercices et documents de travail. Chaque ramette contient 500 feuilles A4 (210 × 297 mm).",
@@ -1377,7 +1377,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
   }),
   Globulus: (x) => ({
-    h1: "Papier rame Globulus 80g en Côte d'Ivoire : prix carton et gros",
+    h1: "Fournisseur papier rame Globulus 80g en Côte d'Ivoire : prix carton et gros",
     intro: [
       `Le papier rame A4 Globulus ${x.g} est un papier polyvalent pour l'impression, la copie et le travail de bureau. ${SITE.nom} le propose à Abidjan et dans toute la Côte d'Ivoire : le carton de 5 ramettes (2 500 feuilles) à ${x.carton}, et ${x.gros} le carton dès ${SEUIL_GROS} cartons.`,
       "Chaque ramette Globulus contient 500 feuilles A4 de 210 × 297 mm. Il s'utilise sur les imprimantes laser, jet d'encre et les photocopieurs, pour les entreprises, écoles, administrations, cybercafés et particuliers.",
@@ -1396,7 +1396,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
   }),
   "Paper Pro": (x) => ({
-    h1: "Papier rame Paper Pro 80g en Côte d'Ivoire : prix carton et gros",
+    h1: "Fournisseur papier rame Paper Pro 80g en Côte d'Ivoire : prix carton et gros",
     intro: [
       `Le papier rame A4 Paper Pro ${x.g} s'adresse aux professionnels qui impriment beaucoup : bureaux, cabinets, administrations, écoles et imprimeries. ${SITE.nom} le livre à Abidjan et en Côte d'Ivoire : carton de 5 ramettes (2 500 feuilles) à ${x.carton}, ${x.gros} le carton dès ${SEUIL_GROS} cartons.`,
       "Format A4 (210 × 297 mm), 500 feuilles par ramette, compatible avec les imprimantes laser, jet d'encre et les photocopieurs. Une facture est établie sur demande pour les entreprises et les administrations.",
@@ -1415,7 +1415,7 @@ export const CONTENU_MARQUES: Record<string, (x: PrixMarque) => ContenuMarque> =
     ],
   }),
   "Smart Copy": (x) => ({
-    h1: "Papier rame Smart Copy 80g en Côte d'Ivoire : prix carton et gros",
+    h1: "Fournisseur papier rame Smart Copy 80g en Côte d'Ivoire : prix carton et gros",
     intro: [
       `Smart Copy est un papier rame A4 laser et copieur de ${x.g}, livré par ${SITE.nom} à Abidjan et dans toute la Côte d'Ivoire. Le carton de 5 ramettes (2 500 feuilles) est à ${x.carton}, et à ${x.gros} le carton dès ${SEUIL_GROS} cartons.`,
       "Le carton Smart Copy est reconnaissable à son emballage rouge. Il contient 5 ramettes de 500 feuilles A4 (210 × 297 mm), pour imprimantes laser, jet d'encre et photocopieurs.",

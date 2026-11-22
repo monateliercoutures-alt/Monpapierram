@@ -76,6 +76,10 @@ export default async function PageMarque({ params }: { params: Promise<{ slug: s
       r: `Oui. Nous fournissons les entreprises, administrations, écoles, universités, cybercafés, imprimeries et revendeurs, avec facture sur demande et tarif dégressif à partir de ${SEUIL_GROS} cartons. Demandez un devis sur WhatsApp.`,
     },
     {
+      q: `Qui est le fournisseur de papier rame ${marque} en Côte d'Ivoire ?`,
+      r: `${SITE.nom} est grossiste et fournisseur de papier rame ${marque} à Abidjan. Nous livrons les entreprises, administrations, écoles, cybercafés, imprimeries et revendeurs partout en Côte d'Ivoire, avec facture sur demande et tarif gros dès ${SEUIL_GROS} cartons.`,
+    },
+    {
       q: "Quels sont les moyens de paiement ?",
       r: "Paiement à la livraison, Orange Money, MTN MoMo, Moov Money ou Wave.",
     },
@@ -158,11 +162,11 @@ export default async function PageMarque({ params }: { params: Promise<{ slug: s
 
           <section aria-labelledby="titre-pro" className="mt-14 grid gap-8 border-t border-profond/10 pt-10 lg:grid-cols-2 lg:gap-14">
             <div>
-              <h2 id="titre-pro" className="text-xl font-bold text-nuit">Pour les entreprises, écoles et administrations</h2>
+              <h2 id="titre-pro" className="text-xl font-bold text-nuit">Fournisseur {marque} pour entreprises, revendeurs et administrations</h2>
               <p className="justifie mt-3 text-encre/85">
-                Vous achetez du papier rame en quantité pour votre entreprise, votre école, votre administration, votre cybercafé ou votre imprimerie ?
+                Vous cherchez un fournisseur de papier rame {marque} pour votre entreprise, votre école, votre administration, votre cybercafé, votre imprimerie, ou pour revendre ?
                 À partir de {SEUIL_GROS} cartons, le tarif gros s&apos;applique{gros?.prix ? ` : ${formatPrixTexte(gros.prix)} le carton de papier ${marque}` : ""}.
-                Une facture peut être établie sur demande et la livraison est planifiée avec vous.
+                Devenez client grossiste ou revendeur {marque} : une facture peut être établie sur demande, la livraison est planifiée avec vous, et vous êtes servi à Abidjan et partout en Côte d'Ivoire.
               </p>
               <a
                 href={lienWhatsApp(message)}
@@ -171,7 +175,7 @@ export default async function PageMarque({ params }: { params: Promise<{ slug: s
                 className="mt-5 inline-flex min-h-12 items-center gap-2 rounded-bouton bg-profond px-7 font-semibold text-white hover:bg-nuit"
               >
                 <IconeWhatsApp />
-                Demander un devis sur WhatsApp
+                Demander un devis fournisseur sur WhatsApp
               </a>
             </div>
             <div>

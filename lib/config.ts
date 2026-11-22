@@ -310,9 +310,9 @@ export const PRODUITS: Produit[] = [
     nom: "Carton papier rame A4 80g Paper Pro (5 ramettes)",
     specs: "80 g/m² · 5 × 500 feuilles",
     detail: "Papier rame A4 Paper Pro, au carton.",
-    prix: 13500,
+    prix: 12500,
     unite: "le carton",
-    note: "Soit 2\u00a0700\u00a0FCFA la ramette",
+    note: "Soit 2\u00a0500\u00a0FCFA la ramette",
     minQty: 1,
     image: "/images/paper-pro-1.jpg",
     alt: "Carton de papier rame A4 Paper Pro 80 g",
@@ -342,9 +342,9 @@ export const PRODUITS: Produit[] = [
     nom: "Papier rame A4 Paper Pro en gros (10 cartons)",
     specs: "Lot de 10 cartons · 80 g/m²",
     detail: "Pour les professionnels : lot de 10 cartons de papier rame A4 Paper Pro.",
-    prix: 13000,
+    prix: 12000,
     unite: "le carton, dès 10 cartons",
-    note: `Soit 2\u00a0600\u00a0FCFA la ramette, dès ${SEUIL_GROS} cartons`,
+    note: `Soit 2\u00a0400\u00a0FCFA la ramette, dès ${SEUIL_GROS} cartons`,
     minQty: 10,
     image: "/images/paper-pro-2.jpg",
     alt: "Carton de papier rame A4 Paper Pro 80 g",
@@ -989,7 +989,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Quel est le prix d'un carton de papier A4 à Abidjan\u00a0?",
-    r: "Le carton de 5 ramettes Double A est à 19\u00a0900 FCFA. Les cartons Paper One, Globulus, Paper Pro, Authentik et Smart Copy sont à 13\u00a0500 FCFA, et ceux d'Ultima Copy, Roch, Aone, Aria et Royal Touch à 12\u00a0500 FCFA. À partir de 10 cartons, le prix passe à 19\u00a0000 FCFA le carton en Double A, 13\u00a0000 FCFA pour Paper One, Globulus, Paper Pro, Authentik et Smart Copy, et 12\u00a0000 FCFA pour Ultima Copy, Roch, Aone, Aria et Royal Touch.",
+    r: "Le carton de 5 ramettes Double A est à 19\u00a0900 FCFA. Les cartons Paper One, Globulus, Authentik et Smart Copy sont à 13\u00a0500 FCFA, et ceux de Paper Pro, Ultima Copy, Roch, Aone, Aria et Royal Touch à 12\u00a0500 FCFA. À partir de 10 cartons, le prix passe à 19\u00a0000 FCFA le carton en Double A, 13\u00a0000 FCFA pour Paper One, Globulus, Authentik et Smart Copy, et 12\u00a0000 FCFA pour Paper Pro, Ultima Copy, Roch, Aone, Aria et Royal Touch.",
   },
   {
     q: "Livrez-vous à Bouaké, Yamoussoukro, San-Pédro ou Korhogo\u00a0?",
@@ -1037,7 +1037,7 @@ export const FAQ: { q: string; r: string }[] = [
   },
   {
     q: "Quel est le prix d'un paquet de rame de papier A4\u00a0?",
-    r: "Un paquet de rame (ramette) de 500 feuilles A4 Double A 80 g est à 4\u00a0000 FCFA. Au carton de 5 ramettes, la ramette revient à environ 3\u00a0980 FCFA en Double A, 2\u00a0700 FCFA en Paper One, Globulus, Paper Pro, Authentik et Smart Copy, et 2\u00a0500 FCFA en Ultima Copy, Roch, Aone, Aria et Royal Touch. Les prix de chaque produit sont sur sa fiche.",
+    r: "Un paquet de rame (ramette) de 500 feuilles A4 Double A 80 g est à 4\u00a0000 FCFA. Au carton de 5 ramettes, la ramette revient à environ 3\u00a0980 FCFA en Double A, 2\u00a0700 FCFA en Paper One, Globulus, Authentik et Smart Copy, et 2\u00a0500 FCFA en Paper Pro, Ultima Copy, Roch, Aone, Aria et Royal Touch. Les prix de chaque produit sont sur sa fiche.",
   },
   {
     q: "Quel est le prix de la rame Double A à Abidjan\u00a0?",

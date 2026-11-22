@@ -12,7 +12,7 @@ const trait = {
 
 const POINTS = [
   {
-    titre: "10 marques de papier rame",
+    titre: "11 marques de papier rame",
     texte: "Double A, Smart Copy, Globulus…",
     icone: (
       <svg {...trait}>

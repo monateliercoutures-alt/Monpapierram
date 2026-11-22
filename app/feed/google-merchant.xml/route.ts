@@ -15,7 +15,7 @@ function xml(t: string): string {
 }
 
 // Nombre de ramettes par article vendu (pour l'attribut multipack), selon l'identifiant produit
-const MULTIPACK: Record<string, number> = { carton: 5, gros: 5, "paperone-carton": 5, "paperone-gros": 5, "globulus-carton": 5, "globulus-gros": 5, "paperpro-carton": 5, "paperpro-gros": 5, "authentik-carton": 5, "authentik-gros": 5, "smart-copy-carton": 5, "smart-copy-gros": 5, "ultima-copy-carton": 5, "ultima-copy-gros": 5, "roch-carton": 5, "roch-gros": 5, "aone-carton": 5, "aone-gros": 5, "aria-carton": 5, "aria-gros": 5 };
+const MULTIPACK: Record<string, number> = { carton: 5, gros: 5, "paperone-carton": 5, "paperone-gros": 5, "globulus-carton": 5, "globulus-gros": 5, "paperpro-carton": 5, "paperpro-gros": 5, "authentik-carton": 5, "authentik-gros": 5, "smart-copy-carton": 5, "smart-copy-gros": 5, "ultima-copy-carton": 5, "ultima-copy-gros": 5, "roch-carton": 5, "roch-gros": 5, "aone-carton": 5, "aone-gros": 5, "aria-carton": 5, "aria-gros": 5, "royal-touch-carton": 5, "royal-touch-gros": 5 };
 
 export function GET() {
   const articles = PRODUITS.filter((p) => p.prix !== null).map((p) => {

@@ -15,7 +15,7 @@ export default function Produits() {
   return (
     <section id="produits" className="bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-6xl">
-        <Titre titre="Nos produits" texte="Papier rame A4 Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone et Aria, livré partout en Côte d'Ivoire." />
+        <Titre titre="Nos produits" texte="Papier rame A4 Double A, Paper One, Globulus, Paper Pro, Authentik, Smart Copy, Ultima Copy, Roch, Aone, Aria et Royal Touch, livré partout en Côte d'Ivoire." />
 
         <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {liste.map((p, i) => (

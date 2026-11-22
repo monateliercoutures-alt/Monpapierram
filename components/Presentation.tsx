@@ -34,7 +34,7 @@ export default function Presentation() {
               {SITE.nom} est <strong>grossiste et fournisseur de papier rame A4</strong> à Abidjan et partout en Côte d&apos;Ivoire, pour les marques <strong>Double A, Paper One et Globulus</strong>. Nous proposons des
               ramettes de 500 feuilles, des cartons de 5 ramettes (2 500 feuilles) et des cartons en gros pour les
               professionnels. Le papier Double A est reconnu pour sa blancheur régulière et son passage sans bourrage
-              dans les imprimantes laser, jet d&apos;encre et les photocopieurs. Les papiers Paper One (70 g/m²), Globulus, Paper Pro, Authentik, Smart Copy (80 g/m²), Ultima Copy (75 g/m²), Roch, Aone et Aria (80 g/m²) sont proposés au carton de 5 ramettes et par lot de 10 cartons : 13 500 FCFA le carton pour la plupart (12 500 FCFA pour Ultima Copy, Roch, Aone et Aria), et dès 10 cartons 13 000 FCFA (12 000 FCFA pour Ultima Copy, Roch, Aone et Aria).
+              dans les imprimantes laser, jet d&apos;encre et les photocopieurs. Les papiers Paper One (70 g/m²), Globulus, Paper Pro, Authentik, Smart Copy (80 g/m²), Ultima Copy (75 g/m²), Roch, Aone, Aria et Royal Touch (80 g/m²) sont proposés au carton de 5 ramettes et par lot de 10 cartons : 13 500 FCFA le carton pour la plupart (12 500 FCFA pour Ultima Copy, Roch, Aone, Aria et Royal Touch), et dès 10 cartons 13 000 FCFA (12 000 FCFA pour Ultima Copy, Roch, Aone, Aria et Royal Touch).
             </p>
             <p>
               Vous commandez en ligne, nous confirmons votre commande sur WhatsApp, puis nous vous livrons à Abidjan et

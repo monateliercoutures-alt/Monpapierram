@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MARQUES, MOYENS_MOBILE, slugMarque, SITE, MESSAGE_GENERAL, lienWhatsApp } from "@/lib/config";
+import { CATEGORIES, MARQUES, MOYENS_MOBILE, slugMarque, SITE, MESSAGE_GENERAL, lienWhatsApp } from "@/lib/config";
 import { IconeWhatsApp } from "./Icones";
 
 // Pied de page simple : logo, liens utiles, contact, paiements, copyright
@@ -33,6 +33,11 @@ export default function Footer() {
             ].map(([href, label]) => (
               <li key={href}>
                 <a href={href} className="inline-flex min-h-9 items-center font-medium hover:text-profond hover:underline">{label}</a>
+              </li>
+            ))}
+            {CATEGORIES.map((c) => (
+              <li key={c.slug}>
+                <a href={`/categories/${c.slug}`} className="inline-flex min-h-9 items-center font-medium hover:text-profond hover:underline">{c.nom}</a>
               </li>
             ))}
             {MARQUES.map((m) => (

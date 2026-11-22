@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MARQUES, SITE, slugMarque } from "@/lib/config";
+import { CATEGORIES, MARQUES, SITE, slugMarque } from "@/lib/config";
 import { usePanier } from "./PanierContext";
 import BarreInfo from "./BarreInfo";
 import RechercheProduits from "./RechercheProduits";
@@ -79,6 +79,14 @@ export default function Header() {
               Tous les produits
             </Link>
           </li>
+          {CATEGORIES.map((c) => (
+            <li key={c.slug}>
+              <Link href={`/categories/${c.slug}`} className="inline-flex h-10 items-center px-3 text-sm font-bold text-nuit hover:text-profond">
+                {c.format}
+              </Link>
+            </li>
+          ))}
+          <li aria-hidden="true" className="px-1 text-encre/30">|</li>
           {MARQUES.map((m) => (
             <li key={m}>
               <Link href={`/marques/${slugMarque(m)}`} className="inline-flex h-10 items-center px-3 text-sm font-medium text-encre/80 hover:text-profond">

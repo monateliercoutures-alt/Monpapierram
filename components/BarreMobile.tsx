@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { MARQUES, slugMarque } from "@/lib/config";
+import { CATEGORIES, MARQUES, slugMarque } from "@/lib/config";
 import { usePanier } from "./PanierContext";
 
 const icone = {
@@ -35,12 +35,20 @@ export default function BarreMobile() {
       {cats && (
         <div className="fixed inset-0 z-40 md:hidden">
           <button type="button" aria-label="Fermer les catégories" onClick={() => setCats(false)} className="absolute inset-0 bg-black/40" />
-          <div role="dialog" aria-label="Catégories" className="absolute inset-x-0 bottom-16 rounded-t-carte border-t border-profond/15 bg-white p-4 shadow-lg">
+          <div role="dialog" aria-label="Catégories" className="absolute inset-x-0 bottom-16 max-h-[70vh] overflow-y-auto rounded-t-carte border-t border-profond/15 bg-white p-4 shadow-lg">
             <p className="text-base font-bold text-nuit">Catégories</p>
             <ul className="mt-2 divide-y divide-profond/10">
               <li>
                 <Link href="/papier-rame-abidjan" className="flex min-h-12 items-center font-semibold text-profond">Tous les produits</Link>
               </li>
+              {CATEGORIES.map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/categories/${c.slug}`} className="flex min-h-12 items-center justify-between font-semibold text-nuit">
+                    {c.nom}
+                    <span aria-hidden="true" className="text-encre/40">›</span>
+                  </Link>
+                </li>
+              ))}
               {MARQUES.map((m) => (
                 <li key={m}>
                   <Link href={`/marques/${slugMarque(m)}`} className="flex min-h-12 items-center justify-between text-encre">
@@ -62,7 +70,7 @@ export default function BarreMobile() {
           </svg>
           Accueil
         </Link>
-        <button type="button" onClick={() => setCats((c) => !c)} aria-expanded={cats} className={`${bouton} ${cats || pathname.startsWith("/marques") ? actif : normal}`}>
+        <button type="button" onClick={() => setCats((c) => !c)} aria-expanded={cats} className={`${bouton} ${cats || (pathname.startsWith("/marques") || pathname.startsWith("/categories")) ? actif : normal}`}>
           <svg {...icone}>
             <rect x="4" y="4" width="6.5" height="6.5" rx="1" />
             <rect x="13.5" y="4" width="6.5" height="6.5" rx="1" />

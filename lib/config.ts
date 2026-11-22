@@ -1311,3 +1311,70 @@ export function faqProduit(p: Produit): { q: string; r: string }[] {
     },
   ];
 }
+
+
+/** Catégories de papier rame par format. Les formats « sur demande » n'ont pas de produit en ligne : prix et disponibilité sont confirmés sur WhatsApp. */
+export type Categorie = {
+  slug: string;
+  format: string;
+  nom: string;
+  dimensions: string;
+  surDemande: boolean;
+  titre: string;
+  description: string;
+  intro: string;
+  usages: string[];
+  faq: { q: string; r: string }[];
+};
+
+export const CATEGORIES: Categorie[] = [
+  {
+    slug: "papier-rame-a4",
+    format: "A4",
+    nom: "Papier rame A4",
+    dimensions: "210 × 297 mm",
+    surDemande: false,
+    titre: "Papier Rame A4 Abidjan : Toutes les Marques | Monpapierrame",
+    description: "Papier rame A4 à Abidjan : ramette 500 feuilles, carton, gros. Double A, Paper One, Globulus, Roch, Aone… Prix et livraison en Côte d'Ivoire.",
+    intro: "Le format A4 (210 × 297 mm) est le format standard du bureau, de l'école et de la photocopie. Retrouvez toutes nos marques de papier rame A4, de 70 à 80 g/m², à l'unité, au carton de 5 rames et en gros dès 10 cartons.",
+    usages: ["Bureaux et entreprises", "Écoles et universités", "Cybercafés et photocopie", "Administrations et imprimeries"],
+    faq: [
+      { q: "Quelle est la taille d'une feuille A4 ?", r: "Une feuille A4 mesure 210 × 297 mm. Une rame contient 500 feuilles." },
+      { q: "Où acheter du papier rame A4 à Abidjan ?", r: "Chez Monpapierrame, grossiste papier rame à Abidjan, avec livraison partout en Côte d'Ivoire." },
+    ],
+  },
+  {
+    slug: "papier-rame-a3",
+    format: "A3",
+    nom: "Papier rame A3",
+    dimensions: "297 × 420 mm",
+    surDemande: true,
+    titre: "Papier Rame A3 à Abidjan : Prix sur Demande | Monpapierrame",
+    description: "Papier rame A3 (297 × 420 mm) à Abidjan : demandez le prix et la disponibilité sur WhatsApp. Livraison partout en Côte d'Ivoire.",
+    intro: "Le format A3 (297 × 420 mm) mesure le double d'une feuille A4. Il sert aux plans, affiches, tableaux, présentations et documents techniques. Demandez le prix et la disponibilité du papier rame A3 sur WhatsApp : nous vous répondons avec les marques et les quantités possibles.",
+    usages: ["Plans et dessins techniques", "Affiches et présentations", "Tableaux et graphiques", "Cabinets d'architecture et bureaux d'études"],
+    faq: [
+      { q: "Quelle est la taille d'une feuille A3 ?", r: "Une feuille A3 mesure 297 × 420 mm, soit deux feuilles A4 côte à côte." },
+      { q: "Comment obtenir le prix du papier rame A3 ?", r: "Écrivez-nous sur WhatsApp avec la quantité souhaitée et votre commune : nous confirmons le prix, la disponibilité et la livraison." },
+    ],
+  },
+  {
+    slug: "papier-rame-a5",
+    format: "A5",
+    nom: "Papier rame A5",
+    dimensions: "148 × 210 mm",
+    surDemande: true,
+    titre: "Papier Rame A5 à Abidjan : Prix sur Demande | Monpapierrame",
+    description: "Papier rame A5 (148 × 210 mm) à Abidjan : demandez le prix et la disponibilité sur WhatsApp. Livraison partout en Côte d'Ivoire.",
+    intro: "Le format A5 (148 × 210 mm) est la moitié d'une feuille A4. Il convient aux carnets, flyers, bons de commande, ordonnances et petits documents. Demandez le prix et la disponibilité du papier rame A5 sur WhatsApp.",
+    usages: ["Flyers et prospectus", "Bons de commande et factures", "Carnets et cahiers", "Ordonnances et petits formulaires"],
+    faq: [
+      { q: "Quelle est la taille d'une feuille A5 ?", r: "Une feuille A5 mesure 148 × 210 mm, soit la moitié d'une feuille A4." },
+      { q: "Comment obtenir le prix du papier rame A5 ?", r: "Écrivez-nous sur WhatsApp avec la quantité souhaitée et votre commune : nous confirmons le prix, la disponibilité et la livraison." },
+    ],
+  },
+];
+
+export function trouverCategorie(slug: string): Categorie | undefined {
+  return CATEGORIES.find((c) => c.slug === slug);
+}

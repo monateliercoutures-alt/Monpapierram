@@ -35,6 +35,7 @@ ${comparatif}
 
 ## Pages utiles
 - [Papier rame à Abidjan : toutes les marques et tous les prix](${SITE.url}/papier-rame-abidjan)
+- [Papier rame A4](${SITE.url}/categories/papier-rame-a4), [A3](${SITE.url}/categories/papier-rame-a3), [A5](${SITE.url}/categories/papier-rame-a5) : formats proposés (A3 et A5 sur demande via WhatsApp)
 - [Types de papier rame A4 : grammage, usages, prix](${SITE.url}/types-de-papier-rame-a4)
 
 ## Livraison

@@ -1147,52 +1147,52 @@ export function trouverMarque(slug: string): string | undefined {
 /** Titre et description Google de chaque page marque ({carton}, {gros}, {ramette} = prix formatés) */
 export const SEO_MARQUES: Record<string, { titre: string; description: string }> = {
   "Double A": {
-    titre: "Papier Rame Double A en Côte d'Ivoire, Prix | Monpapierrame",
-    description: "Fournisseur papier rame Double A : ramette {ramette}, carton {carton}, gros dès 10 cartons. Revendeurs, entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Double A en Côte d'Ivoire : prix ramette, carton et gros",
+    description: "Prix de la rame Double A 80g à Abidjan : ramette {ramette}, carton {carton}, gros dès 10 cartons. Livraison à Cocody, Yopougon et en Côte d'Ivoire.",
   },
   "Paper One": {
-    titre: "Papier Rame Paper One 70g, Prix Carton | Monpapierrame",
-    description: "Fournisseur papier rame Paper One 70g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Paper One 70g en Côte d'Ivoire : prix carton et gros",
+    description: "Prix du papier rame Paper One 70g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   Globulus: {
-    titre: "Papier Rame Globulus 80g, Prix Carton | Monpapierrame",
-    description: "Fournisseur papier rame Globulus 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Globulus 80g en Côte d'Ivoire : prix carton et gros",
+    description: "Prix du papier rame Globulus 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   "Paper Pro": {
-    titre: "Papier Rame Paper Pro 80g, Prix Carton | Monpapierrame",
-    description: "Fournisseur papier rame Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Paper Pro 80g en Côte d'Ivoire : prix carton et gros",
+    description: "Prix du papier rame Paper Pro 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   "Ultima Copy": {
-    titre: "Papier Rame Ultima Copy 75g, Prix Carton | Monpapierrame",
-    description: "Fournisseur papier rame Ultima Copy 75g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Ultima Copy 75g en Côte d'Ivoire : prix carton et gros",
+    description: "Prix du papier rame Ultima Copy 75g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   Beifa: {
-    titre: "Papier Rame Beifa 80g, Prix Carton | Monpapierrame",
-    description: "Fournisseur papier rame Beifa 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Beifa 80g en Côte d'Ivoire : prix carton et gros",
+    description: "Prix du papier rame Beifa 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   "Royal Touch": {
-    titre: "Papier Rame Royal Touch 80g, Prix Carton | Monpapierrame",
-    description: "Fournisseur papier rame Royal Touch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Royal Touch 80g en Côte d'Ivoire : prix carton et gros",
+    description: "Prix du papier rame Royal Touch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   Aone: {
-    titre: "Papier Rame Aone 80g, Prix Carton | Monpapierrame",
-    description: "Fournisseur papier rame Aone 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Aone 80g en Côte d'Ivoire : prix carton et gros",
+    description: "Prix du papier rame Aone 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   Aria: {
-    titre: "Papier Rame Aria 80g, Prix Carton | Monpapierrame",
-    description: "Fournisseur papier rame Aria 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Aria 80g en Côte d'Ivoire : prix carton et gros",
+    description: "Prix du papier rame Aria 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   Roch: {
-    titre: "Papier Rame Roch 80g, Prix Carton | Monpapierrame",
-    description: "Fournisseur papier rame Roch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Roch 80g en Côte d'Ivoire : prix carton et gros",
+    description: "Prix du papier rame Roch 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   "Smart Copy": {
-    titre: "Papier Rame Smart Copy 80g, Prix Carton | Monpapierrame",
-    description: "Fournisseur papier rame Smart Copy 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Smart Copy 80g en Côte d'Ivoire : prix carton et gros",
+    description: "Prix du papier rame Smart Copy 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
   Authentik: {
-    titre: "Papier Rame Authentik 80g, Prix Carton | Monpapierrame",
-    description: "Fournisseur papier rame Authentik 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Revendeurs et entreprises, livraison en Côte d'Ivoire.",
+    titre: "Papier rame Authentik en Côte d'Ivoire : prix carton et gros",
+    description: "Prix du papier rame Authentik 80g à Abidjan : carton {carton}, {gros} dès 10 cartons. Livraison à Cocody, Yopougon et partout en Côte d'Ivoire.",
   },
 };
 

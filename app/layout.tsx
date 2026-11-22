@@ -5,6 +5,7 @@ import { PRODUITS, SEO_ACCUEIL, SITE, meta } from "@/lib/config";
 import PanierProvider from "@/components/PanierContext";
 import RetourEnHaut from "@/components/RetourEnHaut";
 import BarreMobile from "@/components/BarreMobile";
+import EnregistrerApp from "@/components/EnregistrerApp";
 
 // Police des titres : Montserrat (600, 700 et 800), proche de la typographie du logo
 const titre = Montserrat({
@@ -84,6 +85,9 @@ export const metadata: Metadata = {
     "livraison papier rame Abidjan",
   ],
   alternates: { canonical: "/" },
+  applicationName: SITE.nom,
+  appleWebApp: { capable: true, title: SITE.nom, statusBarStyle: "default" },
+  formatDetection: { telephone: false },
   openGraph: {
     type: "website",
     locale: "fr_CI",
@@ -122,6 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <RetourEnHaut />
           {children}
           <BarreMobile />
+          <EnregistrerApp />
         </PanierProvider>
       </body>
     </html>

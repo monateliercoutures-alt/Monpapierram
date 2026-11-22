@@ -48,7 +48,7 @@ export default function PageLivraison() {
                 <li key={v} className="flex gap-2"><span className="text-cyan" aria-hidden="true">✓</span>{v}</li>
               ))}
             </ul>
-            <p className="justifie mt-3 text-encre/85">Votre ville n&apos;est pas dans la liste ? Écrivez-nous sur WhatsApp : nous confirmons la livraison.</p>
+            <p className="justifie mt-3 text-encre/85">Votre ville n&apos;est pas dans la liste ? Écrivez-nous sur WhatsApp : nous confirmons la livraison. Voir aussi la page <Link href="/villes" className="font-semibold text-profond underline">papier rame par ville</Link>.</p>
           </section>
 
           <section className="mt-10">

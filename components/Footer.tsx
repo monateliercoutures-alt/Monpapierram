@@ -27,6 +27,7 @@ export default function Footer() {
             {[
               ["/papier-rame-abidjan", "Papier rame Abidjan"],
               ["/types-de-papier-rame-a4", "Types de papier"],
+              ["/villes", "Villes desservies"],
               ["/livraison", "Livraison"],
               ["/politique-de-retour", "Retours"],
               ["/#faq", "FAQ"],

@@ -1548,3 +1548,59 @@ export const CATEGORIES: Categorie[] = [
 export function trouverCategorie(slug: string): Categorie | undefined {
   return CATEGORIES.find((c) => c.slug === slug);
 }
+
+/**
+ * Pages locales : une page par grande ville et par commune d'Abidjan, pour les recherches du type
+ * « papier rame Bouaké » ou « papier rame Yopougon ». Chaque entrée a son propre texte (contexte local).
+ */
+export type Lieu = {
+  slug: string; // ex. « papier-rame-bouake »
+  nom: string;
+  type: "ville" | "commune";
+  zone: string; // région ou district
+  contexte: string; // phrase propre au lieu (activité, usages)
+  clients: string[]; // clients typiques du lieu
+};
+
+const sl = (nom: string) => "papier-rame-" + nom.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
+const LIEUX_BRUTS: Omit<Lieu, "slug">[] = [
+  // Communes d'Abidjan
+  { nom: "Cocody", type: "commune", zone: "Abidjan", contexte: "Cocody réunit des quartiers résidentiels, des écoles, des universités et de nombreux bureaux (Riviera, Angré, Deux-Plateaux).", clients: ["Universités et écoles supérieures", "Cabinets et bureaux", "Cybercafés et centres de photocopie", "Particuliers"] },
+  { nom: "Yopougon", type: "commune", zone: "Abidjan", contexte: "Yopougon est la commune la plus peuplée d'Abidjan, avec de très nombreux commerces, écoles, cybercafés et petites entreprises.", clients: ["Écoles et lycées", "Cybercafés et photocopie", "Commerces et PME", "Imprimeries de quartier"] },
+  { nom: "Abobo", type: "commune", zone: "Abidjan", contexte: "Abobo est une grande commune populaire du nord d'Abidjan, avec beaucoup d'écoles, de commerces et de centres de photocopie.", clients: ["Écoles et collèges", "Centres de photocopie", "Boutiques et revendeurs", "Associations"] },
+  { nom: "Marcory", type: "commune", zone: "Abidjan", contexte: "Marcory (Zone 4, Biétry) accueille des entreprises, des commerces et de nombreux services.", clients: ["Entreprises de la Zone 4", "Commerces et boutiques", "Écoles privées", "Cybercafés"] },
+  { nom: "Koumassi", type: "commune", zone: "Abidjan", contexte: "Koumassi est une commune dense du sud d'Abidjan, avec des commerces, des ateliers et de nombreuses écoles.", clients: ["Écoles", "Commerces et ateliers", "Centres de photocopie", "Particuliers"] },
+  { nom: "Plateau", type: "commune", zone: "Abidjan", contexte: "Le Plateau est le centre des affaires et des administrations d'Abidjan : banques, ministères, cabinets et grandes entreprises.", clients: ["Administrations et ministères", "Banques et assurances", "Cabinets et grandes entreprises", "Imprimeries"] },
+  { nom: "Port-Bouët", type: "commune", zone: "Abidjan", contexte: "Port-Bouët, près de l'aéroport, abrite une zone industrielle et des entreprises de transport et de logistique.", clients: ["Entreprises et zones industrielles", "Transport et logistique", "Écoles", "Commerces"] },
+  { nom: "Treichville", type: "commune", zone: "Abidjan", contexte: "Treichville est une commune commerçante et portuaire, avec des entreprises, des commerces et des écoles.", clients: ["Commerces et négoce", "Entreprises du port", "Écoles", "Cybercafés"] },
+  { nom: "Adjamé", type: "commune", zone: "Abidjan", contexte: "Adjamé, avec son grand marché, est un centre majeur du commerce de gros à Abidjan.", clients: ["Grossistes et revendeurs", "Commerçants du marché", "Imprimeries", "Écoles"] },
+  { nom: "Attécoubé", type: "commune", zone: "Abidjan", contexte: "Attécoubé est une commune du centre-ouest d'Abidjan, avec des écoles, des commerces et des services.", clients: ["Écoles", "Commerces", "Centres de photocopie", "Particuliers"] },
+  { nom: "Bingerville", type: "commune", zone: "Abidjan", contexte: "Bingerville, ancienne capitale, en pleine croissance, compte des écoles, des administrations et de nouveaux quartiers.", clients: ["Écoles et établissements", "Administrations", "Entreprises locales", "Particuliers"] },
+  // Villes de l'intérieur
+  { nom: "Bouaké", type: "ville", zone: "région du Gbêkê", contexte: "Bouaké, deuxième ville du pays, est un grand carrefour commercial entre le nord et le sud, avec de nombreuses écoles, administrations et commerces.", clients: ["Écoles et université", "Administrations", "Commerces et grossistes", "Cybercafés"] },
+  { nom: "Yamoussoukro", type: "ville", zone: "District autonome de Yamoussoukro", contexte: "Yamoussoukro, capitale politique et administrative, concentre des administrations, des grandes écoles et de nombreux services publics.", clients: ["Administrations", "Grandes écoles et instituts", "Entreprises", "Imprimeries"] },
+  { nom: "San-Pédro", type: "ville", zone: "région du Bas-Sassandra", contexte: "San-Pédro, ville portuaire, compte beaucoup d'entreprises de transport, de négoce et d'exportation qui impriment de nombreux documents.", clients: ["Entreprises du port et du négoce", "Écoles et université", "Administrations", "Commerces"] },
+  { nom: "Daloa", type: "ville", zone: "région du Haut-Sassandra", contexte: "Daloa, au cœur de la boucle du cacao, regroupe négociants, coopératives, écoles et administrations.", clients: ["Coopératives et négociants", "Écoles et université", "Administrations", "Cybercafés"] },
+  { nom: "Korhogo", type: "ville", zone: "région du Poro", contexte: "Korhogo, grande ville du nord, regroupe des coopératives agricoles, des écoles, des administrations et des commerces.", clients: ["Coopératives agricoles", "Écoles et université", "Administrations", "Commerces"] },
+  { nom: "Man", type: "ville", zone: "région du Tonkpi", contexte: "Man, ville de l'ouest du pays, compte des écoles, des commerces et des services publics.", clients: ["Écoles et lycées", "Administrations", "Commerces", "Centres de photocopie"] },
+  { nom: "Abengourou", type: "ville", zone: "région de l'Indénié-Djuablin", contexte: "Abengourou, ville de l'est, vit du commerce et de l'agriculture, avec des écoles et des administrations.", clients: ["Écoles", "Administrations", "Commerces et négoce", "Cybercafés"] },
+  { nom: "Gagnoa", type: "ville", zone: "région du Gôh", contexte: "Gagnoa, ville du centre-ouest, regroupe des coopératives de cacao et de café, des écoles et des administrations.", clients: ["Coopératives", "Écoles", "Administrations", "Commerces"] },
+  { nom: "Divo", type: "ville", zone: "région du Lôh-Djiboua", contexte: "Divo, ville de la zone cacaoyère, compte des négociants, des écoles et des administrations.", clients: ["Négociants et coopératives", "Écoles", "Administrations", "Commerces"] },
+  { nom: "Soubré", type: "ville", zone: "région de la Nawa", contexte: "Soubré, en zone de production de cacao, compte des négociants, des écoles et de nombreux commerces.", clients: ["Négociants et coopératives", "Écoles", "Commerces", "Administrations"] },
+  { nom: "Odienné", type: "ville", zone: "région du Kabadougou", contexte: "Odienné, grande ville du nord-ouest, compte des écoles, des administrations et des commerces.", clients: ["Écoles", "Administrations", "Commerces", "Associations"] },
+  { nom: "Séguéla", type: "ville", zone: "région du Worodougou", contexte: "Séguéla, ville du nord-ouest, regroupe des écoles, des commerces et des services publics.", clients: ["Écoles", "Commerces", "Administrations", "Centres de photocopie"] },
+  { nom: "Bondoukou", type: "ville", zone: "région du Gontougo", contexte: "Bondoukou, ville du nord-est, compte des écoles, des administrations et un commerce actif avec les pays voisins.", clients: ["Écoles", "Administrations", "Commerces", "Cybercafés"] },
+  { nom: "Ferkessédougou", type: "ville", zone: "région du Tchologo", contexte: "Ferkessédougou, ville du nord, est un point de passage commercial avec des écoles et des administrations.", clients: ["Écoles", "Commerces", "Administrations", "Entreprises"] },
+  { nom: "Grand-Bassam", type: "ville", zone: "région du Sud-Comoé", contexte: "Grand-Bassam, ville balnéaire proche d'Abidjan, compte des hôtels, des administrations, des écoles et des commerces.", clients: ["Hôtels et tourisme", "Administrations", "Écoles", "Commerces"] },
+  { nom: "Agboville", type: "ville", zone: "région de l'Agnéby-Tiassa", contexte: "Agboville, au nord d'Abidjan, compte des écoles, des administrations et des commerces.", clients: ["Écoles", "Administrations", "Commerces", "Cybercafés"] },
+  { nom: "Dimbokro", type: "ville", zone: "région du N'Zi", contexte: "Dimbokro, ville du centre, compte des écoles, des administrations et des commerces.", clients: ["Écoles", "Administrations", "Commerces", "Associations"] },
+  { nom: "Katiola", type: "ville", zone: "région du Hambol", contexte: "Katiola, ville du centre-nord, compte des écoles, des services publics et des commerces.", clients: ["Écoles", "Administrations", "Commerces", "Centres de photocopie"] },
+  { nom: "Adzopé", type: "ville", zone: "région de La Mé", contexte: "Adzopé, ville du sud-est, compte des écoles, des administrations et des commerces.", clients: ["Écoles", "Administrations", "Commerces", "Cybercafés"] },
+];
+
+export const LIEUX: Lieu[] = LIEUX_BRUTS.map((l) => ({ ...l, slug: sl(l.nom) }));
+
+export function trouverLieu(slug: string): Lieu | undefined {
+  return LIEUX.find((l) => l.slug === slug);
+}

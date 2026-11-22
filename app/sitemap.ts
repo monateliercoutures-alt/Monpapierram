@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { CATEGORIES, MARQUES, PRODUITS, SITE, slugMarque } from "@/lib/config";
+import { CATEGORIES, LIEUX, MARQUES, PRODUITS, SITE, slugMarque } from "@/lib/config";
 
 // Plan du site : une seule page
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -27,6 +27,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.9,
+    })),
+    {
+      url: `${SITE.url}/villes`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+    ...LIEUX.map((l) => ({
+      url: `${SITE.url}/villes/${l.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
     ...MARQUES.map((m) => ({
       url: `${SITE.url}/marques/${slugMarque(m)}`,

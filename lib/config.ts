@@ -1447,7 +1447,11 @@ export function metaMarque(marque: string, champ: "titre" | "description"): stri
     const p = ps.find(id);
     return p && p.prix !== null ? formatPrixTexte(p.prix) : "sur demande";
   };
+  const nb = (id: (p: Produit) => boolean) => prix(id).replace(" FCFA", "");
   return SEO_MARQUES[marque][champ]
+    .replace("{ramette_n}", nb((p) => p.id === "ramette"))
+    .replace("{carton_n}", nb((p) => p.minQty === 1 && p.id.endsWith("carton")))
+    .replace("{gros_n}", nb((p) => p.minQty > 1))
     .replace("{ramette}", prix((p) => p.id === "ramette"))
     .replace("{carton}", prix((p) => p.minQty === 1 && p.id.endsWith("carton")))
     .replace("{gros}", prix((p) => p.minQty > 1));

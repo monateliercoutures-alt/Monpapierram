@@ -97,7 +97,7 @@ export const PRODUITS: Produit[] = [
   {
     id: "carton",
     marque: "Double A",
-    metaTitre: "Papier Rame A4 Double A 80g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Double A 80g : Carton 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Double A, 2 500 feuilles, {prix}. Livré scellé à Abidjan et en Côte d'Ivoire, payez à la livraison.",
     slug: "carton-papier-a4-5-ramettes-double-a",
@@ -138,7 +138,7 @@ export const PRODUITS: Produit[] = [
   {
     id: "gros",
     marque: "Double A",
-    metaTitre: "Papier Rame A4 Double A : Ramettes en Gros | Monpapierrame",
+    metaTitre: "Papier Rame Double A : Ramettes Gros, {prix} le Carton",
     metaDescription:
       "Grossiste papier rame A4 à Abidjan : carton Double A 80g à {prix} dès 10 cartons. Facture, livraison en Côte d'Ivoire, Mobile Money. Devis WhatsApp.",
     slug: "papier-a4-en-gros-carton-double-a",
@@ -203,7 +203,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Paper One 70g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Paper One : Carton 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 70g Paper One, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -235,7 +235,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Paper One : Ramettes en Gros | Monpapierrame",
+    metaTitre: "Papier Rame Paper One : Ramettes Gros, {prix} le Carton",
     metaDescription:
       "Papier rame A4 Paper One 70g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -267,7 +267,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Globulus 80g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Globulus 80g : Carton 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Globulus, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -299,7 +299,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Globulus : Ramettes en Gros | Monpapierrame",
+    metaTitre: "Papier Rame Globulus : Ramettes Gros, {prix} le Carton",
     metaDescription:
       "Papier rame A4 Globulus 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -331,7 +331,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Paper Pro 80g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Paper Pro : Carton 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Paper Pro, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -363,7 +363,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Paper Pro : Ramettes en Gros | Monpapierrame",
+    metaTitre: "Papier Rame Paper Pro : Ramettes Gros, {prix} le Carton",
     metaDescription:
       "Papier rame A4 Paper Pro 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -393,7 +393,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Authentik 80g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Authentik : Carton 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Authentik, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -423,7 +423,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Authentik : Ramettes en Gros | Monpapierrame",
+    metaTitre: "Papier Rame Authentik : Ramettes Gros, {prix} le Carton",
     metaDescription:
       "Papier rame A4 Authentik 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -455,7 +455,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Smart Copy 80g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Smart Copy : Carton 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Smart Copy, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -487,7 +487,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Smart Copy : Ramettes en Gros | Monpapierrame",
+    metaTitre: "Papier Rame Smart Copy : Ramettes Gros, {prix}/Carton",
     metaDescription:
       "Papier rame A4 Smart Copy 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -518,7 +518,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Ultima Copy 75g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Ultima Copy : Carton 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 75g Ultima Copy, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -549,7 +549,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Ultima Copy, Ramettes en Gros",
+    metaTitre: "Papier Rame Ultima Copy : Ramettes Gros, {prix}/Carton",
     metaDescription:
       "Papier rame A4 Ultima Copy 75g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison en Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -581,7 +581,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Roch 80g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Roch 80g : Carton de 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Roch, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -613,7 +613,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Roch : Ramettes en Gros | Monpapierrame",
+    metaTitre: "Papier Rame Roch : Ramettes en Gros, {prix} le Carton",
     metaDescription:
       "Papier rame A4 Roch 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -645,7 +645,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Aone 80g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Aone 80g : Carton de 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Aone, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -677,7 +677,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Aone : Ramettes en Gros | Monpapierrame",
+    metaTitre: "Papier Rame Aone : Ramettes en Gros, {prix} le Carton",
     metaDescription:
       "Papier rame A4 Aone 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -708,7 +708,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Aria 80g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Aria 80g : Carton de 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Aria, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -739,7 +739,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Aria : Ramettes en Gros | Monpapierrame",
+    metaTitre: "Papier Rame Aria : Ramettes en Gros, {prix} le Carton",
     metaDescription:
       "Papier rame A4 Aria 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison dans toute la Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -769,7 +769,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Royal Touch 80g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Royal Touch : Carton 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Royal Touch, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -799,7 +799,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Royal Touch, Ramettes en Gros",
+    metaTitre: "Papier Rame Royal Touch : Ramettes Gros, {prix}/Carton",
     metaDescription:
       "Papier rame A4 Royal Touch 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison en Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -831,7 +831,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "1 carton"],
     ],
-    metaTitre: "Papier Rame A4 Beifa 80g : Carton de 5 Ramettes",
+    metaTitre: "Papier Rame A4 Beifa 80g : Carton de 5 Ramettes, {prix}",
     metaDescription:
       "Carton de 5 ramettes papier rame A4 80g Beifa, 2 500 feuilles, {prix}. Livraison à Abidjan et partout en Côte d'Ivoire. Commandez en ligne.",
   },
@@ -863,7 +863,7 @@ export const PRODUITS: Produit[] = [
       ["Conditionnement", "Carton de 5 ramettes de 500 feuilles"],
       ["Quantité", "Lot de 10 cartons (50 ramettes)"],
     ],
-    metaTitre: "Papier Rame A4 Beifa : Ramettes en Gros | Monpapierrame",
+    metaTitre: "Papier Rame Beifa : Ramettes en Gros, {prix} le Carton",
     metaDescription:
       "Papier rame A4 Beifa 80g en gros à Abidjan : {prix} le carton dès 10 cartons. Facture, livraison en Côte d'Ivoire. Devis sur WhatsApp.",
   },
@@ -1147,51 +1147,51 @@ export function trouverMarque(slug: string): string | undefined {
 /** Titre et description Google de chaque page marque ({carton}, {gros}, {ramette} = prix formatés) */
 export const SEO_MARQUES: Record<string, { titre: string; description: string }> = {
   "Double A": {
-    titre: "Papier Rame Double A : Ramette A4, Carton et Gros",
+    titre: "Papier Rame Double A : Ramette {ramette}, Carton {carton_n}",
     description: "Rame A4 Double A 80g à Abidjan : paquet de 500 feuilles {ramette}, carton de 5 rames {carton}, gros dès 10 cartons. Livraison en Côte d'Ivoire.",
   },
   "Paper One": {
-    titre: "Papier Rame Paper One 70g : Ramette et Carton A4",
+    titre: "Papier Rame Paper One 70g : Ramette, Carton {carton}",
     description: "Vente de rame papier Paper One 70g : carton de 5 paquets {carton}, {gros} dès 10 cartons. Écoles, cybercafés, bureaux. Livraison à Abidjan.",
   },
   Globulus: {
-    titre: "Papier Rame Globulus 80g : Ramette 500 Feuilles A4",
+    titre: "Papier Rame Globulus 80g : Ramette, Carton {carton}",
     description: "Papier rame A4 Globulus 80g, paquet de 500 feuilles : carton {carton}, gros {gros}. Commande WhatsApp, livraison partout en Côte d'Ivoire.",
   },
   "Paper Pro": {
-    titre: "Papier Rame Paper Pro 80g : Ramette, Carton, Gros",
+    titre: "Papier Rame Paper Pro 80g : Ramette A4, Carton {carton}",
     description: "Carton de rames A4 Paper Pro 80g à {carton}, gros et demi-gros à {gros} dès 10 cartons. Facture entreprises, livraison à Abidjan et en CI.",
   },
   "Ultima Copy": {
-    titre: "Papier Rame Ultima Copy 75g : Ramette A4, Prix Carton",
+    titre: "Papier Rame Ultima Copy 75g : Ramette A4, Carton {carton}",
     description: "Papiers rames A4 Ultima Copy 75g : carton de 2 500 feuilles {carton}, {gros} dès 10 cartons. Copie et impression, livraison en Côte d'Ivoire.",
   },
   Beifa: {
-    titre: "Papier Rame Beifa 80g : Ramette de Papier A4, Gros",
+    titre: "Papier Rame Beifa 80g : Ramette, Carton {carton}",
     description: "Rame de papier A4 Beifa 80g : carton de 5 rames {carton}, gros {gros} dès 10 cartons. Revendeurs bienvenus, livraison en Côte d'Ivoire.",
   },
   "Royal Touch": {
-    titre: "Papier Rame Royal Touch 80g : Ramette A4, Prix Carton",
+    titre: "Papier Rame Royal Touch 80g : Ramette, Carton {carton}",
     description: "Papier rame A4 Royal Touch 80g à surface lisse : carton {carton}, {gros} dès 10 cartons. Impression nette, livraison à Abidjan et en CI.",
   },
   Aone: {
-    titre: "Papier Rame Aone 80g : Ramette A4, Paquet ou Carton",
+    titre: "Papier Rame Aone 80g : Ramette, Carton {carton}",
     description: "Papier rame A4 Aone 80g, au paquet ou au carton : {carton} les 5 rames, {gros} dès 10 cartons. Commande WhatsApp, livraison en Côte d'Ivoire.",
   },
   Aria: {
-    titre: "Papier Rame Aria 80g : Ramette A4 Abidjan, Gros",
+    titre: "Papier Rame Aria 80g : Ramette A4, Carton {carton}",
     description: "Rame A4 Aria 80g (500 feuilles) : carton {carton}, gros {gros} dès 10 cartons. Papier de copie pour bureaux et écoles, livraison en Côte d'Ivoire.",
   },
   Roch: {
-    titre: "Papier Rame Roch 80g : Ramette A4, Carton et Gros",
+    titre: "Papier Rame Roch 80g : Ramette, Carton {carton}",
     description: "Vente de rames A4 Roch 80g à Abidjan : carton de 5 rames {carton}, gros {gros} dès 10 cartons. Papier de copie, livraison en Côte d'Ivoire.",
   },
   "Smart Copy": {
-    titre: "Papier Rame Smart Copy 80g : Ramette A4, Carton, Gros",
+    titre: "Papier Rame Smart Copy 80g : Ramette, Carton {carton}",
     description: "Rame de papier Smart Copy A4 80g, laser et copieur : carton {carton}, gros {gros}. Livraison à Cocody, Yopougon, Bouaké et partout en CI.",
   },
   Authentik: {
-    titre: "Papier Rame Authentik 80g : Ramette A4 en Carton",
+    titre: "Papier Rame Authentik 80g : Ramette, Carton {carton}",
     description: "Acheter papier rame A4 Authentik 80g en carton : {carton} les 5 rames, {gros} dès 10 cartons. Revendeurs, écoles. Livraison en Côte d'Ivoire.",
   },
 };

@@ -86,6 +86,12 @@ export const metadata: Metadata = {
     "livraison papier rame Abidjan",
   ],
   alternates: { canonical: "/" },
+  // Autorise Google à afficher des extraits complets, de grandes images et à s'appuyer sur la page pour ses réponses (aperçus IA inclus)
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 },
+  },
   applicationName: SITE.nom,
   formatDetection: { telephone: false },
   openGraph: {
